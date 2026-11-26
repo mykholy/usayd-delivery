@@ -148,31 +148,30 @@
           "title": "USYD-T0036: secret scanning, locked dependency audit and SBOM",
           "state": "open",
           "merged": false,
-          "head": "dcdb3f374be21ca80651ec7ea7805bd174b02cb5",
+          "head": "46b817be1be6d5238b99ab8b64a1112a3025f884",
           "merge_commit": null,
           "url": "https://github.com/mykholy/usayd-api/pull/31",
           "checks": [
             {
-              "id": 45885252260,
+              "id": 45885591977,
               "name": "Supply chain security",
               "status": "completed",
-              "conclusion": "failure"
+              "conclusion": "success"
             },
             {
-              "id": 45885252277,
+              "id": 45885591914,
               "name": "Independent PR Code Quality Review",
               "status": "completed",
               "conclusion": "success"
             },
             {
-              "id": 45885252240,
+              "id": 45885591986,
               "name": "API CI",
-              "status": "in_progress",
-              "conclusion": null
+              "status": "completed",
+              "conclusion": "success"
             }
           ],
           "security_remediation": {
-            "resolver_run": 45884998525,
             "patched_symfony_packages": [
               "http-foundation",
               "http-kernel",
@@ -181,8 +180,14 @@
             ],
             "version": "v8.1.12",
             "advisories_before": 5,
-            "locked_audit_after": "passed",
-            "scanner_fixture": "corrected; final verification required"
+            "locked_audit_after": "passed: zero advisories",
+            "history_commits_scanned": 82,
+            "unignored_findings": 0,
+            "reviewed_historical_fixture_fingerprints": 3,
+            "sbom_components": 117,
+            "sbom_tests": 4,
+            "artifact_id": 15148814537,
+            "security_run": 45885591977
           }
         }
       ]
