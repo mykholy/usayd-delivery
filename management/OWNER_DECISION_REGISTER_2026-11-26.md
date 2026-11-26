@@ -25,7 +25,7 @@ Source: explicit owner chat decisions on 26 Nov and verified Jira comments 10046
 | [USYD-52](https://mykholy.atlassian.net/browse/USYD-52) | D-43 | Reuse GET /api/v1/achievements direction | Technical contract approval, D-36 catalogue |
 | [USYD-53](https://mykholy.atlassian.net/browse/USYD-53) | D-37 | Faceless graphics; no face mascot | Decision Done only |
 | [USYD-71](https://mykholy.atlassian.net/browse/USYD-71) | Storage | AWS private S3; 30 days recordings, 7 days AI audio, 90 days security logs conditional on legal approval | PR #29 merged, tested S3-compatible/ClamAV. Actual AWS IAM/region/production signature freshness and retention signoff pending; no live upload route |
-| [USYD-77](https://mykholy.atlassian.net/browse/USYD-77) | Infrastructure | Owner deferred server provisioning; delegated region choice. Frankfurt eu-central-1 provisional engineering candidate | Recheck AWS Health, latency, calculator and legal residency before purchase; PR #30 open at snapshot; no actual staging deployed |
+| [USYD-77](https://mykholy.atlassian.net/browse/USYD-77) | Infrastructure | Owner deferred server provisioning; delegated region choice. Frankfurt eu-central-1 provisional engineering candidate | Recheck AWS Health, latency, calculator and legal residency before purchase; PR #30 merged; actual deployment evidence pending; no actual staging deployed |
 
 ## Evidence
 
