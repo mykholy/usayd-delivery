@@ -57,15 +57,15 @@
         "total": 10,
         "Done": 1,
         "In Progress": 0,
-        "In Review": 2,
-        "To Do": 7
+        "In Review": 3,
+        "To Do": 6
       },
       "non_flutter": {
         "total": 6,
         "Done": 1,
         "In Progress": 0,
-        "In Review": 2,
-        "To Do": 3
+        "In Review": 3,
+        "To Do": 2
       },
       "flutter_read_only": {
         "total": 4,
@@ -76,7 +76,7 @@
       }
     }
   },
-  "api_main": "c4e2a5b45b318dd22a1597a6e5f376e8d9dd1232",
+  "api_main": "a7f430be28fe9edad0f5b7eb8c51787ad0b7be8f",
   "api_prs_18_to_30": [
     {
       "number": 18,
@@ -211,8 +211,8 @@
     }
   ],
   "latest_verified_merged_api_ci": {
-    "pr": 30,
-    "run": 45883983912,
+    "pr": 38,
+    "run": 45895582294,
     "tests": 178,
     "assertions": 1689,
     "openapi_operations": 16,
@@ -221,7 +221,8 @@
     "antivirus": "real ClamAV engine synthetic signature",
     "release_readiness_tests": 10,
     "release_readiness": "passed isolated production-mode API",
-    "review_threads_resolved": 2
+    "review_threads_resolved": 2,
+    "compatibility_tests": 11
   },
   "issues": [
     {
@@ -898,14 +899,14 @@
       "scope": "non-flutter",
       "labels": [
         "api",
+        "deployment-evidence-pending",
+        "merged-verified",
         "owner-direction-recorded",
         "planned-s02",
         "production-provisioning-deferred",
         "region-candidate-frankfurt",
         "usayd-spec-handoff",
-        "usyd-t0034",
-        "merged-verified",
-        "deployment-evidence-pending"
+        "usyd-t0034"
       ]
     },
     {
@@ -940,7 +941,7 @@
       "jira": "USYD-80",
       "stable_id": "USYD-T0037",
       "summary": "[USYD-T0037] Cross-repo compatibility and published contracts",
-      "status": "To Do",
+      "status": "In Review",
       "sprint": "planned-s02",
       "scope": "non-flutter",
       "labels": [
@@ -1093,6 +1094,56 @@
         "artifact_id": 15148814537,
         "security_run": 45885591977
       }
+    },
+    {
+      "number": 38,
+      "title": "USYD-T0037: versioned OpenAPI publication and compatibility gate",
+      "state": "closed",
+      "merged": true,
+      "head": "7654a0a3cbec7f71e5d92c66da7a920bc43f2bd8",
+      "merge_commit": "a7f430be28fe9edad0f5b7eb8c51787ad0b7be8f",
+      "url": "https://github.com/mykholy/usayd-api/pull/38",
+      "checks": [
+        {
+          "id": 45895582278,
+          "name": "Independent PR Code Quality Review",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 45895582417,
+          "name": "Supply chain security",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 45895582294,
+          "name": "API CI",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "contract_publication": {
+        "version": "0.1.0",
+        "operations": 16,
+        "compatibility_tests": 11,
+        "artifact_id": 15152959071,
+        "artifact_scope": "candidate PR merge test, not approved production release",
+        "tested_commit": "568d23ba429eaf9eab0ff626598447c6d79269b1",
+        "sha256": "3e5c083e95d30c88274f8bb62ad6bff460fde4a468e8608d01b421228db648e4"
+      }
     }
-  ]
+  ],
+  "dependabot": {
+    "activation_verified": true,
+    "observed_open_prs": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "observed_checks": "All three workflows passed on their observed individual heads; not merged; major updates need review"
+  }
 }
