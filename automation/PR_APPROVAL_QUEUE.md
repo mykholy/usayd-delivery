@@ -20,4 +20,4 @@ Scope: API PRs #18–30 checked by GitHub. No independent human approval claimed
 
 PR #30 exact-head API CI 45883983912 SUCCESS (178 tests, 1689 assertions, 10 readiness fixtures, 13 contract fixtures, 16 routes); automated review 45883983873 SUCCESS; both CodeRabbit threads resolved. No actual AWS deployment claimed.
 
-PR #31: [USYD-T0036: secret scanning, locked dependency audit and SBOM](https://github.com/mykholy/usayd-api/pull/31) — open; head `46b817be1be6d5238b99ab8b64a1112a3025f884`; Supply chain security: success; Independent PR Code Quality Review: success; API CI: success. Security audit zero advisories; Gitleaks 82 commits, zero unignored findings; 3 exact reviewed fixture fingerprints; 117-component SBOM artifact 15148814537. Jira USYD-79 remains In Progress until verified merge and remaining activation checks.
+PR #31: [Supply-chain security](https://github.com/mykholy/usayd-api/pull/31) — merged `c4e2a5b45b318dd22a1597a6e5f376e8d9dd1232`; all three exact-head checks passed; 82 commits scanned, zero unignored findings, 117-component SBOM published. USYD-79 In Review pending activation/enforcement verification.
