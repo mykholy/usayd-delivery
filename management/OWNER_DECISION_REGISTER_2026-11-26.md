@@ -33,3 +33,7 @@ Source: explicit owner chat decisions on 26 Nov and verified Jira comments 10046
 - API #26, #27, #28, #29 merged normally with automated green checks; no independent human approval inferred. PR #29: 178 tests/1689 assertions, 16 actual API operations and 13 OpenAPI fixtures. USYD-71 In Review, not Done; legal/DPO retention and real AWS verification remain gates.
 - Technical region recommendation is provisional, not legally approved; [AWS regions](https://docs.aws.amazon.com/global-infrastructure/latest/regions/aws-regions.html), [AWS Health](https://health.aws.amazon.com/health/status), [data privacy](https://aws.amazon.com/compliance/data-privacy-faq/).
 - USYD-54 branch protection verification, USYD-64 release coordination, USYD-65 authentic media/content remain open. Never fabricate specialist signoff. Flutter implementation untouched.
+
+## Staffing decision — 2026-11-27
+
+Owner explicitly confirmed that **no specialist responsible person has been appointed yet**. Record each as UNASSIGNED: legal/DPO, academic/religious, finance, independent technical/security reviewer, operations/support. No appointment, delegation or specialist approval is inferred. The existing owner is the project decision contact only. Keep each affected activation/acceptance gate open; continue approved low-risk preparation with synthetic fixtures. Named approvers, actual approval evidence, and separation of duties remain required before sensitive activation or release. Jira comments USYD-78 #10095 and USYD-54 #10096, and affected issues #10097–10110, document this decision.
