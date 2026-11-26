@@ -25,3 +25,9 @@
 - 91 Sprints فقط جدولة مرشحة لكامل النطاق؛ الفريق شخصان، فتوقع إعادة تقدير مستمرة.
 - الـAI review لا يصح اعتباره موافقة بشرية. أكمل متطلبات Code Owners / branch rules للحالات الحساسة.
 - ملفات الخطوط لا يعاد توزيعها؛ استخدم الأصل المرخص عند التنفيذ.
+
+## الحالة الفعلية والمراجع الحية (26 نوفمبر 2026)
+- [حالة GitHub وJira الموثقة](automation/LIVE_DELIVERY_STATE.json) — لا تستخدم التقارير التاريخية كحالة حية.
+- [فهرس تصميم كل 169 شاشة](management/SCREEN_DESIGN_CATALOG.md) و[دليل التحويل من التصميم للكود](management/DESIGN_IMPLEMENTATION_GUIDE.md).
+- [قرارات المالك المحدثة](management/OWNER_DECISION_REGISTER_2026-11-26.md)، [الخطوة التالية](automation/NEXT_ACTIONS.md).
+- المصدر الأصلي immutable. قبل كل تاسك اقرأ الـspec وCanvas وAR/EN HTML والعقود والـFR والصلاحيات. بعد كل PR أو تعديل Jira حدث السجل الحي بأدلة فعلية. Flutter للقراءة فقط في مسار full-stack.
