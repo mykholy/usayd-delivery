@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_date": "2026-11-26",
+  "verified_date": "2026-11-27",
   "scope": "candidate sprint labels S00-S02; Jira statuses read live; Flutter read only",
   "jira_site": "https://mykholy.atlassian.net",
   "jira_project": "USYD",
@@ -1029,7 +1029,10 @@
     "USYD-71 legal/DPO retention approval and real AWS deployment gates",
     "USYD-64 coordination review",
     "USYD-65 owner content/licensing approval",
-    "USYD-77 real deployment deferred by owner"
+    "USYD-77 real deployment deferred by owner",
+    "USYD-78 named specialist approvers unassigned; owner confirmation 2026-11-27",
+    "USYD-81 hard prerequisite USYD-54",
+    "Delivery CI fails without job steps/logs"
   ],
   "infrastructure": {
     "provisioning": "deferred by owner",
@@ -1184,5 +1187,49 @@
       37
     ],
     "observed_checks": "All three workflows passed on their observed individual heads; not merged; major updates need review"
+  },
+  "staffing": {
+    "confirmed_by_owner": "2026-11-27",
+    "legal_dpo": "UNASSIGNED",
+    "academic": "UNASSIGNED",
+    "finance": "UNASSIGNED",
+    "independent_technical_security": "UNASSIGNED",
+    "operations_support": "UNASSIGNED",
+    "specialist_signoff": "not granted"
+  },
+  "governance": {
+    "verified_date": "2026-11-27",
+    "repositories": [
+      {
+        "name": "usayd-api",
+        "default_branch": "main",
+        "main_exists": true,
+        "owner_permission": "admin",
+        "live_rulesets": "unverified"
+      },
+      {
+        "name": "usayd-web",
+        "default_branch": "main",
+        "main_exists": true,
+        "owner_permission": "admin",
+        "live_rulesets": "unverified"
+      },
+      {
+        "name": "usayd-flutter",
+        "default_branch": "main",
+        "main_exists": true,
+        "owner_permission": "admin",
+        "live_rulesets": "unverified"
+      },
+      {
+        "name": "usayd-delivery",
+        "default_branch": "main",
+        "main_exists": true,
+        "owner_permission": "admin",
+        "live_rulesets": "unverified"
+      }
+    ],
+    "evidence": "architecture/REPOSITORY_GOVERNANCE_EVIDENCE.md",
+    "web_bootstrap": "blocked by USYD-54"
   }
 }
