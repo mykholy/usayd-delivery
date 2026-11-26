@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "derivation": "Verified original archive SHA256 for every manifest entry; only CRLF to LF transformation on these CSV bytes; no other transformation or binary variants.",
+  "entries": [
+    {
+      "path": "source_blueprint_v1.2/05_UI_UX/SCREEN_API_TRACE_CRITICAL.csv",
+      "original_sha256": "87538a2c39ed51cd8fa05dfc0cc879374da954d648621c983246b14c97ac61bb",
+      "lf_sha256": "72b206df5c94e205b6fa19897db2ef832707c366757f00ab4e5b93eb6adc63ce"
+    },
+    {
+      "path": "source_blueprint_v1.2/05_UI_UX/screen_inventory.csv",
+      "original_sha256": "6e5d8e168aea8115210170832df6df9a65ecae611157be2ff850645e792d03cf",
+      "lf_sha256": "e182adc2d2dfdef0f24163ae675077471eb97416188a4cd9888576fa240622bd"
+    },
+    {
+      "path": "source_blueprint_v1.2/06_DELIVERY_JIRA/sprint_plan.csv",
+      "original_sha256": "811f4c884ea580fdb6993b8cd691cc3d2a9db438344dfb39837b7d2f34b7f73a",
+      "lf_sha256": "e5a8006472ca408f7f86d55d8bf3a8a268b3b0b1bc91eb3792c76710ffe57915"
+    },
+    {
+      "path": "source_blueprint_v1.2/06_DELIVERY_JIRA/requirements_traceability.csv",
+      "original_sha256": "38bc473e6840916aac7a2f424b3a607b6189d5aae8913253591c2cc66ce008b2",
+      "lf_sha256": "a4d23d7ccaa22fb40de549a9e366fba648b0599af813fbc5f845bd4a91e68863"
+    },
+    {
+      "path": "source_blueprint_v1.2/06_DELIVERY_JIRA/dependency_map.csv",
+      "original_sha256": "553f385e6bc4a5ec947d1de179bd874e54f56cbe0aa712d4cd81d420b050ea3f",
+      "lf_sha256": "218d76e3a00570de3f222ba72610d85c6ad68b051bd84f57f3758dc3f3becc10"
+    },
+    {
+      "path": "source_blueprint_v1.2/06_DELIVERY_JIRA/Jira_Import.csv",
+      "original_sha256": "6065f43daf6ebf812c883f8328e9a47c512755259392d7c5570bcb6bada95a2c",
+      "lf_sha256": "ee4713e571ed5cbc6c8324f2a8fd5cc95947e9dbc5cc5098749c07f3d88b9791"
+    },
+    {
+      "path": "source_blueprint_v1.2/02_REQUIREMENTS/functional_requirements.csv",
+      "original_sha256": "9f5f4bf5e2fc61a852f9d22d151c4e145440b1df632d6a039b93d700899fbbda",
+      "lf_sha256": "f31c5a8ea88781419f2a8d8babf208618c19e65e647e74d33b1f443204092178"
+    },
+    {
+      "path": "source_blueprint_v1.2/01_BUSINESS/financial_scenarios.csv",
+      "original_sha256": "0c08c084448b3f58199428254b30a97719cdad5f18968d00fb7a33dddad148c2",
+      "lf_sha256": "1e78ad9f6921f98a3abb1747f114762f4c6e5b3d1191ca2f348faca3fb04310a"
+    },
+    {
+      "path": "source_blueprint_v1.2/14_RELEASE_QA/INTERNATIONAL_E2E_SCENARIOS.csv",
+      "original_sha256": "102477832848ed3fb25792176fc1512e646ab05c293242881693c42e7ed1b40c",
+      "lf_sha256": "7f2b2f14b007e519adc1e60d518800b39b124a353c56115ec99b512718c795e1"
+    },
+    {
+      "path": "source_blueprint_v1.2/13_PREMIUM_UX/FIGMA_FRAME_MANIFEST.csv",
+      "original_sha256": "06cff2164460eafe5a87c5e39e241581c4fba3b913b8a240934152731f0871f2",
+      "lf_sha256": "3b3d67121777a00fd795e686886c71e698164be210c42b7440aa0d2d827a0d8c"
+    },
+    {
+      "path": "source_blueprint_v1.2/13_PREMIUM_UX/SCREEN_TO_API_TRACE_v1.2.csv",
+      "original_sha256": "fc17e6a9a882734c2a6b8745220dfbe9fac5cc798fbde957c84e2a00c060beda",
+      "lf_sha256": "8dcb01fcc4c34c404b02bc37c5747ff68b8d9fd36485c3166bdee2ec1d3b58d6"
+    },
+    {
+      "path": "source_blueprint_v1.2/07_QUALITY_SECURITY/test_cases.csv",
+      "original_sha256": "ed0ecc466382fa916147f62ae0f2287461fed1833117a32885e9fa1032f459f8",
+      "lf_sha256": "13496c532e08d4c9634d7baf4fe345b27b6a1fedd3c884c2b7c87311f2511516"
+    },
+    {
+      "path": "09_mapping/SCREEN_API_MAP.csv",
+      "original_sha256": "baf64fec39f99c8d9cc85637fe5363dd35425763b57054d7f18b80ce33cc5ac2",
+      "lf_sha256": "d57afe38e8301cc9bcdb2787b3809b05016d1a0aa8079dd666807bc649ef9ada"
+    },
+    {
+      "path": "09_mapping/FR_TRACEABILITY.csv",
+      "original_sha256": "3a6e2453b20f0066459b5d8090ce72a1bd532cbe90a0bef47143db7d46a5195f",
+      "lf_sha256": "4a5e575f1cbf59cce8f335b0881329a73890752a0675951573c4bc0f8455120b"
+    },
+    {
+      "path": "09_mapping/SCREEN_FEATURE_MAP.csv",
+      "original_sha256": "ef181b06a5eb692ee52f4cee4aceba209327713a6b6879a175ba757a66012cfc",
+      "lf_sha256": "4dc7323a0b4104a027da13ef7eaebce199dc983d9b733f472738513799b34ded"
+    },
+    {
+      "path": "09_mapping/REQUIREMENT_TO_SCREEN.csv",
+      "original_sha256": "b40bf9fd43b6072aee7b95e49718214ff7de270e4bc86c2b81564454126ec892",
+      "lf_sha256": "f9974b7a9cd1c3d2e8049dbf4e8aa33b06fb40ca97714095985da91c5a428b36"
+    },
+    {
+      "path": "07_api/API_RECONCILIATION_MATRIX.csv",
+      "original_sha256": "58334034132f756fd20522034fbee53ded29b9f26e199f2f15f2eb5c4a0238eb",
+      "lf_sha256": "37769446bc8f47407db4fa19d2c07a45265e064bf62c465fc46e01c7037d9f26"
+    },
+    {
+      "path": "11_qa/VISUAL_QA_MATRIX.csv",
+      "original_sha256": "4ae4fa50e11fab2e24324ce8258423b2ce1176f3853f06619237bd7b62249a7d",
+      "lf_sha256": "6504e8c6ff4492d5455dfb8cb90fbffe86777d8730d977f74ff3615df33387a3"
+    },
+    {
+      "path": "11_qa/ISSUE_REGISTER.csv",
+      "original_sha256": "9e9c1107739fffbbc57de5aaa8ebded8ce1cebb9ca84694dcc2817fdfb90c200",
+      "lf_sha256": "4d3fd6e70313d9fe02acc29a61b7c244a73415ac84af48427b57bf82cb4766ec"
+    },
+    {
+      "path": "11_qa/CHANGE_MANIFEST.csv",
+      "original_sha256": "76dcebea2c4e5b1f948c87f8e1cca54b443d859105e8c058e96c7b315b7869de",
+      "lf_sha256": "756e0dbfebed510ad7757849c6c7d51fe7647786693e316b8f1c9213fc9df8af"
+    },
+    {
+      "path": "11_qa/REMEDIATION_BASELINE.csv",
+      "original_sha256": "905c19da6380fe8244ae3a6504c1a08cfd920045ce76f25b6f6aa7d43c6d1f58",
+      "lf_sha256": "80ab0c9ba2d01393da72242cdad5c7d80f78bdc661dc56c8450a0884f660d8b7"
+    },
+    {
+      "path": "11_qa/SCREEN_VISUAL_QA_160.csv",
+      "original_sha256": "28998be92a2412b46f015bc4b0b6055eefd53f767c37ee290099e86429036f49",
+      "lf_sha256": "6804cb908cac972057d6f8d2623000914ed8690314bf2487debf7857433ca9da"
+    },
+    {
+      "path": "05_requirements/functional_requirements.csv",
+      "original_sha256": "9f5f4bf5e2fc61a852f9d22d151c4e145440b1df632d6a039b93d700899fbbda",
+      "lf_sha256": "f31c5a8ea88781419f2a8d8babf208618c19e65e647e74d33b1f443204092178"
+    },
+    {
+      "path": "10_roadmap/FEATURE_FLAGS.csv",
+      "original_sha256": "9b4e94875ae3c1acae2944b9987fe4798436a8346f76277aa1454ac60ba2e87d",
+      "lf_sha256": "be2498a70780042e034e2f99fbc496a61a50e910e08045e60a53b253f4371b5b"
+    },
+    {
+      "path": "06_permissions/PERMISSIONS_MATRIX.csv",
+      "original_sha256": "4655dba36328ea76453149fbd9e0d25dc7a13fa282e0dd115c21b761120d82de",
+      "lf_sha256": "db1c1c1b390d439df297eaa263fc8a51572029a8f9cb47f96baa08a31a1a41a8"
+    },
+    {
+      "path": "04_flows/JOURNEY_COVERAGE_MATRIX.csv",
+      "original_sha256": "13c18795758e3f042fac00bd4b52152d2ad3e571b2bac429fe139d773d57e92e",
+      "lf_sha256": "b7bf723b1b8357fe4cf6e9e99c28d57bb41ec7fad53b41b9722853a7606cd090"
+    },
+    {
+      "path": "03_screens/SCREEN_INVENTORY.csv",
+      "original_sha256": "a82b472702d56b9d0bf9b1acd036aca62c0096b9606ab8af519e264cb2adf9bd",
+      "lf_sha256": "984e8909c71f5d449c51e74dd86e8eb619c7c92e12ecad3bcd1ce6b45874433e"
+    },
+    {
+      "path": "03_screens/ACTION_CONTRACTS_DETAILED.csv",
+      "original_sha256": "4e8b084343943df74d602ff4e1c2dcd5ea113b5d58a41a2c8db98509398ee375",
+      "lf_sha256": "cc2380fe1e33e8dfbd486a3e6b923bc65c2145b6576183a00f059facdea1434c"
+    },
+    {
+      "path": "03_screens/ACTION_CONTRACTS.csv",
+      "original_sha256": "3b96646f0c9d09c612f602aa4ddd9dadacd117b33dbc67ac58769fef4ee99dcd",
+      "lf_sha256": "20cc257c402e3a13e8565e62f60eabc5dbf51123912624351dd38a8e6ed4b616"
+    },
+    {
+      "path": "03_screens/CANONICAL_ROUTES.csv",
+      "original_sha256": "f7789579c274ba143ec7f368c194627115025662ad01d64f77b5f2ac99d8d769",
+      "lf_sha256": "e4497aad6e6f85295f1cadbe51e42836dfc0b137ec13df4bc8cc70b1e41937b7"
+    },
+    {
+      "path": "03_screens/CONTENT_SLOTS.csv",
+      "original_sha256": "0c146e7b7a05f69fe9bdc4628ace8e143fe1469a953b6e85aff782b80dba3f24",
+      "lf_sha256": "c890f365b23a646af75a11cf433fd6238da2a50380708fa92e4f3747eb453f7e"
+    }
+  ]
+}
