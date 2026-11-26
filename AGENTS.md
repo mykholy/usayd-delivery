@@ -11,3 +11,6 @@ Read in order:
 6. Referenced design, FR, API, journey and permissions files under `source_original/usayd-academy-codex-package/`.
 
 Do not change source; do not invent owner policy; do not merge a PR without real checks/required human signoff; do not claim Jira/GitHub state without tool evidence.
+
+## Live delivery overlay (mandatory)
+Read `automation/LIVE_DELIVERY_STATE.json`, `automation/NEXT_ACTIONS.md`, `management/OWNER_DECISION_REGISTER_2026-11-26.md` and `management/DESIGN_IMPLEMENTATION_GUIDE.md` before choosing work. Use `management/SCREEN_DESIGN_CATALOG.md` to locate exact screen contract + Canvas + AR/EN HTML. Read the actual files for the assigned task; an inventory is not a substitute. Reconcile live GitHub/Jira after every verified change, update the overlay, preserve original SHA256 source, and never replay archived Jira transitions. Full-stack operator must not modify Flutter or its Jira tasks; read-only reporting allowed. No deployment before owner authorization.
