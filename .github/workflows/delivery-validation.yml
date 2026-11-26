@@ -1,0 +1,18 @@
+name: Delivery validation
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  delivery-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate immutable specification and task baseline
+        run: python3 automation/preflight.py
+      - name: Validate live overlay and screen catalog
+        run: python3 automation/verify_live_overlay.py
