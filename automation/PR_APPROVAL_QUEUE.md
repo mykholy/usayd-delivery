@@ -16,6 +16,6 @@ Scope: API PRs #18–30 checked by GitHub. No independent human approval claimed
 | [#27](https://github.com/mykholy/usayd-api/pull/27) USYD-T0033: fail-closed API CI and real Redis integration | Merged | `4c36578dd25f2925623b81403d3f2f03f70d9d18` |
 | [#28](https://github.com/mykholy/usayd-api/pull/28) USYD-T0032: fail-closed upload safety boundary and retention record | Merged | `4b2dac06d8f04460c558818f1bc25ffd31edfffa` |
 | [#29](https://github.com/mykholy/usayd-api/pull/29) USYD-T0032: resolve private S3 adapter and verify storage integration | Merged | `8c88d7108eb212e764c3909c809a3b1a5d78cbd7` |
-| [#30](https://github.com/mykholy/usayd-api/pull/30) USYD-T0034: staging release readiness and reversible migration protocol | open | `59aca38d92c656ddf010408163aa68cd9eee876f` |
+| [#30](https://github.com/mykholy/usayd-api/pull/30) USYD-T0034: staging release readiness and reversible migration protocol | Merged | `4dc2c69bcb4bcf8eebe2f849c9d77350cbe414f7` |
 
-PR #30 exact-head checks: Independent PR Code Quality Review success (45871905475); API CI success (45871905443). Re-check review threads before merging. Historical approval commands removed; no fabricated approval or bypass.
+PR #30 exact-head API CI 45883983912 SUCCESS (178 tests, 1689 assertions, 10 readiness fixtures, 13 contract fixtures, 16 routes); automated review 45883983873 SUCCESS; both CodeRabbit threads resolved. No actual AWS deployment claimed.
