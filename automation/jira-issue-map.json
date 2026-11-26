@@ -459,10 +459,15 @@
     "USYD-T0036": {
       "jira_key": "USYD-79",
       "summary": "[USYD-T0036] Secret scanning, dependency pinning and SBOM",
-      "status": "To Do",
+      "status": "In Progress",
       "status_source": "live Jira",
       "candidate_sprint": "planned-s02",
-      "scope": "non-flutter"
+      "scope": "non-flutter",
+      "latest_verified_api_pr": 31,
+      "latest_verified_api_pr_url": "https://github.com/mykholy/usayd-api/pull/31",
+      "latest_verified_api_pr_state": "open",
+      "latest_verified_api_head": "3a7de5ae4a3f2d57816a3488d7f338f9885c3fb0",
+      "latest_verified_merge_commit": null
     },
     "USYD-T0037": {
       "jira_key": "USYD-80",
