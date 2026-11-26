@@ -19,3 +19,5 @@ Scope: API PRs #18–30 checked by GitHub. No independent human approval claimed
 | [#30](https://github.com/mykholy/usayd-api/pull/30) USYD-T0034: staging release readiness and reversible migration protocol | Merged | `4dc2c69bcb4bcf8eebe2f849c9d77350cbe414f7` |
 
 PR #30 exact-head API CI 45883983912 SUCCESS (178 tests, 1689 assertions, 10 readiness fixtures, 13 contract fixtures, 16 routes); automated review 45883983873 SUCCESS; both CodeRabbit threads resolved. No actual AWS deployment claimed.
+
+PR #31: [USYD-T0036: secret scanning, locked dependency audit and SBOM](https://github.com/mykholy/usayd-api/pull/31) — open; head `3a7de5ae4a3f2d57816a3488d7f338f9885c3fb0`; API CI: in_progress; Supply chain security: failure; Independent PR Code Quality Review: success. No security scan or SBOM publication claimed until verified.
