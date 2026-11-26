@@ -1,0 +1,1044 @@
+{
+  "schema_version": 1,
+  "verified_date": "2026-11-26",
+  "scope": "candidate sprint labels S00-S02; Jira statuses read live; Flutter read only",
+  "jira_site": "https://mykholy.atlassian.net",
+  "jira_project": "USYD",
+  "jira_source_jql": "project = USYD AND labels in (planned-s00, planned-s01, planned-s02) AND issuetype != Epic",
+  "sprint_counts": {
+    "planned-s00": {
+      "all": {
+        "total": 32,
+        "Done": 11,
+        "In Progress": 19,
+        "In Review": 1,
+        "To Do": 1
+      },
+      "non_flutter": {
+        "total": 28,
+        "Done": 7,
+        "In Progress": 19,
+        "In Review": 1,
+        "To Do": 1
+      },
+      "flutter_read_only": {
+        "total": 4,
+        "Done": 4,
+        "In Progress": 0,
+        "In Review": 0,
+        "To Do": 0
+      }
+    },
+    "planned-s01": {
+      "all": {
+        "total": 10,
+        "Done": 5,
+        "In Progress": 0,
+        "In Review": 5,
+        "To Do": 0
+      },
+      "non_flutter": {
+        "total": 6,
+        "Done": 5,
+        "In Progress": 0,
+        "In Review": 1,
+        "To Do": 0
+      },
+      "flutter_read_only": {
+        "total": 4,
+        "Done": 0,
+        "In Progress": 0,
+        "In Review": 4,
+        "To Do": 0
+      }
+    },
+    "planned-s02": {
+      "all": {
+        "total": 10,
+        "Done": 1,
+        "In Progress": 1,
+        "In Review": 0,
+        "To Do": 8
+      },
+      "non_flutter": {
+        "total": 6,
+        "Done": 1,
+        "In Progress": 1,
+        "In Review": 0,
+        "To Do": 4
+      },
+      "flutter_read_only": {
+        "total": 4,
+        "Done": 0,
+        "In Progress": 0,
+        "In Review": 0,
+        "To Do": 4
+      }
+    }
+  },
+  "api_main": "8c88d7108eb212e764c3909c809a3b1a5d78cbd7",
+  "api_prs_18_to_30": [
+    {
+      "number": 18,
+      "title": "USYD-T0032: enforce signed storage path ownership",
+      "state": "closed",
+      "merged": true,
+      "head": "a0990f649f36cf15c71bd6968a64df8254497769",
+      "merge_commit": "a405d88ab368375fa5f19abab2c82bfd86e6866a",
+      "url": "https://github.com/mykholy/usayd-api/pull/18"
+    },
+    {
+      "number": 19,
+      "title": "USYD-T0028: atomic identity and independent token families",
+      "state": "closed",
+      "merged": true,
+      "head": "4868d80d08a273103cbf028e29759cf570cc7ef5",
+      "merge_commit": "09f47074391866cc6cbc0a6653af86ede574ac8a",
+      "url": "https://github.com/mykholy/usayd-api/pull/19"
+    },
+    {
+      "number": 20,
+      "title": "USYD-T0030: thin feature flag controller and fail-safe targeting",
+      "state": "closed",
+      "merged": true,
+      "head": "69e03b4c7cd7b850819e6412eafcdf04bb1c3521",
+      "merge_commit": "d19760803a20c0eb53796c741e2ce22072651e95",
+      "url": "https://github.com/mykholy/usayd-api/pull/20"
+    },
+    {
+      "number": 21,
+      "title": "USYD-T0026: secure queue metrics and truthful readiness",
+      "state": "closed",
+      "merged": true,
+      "head": "29843bb1ac64a8d60fcdf820e031f3bc96f53745",
+      "merge_commit": "97004f69715bb69236b0edb68ec046a9b2411966",
+      "url": "https://github.com/mykholy/usayd-api/pull/21"
+    },
+    {
+      "number": 22,
+      "title": "USYD-T0023: thin health controller and isolated readiness probes",
+      "state": "closed",
+      "merged": true,
+      "head": "0de7ff744e805583e7fb45fb3914dc97a6079cbf",
+      "merge_commit": "d53c2998151007cfc1752716306375b6ad53152c",
+      "url": "https://github.com/mykholy/usayd-api/pull/22"
+    },
+    {
+      "number": 23,
+      "title": "USYD-T0031: outbox relay consistency and atomic acknowledgment",
+      "state": "closed",
+      "merged": true,
+      "head": "75d0feed9cbdde39643aea9dfd3d06b27fbc3037",
+      "merge_commit": "6650a31e23c75e39dd53442c3f2f8d780bfb460d",
+      "url": "https://github.com/mykholy/usayd-api/pull/23"
+    },
+    {
+      "number": 24,
+      "title": "USYD-T0025: atomic database idempotency and replay-safe responses",
+      "state": "closed",
+      "merged": true,
+      "head": "c32785238700f7d2b6b553324357075de5f05e85",
+      "merge_commit": "9fe063506b51c5377a07f2fa94f2c8c50cb9bd8c",
+      "url": "https://github.com/mykholy/usayd-api/pull/24"
+    },
+    {
+      "number": 25,
+      "title": "USYD-T0022: enforce domain and application dependency boundaries",
+      "state": "closed",
+      "merged": true,
+      "head": "6722eb4a606dc480f8c807746994f4d9500bc491",
+      "merge_commit": "421634aceaaed846a7628bee5530fb4c42a0fcd9",
+      "url": "https://github.com/mykholy/usayd-api/pull/25"
+    },
+    {
+      "number": 26,
+      "title": "USYD-T0032: harden private storage download content and caching",
+      "state": "closed",
+      "merged": true,
+      "head": "1c9d5c2fdc64a2243a081e682c052b8149798fd8",
+      "merge_commit": "cc36798780f57777b2319b152719e030e77172dd",
+      "url": "https://github.com/mykholy/usayd-api/pull/26"
+    },
+    {
+      "number": 27,
+      "title": "USYD-T0033: fail-closed API CI and real Redis integration",
+      "state": "closed",
+      "merged": true,
+      "head": "e9a30205aed700863cafe78c4d7702b893db4bef",
+      "merge_commit": "4c36578dd25f2925623b81403d3f2f03f70d9d18",
+      "url": "https://github.com/mykholy/usayd-api/pull/27"
+    },
+    {
+      "number": 28,
+      "title": "USYD-T0032: fail-closed upload safety boundary and retention record",
+      "state": "closed",
+      "merged": true,
+      "head": "2cd73ce4d6630b954947e9af5be6cc7bb38b8d3e",
+      "merge_commit": "4b2dac06d8f04460c558818f1bc25ffd31edfffa",
+      "url": "https://github.com/mykholy/usayd-api/pull/28"
+    },
+    {
+      "number": 29,
+      "title": "USYD-T0032: resolve private S3 adapter and verify storage integration",
+      "state": "closed",
+      "merged": true,
+      "head": "756fbe708bbff583e87fcb66b0dd3fee761ac09b",
+      "merge_commit": "8c88d7108eb212e764c3909c809a3b1a5d78cbd7",
+      "url": "https://github.com/mykholy/usayd-api/pull/29"
+    },
+    {
+      "number": 30,
+      "title": "USYD-T0034: staging release readiness and reversible migration protocol",
+      "state": "open",
+      "merged": false,
+      "head": "59aca38d92c656ddf010408163aa68cd9eee876f",
+      "merge_commit": null,
+      "url": "https://github.com/mykholy/usayd-api/pull/30",
+      "checks": [
+        {
+          "name": "Independent PR Code Quality Review",
+          "status": "completed",
+          "conclusion": "success",
+          "id": 45871905475
+        },
+        {
+          "name": "API CI",
+          "status": "completed",
+          "conclusion": "success",
+          "id": 45871905443
+        }
+      ]
+    }
+  ],
+  "latest_verified_merged_api_ci": {
+    "pr": 29,
+    "run": 45869097094,
+    "tests": 178,
+    "assertions": 1689,
+    "openapi_operations": 16,
+    "contract_fixtures": 13,
+    "s3": "SeaweedFS isolated S3-compatible service",
+    "antivirus": "real ClamAV engine synthetic signature"
+  },
+  "issues": [
+    {
+      "jira": "USYD-34",
+      "stable_id": "USYD-T0001",
+      "summary": "[USYD-T0001] O-01: Legal entity and eligible markets",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "specialist-approval-required",
+        "usayd-spec-handoff",
+        "usyd-t0001"
+      ]
+    },
+    {
+      "jira": "USYD-35",
+      "stable_id": "USYD-T0002",
+      "summary": "[USYD-T0002] O-04: Minors: who may enrol and how guardians are verified",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "specialist-approval-required",
+        "usayd-spec-handoff",
+        "usyd-t0002"
+      ]
+    },
+    {
+      "jira": "USYD-36",
+      "stable_id": "USYD-T0003",
+      "summary": "[USYD-T0003] O-06: Licensed Quran text source and academic authority",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "specialist-approval-required",
+        "usayd-spec-handoff",
+        "usyd-t0003"
+      ]
+    },
+    {
+      "jira": "USYD-37",
+      "stable_id": "USYD-T0004",
+      "summary": "[USYD-T0004] D-42: Separate admin/teacher endpoints from public ones",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0004"
+      ]
+    },
+    {
+      "jira": "USYD-38",
+      "stable_id": "USYD-T0005",
+      "summary": "[USYD-T0005] O-03: In-app video vendor (P0)",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-delegated",
+        "owner-direction-recorded",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0005"
+      ]
+    },
+    {
+      "jira": "USYD-39",
+      "stable_id": "USYD-T0006",
+      "summary": "[USYD-T0006] O-05: Recording and AI processing purposes/consent",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "specialist-approval-required",
+        "usayd-spec-handoff",
+        "usyd-t0006"
+      ]
+    },
+    {
+      "jira": "USYD-40",
+      "stable_id": "USYD-T0007",
+      "summary": "[USYD-T0007] O-07: Competition prizes",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "specialist-approval-required",
+        "usayd-spec-handoff",
+        "usyd-t0007"
+      ]
+    },
+    {
+      "jira": "USYD-41",
+      "stable_id": "USYD-T0008",
+      "summary": "[USYD-T0008] O-08: Payroll contract forms and minimum-wage rules",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "specialist-approval-required",
+        "usayd-spec-handoff",
+        "usyd-t0008"
+      ]
+    },
+    {
+      "jira": "USYD-42",
+      "stable_id": "USYD-T0009",
+      "summary": "[USYD-T0009] D-24: Duplicate routes → canonical implementations",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0009"
+      ]
+    },
+    {
+      "jira": "USYD-43",
+      "stable_id": "USYD-T0010",
+      "summary": "[USYD-T0010] D-35: Default age ranges for app styles",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "specialist-approval-required",
+        "usayd-spec-handoff",
+        "usyd-t0010"
+      ]
+    },
+    {
+      "jira": "USYD-44",
+      "stable_id": "USYD-T0011",
+      "summary": "[USYD-T0011] D-39: Break-glass access policy",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "specialist-approval-required",
+        "usayd-spec-handoff",
+        "usyd-t0011"
+      ]
+    },
+    {
+      "jira": "USYD-45",
+      "stable_id": "USYD-T0012",
+      "summary": "[USYD-T0012] O-02: Pricing, renewal and refund policy",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-delegated",
+        "owner-direction-recorded",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0012"
+      ]
+    },
+    {
+      "jira": "USYD-46",
+      "stable_id": "USYD-T0013",
+      "summary": "[USYD-T0013] O-09: Support hours and staffing",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "specialist-approval-required",
+        "usayd-spec-handoff",
+        "usyd-t0013"
+      ]
+    },
+    {
+      "jira": "USYD-47",
+      "stable_id": "USYD-T0014",
+      "summary": "[USYD-T0014] D-44: Brand tagline alluding to the narration about Usayd; any hadith text/reference on public pages",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "specialist-approval-required",
+        "usayd-spec-handoff",
+        "usyd-t0014"
+      ]
+    },
+    {
+      "jira": "USYD-48",
+      "stable_id": "USYD-T0015",
+      "summary": "[USYD-T0015] O-10: Funding amount and tranche",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "specialist-approval-required",
+        "usayd-spec-handoff",
+        "usyd-t0015"
+      ]
+    },
+    {
+      "jira": "USYD-49",
+      "stable_id": "USYD-T0016",
+      "summary": "[USYD-T0016] D-16: Splash screen UX-MOBILE-000 (added)",
+      "status": "Done",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "docs",
+        "owner-confirmed",
+        "owner-direction-recorded",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0016"
+      ]
+    },
+    {
+      "jira": "USYD-50",
+      "stable_id": "USYD-T0017",
+      "summary": "[USYD-T0017] D-27: KPI definitions on executive dashboard",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0017"
+      ]
+    },
+    {
+      "jira": "USYD-51",
+      "stable_id": "USYD-T0018",
+      "summary": "[USYD-T0018] D-36: Kids badges catalogue",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "specialist-approval-required",
+        "usayd-spec-handoff",
+        "usyd-t0018"
+      ]
+    },
+    {
+      "jira": "USYD-52",
+      "stable_id": "USYD-T0019",
+      "summary": "[USYD-T0019] D-43: Badges via existing achievements op",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "acceptance-evidence-pending",
+        "docs",
+        "owner-direction-recorded",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0019"
+      ]
+    },
+    {
+      "jira": "USYD-53",
+      "stable_id": "USYD-T0020",
+      "summary": "[USYD-T0020] D-37: Optional kids mascot with a face",
+      "status": "Done",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "docs",
+        "owner-confirmed",
+        "owner-direction-recorded",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0020"
+      ]
+    },
+    {
+      "jira": "USYD-54",
+      "stable_id": "USYD-T0021",
+      "summary": "[USYD-T0021] 3-repository creation, permissions & ownership",
+      "status": "In Progress",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "ops",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0021"
+      ]
+    },
+    {
+      "jira": "USYD-55",
+      "stable_id": "USYD-T0022",
+      "summary": "[USYD-T0022] Architecture ADR: modular monolith, repo separation",
+      "status": "Done",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0022"
+      ]
+    },
+    {
+      "jira": "USYD-56",
+      "stable_id": "USYD-T0023",
+      "summary": "[USYD-T0023] Laravel current stable & PHP bootstrap",
+      "status": "Done",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0023"
+      ]
+    },
+    {
+      "jira": "USYD-57",
+      "stable_id": "USYD-T0024",
+      "summary": "[USYD-T0024] MySQL 8.4 LTS schema foundations",
+      "status": "Done",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0024"
+      ]
+    },
+    {
+      "jira": "USYD-58",
+      "stable_id": "USYD-T0025",
+      "summary": "[USYD-T0025] MySQL concurrency & idempotency harness",
+      "status": "Done",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0025"
+      ]
+    },
+    {
+      "jira": "USYD-59",
+      "stable_id": "USYD-T0026",
+      "summary": "[USYD-T0026] Redis queues, retry, failed-job lifecycle",
+      "status": "Done",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0026"
+      ]
+    },
+    {
+      "jira": "USYD-60",
+      "stable_id": "USYD-T0075",
+      "summary": "[USYD-T0075] Flutter project bootstrap and flavor config",
+      "status": "Done",
+      "sprint": "planned-s00",
+      "scope": "flutter-read-only",
+      "labels": [
+        "flutter",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0075"
+      ]
+    },
+    {
+      "jira": "USYD-61",
+      "stable_id": "USYD-T0076",
+      "summary": "[USYD-T0076] Flutter design tokens, fonts/reference asset linking",
+      "status": "Done",
+      "sprint": "planned-s00",
+      "scope": "flutter-read-only",
+      "labels": [
+        "flutter",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0076"
+      ]
+    },
+    {
+      "jira": "USYD-62",
+      "stable_id": "USYD-T0077",
+      "summary": "[USYD-T0077] RTL/LTR localization and light/dark themes",
+      "status": "Done",
+      "sprint": "planned-s00",
+      "scope": "flutter-read-only",
+      "labels": [
+        "flutter",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0077"
+      ]
+    },
+    {
+      "jira": "USYD-63",
+      "stable_id": "USYD-T0078",
+      "summary": "[USYD-T0078] Responsive mobile shell / navigation",
+      "status": "Done",
+      "sprint": "planned-s00",
+      "scope": "flutter-read-only",
+      "labels": [
+        "flutter",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0078"
+      ]
+    },
+    {
+      "jira": "USYD-64",
+      "stable_id": "USYD-T0702",
+      "summary": "[USYD-T0702] Release coordination across API-Web-Flutter",
+      "status": "In Review",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "docs",
+        "planned-s00",
+        "release-review-required",
+        "usayd-spec-handoff",
+        "usyd-t0702"
+      ]
+    },
+    {
+      "jira": "USYD-65",
+      "stable_id": "USYD-T0707",
+      "summary": "[USYD-T0707] Approve owner content slots and authentic media",
+      "status": "To Do",
+      "sprint": "planned-s00",
+      "scope": "non-flutter",
+      "labels": [
+        "docs",
+        "owner-approval-required",
+        "planned-s00",
+        "usayd-spec-handoff",
+        "usyd-t0707"
+      ]
+    },
+    {
+      "jira": "USYD-66",
+      "stable_id": "USYD-T0027",
+      "summary": "[USYD-T0027] API RFC7807 error taxonomy & localization",
+      "status": "Done",
+      "sprint": "planned-s01",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "planned-s01",
+        "usayd-spec-handoff",
+        "usyd-t0027"
+      ]
+    },
+    {
+      "jira": "USYD-67",
+      "stable_id": "USYD-T0028",
+      "summary": "[USYD-T0028] Auth/API security scaffolding",
+      "status": "Done",
+      "sprint": "planned-s01",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "planned-s01",
+        "usayd-spec-handoff",
+        "usyd-t0028"
+      ]
+    },
+    {
+      "jira": "USYD-68",
+      "stable_id": "USYD-T0029",
+      "summary": "[USYD-T0029] Authorization gates and audit trail",
+      "status": "Done",
+      "sprint": "planned-s01",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "planned-s01",
+        "usayd-spec-handoff",
+        "usyd-t0029"
+      ]
+    },
+    {
+      "jira": "USYD-69",
+      "stable_id": "USYD-T0030",
+      "summary": "[USYD-T0030] Feature flags & kill switches",
+      "status": "Done",
+      "sprint": "planned-s01",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "planned-s01",
+        "usayd-spec-handoff",
+        "usyd-t0030"
+      ]
+    },
+    {
+      "jira": "USYD-70",
+      "stable_id": "USYD-T0031",
+      "summary": "[USYD-T0031] Transactional outbox for notifications",
+      "status": "Done",
+      "sprint": "planned-s01",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "planned-s01",
+        "usayd-spec-handoff",
+        "usyd-t0031"
+      ]
+    },
+    {
+      "jira": "USYD-71",
+      "stable_id": "USYD-T0032",
+      "summary": "[USYD-T0032] Storage privacy and signed links",
+      "status": "In Review",
+      "sprint": "planned-s01",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "merged-verified",
+        "owner-direction-recorded",
+        "planned-s01",
+        "production-provisioning-deferred",
+        "retention-approval-pending",
+        "s3-dependency-resolved",
+        "specialist-approval-required",
+        "usayd-spec-handoff",
+        "usyd-t0032"
+      ]
+    },
+    {
+      "jira": "USYD-72",
+      "stable_id": "USYD-T0079",
+      "summary": "[USYD-T0079] Flutter typed API client, token storage and refresh contracts",
+      "status": "In Review",
+      "sprint": "planned-s01",
+      "scope": "flutter-read-only",
+      "labels": [
+        "flutter",
+        "planned-s01",
+        "usayd-spec-handoff",
+        "usyd-t0079"
+      ]
+    },
+    {
+      "jira": "USYD-73",
+      "stable_id": "USYD-T0080",
+      "summary": "[USYD-T0080] Flutter routing and account permissions",
+      "status": "In Review",
+      "sprint": "planned-s01",
+      "scope": "flutter-read-only",
+      "labels": [
+        "flutter",
+        "planned-s01",
+        "usayd-spec-handoff",
+        "usyd-t0080"
+      ]
+    },
+    {
+      "jira": "USYD-74",
+      "stable_id": "USYD-T0081",
+      "summary": "[USYD-T0081] Flutter offline queue and encryption scaffolding",
+      "status": "In Review",
+      "sprint": "planned-s01",
+      "scope": "flutter-read-only",
+      "labels": [
+        "flutter",
+        "planned-s01",
+        "usayd-spec-handoff",
+        "usyd-t0081"
+      ]
+    },
+    {
+      "jira": "USYD-75",
+      "stable_id": "USYD-T0082",
+      "summary": "[USYD-T0082] Flutter testing infrastructure",
+      "status": "In Review",
+      "sprint": "planned-s01",
+      "scope": "flutter-read-only",
+      "labels": [
+        "flutter",
+        "planned-s01",
+        "usayd-spec-handoff",
+        "usyd-t0082"
+      ]
+    },
+    {
+      "jira": "USYD-76",
+      "stable_id": "USYD-T0033",
+      "summary": "[USYD-T0033] CI: API MySQL + Redis + lint + tests + OpenAPI",
+      "status": "Done",
+      "sprint": "planned-s02",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "merged-verified",
+        "planned-s02",
+        "usayd-spec-handoff",
+        "usyd-t0033"
+      ]
+    },
+    {
+      "jira": "USYD-77",
+      "stable_id": "USYD-T0034",
+      "summary": "[USYD-T0034] Staging deploy & reversible migration protocol",
+      "status": "In Progress",
+      "sprint": "planned-s02",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "owner-direction-recorded",
+        "planned-s02",
+        "production-provisioning-deferred",
+        "region-candidate-frankfurt",
+        "usayd-spec-handoff",
+        "usyd-t0034"
+      ]
+    },
+    {
+      "jira": "USYD-78",
+      "stable_id": "USYD-T0035",
+      "summary": "[USYD-T0035] Documentation, operational bootstrap & ADRs",
+      "status": "To Do",
+      "sprint": "planned-s02",
+      "scope": "non-flutter",
+      "labels": [
+        "docs",
+        "planned-s02",
+        "usayd-spec-handoff",
+        "usyd-t0035"
+      ]
+    },
+    {
+      "jira": "USYD-79",
+      "stable_id": "USYD-T0036",
+      "summary": "[USYD-T0036] Secret scanning, dependency pinning and SBOM",
+      "status": "To Do",
+      "sprint": "planned-s02",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "planned-s02",
+        "usayd-spec-handoff",
+        "usyd-t0036"
+      ]
+    },
+    {
+      "jira": "USYD-80",
+      "stable_id": "USYD-T0037",
+      "summary": "[USYD-T0037] Cross-repo compatibility and published contracts",
+      "status": "To Do",
+      "sprint": "planned-s02",
+      "scope": "non-flutter",
+      "labels": [
+        "api",
+        "planned-s02",
+        "usayd-spec-handoff",
+        "usyd-t0037"
+      ]
+    },
+    {
+      "jira": "USYD-81",
+      "stable_id": "USYD-T0063",
+      "summary": "[USYD-T0063] Next.js latest STABLE TypeScript/App Router bootstrap",
+      "status": "To Do",
+      "sprint": "planned-s02",
+      "scope": "non-flutter",
+      "labels": [
+        "dependency-blocked",
+        "planned-s02",
+        "usayd-spec-handoff",
+        "usyd-t0063",
+        "web"
+      ]
+    },
+    {
+      "jira": "USYD-82",
+      "stable_id": "USYD-T0083",
+      "summary": "[USYD-T0083] Flutter performance, crash reporting and logs",
+      "status": "To Do",
+      "sprint": "planned-s02",
+      "scope": "flutter-read-only",
+      "labels": [
+        "flutter",
+        "planned-s02",
+        "usayd-spec-handoff",
+        "usyd-t0083"
+      ]
+    },
+    {
+      "jira": "USYD-83",
+      "stable_id": "USYD-T0084",
+      "summary": "[USYD-T0084] Flutter app signing/release checklist",
+      "status": "To Do",
+      "sprint": "planned-s02",
+      "scope": "flutter-read-only",
+      "labels": [
+        "flutter",
+        "planned-s02",
+        "usayd-spec-handoff",
+        "usyd-t0084"
+      ]
+    },
+    {
+      "jira": "USYD-643",
+      "stable_id": "USYD-T0603",
+      "summary": "[USYD-T0603] UX-GLOB-017: Flutter Region & Language — Flutter UI",
+      "status": "To Do",
+      "sprint": "planned-s02",
+      "scope": "flutter-read-only",
+      "labels": [
+        "flutter",
+        "planned-s02",
+        "usayd-spec-handoff",
+        "usyd-t0603"
+      ]
+    },
+    {
+      "jira": "USYD-669",
+      "stable_id": "USYD-T0629",
+      "summary": "[USYD-T0629] UX-MOBILE-000: Flutter Splash (added) — Flutter UI",
+      "status": "To Do",
+      "sprint": "planned-s02",
+      "scope": "flutter-read-only",
+      "labels": [
+        "flutter",
+        "planned-s02",
+        "usayd-spec-handoff",
+        "usyd-t0629"
+      ]
+    }
+  ],
+  "blockers": [
+    "USYD-54 live branch protection not verified",
+    "USYD-71 legal/DPO retention approval and real AWS deployment gates",
+    "USYD-64 coordination review",
+    "USYD-65 owner content/licensing approval",
+    "USYD-77 real deployment deferred by owner"
+  ],
+  "infrastructure": {
+    "provisioning": "deferred by owner",
+    "candidate_region": "eu-central-1",
+    "status": "provisional; verify legal residency, health, latency and workload pricing before purchase"
+  },
+  "source_baseline": {
+    "source_manifest_git_blob": "9d0f943a993954dcbffe7e0dee919929ebb507bf",
+    "screen_index_git_blob": "523d2530372169074366ff7eba7058f3c4eb91e2",
+    "matching_local_archive_sha256_files": 1183,
+    "screen_count": 169,
+    "canvas_count": 169,
+    "ar_html_count": 169,
+    "en_html_count": 169,
+    "per_screen_spec_count": 169,
+    "journey_boards": 9,
+    "scope_note": "Local archive verified against identical manifest blob and index; remote individual blobs not exhaustively fetched; no new visual QA."
+  }
+}
