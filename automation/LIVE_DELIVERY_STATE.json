@@ -56,16 +56,16 @@
       "all": {
         "total": 10,
         "Done": 1,
-        "In Progress": 0,
+        "In Progress": 1,
         "In Review": 3,
-        "To Do": 6
+        "To Do": 5
       },
       "non_flutter": {
         "total": 6,
         "Done": 1,
-        "In Progress": 0,
+        "In Progress": 1,
         "In Review": 3,
-        "To Do": 2
+        "To Do": 1
       },
       "flutter_read_only": {
         "total": 4,
@@ -913,7 +913,7 @@
       "jira": "USYD-78",
       "stable_id": "USYD-T0035",
       "summary": "[USYD-T0035] Documentation, operational bootstrap & ADRs",
-      "status": "To Do",
+      "status": "In Progress",
       "sprint": "planned-s02",
       "scope": "non-flutter",
       "labels": [
@@ -1132,6 +1132,36 @@
         "tested_commit": "568d23ba429eaf9eab0ff626598447c6d79269b1",
         "sha256": "3e5c083e95d30c88274f8bb62ad6bff460fde4a468e8608d01b421228db648e4"
       }
+    },
+    {
+      "number": 39,
+      "title": "USYD-T0035: operational bootstrap and verified API runbooks",
+      "state": "open",
+      "merged": false,
+      "head": "b14d8ed87666075f595b9db4d09d83f85e5f94b8",
+      "merge_commit": null,
+      "url": "https://github.com/mykholy/usayd-api/pull/39",
+      "checks": [
+        {
+          "id": 45902995433,
+          "name": "API CI",
+          "status": "in_progress",
+          "conclusion": null
+        },
+        {
+          "id": 45902995429,
+          "name": "Supply chain security",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 45902995533,
+          "name": "Independent PR Code Quality Review",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "API contribution to USYD-T0035; cross-team docs and named approvers still pending"
     }
   ],
   "dependabot": {
