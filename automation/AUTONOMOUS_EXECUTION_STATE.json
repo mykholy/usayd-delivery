@@ -10,7 +10,7 @@
   },
   "repositories": {
     "usayd-api": {
-      "main_commit": "a7f430be28fe9edad0f5b7eb8c51787ad0b7be8f",
+      "main_commit": "607751653902f53d4f751047589a4bee73e0e2e6",
       "latest_prs": [
         {
           "number": 18,
@@ -231,18 +231,12 @@
         {
           "number": 39,
           "title": "USYD-T0035: operational bootstrap and verified API runbooks",
-          "state": "open",
-          "merged": false,
+          "state": "closed",
+          "merged": true,
           "head": "b14d8ed87666075f595b9db4d09d83f85e5f94b8",
-          "merge_commit": null,
+          "merge_commit": "607751653902f53d4f751047589a4bee73e0e2e6",
           "url": "https://github.com/mykholy/usayd-api/pull/39",
           "checks": [
-            {
-              "id": 45902995433,
-              "name": "API CI",
-              "status": "in_progress",
-              "conclusion": null
-            },
             {
               "id": 45902995429,
               "name": "Supply chain security",
@@ -254,9 +248,23 @@
               "name": "Independent PR Code Quality Review",
               "status": "completed",
               "conclusion": "success"
+            },
+            {
+              "id": 45902995433,
+              "name": "API CI",
+              "status": "completed",
+              "conclusion": "success"
             }
           ],
-          "scope": "API contribution to USYD-T0035; cross-team docs and named approvers still pending"
+          "operational_verification": {
+            "phpunit": 178,
+            "assertions": 1689,
+            "operational_fixtures": 4,
+            "platform_requirements": "passed",
+            "artisan_inventory": "passed",
+            "horizon": "not installed",
+            "scope": "API portion only; cross-team docs and named specialist acceptance pending"
+          }
         }
       ]
     },
