@@ -23,7 +23,7 @@ The objective of this specification is to govern cross-repository compatibility 
 ## 2. API Contract Governance & Compatibility Windows
 
 ### 2.1 Contract Authority and Single Source of Truth
-- The authoritative API specification lives in `delivery/` (`06_api/` OpenAPI 3.1 definitions).
+- The planning specification is `source_original/usayd-academy-codex-package/07_api/openapi.yaml`; proposed operations are separate. The implemented consumer contract is [usayd-api/docs/api/implemented.openapi.json](https://github.com/mykholy/usayd-api/blob/main/docs/api/implemented.openapi.json), versioned and published with SHA256 under [producer policy](https://github.com/mykholy/usayd-api/blob/main/docs/api/CONTRACT_PUBLICATION.md).
 - `usayd-api` is the **producer** of API contracts.
 - `usayd-web` and `usayd-flutter` are **consumers** of API contracts.
 - **Contract Freezing Rule:** No breaking change may be introduced to an existing endpoint without a formal API deprecation notice and a concurrent versioning strategy (`/api/v1` to `/api/v2`).
@@ -42,7 +42,7 @@ The objective of this specification is to govern cross-repository compatibility 
   - `X-App-Build`: Numeric build number (e.g., `100`).
   - `X-Platform`: `ios` or `android`.
   - `X-Trace-ID`: Client trace UUID.
-- The backend checks `min_supported_version` via configuration/feature flags:
+- Future approved contract: the backend will check `min_supported_version` via configuration/feature flags. This is a planned acceptance requirement, not evidence of a currently implemented cutoff. Store links must be verified before publication:
   - If `X-App-Version < min_supported_version`: Returns RFC 7807 `426 Upgrade Required` with:
     ```json
     {
@@ -52,9 +52,7 @@ The objective of this specification is to govern cross-repository compatibility 
       "code": "UPGRADE_REQUIRED",
       "detail": "يرجى تحديث تطبيق أُسَيْد للاستمرار في الاستخدام.",
       "traceId": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
-      "invalidParams": {
-        "storeUrl": "https://apps.apple.com/app/usayd/id123456789"
-      }
+      "invalidParams": {}
     }
     ```
 
@@ -65,7 +63,7 @@ The objective of this specification is to govern cross-repository compatibility 
 All schema changes in `usayd-api` must be strictly backward-compatible with running versions of the application:
 1. **Phase 1 (Expand):**
    - Add new nullable columns or tables.
-   - Run migrations without downtime.
+   - Rehearse and measure migration impact; zero downtime is not assumed.
    - Deploy backend code that writes to both old and new columns, reading from old if new is null.
 2. **Phase 2 (Backfill):**
    - Run idempotent queued jobs to backfill historical data from old columns to new columns.
@@ -73,7 +71,7 @@ All schema changes in `usayd-api` must be strictly backward-compatible with runn
    - Update application code to read exclusively from new columns.
 4. **Phase 4 (Contract):**
    - After all consumers and mobile clients have transitioned beyond the compatibility window, deploy a cleanup migration to drop old columns or tables.
-- **Rollback Guarantee:** Every migration file must have a verified, symmetrical `down()` method that restores schema state without data loss.
+- **Rollback Guarantee:** Test reversible migrations on isolated data. Never assume down() restores deleted data. Prefer application rollback against compatible expanded schema; destructive migration or restore needs explicit approval and proven backup/restore.
 
 ---
 
@@ -94,7 +92,7 @@ All schema changes in `usayd-api` must be strictly backward-compatible with runn
 ```
 
 ### 4.1 Deployment Sequence
-1. **Step 1 — Backend Schema Migration:** Run `php artisan migrate --force` in `usayd-api`.
+1. **Step 1 — Backend Schema Migration:** Follow the [approved-for-preparation release runbook](https://github.com/mykholy/usayd-api/blob/main/docs/operations/RELEASE_PROTOCOL.md), including backup/restore proof and isolated migration lock; real deployment deferred.
 2. **Step 2 — Backend Application Rollout:** Rolling update of `usayd-api` worker and web pods.
 3. **Step 3 — Web Frontend Rollout:** Deploy Next.js SSR/Static build to production edge.
 4. **Step 4 — Mobile Submission:** Build signed AAB (Android) and IPA (iOS), upload to TestFlight / Google Play Internal Testing, execute smoke test suite, and promote to phased release (1%, 5%, 20%, 50%, 100%).
@@ -107,10 +105,10 @@ All schema changes in `usayd-api` must be strictly backward-compatible with runn
    - Because of the Expand-Contract rule, the previous container image can be redeployed immediately without rolling back database migrations.
    - If an emergency rollback is required, route traffic to the previous stable container revision.
 2. **Web Rollback:**
-   - Instant rollback of Vercel/Node deployment to the previous immutable deployment hash.
+   - Restore the previous verified immutable web deployment through the future approved hosting platform; actual provider and rollback evidence pending.
 3. **Mobile Rollback / Hotfix:**
    - Native apps cannot be rolled back once downloaded by end-users.
-   - If a critical bug occurs on mobile, trigger the **Kill Switch** or **Maintenance Mode** for the affected feature via backend feature flags (`POST /api/v1/admin/feature-flags`).
+   - If a critical bug occurs on mobile, trigger the **Kill Switch** or **Maintenance Mode** for the affected feature via backend feature flags (only through approved authorized feature-flag operations; implemented update route is `PUT /api/v1/admin/feature-flags/{key}`).
    - Ship an expedited hotfix build to app store review pipelines.
 
 ---
@@ -123,8 +121,12 @@ Prior to promoting any coordinated release, the following smoke test matrix must
 |---|---|---|---|
 | `SMK-01` | Health & Readiness | `GET /api/v1/health` | 200 OK, DB connected, Redis connected |
 | `SMK-02` | Correlation Tracing | Any endpoint with `X-Request-ID` | Response headers mirror `X-Request-ID` and `X-Trace-ID` |
-| `SMK-03` | Localized Error Taxonomy | `GET /api/v1/test/errors/not-found` | RFC 7807 404 with Arabic message and traceId |
+| `SMK-03` | Localized Error Taxonomy | Test-only harness in isolated test environment; never use test route in production | RFC 7807 404 with Arabic message and traceId |
 | `SMK-04` | Auth Token Refresh | `POST /api/v1/auth/refresh` | Single-use rotation, previous refresh token invalidated |
 | `SMK-05` | Mobile Age-Adaptive Shell | Launch Flutter dev/staging flavor | Correct tab layout based on mode (Kids: 4, Pro: 5, Simple: 3) |
-| `SMK-06` | RTL Layout & Typography | Arabic locale render | Layout mirrored, Cairo/Amiri typography, Quranic text unaltered |
-| `SMK-07` | Web SSR Hydration | Next.js landing & dashboard | Zero hydration mismatch errors, WCAG 2.1 AA targets intact |
+| `SMK-06` | RTL Layout & Typography | Arabic locale render | Layout mirrored, IBM Plex Sans Arabic / approved design tokens v0.4, Quranic text unaltered |
+| `SMK-07` | Web SSR Hydration | Next.js landing & dashboard | Zero hydration mismatch errors, WCAG 2.2 AA targets intact |
+
+## 7. Current verification boundary — 2026-11-27
+
+API PR #38 published a candidate implemented contract (16 operations), with version and SHA256 verified in CI. Consumer N/N-1/N-2, actual mobile releases, live smoke tests and deployment rollback are not verified. No specialist approvers appointed; see [cross-team runbook](CROSS_TEAM_OPERATIONS_RUNBOOK.md). AWS provisioning deferred. Keep USYD-64 In Review pending actual coordination evidence; no Flutter changes.
