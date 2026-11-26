@@ -31,3 +31,7 @@
 - [فهرس تصميم كل 169 شاشة](management/SCREEN_DESIGN_CATALOG.md) و[دليل التحويل من التصميم للكود](management/DESIGN_IMPLEMENTATION_GUIDE.md).
 - [قرارات المالك المحدثة](management/OWNER_DECISION_REGISTER_2026-11-26.md)، [الخطوة التالية](automation/NEXT_ACTIONS.md).
 - المصدر الأصلي immutable. قبل كل تاسك اقرأ الـspec وCanvas وAR/EN HTML والعقود والـFR والصلاحيات. بعد كل PR أو تعديل Jira حدث السجل الحي بأدلة فعلية. Flutter للقراءة فقط في مسار full-stack.
+
+## تحديث 27 نوفمبر 2026
+- [دليل التشغيل بين الفرق](architecture/CROSS_TEAM_OPERATIONS_RUNBOOK.md) و[دليل أدلة حماية المستودعات](architecture/REPOSITORY_GOVERNANCE_EVIDENCE.md).
+- كل الأدوار التخصصية غير معينة بحسب تأكيد المالك؛ لا يعتبر ذلك اعتمادًا. لا تبدأ USYD-81 قبل إغلاق USYD-54. لا تطلب كلمات مرور أو مفاتيح API في المحادثة.
