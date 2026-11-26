@@ -21,3 +21,7 @@ Scope: API PRs #18–30 checked by GitHub. No independent human approval claimed
 PR #30 exact-head API CI 45883983912 SUCCESS (178 tests, 1689 assertions, 10 readiness fixtures, 13 contract fixtures, 16 routes); automated review 45883983873 SUCCESS; both CodeRabbit threads resolved. No actual AWS deployment claimed.
 
 PR #31: [Supply-chain security](https://github.com/mykholy/usayd-api/pull/31) — merged `c4e2a5b45b318dd22a1597a6e5f376e8d9dd1232`; all three exact-head checks passed; 82 commits scanned, zero unignored findings, 117-component SBOM published. USYD-79 In Review pending activation/enforcement verification.
+
+PR #38: [Versioned OpenAPI publication](https://github.com/mykholy/usayd-api/pull/38) — merged `a7f430be28fe9edad0f5b7eb8c51787ad0b7be8f`; all three exact-head checks passed. 178 PHPUnit/1689 assertions, 11 compatibility fixtures, 16 operations, SHA256 verified, candidate artifact 15152959071. USYD-80 In Review pending consumer validation and approved release artifact.
+
+Dependabot activation verified: #32–37 open update proposals; all three checks green at observed heads. No major upgrades merged.
