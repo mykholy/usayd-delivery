@@ -472,10 +472,15 @@
     "USYD-T0037": {
       "jira_key": "USYD-80",
       "summary": "[USYD-T0037] Cross-repo compatibility and published contracts",
-      "status": "To Do",
+      "status": "In Review",
       "status_source": "live Jira",
       "candidate_sprint": "planned-s02",
-      "scope": "non-flutter"
+      "scope": "non-flutter",
+      "latest_verified_api_pr": 38,
+      "latest_verified_api_pr_url": "https://github.com/mykholy/usayd-api/pull/38",
+      "latest_verified_api_pr_state": "merged",
+      "latest_verified_api_head": "7654a0a3cbec7f71e5d92c66da7a920bc43f2bd8",
+      "latest_verified_merge_commit": "a7f430be28fe9edad0f5b7eb8c51787ad0b7be8f"
     },
     "USYD-T0063": {
       "jira_key": "USYD-81",
