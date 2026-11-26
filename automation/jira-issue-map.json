@@ -438,15 +438,15 @@
     "USYD-T0034": {
       "jira_key": "USYD-77",
       "summary": "[USYD-T0034] Staging deploy & reversible migration protocol",
-      "status": "In Progress",
+      "status": "In Review",
       "status_source": "live Jira",
       "candidate_sprint": "planned-s02",
       "scope": "non-flutter",
       "latest_verified_api_pr": 30,
       "latest_verified_api_pr_url": "https://github.com/mykholy/usayd-api/pull/30",
-      "latest_verified_api_pr_state": "open",
-      "latest_verified_api_head": "59aca38d92c656ddf010408163aa68cd9eee876f",
-      "latest_verified_merge_commit": null
+      "latest_verified_api_pr_state": "merged",
+      "latest_verified_api_head": "4651885fda7644f7fde3691fd426043da9760c84",
+      "latest_verified_merge_commit": "4dc2c69bcb4bcf8eebe2f849c9d77350cbe414f7"
     },
     "USYD-T0035": {
       "jira_key": "USYD-78",
