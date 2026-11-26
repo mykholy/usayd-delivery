@@ -20,4 +20,4 @@ Scope: API PRs #18–30 checked by GitHub. No independent human approval claimed
 
 PR #30 exact-head API CI 45883983912 SUCCESS (178 tests, 1689 assertions, 10 readiness fixtures, 13 contract fixtures, 16 routes); automated review 45883983873 SUCCESS; both CodeRabbit threads resolved. No actual AWS deployment claimed.
 
-PR #31: [USYD-T0036: secret scanning, locked dependency audit and SBOM](https://github.com/mykholy/usayd-api/pull/31) — open; head `3a7de5ae4a3f2d57816a3488d7f338f9885c3fb0`; API CI: in_progress; Supply chain security: failure; Independent PR Code Quality Review: success. No security scan or SBOM publication claimed until verified.
+PR #31: [USYD-T0036: secret scanning, locked dependency audit and SBOM](https://github.com/mykholy/usayd-api/pull/31) — open; head `dcdb3f374be21ca80651ec7ea7805bd174b02cb5`; Supply chain security: failure; Independent PR Code Quality Review: success; API CI: in_progress. Five reported Symfony advisories resolved in Composer-generated lock (4 packages v8.1.12); locked audit passed. Final scanner and SBOM evidence must be checked.
