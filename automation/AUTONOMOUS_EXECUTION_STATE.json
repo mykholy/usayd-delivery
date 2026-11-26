@@ -1,58 +1,238 @@
 {
-  "updated_at": "2026-11-24T05:22:00Z",
-  "operator": "Principal Full Stack Engineer & Autonomous Delivery Operator",
-  "active_workspace": "C:\\laragon\\www\\Usayd",
+  "updated_date": "2026-11-26",
+  "authoritative_snapshot": "automation/LIVE_DELIVERY_STATE.json",
+  "scope": "candidate sprint labels S00-S02; Jira statuses read live; Flutter read only",
   "jira": {
     "site": "https://mykholy.atlassian.net",
     "project_key": "USYD",
-    "total_mapped_items": 42,
-    "s00_items": 32,
-    "s01_items": 10,
-    "auth_status": "CREDENTIALS_REQUIRED_FOR_LIVE_REST_API",
-    "sync_queue_count": 18
+    "auth_status": "LIVE_VERIFIED_VIA_CONNECTOR",
+    "sync_queue": "disabled; historical entries archived; do not replay"
   },
   "repositories": {
     "usayd-api": {
-      "remote": "https://github.com/mykholy/usayd-api",
-      "main_commit": "6565e69",
-      "merged_prs": [1],
-      "open_prs": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      "last_implemented_task": "USYD-T0030 (USYD-69)",
-      "next_task": "USYD-T0031 (USYD-70)"
-    },
-    "usayd-flutter": {
-      "remote": "https://github.com/mykholy/usayd-flutter",
-      "main_branch": "main",
-      "assignee": "ahmedmmdouh9000@gmail.com",
-      "merged_prs": [],
-      "open_prs": [1, 2, 3, 4, 5, 6],
-      "last_implemented_task": "USYD-T0080 (USYD-73)",
-      "next_task": "USYD-T0081 (USYD-74)"
+      "main_commit": "8c88d7108eb212e764c3909c809a3b1a5d78cbd7",
+      "latest_prs": [
+        {
+          "number": 18,
+          "title": "USYD-T0032: enforce signed storage path ownership",
+          "state": "closed",
+          "merged": true,
+          "head": "a0990f649f36cf15c71bd6968a64df8254497769",
+          "merge_commit": "a405d88ab368375fa5f19abab2c82bfd86e6866a",
+          "url": "https://github.com/mykholy/usayd-api/pull/18"
+        },
+        {
+          "number": 19,
+          "title": "USYD-T0028: atomic identity and independent token families",
+          "state": "closed",
+          "merged": true,
+          "head": "4868d80d08a273103cbf028e29759cf570cc7ef5",
+          "merge_commit": "09f47074391866cc6cbc0a6653af86ede574ac8a",
+          "url": "https://github.com/mykholy/usayd-api/pull/19"
+        },
+        {
+          "number": 20,
+          "title": "USYD-T0030: thin feature flag controller and fail-safe targeting",
+          "state": "closed",
+          "merged": true,
+          "head": "69e03b4c7cd7b850819e6412eafcdf04bb1c3521",
+          "merge_commit": "d19760803a20c0eb53796c741e2ce22072651e95",
+          "url": "https://github.com/mykholy/usayd-api/pull/20"
+        },
+        {
+          "number": 21,
+          "title": "USYD-T0026: secure queue metrics and truthful readiness",
+          "state": "closed",
+          "merged": true,
+          "head": "29843bb1ac64a8d60fcdf820e031f3bc96f53745",
+          "merge_commit": "97004f69715bb69236b0edb68ec046a9b2411966",
+          "url": "https://github.com/mykholy/usayd-api/pull/21"
+        },
+        {
+          "number": 22,
+          "title": "USYD-T0023: thin health controller and isolated readiness probes",
+          "state": "closed",
+          "merged": true,
+          "head": "0de7ff744e805583e7fb45fb3914dc97a6079cbf",
+          "merge_commit": "d53c2998151007cfc1752716306375b6ad53152c",
+          "url": "https://github.com/mykholy/usayd-api/pull/22"
+        },
+        {
+          "number": 23,
+          "title": "USYD-T0031: outbox relay consistency and atomic acknowledgment",
+          "state": "closed",
+          "merged": true,
+          "head": "75d0feed9cbdde39643aea9dfd3d06b27fbc3037",
+          "merge_commit": "6650a31e23c75e39dd53442c3f2f8d780bfb460d",
+          "url": "https://github.com/mykholy/usayd-api/pull/23"
+        },
+        {
+          "number": 24,
+          "title": "USYD-T0025: atomic database idempotency and replay-safe responses",
+          "state": "closed",
+          "merged": true,
+          "head": "c32785238700f7d2b6b553324357075de5f05e85",
+          "merge_commit": "9fe063506b51c5377a07f2fa94f2c8c50cb9bd8c",
+          "url": "https://github.com/mykholy/usayd-api/pull/24"
+        },
+        {
+          "number": 25,
+          "title": "USYD-T0022: enforce domain and application dependency boundaries",
+          "state": "closed",
+          "merged": true,
+          "head": "6722eb4a606dc480f8c807746994f4d9500bc491",
+          "merge_commit": "421634aceaaed846a7628bee5530fb4c42a0fcd9",
+          "url": "https://github.com/mykholy/usayd-api/pull/25"
+        },
+        {
+          "number": 26,
+          "title": "USYD-T0032: harden private storage download content and caching",
+          "state": "closed",
+          "merged": true,
+          "head": "1c9d5c2fdc64a2243a081e682c052b8149798fd8",
+          "merge_commit": "cc36798780f57777b2319b152719e030e77172dd",
+          "url": "https://github.com/mykholy/usayd-api/pull/26"
+        },
+        {
+          "number": 27,
+          "title": "USYD-T0033: fail-closed API CI and real Redis integration",
+          "state": "closed",
+          "merged": true,
+          "head": "e9a30205aed700863cafe78c4d7702b893db4bef",
+          "merge_commit": "4c36578dd25f2925623b81403d3f2f03f70d9d18",
+          "url": "https://github.com/mykholy/usayd-api/pull/27"
+        },
+        {
+          "number": 28,
+          "title": "USYD-T0032: fail-closed upload safety boundary and retention record",
+          "state": "closed",
+          "merged": true,
+          "head": "2cd73ce4d6630b954947e9af5be6cc7bb38b8d3e",
+          "merge_commit": "4b2dac06d8f04460c558818f1bc25ffd31edfffa",
+          "url": "https://github.com/mykholy/usayd-api/pull/28"
+        },
+        {
+          "number": 29,
+          "title": "USYD-T0032: resolve private S3 adapter and verify storage integration",
+          "state": "closed",
+          "merged": true,
+          "head": "756fbe708bbff583e87fcb66b0dd3fee761ac09b",
+          "merge_commit": "8c88d7108eb212e764c3909c809a3b1a5d78cbd7",
+          "url": "https://github.com/mykholy/usayd-api/pull/29"
+        },
+        {
+          "number": 30,
+          "title": "USYD-T0034: staging release readiness and reversible migration protocol",
+          "state": "open",
+          "merged": false,
+          "head": "59aca38d92c656ddf010408163aa68cd9eee876f",
+          "merge_commit": null,
+          "url": "https://github.com/mykholy/usayd-api/pull/30",
+          "checks": [
+            {
+              "name": "Independent PR Code Quality Review",
+              "status": "completed",
+              "conclusion": "success",
+              "id": 45871905475
+            },
+            {
+              "name": "API CI",
+              "status": "completed",
+              "conclusion": "success",
+              "id": 45871905443
+            }
+          ]
+        }
+      ]
     },
     "usayd-web": {
-      "remote": "https://github.com/mykholy/usayd-web",
-      "main_branch": "main",
-      "status": "Ready for web foundation tasks"
+      "status": "USYD-81 To Do; dependency USYD-54"
+    },
+    "usayd-flutter": {
+      "scope": "read-only Jira reporting; no implementation or issue changes"
     }
   },
-  "sprint_s00_summary": {
-    "total_tasks": 32,
-    "engineering_done_or_in_review": 10,
-    "specifications_done": 2,
-    "owner_decisions_dossier_ready": 20,
-    "status": "Engineering and specifications complete; awaiting human PR approvals and owner decision sign-offs"
+  "sprint_counts": {
+    "planned-s00": {
+      "all": {
+        "total": 32,
+        "Done": 11,
+        "In Progress": 19,
+        "In Review": 1,
+        "To Do": 1
+      },
+      "non_flutter": {
+        "total": 28,
+        "Done": 7,
+        "In Progress": 19,
+        "In Review": 1,
+        "To Do": 1
+      },
+      "flutter_read_only": {
+        "total": 4,
+        "Done": 4,
+        "In Progress": 0,
+        "In Review": 0,
+        "To Do": 0
+      }
+    },
+    "planned-s01": {
+      "all": {
+        "total": 10,
+        "Done": 5,
+        "In Progress": 0,
+        "In Review": 5,
+        "To Do": 0
+      },
+      "non_flutter": {
+        "total": 6,
+        "Done": 5,
+        "In Progress": 0,
+        "In Review": 1,
+        "To Do": 0
+      },
+      "flutter_read_only": {
+        "total": 4,
+        "Done": 0,
+        "In Progress": 0,
+        "In Review": 4,
+        "To Do": 0
+      }
+    },
+    "planned-s02": {
+      "all": {
+        "total": 10,
+        "Done": 1,
+        "In Progress": 1,
+        "In Review": 0,
+        "To Do": 8
+      },
+      "non_flutter": {
+        "total": 6,
+        "Done": 1,
+        "In Progress": 1,
+        "In Review": 0,
+        "To Do": 4
+      },
+      "flutter_read_only": {
+        "total": 4,
+        "Done": 0,
+        "In Progress": 0,
+        "In Review": 0,
+        "To Do": 4
+      }
+    }
   },
-  "sprint_s01_summary": {
-    "total_tasks": 10,
-    "in_review": 6,
-    "to_do": 4,
-    "implemented_prs": [
-      {"pr": 8, "task": "USYD-T0027", "jira": "USYD-66", "repo": "usayd-api", "ci": "SUCCESS"},
-      {"pr": 9, "task": "USYD-T0028", "jira": "USYD-67", "repo": "usayd-api", "ci": "SUCCESS"},
-      {"pr": 10, "task": "USYD-T0029", "jira": "USYD-68", "repo": "usayd-api", "ci": "SUCCESS"},
-      {"pr": 11, "task": "USYD-T0030", "jira": "USYD-69", "repo": "usayd-api", "ci": "SUCCESS"},
-      {"pr": 5, "task": "USYD-T0079", "jira": "USYD-72", "repo": "usayd-flutter", "ci": "SUCCESS"},
-      {"pr": 6, "task": "USYD-T0080", "jira": "USYD-73", "repo": "usayd-flutter", "ci": "SUCCESS"}
-    ]
+  "blockers": [
+    "USYD-54 live branch protection not verified",
+    "USYD-71 legal/DPO retention approval and real AWS deployment gates",
+    "USYD-64 coordination review",
+    "USYD-65 owner content/licensing approval",
+    "USYD-77 real deployment deferred by owner"
+  ],
+  "infrastructure": {
+    "provisioning": "deferred by owner",
+    "candidate_region": "eu-central-1",
+    "status": "provisional; verify legal residency, health, latency and workload pricing before purchase"
   }
 }
