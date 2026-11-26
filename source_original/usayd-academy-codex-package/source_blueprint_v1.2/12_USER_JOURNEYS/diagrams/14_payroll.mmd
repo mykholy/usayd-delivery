@@ -1,0 +1,12 @@
+sequenceDiagram
+  participant Teacher
+  participant Attendance
+  participant Payroll
+  participant Finance
+  Attendance->>Payroll: Approved lesson minutes and attendance
+  Payroll->>Payroll: Snapshot effective contract rules
+  Payroll-->>Teacher: Preview statement
+  Teacher->>Payroll: Dispute if needed
+  Payroll->>Finance: Maker creates pay run
+  Finance->>Payroll: Independent approval
+  Payroll-->>Teacher: Posted immutable statement

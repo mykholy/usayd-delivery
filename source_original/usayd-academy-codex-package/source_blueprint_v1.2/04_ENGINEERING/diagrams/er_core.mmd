@@ -1,0 +1,19 @@
+erDiagram
+ USER ||--o| LEARNER : owns
+ LEARNER ||--o{ GUARDIAN_CONSENT : may_require
+ LEARNER ||--o{ SUBSCRIPTION : has
+ SUBSCRIPTION ||--o{ CREDIT_LEDGER : produces
+ LEARNER ||--o{ LESSON : attends
+ TEACHER ||--o{ LESSON : teaches
+ LESSON ||--o| CONFERENCE_SESSION : uses
+ LESSON ||--o| LESSON_REPORT : yields
+ LEARNER ||--o{ LEARNING_PLAN : receives
+ LEARNING_PLAN ||--o{ PLAN_VERSION : versions
+ PLAN_VERSION ||--o{ STUDY_TASK : assigns
+ LEARNER ||--o{ ASSESSMENT : assessed
+ LEARNER ||--o{ COMPETITION_REGISTRATION : enrolls
+ COMPETITION ||--o{ COMPETITION_REGISTRATION : contains
+ COMPETITION_REGISTRATION ||--o{ CONTEST_SUBMISSION : submits
+ CONTEST_SUBMISSION ||--o{ CONTEST_JUDGMENT : reviewed
+ TEACHER ||--o{ TEACHER_CONTRACT : contracts
+ TEACHER_CONTRACT ||--o{ TEACHER_ACCRUAL : accrues

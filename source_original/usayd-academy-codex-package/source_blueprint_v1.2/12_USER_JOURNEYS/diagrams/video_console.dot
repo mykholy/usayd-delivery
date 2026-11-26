@@ -1,0 +1,7 @@
+digraph G{rankdir=LR;graph[bgcolor="transparent",pad=.5,ranksep=.8];node[shape=box,style="rounded,filled",color="#d8e5df",fillcolor="#f6faf7",fontname="DejaVu Sans",fontcolor="#102e2b",fontsize=12,margin=".20,.15"];edge[color="#528c7a",penwidth=1.5];A[label="Provider draft
+Admin settings"];B[label="Connection / quota /
+feature verification"];C[label="Dry-run +
+impact preview"];D[label="Independent approvals
+MFA + audit"];E[label="Future lessons
+new provider",fillcolor="#e2f5ec"];F[label="Active lessons
+existing provider",fillcolor="#fff3df"];A->B->C->D->E;D->F[style=dotted,label="unchanged"]}

@@ -1,0 +1,14 @@
+flowchart LR
+  Web[Next.js Web] --> API[Laravel API v1]
+  Flutter[Flutter App] --> API
+  Staff[Admin and Teacher] --> API
+  API --> DB[(PostgreSQL or MySQL)]
+  API --> Q[Redis Horizon]
+  API --> Video[VideoProvider Registry]
+  Video --> Meet[Google Meet]
+  Video --> Zoom[Zoom Meetings and SDK]
+  Video --> SDK[LiveKit/VideoSDK/Daily]
+  Q --> AI[AI Workers]
+  API --> Pay[Payment Provider]
+  API --> Quran[Licensed Quran Provider]
+  API --> Store[Private Media Storage]

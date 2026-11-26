@@ -1,0 +1,6 @@
+flowchart TD
+  A[Booking UTC event] --> B[User timezone and locale preference]
+  B --> C[Quiet hours check in local zone]
+  C --> D[Schedule unique UTC notification]
+  D --> E[Localized AR or EN template]
+  E --> F[Email SMS push subject to opt in]

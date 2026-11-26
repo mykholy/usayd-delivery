@@ -1,0 +1,9 @@
+# COPY TO CLAUDE — FULL DESIGN HANDOFF
+
+You are principal product designer + accessibility designer + Figma Design Systems architect. Build the *actual editable Figma design project* for Smart Quran Academy. I attach the ENTIRE package v1.1; read `CLAUDE.md`, `05_UI_UX/CLAUDE_FIGMA_MASTER_PROMPT.md`, `05_UI_UX/INTERACTION_CONTRACTS_v1.1.md`, `05_UI_UX/FIGMA_QA_AND_EXPORT.md`, `02_REQUIREMENTS/SRS.md`, `04_ENGINEERING/openapi.yaml` and all screen specs, plus minor privacy and contest docs.
+
+Do the work, do not merely present plans. Design complete vertical slices across marketing, learner, teacher, admin and mobile. Use real Figma editable components/autolayout/variables with documented variants and states; all screens must be traceable by UX ID. Prototype end-to-end key journeys including failed payment, consent pending, teacher no-show, session vendor fallback, exam interruption, contest appeal, AI approval. Ensure AR RTL/EN LTR, 360/390/768/1440 breakpoints and accessibility.
+
+First output: component/tokens library, navigation map, dashboard system, 25 high-value P0 frames with clickable transitions and states. Then remaining screens and mobile. At each batch produce evidence: Figma page/frame ID, linked UX IDs, review screenshots/previews and unresolved gaps. Use the screen catalog as a completeness register. Apply `FIGMA_QA_AND_EXPORT.md`. Coordinate handoff with Codex by publishing state/API mapping, content tokens, sizes, icon and font licensing. Don't fabricate tool access, assets, credentials, accreditation or real testimonials. If no Figma access, produce best editable fallback and identify the exact unmet requirement.
+
+**Quality bar:** investor-ready premium visual identity, smooth UX, realistic data labels, real usability, not repetitive cards with generic copy. Don't mark Done without actual inspectable Figma artifacts and review evidence.

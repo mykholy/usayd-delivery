@@ -1,0 +1,8 @@
+﻿route,screens,canonical,kind,note
+/admin/settings,UX-ADMIN-041; UX-SUP-010,UX-SUP-010,DUPLICATE ROUTE → one implementation,"Alias kept as a design reference; build only the canonical screen (D-24, needs review)"
+/pricing,UX-PUBLIC-004; UX-GLOB-002,UX-GLOB-002,DUPLICATE ROUTE → one implementation,"Alias kept as a design reference; build only the canonical screen (D-24, needs review)"
+/pricing,UX-PUBLIC-004,UX-GLOB-002,SHARED COMPONENT / ALIAS,Implement once; this ID reuses it
+/app/programs,UX-LEARNER-003,UX-PUBLIC-002 (catalogue component shared),SHARED COMPONENT / ALIAS,Implement once; this ID reuses it
+/app/teachers,UX-LEARNER-005,UX-PUBLIC-005 (shared teacher card),SHARED COMPONENT / ALIAS,Implement once; this ID reuses it
+/admin/video-providers,UX-ADMIN-017,UX-VPC-001,SHARED COMPONENT / ALIAS,Implement once; this ID reuses it
+/admin/settings,UX-ADMIN-041,UX-SUP-010,SHARED COMPONENT / ALIAS,Implement once; this ID reuses it

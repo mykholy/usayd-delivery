@@ -1,0 +1,14 @@
+sequenceDiagram
+  participant Student
+  participant API
+  participant Pricing
+  participant PSP
+  Student->>API: Select package and billing country
+  API->>Pricing: Market eligibility + active price book
+  Pricing-->>API: Immutable quote amount_minor currency tax expiry
+  API-->>Student: Quote and charge currency
+  Student->>API: Confirm checkout with idempotency key
+  API->>PSP: Create intent with merchant profile and amount
+  PSP-->>API: Webhook signed event
+  API->>API: Verify dedup and reconcile ledger
+  API-->>Student: Paid entitlement or pending status

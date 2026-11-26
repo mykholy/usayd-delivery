@@ -1,0 +1,10 @@
+flowchart TD
+  A[Student sees competition] --> B{Eligible based on cohort and consent?}
+  B -->|No| C[Explain reason and alternatives]
+  B -->|Yes| D[Register and practice]
+  D --> E[Timed round using UTC deadline]
+  E --> F[Submit answers]
+  F --> G[Judging with conflicts check]
+  G --> H[Results provisional review]
+  H --> I[Publish private safe ranking]
+  I --> J[Appeal and human resolution]

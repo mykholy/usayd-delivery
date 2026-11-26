@@ -1,0 +1,9 @@
+# Replace @mykholy with real authorized human account/team if needed
+/app/Modules/Identity/ @mykholy
+/app/Modules/Payments/ @mykholy
+/app/Modules/Guardian/ @mykholy
+/app/Modules/Payroll/ @mykholy
+/app/Modules/Quran/ @mykholy
+/app/Modules/AI/ @mykholy
+/database/migrations/ @mykholy
+/.github/ @mykholy

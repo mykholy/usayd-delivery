@@ -1,0 +1,5 @@
+digraph G{rankdir=LR;graph[bgcolor="transparent",pad=.5,ranksep=.9];node[shape=box,style="rounded,filled",color="#d8e5df",fillcolor="#f6faf7",fontname="DejaVu Sans",fontsize=12,margin=".22,.16"];edge[color="#528c7a",penwidth=1.5];A[label="Placement with teacher"];B[label="AI draft + evidence"];C[label="Teacher / academic
+approval"];D[label="Live lesson +
+home practice"];E[label="Mastery report +
+spaced revision"];F[label="Adapted plan /
+optional competition",fillcolor="#e4f2eb"];A->B->C->D->E->F;E->B[style=dashed,label="learning feedback"]; }

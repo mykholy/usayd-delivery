@@ -1,0 +1,12 @@
+sequenceDiagram
+  participant Admin
+  participant PolicyAPI
+  participant OpsApprover
+  participant Lesson
+  Admin->>PolicyAPI: Draft default provider and market rules
+  PolicyAPI->>PolicyAPI: Credentials health capabilities and legal preflight
+  PolicyAPI-->>Admin: Impact preview and dry-run
+  Admin->>OpsApprover: Request second approval and MFA
+  OpsApprover->>PolicyAPI: Approve effective-at version
+  PolicyAPI->>Lesson: New unprovisioned lessons use new provider
+  Lesson-->>Admin: Existing bound lessons unchanged

@@ -1,0 +1,5 @@
+digraph G{rankdir=LR;graph[bgcolor="transparent",pad=.5,ranksep=.8,nodesep=.4];node[shape=box,style="rounded,filled",color="#d8e5df",fillcolor="#f6faf7",fontname="DejaVu Sans",fontcolor="#102e2b",fontsize=13,margin=".24,.17"];edge[color="#528c7a",penwidth=1.7,arrowsize=.75];A[label="Visitor / Learner"];B[label="Explicit market selection"];C[label="Approved price book
+ISO currency minor units"];D[label="Merchant + billing country
+PSP capability gate"];E[label="Signed checkout quote
+locked currency and total"];A->B->C->D->E;F[label="UI locale AR / EN",fillcolor="#e8f2ed"];G[label="IANA timezone
+independent",fillcolor="#e8f2ed"];B->F[style=dashed];B->G[style=dashed] }

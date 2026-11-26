@@ -1,0 +1,7 @@
+flowchart TD
+  A[Teacher sets recurrence in IANA timezone] --> B[Project future local occurrences]
+  B --> C[Convert each occurrence to UTC]
+  C --> D{Overlaps or DST issue?}
+  D -->|Yes| E[Show corrections and alternate slots]
+  D -->|No| F[Publish availability]
+  E --> A

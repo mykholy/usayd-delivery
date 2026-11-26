@@ -1,0 +1,302 @@
+[
+  {
+    "path": "00_START_HERE/DECISIONS_AND_OPEN_ITEMS.md",
+    "bytes": 3129,
+    "sha256": "3bae66324e0d224b1192e63a33fe210ec2c682c77219e537dcff0f6251fbc48e"
+  },
+  {
+    "path": "00_START_HERE/QA_VALIDATION.md",
+    "bytes": 1246,
+    "sha256": "525184d323951eac531cdf47eff477b98c688a1125f61d575b8a626bfa0c550f"
+  },
+  {
+    "path": "00_START_HERE/README.md",
+    "bytes": 3782,
+    "sha256": "fa4bdafa15efa0b64c53146a402927e0d868d2cd36a122b21a54b164b4f45cc0"
+  },
+  {
+    "path": "00_START_HERE/product_manifest.json",
+    "bytes": 543,
+    "sha256": "7eb4a623a2f93243fc0ec7e638a9c3b3b3fe0a2ec4a1aac87ab9786b34e19035"
+  },
+  {
+    "path": "01_BUSINESS/BRD.md",
+    "bytes": 6179,
+    "sha256": "7e9ab90a7579feee8197bfd616c1ac20e6f2accb0775f2694b599ce6beb68935"
+  },
+  {
+    "path": "01_BUSINESS/FINANCIAL_MODEL_GUIDE.md",
+    "bytes": 2460,
+    "sha256": "e5abbd2567620556d052c8eb19a2bb8f09bb0447a88c0995ceac4ad2e09d8abc"
+  },
+  {
+    "path": "01_BUSINESS/GO_TO_MARKET.md",
+    "bytes": 4985,
+    "sha256": "08601633bf1279cdc46aa308d469b0a44249ed4af6ee2673605664f0d0f4b7b4"
+  },
+  {
+    "path": "01_BUSINESS/TEACHER_OPERATING_MODEL.md",
+    "bytes": 3596,
+    "sha256": "62d7c048c58b8f2f600e077d53ca60225b194c3509590d5f57c937c20e04398b"
+  },
+  {
+    "path": "01_BUSINESS/UNIT_ECONOMICS.md",
+    "bytes": 3776,
+    "sha256": "d73abb10af2b4bf320364137f66ae09bf48446749def300d0886c63c1ed2cf30"
+  },
+  {
+    "path": "01_BUSINESS/financial_scenarios.csv",
+    "bytes": 2977,
+    "sha256": "0c08c084448b3f58199428254b30a97719cdad5f18968d00fb7a33dddad148c2"
+  },
+  {
+    "path": "02_REQUIREMENTS/NON_FUNCTIONAL_REQUIREMENTS.md",
+    "bytes": 3799,
+    "sha256": "2807f339b068fcf9a3f17192da79a01399446caedc2b4571144920c3f4755482"
+  },
+  {
+    "path": "02_REQUIREMENTS/PRD.md",
+    "bytes": 5767,
+    "sha256": "d589a7d9f5a639f2d6c0b788815c70930ca2a3bfb9e1a7e359df36dec85f3ff8"
+  },
+  {
+    "path": "02_REQUIREMENTS/REQUIREMENTS_CATALOG.md",
+    "bytes": 30859,
+    "sha256": "d35ae925244b45a26e45f7f9adb3a8acb55d78b51a6e8da203b7b8d8169f801d"
+  },
+  {
+    "path": "02_REQUIREMENTS/SRS.md",
+    "bytes": 7077,
+    "sha256": "c6d66607a20581a8d69863d0c21558f5647f986b9d9f51dc4c8743aa02865591"
+  },
+  {
+    "path": "02_REQUIREMENTS/functional_requirements.csv",
+    "bytes": 28688,
+    "sha256": "e9f24ac79d4527c0253b894bdeca9089f4973da99ea23547c12e476b7c0d9aea"
+  },
+  {
+    "path": "03_ACADEMIC_AI/COMPETITIONS_AND_REWARDS.md",
+    "bytes": 9112,
+    "sha256": "4ea000aeefecc59afcfb607c91b23d7e2c795e76a9a65e7c6455351ea22cbbf3"
+  },
+  {
+    "path": "03_ACADEMIC_AI/EXAMS_AND_PERSONALIZED_TESTING.md",
+    "bytes": 4394,
+    "sha256": "4e54a108791d067de75175f5aa2634203673c3783fa051a7b6bcbf42d7328d54"
+  },
+  {
+    "path": "03_ACADEMIC_AI/LEARNING_AI_AND_ASSESSMENTS.md",
+    "bytes": 6769,
+    "sha256": "7f00657e971d836dbf572c6a8f05227c442ab264c6326db1bf1dbc6113b5d048"
+  },
+  {
+    "path": "03_ACADEMIC_AI/SESSION_INTELLIGENCE_AND_AI_GOVERNANCE.md",
+    "bytes": 4009,
+    "sha256": "6839c1fb9b08dff1dc6d34b0df60b8bc33b5c64f7e76b1363257be522928c7a8"
+  },
+  {
+    "path": "04_ENGINEERING/API_IMPLEMENTATION_GUIDE.md",
+    "bytes": 2519,
+    "sha256": "5c914cd270d493ad1a0ec4da8fa4016572c760cea49662aa87d4501617ae51b8"
+  },
+  {
+    "path": "04_ENGINEERING/ARCHITECTURE.md",
+    "bytes": 6059,
+    "sha256": "4517b360e74ef01d268553ed2342f10b465d9be0573b3e3d7a927e6244141572"
+  },
+  {
+    "path": "04_ENGINEERING/DATA_DICTIONARY.md",
+    "bytes": 7653,
+    "sha256": "675a8639a710a71296f25ff0fceb51acff05f542ec60be226f5eccba7597fde1"
+  },
+  {
+    "path": "04_ENGINEERING/DEVOPS_AND_RUNBOOK.md",
+    "bytes": 2803,
+    "sha256": "9a0ab4a64df427b9875d975145dd556daf83995fb3fa0f4b4d45d85a8036cbcf"
+  },
+  {
+    "path": "04_ENGINEERING/EVENTS_AND_ANALYTICS.md",
+    "bytes": 4097,
+    "sha256": "4cd3e516d8c34f5ff52ba61fa7533e05c3ed44c47ea181c1da888caedd98ddf8"
+  },
+  {
+    "path": "04_ENGINEERING/REPO_STRUCTURE_AND_CONVENTIONS.md",
+    "bytes": 1786,
+    "sha256": "0e5f2bf1fb32cc77ccf97b1eed00c1c926ec691ecb617ebc836d82b56b47bb99"
+  },
+  {
+    "path": "04_ENGINEERING/SECURITY_AND_PERMISSIONS_MATRIX.md",
+    "bytes": 2187,
+    "sha256": "57c20c39418f6c76e21e50a2e3e64b992e32c5227d7af262e3428ef3a3346b70"
+  },
+  {
+    "path": "04_ENGINEERING/STATE_MACHINES.md",
+    "bytes": 2623,
+    "sha256": "7390956ab67f749dd33eca1cc5b5c493713d40017bdb3046ef5aff53b1daa9b7"
+  },
+  {
+    "path": "04_ENGINEERING/VIDEO_PROVIDER_RFC.md",
+    "bytes": 4878,
+    "sha256": "d4faa4aabd4fa18c0dab562b8b10ad4bc08d2d11832ad35ac76d9fb27f8c7d6c"
+  },
+  {
+    "path": "04_ENGINEERING/diagrams/er_core.mmd",
+    "bytes": 798,
+    "sha256": "adcd6ff1c3458aa0f7aa72fdb433b114e2c711b479eec734476546f1ea398abc"
+  },
+  {
+    "path": "04_ENGINEERING/diagrams/learner_journey.mmd",
+    "bytes": 515,
+    "sha256": "fa16dd4573225792e83a852b3a119fedaa3e6bd5614d6e591d9f7b1a1163a4db"
+  },
+  {
+    "path": "04_ENGINEERING/diagrams/overview.mmd",
+    "bytes": 470,
+    "sha256": "c848819179e137a00055fe39c0a5f247a3d86551916ecea05aca2decc78c2cae"
+  },
+  {
+    "path": "04_ENGINEERING/openapi.yaml",
+    "bytes": 66528,
+    "sha256": "51f534ddd0c3fd1c4d2705ab4d391960dd4d02e6767b6b58e41c214852931271"
+  },
+  {
+    "path": "05_UI_UX/CLAUDE_FIGMA_MASTER_PROMPT.md",
+    "bytes": 8660,
+    "sha256": "963ccbd4f755a4897221e4f325eebfe94e9b5d7c8dd74ca9db5630768f4caa6b"
+  },
+  {
+    "path": "05_UI_UX/DESIGN_SYSTEM.md",
+    "bytes": 4783,
+    "sha256": "fdf4a7d4f24537ae447e2704e62f2c7494384823a4361504e5a092ecb14bf245"
+  },
+  {
+    "path": "05_UI_UX/MOBILE_FLUTTER_SPEC.md",
+    "bytes": 2313,
+    "sha256": "0de94a9500971ec8b3800991a290dd388223d5511a0bed171b97d3358eff6585"
+  },
+  {
+    "path": "05_UI_UX/SCREEN_CATALOG.md",
+    "bytes": 22986,
+    "sha256": "e4cd7ef780e960f0a46a0822d578974366bf55e92734ce49c850116e3386cd49"
+  },
+  {
+    "path": "05_UI_UX/SCREEN_DETAILED_SPECS.md",
+    "bytes": 161957,
+    "sha256": "b4bc6150bcd486a054cd83e64b8635a53ad4c73cb47a0dc9e7189e22e37b90e3"
+  },
+  {
+    "path": "05_UI_UX/UX_COPY_AR_EN.md",
+    "bytes": 3381,
+    "sha256": "2bd88bb3631d0a438371eae6caa043ad37484e269f74c51b2fc0c1315f91f02d"
+  },
+  {
+    "path": "05_UI_UX/UX_MASTER_SPEC.md",
+    "bytes": 8021,
+    "sha256": "7a66be1922d1798570f6ac89aa706489c0b74dd7ad6d0f7b7ecaf74d6e65b27d"
+  },
+  {
+    "path": "05_UI_UX/figma_tokens.json",
+    "bytes": 691,
+    "sha256": "1b7549d9ae09bd0d353312f82bae318c0e487c63dc3d14aacfb04c306f1faffc"
+  },
+  {
+    "path": "05_UI_UX/screen_inventory.csv",
+    "bytes": 20643,
+    "sha256": "58bc92d2d8a74b71978e4e5f618415a797974f2e49533ca52b77cd779afb0228"
+  },
+  {
+    "path": "06_DELIVERY_JIRA/INVESTOR_MEETING_PACK.md",
+    "bytes": 2627,
+    "sha256": "316aac6f13a0a812aaf3961bfb564d646a7db5157554b8ac1ee451ef6944590c"
+  },
+  {
+    "path": "06_DELIVERY_JIRA/JIRA_IMPORT_GUIDE.md",
+    "bytes": 2679,
+    "sha256": "390b7432e36b54acf37abb68e4ec08fe3e39e3726848db0f291882a648d17192"
+  },
+  {
+    "path": "06_DELIVERY_JIRA/Jira_Import.csv",
+    "bytes": 211012,
+    "sha256": "a14fe147fb5d5d484c25d640982892c6f56ce49b7c846ea14248effa8dc55713"
+  },
+  {
+    "path": "06_DELIVERY_JIRA/ROADMAP_AND_RELEASE_GATES.md",
+    "bytes": 4477,
+    "sha256": "cb4b69d5dfb7c2cae34c8f980a3ca4bb74cffa3e9b91777e4adaa4eca45c4e0f"
+  },
+  {
+    "path": "06_DELIVERY_JIRA/TEAM_HANDOFF_CHECKLIST.md",
+    "bytes": 1608,
+    "sha256": "809403b05d36011026490285f58a51d4a0923fea77ef9a92cded287209b0dac3"
+  },
+  {
+    "path": "06_DELIVERY_JIRA/dependency_map.csv",
+    "bytes": 962,
+    "sha256": "553f385e6bc4a5ec947d1de179bd874e54f56cbe0aa712d4cd81d420b050ea3f"
+  },
+  {
+    "path": "06_DELIVERY_JIRA/requirements_traceability.csv",
+    "bytes": 26559,
+    "sha256": "4b95bec15d42785417c415c0b272e2609fe37ef56cf78d388fa65b08a5579c2b"
+  },
+  {
+    "path": "06_DELIVERY_JIRA/sprint_plan.csv",
+    "bytes": 929,
+    "sha256": "811f4c884ea580fdb6993b8cd691cc3d2a9db438344dfb39837b7d2f34b7f73a"
+  },
+  {
+    "path": "07_QUALITY_SECURITY/QA_MASTER_PLAN.md",
+    "bytes": 3275,
+    "sha256": "2e0a256fd69bd23ae165b1d9874a6d60eda1b2c727e4fb581170bee8caaad678"
+  },
+  {
+    "path": "07_QUALITY_SECURITY/RISK_REGISTER.md",
+    "bytes": 2673,
+    "sha256": "3b3f5fdcae4d34ad79e39358b08e9e3593544955320150c49fd3ba7cf86ed19a"
+  },
+  {
+    "path": "07_QUALITY_SECURITY/SECURITY_PRIVACY_SAFEGUARDING.md",
+    "bytes": 4248,
+    "sha256": "372c1e25d65a110568a3d100bca163910ac5a567bf65292033f7d3fe3f0823e2"
+  },
+  {
+    "path": "07_QUALITY_SECURITY/test_cases.csv",
+    "bytes": 119057,
+    "sha256": "693dc360a0351df14bc92a7713ac12d47b736145817ae283797937c0b53cc2ca"
+  },
+  {
+    "path": "08_REFERENCES/SOURCES_AND_VALIDATION.md",
+    "bytes": 3008,
+    "sha256": "ed34cc6245b059b829f5182892e3c674816c0296e1f97fa4fe50a46851be1d40"
+  },
+  {
+    "path": "09_EXPORTS/CHANGES_FROM_INVESTOR_PLAN.md",
+    "bytes": 1187,
+    "sha256": "bde7635681c5513f425f99dafad1ef78b86a119f6d9b5721770857abb4a78c2e"
+  },
+  {
+    "path": "09_EXPORTS/PREVIOUS_INVESTOR_STUDY.md",
+    "bytes": 63719,
+    "sha256": "bf9a2a543220bd0055a170d36bca00d6dde5d5cb837d9f9d278b312f86f8ed18"
+  },
+  {
+    "path": "09_EXPORTS/Smart_Quran_Academy_Executive_Pack_AR.docx",
+    "bytes": 42947,
+    "sha256": "6ac90304dae5ac186a5c7e48391d9ee17896968e80e5d614b6eed338f312601f"
+  },
+  {
+    "path": "09_EXPORTS/Smart_Quran_Academy_Executive_Pack_AR.html",
+    "bytes": 18469,
+    "sha256": "3ca4beb13c2faad4154fdffffc29cf3cff47338a70bfb06ed48e23d70c03b636"
+  },
+  {
+    "path": "09_EXPORTS/Smart_Quran_Academy_Executive_Pack_AR.pdf",
+    "bytes": 61297,
+    "sha256": "236be1d48381a946564915ed1c544dedb3b9e5061fc72f1c92c380b22592575a"
+  },
+  {
+    "path": "INDEX.html",
+    "bytes": 7413,
+    "sha256": "73623f64259d184860449093cf191ec19d04065c0633d5f8cd3b0db9b04a9f62"
+  }
+]

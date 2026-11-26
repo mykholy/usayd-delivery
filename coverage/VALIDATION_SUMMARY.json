@@ -1,0 +1,31 @@
+{
+  "original_source_files": 1206,
+  "copied_source_files": 1183,
+  "font_binary_files_not_redistributed": 23,
+  "functional_requirements": 216,
+  "screens": 169,
+  "detailed_actions": 641,
+  "api_operations": 178,
+  "existing_api": 121,
+  "proposed_api": 57,
+  "journeys": 17,
+  "epics": 33,
+  "work_items": 707,
+  "sprint_candidates": 91,
+  "cross_repo_dependencies_requiring_replan": 0,
+  "repo_counts": {
+    "docs": 23,
+    "ops": 1,
+    "api": 435,
+    "web": 161,
+    "flutter": 57,
+    "qa": 30
+  },
+  "uploaded_current_older_files": 1103,
+  "ready_files": 1206,
+  "source_overlap_changed_files": 751,
+  "ready_additional_files": 103,
+  "jira_import_rows": 740,
+  "jira_remote_created": 0,
+  "jira_error": "404 Site temporarily unavailable"
+}

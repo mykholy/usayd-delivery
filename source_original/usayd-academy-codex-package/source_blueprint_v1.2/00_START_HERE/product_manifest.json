@@ -1,0 +1,33 @@
+{
+  "release": "1.0",
+  "date": "2026-11-21",
+  "status": "specification-not-implemented",
+  "functional_requirements": 148,
+  "nfr": 24,
+  "screens": 119,
+  "jira_issues": 311,
+  "jira_epics": 19,
+  "test_cases": 336,
+  "modules": {
+    "IAM": 10,
+    "PROF": 6,
+    "CURR": 6,
+    "TCHR": 7,
+    "BOOK": 8,
+    "PAY": 8,
+    "VIDEO": 10,
+    "ATT": 5,
+    "ASMT": 8,
+    "PLAN": 8,
+    "CONTEST": 14,
+    "AI": 12,
+    "MEDIA": 5,
+    "PAYROLL": 9,
+    "CRM": 6,
+    "NOTIF": 4,
+    "ADMIN": 9,
+    "MOB": 5,
+    "SEC": 8
+  },
+  "apis": 53
+}

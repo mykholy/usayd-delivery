@@ -1,0 +1,10 @@
+sequenceDiagram
+  participant Regional
+  participant Compliance
+  participant Finance
+  participant Platform
+  Regional->>Platform: Country draft and offerings
+  Compliance->>Platform: Approve legal and privacy scope
+  Finance->>Platform: Verify PSP quote tax and merchant
+  Platform->>Platform: Sandbox e2e and dual approval
+  Platform-->>Regional: Activate future effective date and audit

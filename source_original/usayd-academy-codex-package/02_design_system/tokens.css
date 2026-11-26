@@ -1,0 +1,19 @@
+/* Usayd Academy UI kit v0.4 — tokens from Usayd Design System v1 (Parchment / Night).
+   Used by every artboard on the design canvas and exported to Codex as the visual source of truth. */
+:root,[data-theme="light"]{
+--bg-page:#FBF7EE;--bg-raised:#FFFDF8;--bg-subtle:#F4ECDC;--bg-sunken:#ECE2CC;--bg-brand:#0F2529;--bg-brand-soft:#E3ECEA;--bg-accent-soft:#FBEFD5;
+--tx:#1A1814;--tx2:#57524A;--tx3:#655F53;--tx-brand:#0F2529;--tx-accent:#835A10;--tx-on-brand:#F3EBDA;--tx-on-brand2:#BDB6A8;
+--line:#E6DCC7;--line-strong:#8A8170;--act:#0F2529;--act-h:#1B4148;--on-act:#F7F1E3;--lamp:#E8B04B;--on-lamp:#1A1814;--brass:#8A5F12;--focus:#8A5F12;
+--canopy:#8A5F12;--book:#0F2529;
+--ok:#2A6448;--ok-bg:#E1EFE6;--err:#A33725;--err-bg:#F9E4DE;--warn:#835A10;--warn-bg:#FBEFD5;--info:#285876;--info-bg:#E2EDF3;
+--clay:#93442A;--clay-bg:#F6E5DC;--ai:#2A5A5F;--ai-bg:#E0EDEB;--lock:#57524A;--lock-bg:#ECE2CC;
+--r-sm:6px;--r-md:14px;--r-lg:20px;--shadow:0 1px 2px rgba(26,24,20,.05);
+--f-display:"Reem Kufi","IBM Plex Sans Arabic",system-ui,sans-serif;--f-text:"IBM Plex Sans Arabic","IBM Plex Sans",system-ui,sans-serif;--f-quran:"Amiri Quran","Amiri",serif;
+color-scheme:light}
+[data-theme="dark"]{
+--bg-page:#0A1B1E;--bg-raised:#11282C;--bg-subtle:#173237;--bg-sunken:#07151A;--bg-brand:#06141A;--bg-brand-soft:#173439;--bg-accent-soft:#2A2415;
+--tx:#F4EDDF;--tx2:#BFB8A9;--tx3:#A39D91;--tx-brand:#F4EDDF;--tx-accent:#F0C25F;--tx-on-brand:#F4EDDF;--tx-on-brand2:#BFB8A9;
+--line:#203B40;--line-strong:#5E7C80;--act:#E8B04B;--act-h:#F2C463;--on-act:#14120E;--lamp:#E8B04B;--on-lamp:#14120E;--focus:#F0C25F;--canopy:#E8B04B;--book:#F4EDDF;
+--ok:#7DCBA3;--ok-bg:#12322A;--err:#F29C87;--err-bg:#3A1F1B;--warn:#EDC26C;--warn-bg:#2E2615;--info:#92C3DF;--info-bg:#12303F;
+--clay:#EDA98B;--clay-bg:#382219;--ai:#8ED4CB;--ai-bg:#113537;--lock:#BFB8A9;--lock-bg:#173237;--shadow:none;
+color-scheme:dark}

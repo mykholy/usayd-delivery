@@ -1,0 +1,28 @@
+﻿UX ID,Requirement family,Suggested operation ID,Operation exact in OpenAPI?,Acceptance focus,Review status
+UX-AUTH-001,FR-IAM-001,post__auth_register,YES,register → verified contact / invalid OTP / rate-limit,TECH REVIEW REQUIRED
+UX-AUTH-002,FR-IAM-007,post__consents,YES,consent pending/declined/expired; learner remains limited,TECH REVIEW REQUIRED
+UX-LEARNER-001,FR-PLAN-001,getLearnerLearningSummary,YES,approved plan only; pending AI draft labeled,TECH REVIEW REQUIRED
+UX-LEARNER-009,FR-BOOK-001,get__lessons__lessonId,YES,"lesson detail, entitlement, join disabled if absent",TECH REVIEW REQUIRED
+UX-LEARNER-011,FR-ATT-001,getLessonReport,YES,approved report and dispute history,TECH REVIEW REQUIRED
+UX-LEARNER-012,FR-PLAN-001,getLearningPlan,YES,manual override and evidence history,TECH REVIEW REQUIRED
+UX-LEARNER-017,FR-ASMT-001,get__exams,YES,level filters and locked exam,TECH REVIEW REQUIRED
+UX-LEARNER-018,FR-ASMT-001,post__exams__examId__attempts,YES,"exam start, time and autosave status",TECH REVIEW REQUIRED
+UX-LEARNER-019,FR-ASMT-001,getExamAttempt,YES,provisional/final result and appeal,TECH REVIEW REQUIRED
+UX-LEARNER-020,FR-CONTEST-001,get__competitions,YES,level and minor eligibility states,TECH REVIEW REQUIRED
+UX-LEARNER-021,FR-CONTEST-001,get__competitions__competitionId,YES,signups/rubric/consent,TECH REVIEW REQUIRED
+UX-LEARNER-023,FR-CONTEST-001,getCompetitionRound,YES,round submit/retry/offline,TECH REVIEW REQUIRED
+UX-LEARNER-024,FR-CONTEST-001,get__competitions__competitionId__standings,YES,hide minor names by default,TECH REVIEW REQUIRED
+UX-LEARNER-025,FR-CONTEST-001,getCompetitionResult,YES,versioned appeal and notification,TECH REVIEW REQUIRED
+UX-TEACHER-005,FR-ATT-001,get__lessons__lessonId,YES,teacher briefing and permission,TECH REVIEW REQUIRED
+UX-TEACHER-007,FR-ATT-001,post__lessons__lessonId__report,YES,draft/submit/edit/audit,TECH REVIEW REQUIRED
+UX-TEACHER-011,FR-PLAN-001,post__learning_plans__planId__approve,YES,teacher AI proposal approval,TECH REVIEW REQUIRED
+UX-TEACHER-014,FR-CONTEST-001,post__competition_submissions__submissionId__judge,YES,rubric/judge conflict/score version,TECH REVIEW REQUIRED
+UX-ADMIN-001,FR-ADMIN-001,get__admin_kpis,YES,"aggregated, no personal audio",TECH REVIEW REQUIRED
+UX-ADMIN-010,FR-PAYROLL-001,post__admin_teachers__teacherId__contracts,YES,effective dated pay version,TECH REVIEW REQUIRED
+UX-ADMIN-016,FR-VIDEO-001,get__conferences__conferenceId__capabilities,YES,feature availability and vendor switch,TECH REVIEW REQUIRED
+UX-ADMIN-019,FR-PAY-001,get__payments__paymentId,YES,reconcile/Refund maker-checker,TECH REVIEW REQUIRED
+UX-ADMIN-026,FR-CONTEST-001,post__admin_competitions,YES,rubric/legal review before publish,TECH REVIEW REQUIRED
+UX-ADMIN-031,FR-CONTEST-001,postAdminContestAppealResolve,YES,independent appeal adjudication,TECH REVIEW REQUIRED
+UX-ADMIN-039,FR-ADMIN-001,get__admin_kpis,YES,date filters and data visibility,TECH REVIEW REQUIRED
+UX-MOBILE-007,FR-ASMT-001,getExamAttempt,YES,"restore, timeout, accessibility",TECH REVIEW REQUIRED
+UX-MOBILE-008,FR-CONTEST-001,get__competitions__competitionId,YES,"eligibility, private status, awards",TECH REVIEW REQUIRED

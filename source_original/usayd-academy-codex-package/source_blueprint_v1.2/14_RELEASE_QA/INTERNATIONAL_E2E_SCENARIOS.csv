@@ -1,0 +1,61 @@
+﻿Scenario ID,Title,Actor,Screen / Area,Given / Test Data,When,Expected,Domain,Phase
+GEO-01,Guest in EG views EGP,Guest,/choose-country,No saved country; IP hints EG,Select Egypt,Current active price-book price in EGP; can change country,GEO,P0
+GEO-02,VPN suggests a wrong country,Guest,/choose-country,IP suggests UK while profile is EG,Visit site,Saved explicit EG wins; no surprise quote,GEO,P0
+GEO-03,SA storefront with English UI,Student,/pricing,selected_market=SA locale=en,Open prices,"SAR localized numeric label; EN layout, independent zone",I18N,P0
+GEO-04,KWD three decimals,Student,/checkout,market=KW price=7.500 KWD,Create quote,Integer minor units 7500; gateway validation exact,GEO,P0
+GEO-05,Market not approved,Guest,/pricing,market=AE status=payment_testing,Attempt purchase,No charge; waitlist only; clear reason,GEO,P0
+GEO-06,Changed selected country during checkout,Student,/checkout,EG quote already issued; switch to SA,Change country,"Old quote preserved or cancelled with explicit re-quote, no silent conversion",GEO,P0
+GEO-07,PSP cannot charge advertised currency,Student,/checkout,SA merchant does not support SAR,Pay,Pay blocked; no false successful payment,GEO,P0
+GEO-08,Price updated while quote open,Student,/checkout,Price-book version changed,Confirm valid quote,Honors valid snapshot or clearly rejects with repricing policy,GEO,P0
+GEO-09,Refund after FX change,Finance,/admin/payments,"Original charge KWD, FX changes",Refund,Refund in original charged amount/currency and ledger preserved,GEO,P0
+GEO-10,Country market activation approvals,Regional,/admin/markets,Regional drafts SA but no finance approval,Activate,Denied until independent legal+finance signoff and live PSP test,SUP,P0
+GEO-11,Guest changes locale only,Guest,/ar/pricing,Country=EG; timezone=Asia/Riyadh,Switch to English,Language changes; EGP and timezone preserved,I18N,P0
+GEO-12,Renewal with localized price update,Student,/me/subscriptions,Existing grandfathered price,Renew,"Shown correct old/new term and affirmative policy, no hidden price",GEO,P1
+TIME-01,Teacher Cairo learner Riyadh,Teacher,/teacher/lessons,Same UTC lesson booked,View details,Both local times represent same instant,TIME,P0
+TIME-02,Teacher US DST fold,Student,/me/schedule,New York 01:30 fall transition,Book,Shows two explicit offsets/choices,TIME,P0
+TIME-03,Teacher US missing spring hour,Student,/me/schedule,New York 02:30 spring transition,Book,Reject invalid local time with alternatives,TIME,P0
+TIME-04,Cairo DST update changes future shifts,Ops,/admin/operations/timezones,tzdb upgraded,Preview future,Reports affected future slots; no silent UTC change for booked sessions,TIME,P0
+TIME-05,Student traveling region change,Student,/me/preferences,Student already booked UTC slot,Change timezone,Only display preference changes; instant unchanged,TIME,P0
+TIME-06,Double booking races across countries,Student,/booking,EG+SA learners simultaneous same teacher,Reserve one slot,"One succeeds, other 409; no double-charge",TIME,P0
+TIME-07,Reminder quiet-hours in student zone,Student,/me/preferences,Notification trigger falls in quiet period,Send reminder,Follows configured quiet policy and dedupes UTC trigger,TIME,P0
+TIME-08,Rescheduled calendar invite,Teacher,/teacher/lessons,Booked lesson with ICS UID,Reschedule,Same stable UID updated with SEQUENCE; no duplicate meeting,TIME,P1
+TIME-09,Teacher pay derived from UTC,Finance,/admin/payroll,Teacher lesson viewed in two zones,Calculate compensation,Same attendance minutes and amount,TIME,P0
+VPC-01,Switch LiveKit to Daily,Platform Admin,/admin/settings/video-routing,LiveKit rooms already active,Activate Daily for future,New lessons Daily; active sessions stay LiveKit,VPC,P0
+VPC-02,Switch to Google Meet,Platform Admin,/admin/settings/video-routing,Policy requires raw audio AI,Dry-run Meet,Fails capability and explains unsupported feature; cannot claim equivalence,VPC,P0
+VPC-03,Wrong key in credentials,Tech Ops,/admin/settings/video-providers,Invalid provider vault key,Connection test,Failed status without exposing raw secret,VPC,P0
+VPC-04,Unapproved provider change,Admin,/admin/settings/video-routing,Only creator confirms,Activate,"403 or approval pending, no traffic change",VPC,P0
+VPC-05,Prejoin provider outage,Student,/lessons/:id/prejoin,Bound provider unavailable,Join,Safe approved fallback or reschedule; credit preserved,VPC,P0
+VPC-06,Midcall provider interruption,Teacher,/teacher/lessons,Live meeting drops,Recover,"Not silent seamless swap; manual recovery, accurate attendance",VPC,P0
+VPC-07,Duplicate or forged webhook,Attacker,/api/v1/webhooks/video,Invalid or repeated event,Post webhook,Forged rejected; duplicate idempotent; no inflated attendance,VPC,P0
+VPC-08,Unauthorized student obtains join,Attacker,/lessons/:id/prejoin,Not enrolled,Request token,403; no vendor URL/token leakage,VPC,P0
+VPC-09,Missing recording consent,Admin,/admin/settings/video,Student opted out,Enable recording,Recording disabled irrespective of provider policy,VPC,P0
+VPC-10,Mobile SDK unsupported,Student,mobile://lesson/join,Provider only web verified,Join mobile,Compatible alternative or explicit external mode; no false promised embed,VPC,P1
+VPC-11,Provider rollback after activation,Platform Admin,/admin/settings/video-routing,Policy v3 active,Rollback to v2,"Future lessons route per v2, existing binding v3 preserved",VPC,P0
+VPC-12,Secret rotation live,Security,/admin/settings/video-providers,Provider key rotation,Rotate,"No secret in API logs; tested cutover, no unauthorized reveal",VPC,P0
+SUP-01,Scoped academic supervisor,Academic Supervisor,/supervisor/academic/plans,Assigned program A only,Open program B learner,403 and redacted existence,SUP,P0
+SUP-02,Plan AI suggestion pending,Teacher,/supervisor/academic/plans,AI drafts plan,Approve as teacher,If academic approval required cannot bypass gate,SUP,P0
+SUP-03,Safeguarding restricted report,Support,/supervisor/safeguarding/cases,Learner opens a serious report,View case,Support sees minimal reference; protected content safeguarding-only,SUP,P0
+SUP-04,Temporary supervisor grant expires,Academic Supervisor,/supervisor,Delegation past expiry,Call API,403 immediate and active session scopes refreshed,SUP,P0
+SUP-05,Finance maker checker,Finance,/admin/payruns,Same person creates and approves,Approve own payrun,Rejected with 2-person requirement,SUP,P0
+SUP-06,Quality reviewer transcript misuse,Quality Supervisor,/supervisor/quality,No consent for audio access,Open transcript,403; permitted metadata only,SUP,P0
+SUP-07,Contest judge conflict,Contest Judge,/supervisor/competitions,Judge assigned own learner,Score,"Conflict denied, reassignment logged",SUP,P1
+SUP-08,Break-glass scrutiny,Safety Officer,/admin/security/access-audits,Emergency grant needed,Request access,"Timeboxed MFA reason, alert independent review",SUP,P0
+SUP-09,Settings inheritance,Platform Admin,/admin/settings,Global and region versions,Preview program,"Effective precedence shown, provenance and diff",SUP,P0
+SUP-10,Localization review for refund terms,Translator,/admin/content/translations,Translation drafted,Publish directly,Denied until legal and linguistic signoff,I18N,P0
+SUP-11,Regional KPI limits,Regional Manager,/supervisor/regions,Access EG only,Query SA revenue API,403; aggregate not leaked,SUP,P0
+SUP-12,Teacher compensation hybrid,Finance,/admin/payroll,salary+per-session+shift allowance,Preview payment,"Rules effective-dated, attendance verifiable, immutable snapshot",SUP,P0
+ENG-01,Competition country deadline,Student,/competitions/:id,Two students different timezones,Submit at cutoff,Same UTC cutoff for both; correct local clocks,ENG,P1
+ENG-02,Minor competition leaderboard,Minor Learner,/competitions/:id/leaderboard,Minor not consented to publicity,View rankings,"Private alias or cohort-limited result, no full name public",ENG,P1
+ENG-03,AI generated adaptive practice,Student,/study/practice/recommended,Teacher verified weakness,Open practice,Learner sees cited basis and teacher-reviewed rubric,ENG,P1
+ENG-04,AI invents Quran text,Student,/study/practice/recommended,LLM returns unverified verse,Display answer,Canonical service rejects hallucination; never publish false Quran,ENG,P0
+ENG-05,AI policy false positive,Teacher,/teacher/lessons,Discusses WhatsApp policy legitimately,Review flag,Not automatically punished; reviewer checks context,ENG,P0
+ENG-06,Revoked audio processing consent,Student,/me/privacy,Consent withdrawn mid-subscription,Continue lesson,Core teaching remains; future analysis stopped,ENG,P0
+ENG-07,Contest appeal resolves,Student,/competitions/:id,Provisional grade disputed,Appeal,"Independent human re-grade, versioned result and notice",ENG,P1
+ENG-08,Offline mobile exam autosave,Student,mobile://practice/exam,Network drops mid exam,Continue locally then sync,Idempotent checkpoint; no duplicate attempt and clear conflict,ENG,P1
+ENG-09,Gentle reminder after gap,Student,/me/progress/weekly,Student away for a month,Resume learning,Recovery plan with no shame/guilt dark pattern,ENG,P1
+QA-01,Arabic RTL responsive,QA,all critical screens,360 px mobile / 1440 desktop,Switch AR/EN,"No clipped labels, readable currency, semantic icon direction",I18N,P0
+QA-02,Keyboard + screen reader,QA,all critical screens,WCAG 2.2 AA target,Keyboard tour,"Correct focus traps, names, forms and 44px targets",I18N,P0
+QA-03,High load 100 simultaneous lessons,QA,classroom backend,Synthetic users; provider quota approved,Load test,Within agreed SLO; no video credential leak or double lesson,VPC,P0
+QA-04,Restore from backups,SRE,DB and events,Recent encrypted snapshot,Recover,"Documented RPO/RTO measured, events and billing reconcile",SUP,P0
+QA-05,Idempotent double payment webhooks,QA,payment webhooks,Identical event delivered 10x,Process,One entitlement and one ledger posting,GEO,P0
+QA-06,Feature matrix with all providers,QA,provider settings,LiveKit/VideoSDK/Daily/Zoom/Meet,Run contract suite,Each vendor marked tested/unverified; unsupported features disabled,VPC,P0

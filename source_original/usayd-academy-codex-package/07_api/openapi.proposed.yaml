@@ -1,0 +1,5175 @@
+openapi: 3.1.0
+info:
+  title: Usayd Academy API — PROPOSED additions (NOT APPROVED, NOT IMPLEMENTED)
+  version: 1.3.0-proposal
+  description: Proposals only. Merge into openapi.yaml operation by operation after product/tech-lead approval. Operations marked NEEDS_APPROVAL
+    stay behind the named feature flag until the owner decision is recorded. `Problem` and `BearerAuth` refer to the baseline openapi.yaml.
+servers:
+- url: https://api.example.invalid
+  description: Non-resolving placeholder origin; endpoint paths include /api/v1 exactly once.
+security:
+- BearerAuth: []
+paths:
+  /api/v1/admin/learners:
+    get:
+      operationId: listAdminLearners
+      summary: Scoped learner directory
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-IAM-004
+      - FR-ADMIN-002
+      - FR-PROF-004
+      x-consumers:
+      - UX-ADMIN-002
+      x-journeys:
+      - J11
+      x-permission:
+        roles:
+        - platform_admin
+        - support_agent
+        - academic_supervisor
+        scope: market/program scope; support sees only learners on open tickets
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential + child data (minimised)
+      x-audit-event: admin.learner_list.viewed (sampled)
+      x-idempotency: safe/read-only
+      parameters:
+      - name: market
+        in: query
+        schema:
+          type: string
+          pattern: ^[A-Z]{2}$
+      - name: status
+        in: query
+        schema:
+          type: string
+          enum:
+          - active
+          - limited
+          - paused
+          - closed
+      - name: age_band
+        in: query
+        schema:
+          type: string
+          enum:
+          - minor_under_13
+          - minor_13_17
+          - adult
+      - name: q
+        in: query
+        schema:
+          type: string
+          maxLength: 64
+        description: display_ref or learner id only; no name search for minors
+      - name: sort
+        in: query
+        schema:
+          type: string
+          enum:
+          - display_ref
+          - status
+          - market
+          default: display_ref
+      - name: order
+        in: query
+        schema:
+          type: string
+          enum:
+          - asc
+          - desc
+          default: asc
+      - &id002
+        name: cursor
+        in: query
+        schema:
+          type: string
+        description: Opaque cursor from `next_cursor`
+      - &id003
+        name: limit
+        in: query
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 100
+          default: 25
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminLearnerRowList'
+        '401': &id004
+          description: UNAUTHENTICATED
+          content:
+            application/problem+json:
+              schema: &id001
+                $ref: '#/components/schemas/Problem'
+        '403': &id005
+          description: FORBIDDEN_SCOPE — non-revealing; also consent/policy blocks
+          content:
+            application/problem+json:
+              schema: *id001
+        '429': &id006
+          description: RATE_LIMITED — Retry-After header
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/admin/consents:
+    get:
+      operationId: listAdminConsents
+      summary: Guardian consent queue
+      tags:
+      - Admin
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-IAM-006
+      - FR-IAM-007
+      x-consumers:
+      - UX-ADMIN-004
+      x-journeys:
+      - J02
+      x-permission:
+        roles:
+        - platform_admin
+        - safeguarding_lead
+        scope: market scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: child data
+      x-feature-flag: guardian_consent_v1
+      x-decision: O-04 (verification_method enum)
+      x-idempotency: safe/read-only
+      parameters:
+      - name: state
+        in: query
+        schema:
+          type: string
+          enum:
+          - requested
+          - verified
+          - granted
+          - declined
+          - withdrawn
+          - expired
+      - name: purpose
+        in: query
+        schema:
+          type: string
+          enum:
+          - lessons
+          - recording
+          - competitions
+          - ai_processing
+          - marketing
+      - name: market
+        in: query
+        schema: &id008
+          type: string
+      - name: sort
+        in: query
+        schema:
+          type: string
+          enum:
+          - expires_at
+          - sent_at
+          default: expires_at
+      - name: order
+        in: query
+        schema:
+          type: string
+          enum:
+          - asc
+          - desc
+          default: asc
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminConsentRowList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/admin/teacher-applications:
+    get:
+      operationId: listTeacherApplications
+      summary: Teacher recruitment pipeline
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-TCHR-001
+      x-consumers:
+      - UX-ADMIN-006
+      x-journeys:
+      - J03
+      x-permission:
+        roles:
+        - platform_admin
+        - academic_supervisor
+        - safeguarding_lead
+        scope: market scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential (identity documents referenced by id only)
+      x-idempotency: safe/read-only
+      parameters:
+      - name: state
+        in: query
+        schema:
+          type: string
+          enum:
+          - submitted
+          - credentials_review
+          - recitation_interview
+          - safeguarding_check
+          - accepted
+          - rejected
+          - withdrawn
+      - name: sort
+        in: query
+        schema:
+          type: string
+          enum:
+          - submitted_at
+          - state
+          default: submitted_at
+      - name: order
+        in: query
+        schema:
+          type: string
+          enum:
+          - asc
+          - desc
+          default: asc
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TeacherApplicationList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/teacher-applications:
+    post:
+      operationId: submitTeacherApplication
+      summary: Submit a teacher application
+      tags:
+      - Teacher-Applications
+      x-status: PROPOSED
+      x-fr:
+      - FR-TCHR-001
+      - FR-MEDIA-003
+      x-consumers:
+      - UX-TEACHER-001
+      x-journeys:
+      - J03
+      x-permission:
+        roles:
+        - authenticated_user
+        scope: own application only; one open application per user
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential
+      x-audit-event: teacher_application.submitted
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - &id007
+        name: Idempotency-Key
+        in: header
+        required: true
+        schema:
+          type: string
+          format: uuid
+        description: Same key + same body within 24 h returns the first result; same key + different body → 409 IDEMPOTENCY_MISMATCH
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TeacherApplicationEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: APPLICATION_ALREADY_OPEN
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TeacherApplicationRequest'
+            example:
+              languages:
+              - ar
+              - en
+              teaching_areas:
+              - memorization
+              - tajweed
+              riwayat:
+              - hafs_an_asim
+              document_upload_ids:
+              - 7b1d0c1e-2f0a-4f1a-9b6c-0b2f3a1c9d10
+              consent_receipt_id: 0e6f3a52-1c3e-4d5b-8f0a-2a4c6b8d0e12
+  /api/v1/admin/teacher-applications/{applicationId}/decision:
+    post:
+      operationId: decideTeacherApplication
+      summary: Accept/reject an application
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-TCHR-001
+      - FR-TCHR-005
+      x-consumers:
+      - UX-ADMIN-006
+      x-journeys:
+      - J03
+      x-permission:
+        roles:
+        - academic_supervisor
+        scope: market scope; decider ≠ the reviewer who ran the recitation interview; safeguarding_check must be cleared before approve
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential
+      x-audit-event: teacher_application.decided
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: applicationId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TeacherApplicationEnvelope'
+        '401': *id004
+        '403':
+          description: SELF_DECISION_FORBIDDEN
+          content:
+            application/problem+json:
+              schema: *id001
+        '429': *id006
+        '409':
+          description: SAFEGUARDING_NOT_CLEARED
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DecisionRequest'
+  /api/v1/admin/teachers/{teacherId}:
+    get:
+      operationId: getAdminTeacher
+      summary: Teacher admin profile
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-TCHR-002
+      - FR-TCHR-005
+      - FR-TCHR-007
+      x-consumers:
+      - UX-ADMIN-008
+      x-permission:
+        roles:
+        - platform_admin
+        - academic_supervisor
+        - finance_supervisor
+        scope: market scope; finance sees contract fields only
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential
+      x-audit-event: admin.teacher_profile.viewed
+      x-idempotency: safe/read-only
+      parameters:
+      - name: teacherId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminTeacherEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '404':
+          description: NOT_FOUND (also returned when out of scope)
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/admin/teachers:
+    get:
+      operationId: listAdminTeachers
+      summary: Admin teacher list
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-TCHR-005
+      - FR-TCHR-007
+      x-consumers:
+      - UX-ADMIN-007
+      x-permission:
+        roles:
+        - platform_admin
+        - academic_supervisor
+        - ops_supervisor
+        scope: market scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential
+      x-idempotency: safe/read-only
+      parameters:
+      - name: market
+        in: query
+        schema: *id008
+      - name: employment_state
+        in: query
+        schema:
+          type: string
+          enum:
+          - candidate
+          - approved
+          - active
+          - suspended
+          - offboarded
+      - name: contract_type
+        in: query
+        schema: *id008
+      - name: sort
+        in: query
+        schema:
+          type: string
+          enum:
+          - display_name
+          - lessons_completed_30d
+          - attendance_rate_30d
+          default: display_name
+      - name: order
+        in: query
+        schema:
+          type: string
+          enum:
+          - asc
+          - desc
+          default: asc
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminTeacherList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/teachers/{teacherId}:
+    get:
+      operationId: getPublicTeacher
+      summary: Public teacher profile
+      tags:
+      - Teachers
+      x-status: PROPOSED
+      x-fr:
+      - FR-TCHR-002
+      x-consumers:
+      - UX-PUBLIC-006
+      - UX-LEARNER-005
+      x-journeys:
+      - J01
+      x-permission:
+        roles:
+        - guest
+        - learner
+        scope: published + consented profiles only; market-limited (FR-GEO-004)
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: public
+      x-idempotency: safe/read-only
+      parameters:
+      - name: teacherId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: market
+        in: query
+        schema: *id008
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicTeacherEnvelope'
+        '429': *id006
+        '404':
+          description: NOT_FOUND
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/admin/quran-sources:
+    get:
+      operationId: listQuranSources
+      summary: Licensed Quran text sources
+      tags:
+      - Admin
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-CURR-003
+      x-consumers:
+      - UX-ADMIN-012
+      x-permission:
+        roles:
+        - academic_supervisor
+        - platform_admin
+        scope: global
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-feature-flag: quran_source_v1
+      x-decision: O-06 licensed source + academic authority
+      x-idempotency: safe/read-only
+      parameters:
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuranSourceList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+  /api/v1/question-bank-items:
+    get:
+      operationId: listQuestionBankItems
+      summary: Question bank (role-scoped)
+      tags:
+      - Question-Bank-Items
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-CURR-006
+      - FR-CONTEST-006
+      - FR-ASMT-005
+      x-consumers:
+      - UX-ADMIN-013
+      - UX-TEACHER-012
+      x-permission:
+        roles:
+        - content_editor
+        - academic_supervisor
+        - teacher (reviewer)
+        scope: teachers see items assigned to them for review
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-decision: O-06 for items that quote Quran text
+      x-idempotency: safe/read-only
+      parameters:
+      - name: status
+        in: query
+        schema:
+          type: string
+          enum:
+          - draft
+          - review
+          - approved
+          - retired
+      - name: level
+        in: query
+        schema: *id008
+      - name: type
+        in: query
+        schema:
+          type: string
+          enum:
+          - choice
+          - order
+          - identify_word
+          - recitation
+      - name: sort
+        in: query
+        schema:
+          type: string
+          enum:
+          - updated_at
+          - level
+          default: updated_at
+      - name: order
+        in: query
+        schema:
+          type: string
+          enum:
+          - asc
+          - desc
+          default: asc
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuestionBankItemList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+    post:
+      operationId: createQuestionDraft
+      summary: Create a question draft
+      tags:
+      - Question-Bank-Items
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-CURR-006
+      - FR-CONTEST-006
+      x-consumers:
+      - UX-ADMIN-013
+      x-permission:
+        roles:
+        - content_editor
+        scope: program scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-audit-event: question.draft_created
+      x-decision: O-06 for Quran-quoting items
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - *id007
+      responses:
+        '201':
+          description: Accepted/OK
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QuestionDraftRequest'
+  /api/v1/admin/rubrics:
+    get:
+      operationId: listRubrics
+      summary: Assessment/contest rubrics (versioned)
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-ASMT-001
+      - FR-CONTEST-003
+      x-consumers:
+      - UX-ADMIN-014
+      x-permission:
+        roles:
+        - academic_supervisor
+        - content_editor
+        scope: program scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-idempotency: safe/read-only
+      parameters:
+      - name: program_id
+        in: query
+        schema: &id010
+          type: string
+          format: uuid
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RubricList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+    post:
+      operationId: createRubricVersion
+      summary: New rubric version
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-ASMT-001
+      x-consumers:
+      - UX-ADMIN-014
+      x-permission:
+        roles:
+        - academic_supervisor
+        scope: program scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-audit-event: rubric.version_created
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - *id007
+      responses:
+        '201':
+          description: Accepted/OK
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RubricVersionRequest'
+  /api/v1/admin/lessons:
+    get:
+      operationId: listAdminLessons
+      summary: Live lesson operations
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-ADMIN-001
+      - FR-ATT-004
+      x-consumers:
+      - UX-ADMIN-016
+      x-journeys:
+      - J06
+      x-permission:
+        roles:
+        - ops_supervisor
+        - platform_admin
+        scope: market scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential
+      x-idempotency: safe/read-only
+      parameters:
+      - name: state
+        in: query
+        schema:
+          type: string
+          enum:
+          - scheduled
+          - live
+          - completed
+          - incident
+          - cancelled
+      - name: from
+        in: query
+        schema: &id009
+          type: string
+          format: date-time
+      - name: to
+        in: query
+        schema: *id009
+      - name: provider
+        in: query
+        schema: *id008
+      - name: sort
+        in: query
+        schema:
+          type: string
+          enum:
+          - start_at
+          - state
+          default: start_at
+      - name: order
+        in: query
+        schema:
+          type: string
+          enum:
+          - asc
+          - desc
+          default: asc
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminLessonRowList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/admin/pay-runs:
+    get:
+      operationId: listPayRuns
+      summary: Pay runs
+      tags:
+      - Admin
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-PAYROLL-008
+      x-consumers:
+      - UX-ADMIN-021
+      x-journeys:
+      - J15
+      x-permission:
+        roles:
+        - finance_supervisor
+        scope: market/entity scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential (financial)
+      x-feature-flag: payroll_v1
+      x-decision: O-08 (calculation rules; list itself is safe)
+      x-idempotency: safe/read-only
+      parameters:
+      - name: state
+        in: query
+        schema:
+          type: string
+          enum:
+          - draft
+          - calculated
+          - reviewed
+          - approved
+          - paid
+          - reconciled
+      - name: period
+        in: query
+        schema: *id008
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PayRunRowList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/admin/competitions:
+    get:
+      operationId: listAdminCompetitions
+      summary: Admin competitions list (incl. drafts)
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-CONTEST-001
+      - FR-CONTEST-005
+      - FR-ADMIN-003
+      x-consumers:
+      - UX-ADMIN-027
+      - UX-ADMIN-025
+      x-journeys:
+      - J10
+      x-permission:
+        roles:
+        - platform_admin
+        - competition_moderator
+        scope: market scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-idempotency: safe/read-only
+      parameters:
+      - name: state
+        in: query
+        schema:
+          type: string
+          enum:
+          - draft
+          - academic_review
+          - legal_review
+          - scheduled
+          - registration_open
+          - registration_closed
+          - running
+          - scoring
+          - provisional_results
+          - appeal_window
+          - finalized
+          - prizes_issued
+          - archived
+          - cancelled
+      - name: kind
+        in: query
+        schema:
+          type: string
+          enum:
+          - competition
+          - template
+        description: templates = reusable drafts; template semantics DEFERRED until FR-CONTEST-005 cadence rules are approved
+      - name: sort
+        in: query
+        schema:
+          type: string
+          enum:
+          - next_deadline_at
+          - title
+          default: next_deadline_at
+      - name: order
+        in: query
+        schema:
+          type: string
+          enum:
+          - asc
+          - desc
+          default: asc
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminCompetitionRowList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/admin/competitions/{competitionId}/judges:
+    post:
+      operationId: assignCompetitionJudges
+      summary: Assign judges with conflict check
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-CONTEST-008
+      - FR-CONTEST-011
+      - FR-ADMIN-003
+      x-consumers:
+      - UX-ADMIN-029
+      x-journeys:
+      - J10
+      x-permission:
+        roles:
+        - competition_moderator
+        - academic_supervisor
+        scope: market scope; judge may not be the teacher of any entrant
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-audit-event: competition.judges_assigned
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: competitionId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JudgeAssignmentEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: JUDGE_CONFLICT_OF_INTEREST
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JudgeAssignmentRequest'
+  /api/v1/admin/crm/leads:
+    get:
+      operationId: listCrmLeads
+      summary: CRM leads
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-CRM-001
+      - FR-CRM-002
+      - FR-CRM-005
+      x-consumers:
+      - UX-ADMIN-033
+      - UX-ADMIN-034
+      x-permission:
+        roles:
+        - marketing_admin
+        scope: market scope; adults only
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: personal (marketing consent)
+      x-idempotency: safe/read-only
+      parameters:
+      - name: stage
+        in: query
+        schema:
+          type: string
+          enum:
+          - new
+          - contacted
+          - qualified
+          - scheduled
+          - attended
+          - paid
+          - lost
+      - name: market
+        in: query
+        schema: *id008
+      - name: source
+        in: query
+        schema: *id008
+      - name: sort
+        in: query
+        schema:
+          type: string
+          enum:
+          - created_at
+          - stage
+          default: created_at
+      - name: order
+        in: query
+        schema:
+          type: string
+          enum:
+          - asc
+          - desc
+          default: asc
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CrmLeadList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/admin/library-items:
+    get:
+      operationId: listAdminLibraryItems
+      summary: Recorded library (admin)
+      tags:
+      - Admin
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-MEDIA-001
+      - FR-CURR-005
+      x-consumers:
+      - UX-ADMIN-037
+      x-permission:
+        roles:
+        - content_editor
+        - academic_supervisor
+        scope: program scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-feature-flag: library_v1
+      x-decision: Licensing of each item (FR-MEDIA-001)
+      x-idempotency: safe/read-only
+      parameters:
+      - name: licence_state
+        in: query
+        schema:
+          type: string
+          enum:
+          - pending
+          - licensed
+          - expired
+      - name: program_id
+        in: query
+        schema: *id010
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LibraryItemList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/library-items:
+    get:
+      operationId: listLibraryItems
+      summary: Recorded library (entitled learner)
+      tags:
+      - Library-Items
+      x-status: PROPOSED
+      x-fr:
+      - FR-CURR-005
+      - FR-MEDIA-002
+      x-consumers:
+      - UX-LEARNER-028
+      x-journeys:
+      - J08
+      x-permission:
+        roles:
+        - learner
+        scope: own entitlements only; signed URLs ≤ 15 min
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-feature-flag: library_v1
+      x-idempotency: safe/read-only
+      parameters:
+      - name: program_id
+        in: query
+        schema: *id010
+      - name: kind
+        in: query
+        schema:
+          type: string
+          enum:
+          - video
+          - audio
+          - document
+          - exercise
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LibraryItemList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/auth/password-reset-requests:
+    post:
+      operationId: requestPasswordReset
+      summary: Start account recovery (non-enumerating)
+      tags:
+      - Auth
+      x-status: PROPOSED
+      x-fr:
+      - FR-IAM-003
+      - FR-SEC-003
+      x-consumers:
+      - UX-AUTH-004
+      x-permission:
+        roles:
+        - guest
+        scope: none
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: personal
+      x-audit-event: auth.reset_requested
+      x-idempotency: natural key
+      responses:
+        '202':
+          description: Accepted/OK
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PasswordResetRequest'
+  /api/v1/auth/password-resets:
+    post:
+      operationId: confirmPasswordReset
+      summary: Complete account recovery
+      tags:
+      - Auth
+      x-status: PROPOSED
+      x-fr:
+      - FR-IAM-003
+      - FR-IAM-008
+      x-consumers:
+      - UX-AUTH-004
+      x-permission:
+        roles:
+        - guest
+        scope: token-bound
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: secret
+      x-audit-event: auth.password_reset (revokes all sessions)
+      x-idempotency: natural key
+      responses:
+        '204':
+          description: Accepted/OK
+        '429': *id006
+        '410':
+          description: TOKEN_EXPIRED
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: WEAK_PASSWORD
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PasswordResetConfirm'
+  /api/v1/public/market-waitlist:
+    post:
+      operationId: joinMarketWaitlist
+      summary: Join waitlist for an unavailable market
+      tags:
+      - Public
+      x-status: PROPOSED
+      x-fr:
+      - FR-GEO-002
+      - FR-GEO-003
+      - FR-CRM-001
+      - FR-CRM-005
+      x-consumers:
+      - UX-GLOB-003
+      - UX-PUBLIC-001
+      x-journeys:
+      - J01
+      - J16
+      x-permission:
+        roles:
+        - guest
+        scope: none
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: personal (contact + consent)
+      x-audit-event: market_waitlist.joined
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - *id007
+      responses:
+        '202':
+          description: Accepted/OK
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED
+          content:
+            application/problem+json:
+              schema: *id001
+        '409':
+          description: MARKET_ALREADY_ACTIVE
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WaitlistRequest'
+  /api/v1/subscriptions/{subscriptionId}/renewal-consent:
+    post:
+      operationId: setRenewalConsent
+      summary: Opt in/out of auto-renewal
+      tags:
+      - Subscriptions
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-PAY-006
+      x-consumers:
+      - UX-GLOB-007
+      - UX-LEARNER-029
+      x-journeys:
+      - J05
+      x-permission:
+        roles:
+        - learner (payer)
+        scope: own subscription
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: financial
+      x-audit-event: subscription.renewal_consent_changed
+      x-feature-flag: auto_renew_v1
+      x-decision: O-02 pricing/renewal policy + PSP support
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: subscriptionId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '204':
+          description: Accepted/OK
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RenewalConsentRequest'
+  /api/v1/me/notifications:
+    get:
+      operationId: listMyNotifications
+      summary: In-app notification inbox
+      tags:
+      - Me
+      x-status: PROPOSED
+      x-fr:
+      - FR-NOTIF-002
+      - FR-NOTIF-003
+      - FR-MOB-003
+      x-consumers:
+      - UX-LEARNER-030
+      - UX-MOBILE-011
+      x-journeys:
+      - J14
+      x-permission:
+        roles:
+        - learner
+        - teacher
+        scope: own only
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: personal
+      x-idempotency: safe/read-only
+      parameters:
+      - name: unread
+        in: query
+        schema: &id012
+          type: boolean
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotificationList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/me/notifications/read:
+    post:
+      operationId: markNotificationsRead
+      summary: Mark notifications read
+      tags:
+      - Me
+      x-status: PROPOSED
+      x-fr:
+      - FR-NOTIF-003
+      x-consumers:
+      - UX-LEARNER-030
+      x-journeys:
+      - J14
+      x-permission:
+        roles:
+        - learner
+        - teacher
+        scope: own only
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: personal
+      x-idempotency: natural key
+      responses:
+        '204':
+          description: Accepted/OK
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NotificationReadRequest'
+  /api/v1/public/legal-documents/{slug}:
+    get:
+      operationId: getLegalDocument
+      summary: Versioned legal document
+      tags:
+      - Public
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-IAM-006
+      - FR-IAM-010
+      - FR-I18N-003
+      x-consumers:
+      - UX-PUBLIC-012
+      - UX-AUTH-001
+      - UX-AUTH-002
+      x-permission:
+        roles:
+        - guest
+        scope: none
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: public
+      x-decision: O-01 (content only — contract is safe)
+      x-idempotency: safe/read-only
+      parameters:
+      - name: slug
+        in: path
+        required: true
+        schema:
+          type: string
+          enum:
+          - terms
+          - privacy
+          - refunds
+          - safeguarding
+          - cookies
+      - name: locale
+        in: query
+        schema:
+          type: string
+          enum:
+          - ar
+          - en
+      - name: market
+        in: query
+        schema: *id008
+      - name: version
+        in: query
+        schema: *id008
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LegalDocumentEnvelope'
+        '429': *id006
+        '404':
+          description: NOT_PUBLISHED
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/teachers/me/learners:
+    get:
+      operationId: listMyLearners
+      summary: Teacher’s assigned learners
+      tags:
+      - Teachers
+      x-status: PROPOSED
+      x-fr:
+      - FR-IAM-004
+      - FR-TCHR-004
+      x-consumers:
+      - UX-TEACHER-008
+      - UX-TEACHER-002
+      x-journeys:
+      - J03
+      - J07
+      x-permission:
+        roles:
+        - teacher
+        scope: assigned learners only (ownership)
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential + child data (minimised)
+      x-idempotency: safe/read-only
+      parameters:
+      - name: plan_state
+        in: query
+        schema:
+          type: string
+          enum:
+          - none
+          - draft
+          - pending_review
+          - approved
+      - name: sort
+        in: query
+        schema:
+          type: string
+          enum:
+          - next_lesson_at
+          - display_name
+          default: next_lesson_at
+      - name: order
+        in: query
+        schema:
+          type: string
+          enum:
+          - asc
+          - desc
+          default: asc
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MyLearnerRowList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/booking/slot-holds:
+    post:
+      operationId: createSlotHold
+      summary: Hold a slot before payment/confirmation
+      tags:
+      - Booking
+      x-status: PROPOSED
+      x-fr:
+      - FR-BOOK-001
+      - FR-BOOK-002
+      - FR-BOOK-007
+      - FR-TIME-004
+      x-consumers:
+      - UX-LEARNER-008
+      - UX-PUBLIC-009
+      - UX-GLOB-005
+      x-journeys:
+      - J01
+      - J04
+      x-permission:
+        roles:
+        - learner
+        - guest (assessment)
+        scope: own; one active hold per learner per teacher
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-audit-event: booking.slot_held
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - *id007
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SlotHoldEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: SLOT_TAKEN
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: DST_GAP | DST_AMBIGUOUS_NEEDS_RESOLUTION
+          content:
+            application/problem+json:
+              schema: *id001
+        '423':
+          description: HOLD_LIMIT
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SlotHoldRequest'
+            example:
+              teacher_id: 3f1c2a7e-9d4b-4c1e-8a2f-5b6c7d8e9f01
+              start_at: '2026-12-10T17:30:00Z'
+              duration_minutes: 30
+              timezone: Africa/Cairo
+              dst_resolution: null
+  /api/v1/bookings/{bookingId}/cancel:
+    post:
+      operationId: cancelBooking
+      summary: Cancel a booking under the cancellation window
+      tags:
+      - Bookings
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-BOOK-004
+      - FR-BOOK-005
+      - FR-PAY-008
+      x-consumers:
+      - UX-LEARNER-009
+      - UX-LEARNER-010
+      x-journeys:
+      - J04
+      x-permission:
+        roles:
+        - learner
+        - teacher
+        - ops_supervisor
+        scope: participant or scoped ops
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-audit-event: booking.cancelled
+      x-decision: Credit/forfeit rules per window (O-02 commercial policy)
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: bookingId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookingCancellationEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: OUTSIDE_CANCELLATION_WINDOW
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CancelBookingRequest'
+  /api/v1/learners/{learnerId}/guardian-invitations:
+    post:
+      operationId: createGuardianInvitation
+      summary: Invite a guardian (separate session)
+      tags:
+      - Learners
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-IAM-007
+      - FR-PROF-005
+      x-consumers:
+      - UX-AUTH-002
+      x-journeys:
+      - J02
+      x-permission:
+        roles:
+        - learner (minor) / onboarding user
+        scope: own learner profile
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: child data
+      x-audit-event: guardian_invitation.sent
+      x-feature-flag: guardian_consent_v1
+      x-decision: O-04 verification method
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: learnerId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GuardianInvitationEnvelope'
+        '401': *id004
+        '403': *id005
+        '429':
+          description: TOO_MANY_INVITES
+          content:
+            application/problem+json:
+              schema: *id001
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GuardianInvitationRequest'
+  /api/v1/guardian-invitations/{invitationToken}:
+    get:
+      operationId: getGuardianInvitation
+      summary: Guardian opens the invitation
+      tags:
+      - Guardian-Invitations
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-IAM-007
+      x-consumers:
+      - UX-JR-02 (guardian session)
+      x-journeys:
+      - J02
+      x-permission:
+        roles:
+        - guardian (token)
+        scope: token-bound, single learner
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: child data
+      x-feature-flag: guardian_consent_v1
+      x-decision: O-04
+      x-idempotency: safe/read-only
+      parameters:
+      - name: invitationToken
+        in: path
+        required: true
+        schema: *id008
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GuardianInvitationEnvelope'
+        '429': *id006
+        '410':
+          description: INVITATION_EXPIRED
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/guardian-invitations/{invitationToken}/decision:
+    post:
+      operationId: decideGuardianConsent
+      summary: Guardian grants/declines per purpose
+      tags:
+      - Guardian-Invitations
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-IAM-006
+      - FR-IAM-007
+      x-consumers:
+      - UX-JR-02 (guardian session)
+      x-journeys:
+      - J02
+      x-permission:
+        roles:
+        - guardian (token)
+        scope: token-bound
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: child data
+      x-audit-event: consent.recorded (per purpose, policy version)
+      x-feature-flag: guardian_consent_v1
+      x-decision: O-04, O-05
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: invitationToken
+        in: path
+        required: true
+        schema: *id008
+      - *id007
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GuardianInvitationEnvelope'
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+        '410':
+          description: INVITATION_EXPIRED
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GuardianDecisionRequest'
+  /api/v1/lessons/{lessonId}/report-draft:
+    put:
+      operationId: saveLessonReportDraft
+      summary: Autosave a lesson report draft
+      tags:
+      - Lessons
+      x-status: PROPOSED
+      x-fr:
+      - FR-ATT-003
+      x-consumers:
+      - UX-TEACHER-006
+      - UX-TEACHER-007
+      x-journeys:
+      - J07
+      x-permission:
+        roles:
+        - teacher
+        scope: lesson’s assigned teacher
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential + child data
+      x-idempotency: natural key
+      x-concurrency: If-Match version (412 on mismatch)
+      parameters:
+      - name: lessonId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - &id011
+        name: If-Match
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Entity version (ETag). Mismatch → 412 VERSION_CONFLICT
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReportDraftEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '412':
+          description: VERSION_CONFLICT — returns server draft
+          content:
+            application/problem+json:
+              schema: *id001
+        '409':
+          description: REPORT_ALREADY_SUBMITTED
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReportDraft'
+  /api/v1/me/sync-batches:
+    post:
+      operationId: submitSyncBatch
+      summary: Upload queued offline items
+      tags:
+      - Me
+      x-status: PROPOSED
+      x-fr:
+      - FR-MOB-004
+      - FR-MOB-002
+      x-consumers:
+      - UX-MOBILE-007
+      - UX-MOBILE-010
+      - UX-MOBILE-002
+      x-journeys:
+      - J13
+      x-permission:
+        roles:
+        - learner
+        - teacher
+        scope: own items; per-item ownership check
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential
+      x-audit-event: sync.batch_applied
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - *id007
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SyncBatchResultEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '413':
+          description: BATCH_TOO_LARGE
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SyncBatchRequest'
+  /api/v1/me/devices:
+    post:
+      operationId: registerDevice
+      summary: Register push token
+      tags:
+      - Me
+      x-status: PROPOSED
+      x-fr:
+      - FR-MOB-003
+      x-consumers:
+      - UX-MOBILE-000
+      - UX-MOBILE-011
+      x-journeys:
+      - J13
+      - J14
+      x-permission:
+        roles:
+        - learner
+        - teacher
+        scope: own
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: device identifiers
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - *id007
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeviceRegistration'
+  /api/v1/me/devices/{deviceId}:
+    delete:
+      operationId: unregisterDevice
+      summary: Remove push token (logout)
+      tags:
+      - Me
+      x-status: PROPOSED
+      x-fr:
+      - FR-MOB-003
+      - FR-IAM-008
+      x-consumers:
+      - UX-MOBILE-011
+      - UX-LEARNER-032
+      x-permission:
+        roles:
+        - learner
+        - teacher
+        scope: own
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: device identifiers
+      x-idempotency: natural key
+      parameters:
+      - name: deviceId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      responses:
+        '204':
+          description: Accepted/OK
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '404':
+          description: NOT_FOUND
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/auth/logout:
+    post:
+      operationId: logout
+      summary: Revoke refresh token(s)
+      tags:
+      - Auth
+      x-status: PROPOSED
+      x-fr:
+      - FR-IAM-003
+      - FR-IAM-008
+      x-consumers:
+      - UX-LEARNER-032
+      - UX-MOBILE-011
+      - UX-TEACHER-018
+      x-permission:
+        roles:
+        - any authenticated
+        scope: own sessions
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: secret
+      x-audit-event: auth.logout
+      x-idempotency: natural key
+      responses:
+        '204':
+          description: Accepted/OK
+        '401': *id004
+        '403': *id005
+        '429': *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LogoutRequest'
+  /api/v1/payments/{paymentId}/refund-requests:
+    post:
+      operationId: requestRefund
+      summary: Request a refund
+      tags:
+      - Payments
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-PAY-005
+      - FR-GEO-015
+      x-consumers:
+      - UX-LEARNER-029
+      - UX-ADMIN-019
+      x-journeys:
+      - J05
+      x-permission:
+        roles:
+        - learner (payer)
+        - finance_supervisor
+        scope: own payment / finance scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: financial
+      x-audit-event: refund.requested
+      x-feature-flag: refunds_v1
+      x-decision: O-02 refund policy
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: paymentId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RefundCaseEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: REFUND_EXCEEDS_REFUNDABLE
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RefundRequest'
+  /api/v1/admin/break-glass-grants:
+    post:
+      operationId: postBreakGlassGrant
+      summary: Time-boxed emergency access to a safeguarding case
+      tags:
+      - Admin
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-SUP-004
+      - FR-SUP-009
+      - FR-SEC-004
+      x-consumers:
+      - UX-SUP-004
+      x-journeys:
+      - J14
+      x-permission:
+        roles:
+        - safeguarding_lead
+        - platform_admin
+        scope: single case, time-boxed, MFA step-up
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: child data (highest)
+      x-audit-event: break_glass.granted (review required within 24 h)
+      x-feature-flag: break_glass_v1
+      x-decision: D-39
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - *id007
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BreakGlassGrantEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BreakGlassRequest'
+  /api/v1/admin/security/access-audits/{auditId}/review:
+    post:
+      operationId: postAccessAuditReview
+      summary: Record an access-review outcome
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-SUP-009
+      - FR-SEC-004
+      x-consumers:
+      - UX-SUP-009
+      x-journeys:
+      - J11
+      x-permission:
+        roles:
+        - security_reviewer
+        - safeguarding_lead
+        scope: reviewer ≠ actor of the audited access
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential
+      x-audit-event: access_audit.reviewed
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: auditId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '204':
+          description: Accepted/OK
+        '401': *id004
+        '403':
+          description: SELF_REVIEW_FORBIDDEN
+          content:
+            application/problem+json:
+              schema: *id001
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccessAuditReviewRequest'
+  /api/v1/uploads:
+    post:
+      operationId: createUpload
+      summary: Signed upload + malware scan
+      tags:
+      - Uploads
+      x-status: PROPOSED
+      x-fr:
+      - FR-MEDIA-003
+      - FR-SEC-002
+      x-consumers:
+      - UX-TEACHER-001
+      - UX-LEARNER-031
+      - UX-TEACHER-007
+      x-journeys:
+      - J03
+      x-permission:
+        roles:
+        - authenticated_user
+        scope: own uploads
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: depends on purpose
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - *id007
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '413':
+          description: FILE_TOO_LARGE
+          content:
+            application/problem+json:
+              schema: *id001
+        '415':
+          description: UNSUPPORTED_TYPE
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UploadRequest'
+  /api/v1/admin/learners/{learnerId}/teacher-assignment:
+    post:
+      operationId: assignTeacher
+      summary: Assign/transfer a learner’s teacher
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-TCHR-004
+      - FR-TCHR-006
+      x-consumers:
+      - UX-ADMIN-003
+      - UX-SUP-006
+      x-journeys:
+      - J03
+      x-permission:
+        roles:
+        - ops_supervisor
+        - academic_supervisor
+        scope: market/program scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential
+      x-audit-event: learner.teacher_assigned
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: learnerId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '204':
+          description: Accepted/OK
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: TEACHER_NOT_ACTIVE
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TeacherAssignmentRequest'
+  /api/v1/teachers/me/pay-statements/{statementId}/disputes:
+    post:
+      operationId: disputePayStatement
+      summary: Teacher disputes a pay line
+      tags:
+      - Teachers
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-PAYROLL-009
+      x-consumers:
+      - UX-TEACHER-016
+      x-journeys:
+      - J15
+      x-permission:
+        roles:
+        - teacher
+        scope: own statements
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: financial
+      x-audit-event: payroll.dispute_opened
+      x-feature-flag: payroll_v1
+      x-decision: O-08
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: statementId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PayStatementDisputeEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PayStatementDisputeRequest'
+  /api/v1/admin/bookings:
+    get:
+      operationId: listAdminBookings
+      summary: Scoped booking operations list
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-BOOK-001
+      - FR-BOOK-004
+      - FR-BOOK-006
+      - FR-TIME-006
+      x-consumers:
+      - UX-ADMIN-015
+      x-journeys:
+      - J04
+      x-permission:
+        roles:
+        - ops_supervisor
+        - platform_admin
+        scope: market scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential
+      x-idempotency: safe/read-only
+      parameters:
+      - name: status
+        in: query
+        schema:
+          type: string
+          enum:
+          - reserved
+          - confirmed
+          - reschedule_pending
+          - cancelled
+          - completed
+          - disputed
+      - name: issue
+        in: query
+        schema:
+          type: string
+          enum:
+          - payment_pending
+          - hold_expired
+          - dst_gap
+          - shift_clash
+          - waitlist
+      - name: from
+        in: query
+        schema: *id009
+      - name: to
+        in: query
+        schema: *id009
+      - name: sort
+        in: query
+        schema:
+          type: string
+          enum:
+          - start_at
+          - status
+          default: start_at
+      - name: order
+        in: query
+        schema:
+          type: string
+          enum:
+          - asc
+          - desc
+          default: asc
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminBookingList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/me/support-tickets:
+    get:
+      operationId: listMySupportTickets
+      summary: My support tickets
+      tags:
+      - Me
+      x-status: PROPOSED
+      x-fr:
+      - FR-ADMIN-006
+      x-consumers:
+      - UX-LEARNER-031
+      - UX-TEACHER-017
+      x-journeys:
+      - J14
+      x-permission:
+        roles:
+        - learner
+        - teacher
+        scope: own
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: personal
+      x-idempotency: safe/read-only
+      parameters:
+      - name: state
+        in: query
+        schema:
+          type: string
+          enum:
+          - open
+          - waiting_on_user
+          - resolved
+          - closed
+      - *id002
+      - *id003
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SupportTicketRowList'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '422':
+          description: VALIDATION_FAILED — bad filter/sort/cursor
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/admin/exports:
+    post:
+      operationId: createExport
+      summary: Scoped, watermarked export with reason
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-ADMIN-005
+      - FR-SEC-004
+      x-consumers:
+      - UX-ADMIN-002
+      - UX-ADMIN-039
+      x-permission:
+        roles:
+        - platform_admin
+        - finance_supervisor
+        scope: scope of the requester; no minors’ contact data
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential
+      x-audit-event: export.requested (who, when, filters)
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - *id007
+      responses:
+        '202':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExportJobEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExportRequest'
+  /api/v1/admin/learners/{learnerId}/pii-reveals:
+    post:
+      operationId: revealLearnerPii
+      summary: Time-boxed PII reveal with reason
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-ADMIN-002
+      - FR-SEC-004
+      - FR-IAM-004
+      x-consumers:
+      - UX-ADMIN-003
+      x-permission:
+        roles:
+        - support_agent
+        - safeguarding_lead
+        scope: learner in scope + open ticket/case
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: personal / child data
+      x-audit-event: pii.revealed (fields, reason)
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: learnerId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RevealedPiiEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RevealRequest'
+  /api/v1/admin/guardian-invitations/{invitationId}/resend:
+    post:
+      operationId: resendGuardianInvitation
+      summary: Resend a guardian invitation
+      tags:
+      - Admin
+      x-status: PROPOSED — NEEDS_APPROVAL
+      x-fr:
+      - FR-IAM-007
+      x-consumers:
+      - UX-ADMIN-004
+      x-journeys:
+      - J02
+      x-permission:
+        roles:
+        - platform_admin
+        - support_agent
+        scope: market scope; rate-limited
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: child data
+      x-audit-event: guardian_invitation.resent
+      x-feature-flag: guardian_consent_v1
+      x-decision: O-04
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: invitationId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '202':
+          description: Accepted/OK
+        '401': *id004
+        '403': *id005
+        '429':
+          description: TOO_MANY_INVITES
+          content:
+            application/problem+json:
+              schema: *id001
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+  /api/v1/admin/programs:
+    post:
+      operationId: createProgramDraft
+      summary: Create a program (draft version)
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-CURR-001
+      - FR-CURR-002
+      x-consumers:
+      - UX-ADMIN-011
+      x-permission:
+        roles:
+        - content_editor
+        - academic_supervisor
+        scope: program scope
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-audit-event: program.draft_created
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - *id007
+      responses:
+        '201':
+          description: Accepted/OK
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProgramDraftRequest'
+  /api/v1/question-bank-items/{itemId}/decision:
+    post:
+      operationId: decideQuestionItem
+      summary: Approve / request changes on a question
+      tags:
+      - Question-Bank-Items
+      x-status: PROPOSED
+      x-fr:
+      - FR-CURR-006
+      - FR-CONTEST-006
+      x-consumers:
+      - UX-TEACHER-012
+      - UX-ADMIN-013
+      x-permission:
+        roles:
+        - teacher (assigned reviewer)
+        - academic_supervisor
+        scope: assigned items; reviewer ≠ author
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-audit-event: question.decided
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: itemId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '204':
+          description: Accepted/OK
+        '401': *id004
+        '403':
+          description: SELF_REVIEW_FORBIDDEN
+          content:
+            application/problem+json:
+              schema: *id001
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DecisionRequest'
+  /api/v1/supervisor/quality-observations:
+    post:
+      operationId: recordQualityObservation
+      summary: Record a quality observation
+      tags:
+      - Supervisor
+      x-status: PROPOSED
+      x-fr:
+      - FR-ADMIN-007
+      - FR-TCHR-007
+      - FR-ATT-004
+      x-consumers:
+      - UX-SUP-003
+      x-permission:
+        roles:
+        - quality_supervisor
+        scope: teachers in scope; purpose required
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: confidential
+      x-audit-event: quality.observation_recorded
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - *id007
+      responses:
+        '201':
+          description: Accepted/OK
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QualityObservationRequest'
+  /api/v1/admin/contest-appeals/{appealId}/reviewer:
+    post:
+      operationId: assignAppealReviewer
+      summary: Assign an independent appeal reviewer
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-CONTEST-011
+      - FR-SUP-005
+      x-consumers:
+      - UX-SUP-005
+      - UX-ADMIN-031
+      x-journeys:
+      - J10
+      x-permission:
+        roles:
+        - competition_moderator
+        scope: reviewer ≠ original judges
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-audit-event: appeal.reviewer_assigned
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: appealId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '204':
+          description: Accepted/OK
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: REVIEWER_NOT_INDEPENDENT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AppealReviewerRequest'
+  /api/v1/me/teacher-change-requests:
+    post:
+      operationId: requestTeacherChange
+      summary: Learner asks for a different teacher
+      tags:
+      - Me
+      x-status: PROPOSED
+      x-fr:
+      - FR-TCHR-006
+      x-consumers:
+      - UX-LEARNER-005
+      x-permission:
+        roles:
+        - learner
+        scope: own
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: internal
+      x-audit-event: teacher_change.requested
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - *id007
+      responses:
+        '202':
+          description: Accepted/OK
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TeacherChangeRequest'
+  /api/v1/learners/{learnerId}/goals:
+    patch:
+      operationId: patchLearnerGoals
+      summary: Edit learning goals
+      tags:
+      - Learners
+      x-status: PROPOSED
+      x-fr:
+      - FR-PROF-001
+      - FR-PROF-002
+      x-consumers:
+      - UX-LEARNER-002
+      x-permission:
+        roles:
+        - learner
+        scope: own profile
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: personal
+      x-audit-event: learner.goals_updated
+      x-idempotency: natural key
+      x-concurrency: If-Match version (412 on mismatch)
+      parameters:
+      - name: learnerId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id011
+      responses:
+        '204':
+          description: Accepted/OK
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LearnerGoalsPatch'
+  /api/v1/me/data-requests:
+    post:
+      operationId: createDataRequest
+      summary: Data access/export, rectification or erasure request
+      tags:
+      - Me
+      x-status: PROPOSED
+      x-fr:
+      - FR-IAM-009
+      - FR-SEC-005
+      x-consumers:
+      - UX-LEARNER-032
+      - UX-TEACHER-018
+      x-permission:
+        roles:
+        - learner
+        - teacher
+        - guardian (for a minor, O-04)
+        scope: own account
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: personal
+      x-audit-event: privacy.data_request_received
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - *id007
+      responses:
+        '202':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataRequestCaseEnvelope'
+        '401': *id004
+        '403': *id005
+        '429': *id006
+        '409':
+          description: REQUEST_ALREADY_OPEN
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataRequest'
+  /api/v1/admin/video-providers/{providerAccountId}/credential-rotations:
+    post:
+      operationId: rotateProviderCredentials
+      summary: Rotate provider credentials (two-person)
+      tags:
+      - Admin
+      x-status: PROPOSED
+      x-fr:
+      - FR-VPC-001
+      - FR-VPC-006
+      - FR-SEC-006
+      x-consumers:
+      - UX-VPC-002
+      x-permission:
+        roles:
+        - security_admin
+        - platform_admin
+        scope: maker ≠ approver; MFA
+        enforced: server-side RBAC + ABAC + ownership (FR-IAM-004, FR-SEC-001)
+      x-data-classification: secret reference only
+      x-audit-event: video.credentials_rotation_requested
+      x-idempotency: Idempotency-Key required
+      parameters:
+      - name: providerAccountId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - *id007
+      responses:
+        '202':
+          description: Accepted/OK
+        '401': *id004
+        '403':
+          description: SELF_APPROVAL_FORBIDDEN
+          content:
+            application/problem+json:
+              schema: *id001
+        '429': *id006
+        '409':
+          description: STATE_CONFLICT
+          content:
+            application/problem+json:
+              schema: *id001
+        '422':
+          description: VALIDATION_FAILED {field, code}
+          content:
+            application/problem+json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SecretRotationRequest'
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Problem:
+      type: object
+      required:
+      - type
+      - title
+      - status
+      - code
+      properties:
+        type:
+          type: string
+        title:
+          type: string
+        status:
+          type: integer
+        code:
+          type: string
+        detail:
+          type: string
+        request_id:
+          type: string
+    AccessAuditReviewRequest:
+      type: object
+      required:
+      - outcome
+      - note
+      properties:
+        outcome:
+          type: string
+          enum:
+          - justified
+          - not_justified
+          - escalated
+        note:
+          type: string
+          minLength: 10
+          maxLength: 1000
+      additionalProperties: false
+    AdminBookingList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdminBookingRow'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    AdminBookingRow:
+      type: object
+      required:
+      - id
+      - learner_id
+      - teacher_id
+      - start_at
+      - status
+      properties:
+        id: *id010
+        learner_id: *id010
+        teacher_id: *id010
+        start_at: *id009
+        status:
+          type: string
+          enum:
+          - reserved
+          - confirmed
+          - reschedule_pending
+          - cancelled
+          - completed
+          - disputed
+        issue:
+          type:
+          - string
+          - 'null'
+          enum:
+          - payment_pending
+          - hold_expired
+          - dst_gap
+          - shift_clash
+          - waitlist
+          - null
+      additionalProperties: false
+    AdminCompetitionRow:
+      type: object
+      required:
+      - id
+      - title
+      - state
+      properties:
+        id: *id010
+        title: *id008
+        state:
+          type: string
+          enum:
+          - draft
+          - academic_review
+          - legal_review
+          - scheduled
+          - registration_open
+          - registration_closed
+          - running
+          - scoring
+          - provisional_results
+          - appeal_window
+          - finalized
+          - prizes_issued
+          - archived
+          - cancelled
+        participants:
+          type:
+          - integer
+          - 'null'
+        pending_judging:
+          type:
+          - integer
+          - 'null'
+        next_deadline_at:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        minors_included: *id012
+      additionalProperties: false
+    AdminCompetitionRowList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdminCompetitionRow'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    AdminConsentRow:
+      type: object
+      required:
+      - id
+      - learner_id
+      - market
+      - purpose
+      - state
+      - sent_at
+      - expires_at
+      properties:
+        id: *id010
+        learner_id: *id010
+        market: *id008
+        purpose:
+          type: string
+          enum:
+          - lessons
+          - recording
+          - competitions
+          - ai_processing
+          - marketing
+        state:
+          type: string
+          enum:
+          - requested
+          - verified
+          - granted
+          - declined
+          - withdrawn
+          - expired
+          description: Consent state machine (STATE_MACHINES.md); `declined` is a proposed addition (STATE_ALIGNMENT.md)
+        sent_at: *id009
+        expires_at: *id009
+        verification_method:
+          type:
+          - string
+          - 'null'
+          description: 'NEEDS_APPROVAL (O-04): enum fixed after the verification method is chosen'
+      additionalProperties: false
+    AdminConsentRowList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdminConsentRow'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    AdminLearnerRow:
+      type: object
+      required:
+      - id
+      - display_ref
+      - market
+      - age_band
+      - consent_state
+      - status
+      properties:
+        id: *id010
+        display_ref: *id008
+        market:
+          type: string
+          pattern: ^[A-Z]{2}$
+        age_band:
+          type: string
+          enum:
+          - minor_under_13
+          - minor_13_17
+          - adult
+        consent_state:
+          type: string
+          enum:
+          - not_required
+          - pending
+          - granted
+          - declined
+          - expired
+          - withdrawn
+        status:
+          type: string
+          enum:
+          - active
+          - limited
+          - paused
+          - closed
+        assigned_teacher_id:
+          type:
+          - string
+          - 'null'
+          format: uuid
+      additionalProperties: false
+      description: Admin list row. No name, birth date or contact for minors (FR-SEC-001, safeguarding); display_ref is a non-PII reference.
+    AdminLearnerRowList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdminLearnerRow'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    AdminLessonRow:
+      type: object
+      required:
+      - id
+      - start_at
+      - teacher_id
+      - learner_id
+      - state
+      - provider
+      properties:
+        id: *id010
+        start_at: *id009
+        teacher_id: *id010
+        learner_id: *id010
+        state:
+          type: string
+          enum:
+          - scheduled
+          - live
+          - completed
+          - incident
+          - cancelled
+        provider: *id008
+        incident_id:
+          type:
+          - string
+          - 'null'
+          format: uuid
+      additionalProperties: false
+    AdminLessonRowList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdminLessonRow'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    AdminTeacher:
+      type: object
+      required:
+      - id
+      - display_name
+      - employment_state
+      - qualification_status
+      - timezone
+      properties:
+        id: *id010
+        display_name: *id008
+        employment_state:
+          type: string
+          enum:
+          - candidate
+          - approved
+          - active
+          - suspended
+          - offboarded
+        qualification_status:
+          type: string
+          enum:
+          - pending
+          - verified
+          - revoked
+        timezone: *id008
+        contract_version_id:
+          type:
+          - string
+          - 'null'
+          format: uuid
+        safeguarding_check:
+          type: string
+          enum:
+          - not_started
+          - in_progress
+          - cleared
+          - failed
+        lessons_completed_30d: &id013
+          type: integer
+        attendance_rate_30d:
+          type:
+          - number
+          - 'null'
+          minimum: 0
+          maximum: 1
+      additionalProperties: false
+    AdminTeacherEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/AdminTeacher'
+      additionalProperties: false
+    AdminTeacherList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdminTeacher'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    AppealReviewerRequest:
+      type: object
+      required:
+      - reviewer_id
+      properties:
+        reviewer_id: *id010
+      additionalProperties: false
+    BookingCancellation:
+      type: object
+      required:
+      - booking_id
+      - state
+      - credit_outcome
+      properties:
+        booking_id: *id010
+        state:
+          type: string
+          enum:
+          - cancelled
+        credit_outcome:
+          type: string
+          enum:
+          - returned
+          - forfeited
+          - pending_review
+        policy_version: *id008
+      additionalProperties: false
+    BookingCancellationEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/BookingCancellation'
+      additionalProperties: false
+    BreakGlassGrant:
+      type: object
+      required:
+      - id
+      - case_id
+      - expires_at
+      properties:
+        id: *id010
+        case_id: *id010
+        expires_at: *id009
+      additionalProperties: false
+    BreakGlassGrantEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/BreakGlassGrant'
+      additionalProperties: false
+    BreakGlassRequest:
+      type: object
+      required:
+      - case_id
+      - reason
+      properties:
+        case_id: *id010
+        reason:
+          type: string
+          minLength: 20
+          maxLength: 500
+      additionalProperties: false
+      description: 'NEEDS_APPROVAL (D-39): duration, eligible roles and review SLA are policy'
+    CancelBookingRequest:
+      type: object
+      required:
+      - reason
+      properties:
+        reason:
+          type: string
+          enum:
+          - learner_request
+          - teacher_unavailable
+          - technical
+          - emergency
+          - other
+        note:
+          type: string
+          maxLength: 500
+      additionalProperties: false
+    CrmLead:
+      type: object
+      required:
+      - id
+      - source
+      - stage
+      - market
+      - marketing_consent
+      properties:
+        id: *id010
+        source: *id008
+        medium: *id008
+        campaign: *id008
+        stage:
+          type: string
+          enum:
+          - new
+          - contacted
+          - qualified
+          - scheduled
+          - attended
+          - paid
+          - lost
+        market: *id008
+        marketing_consent: *id012
+        owner_id:
+          type:
+          - string
+          - 'null'
+          format: uuid
+      additionalProperties: false
+      description: Adults only; leads for minors are rejected (FR-CRM-006).
+    CrmLeadList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/CrmLead'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    DataRequest:
+      type: object
+      required:
+      - type
+      properties:
+        type:
+          type: string
+          enum:
+          - access_export
+          - rectification
+          - erasure
+        note:
+          type: string
+          maxLength: 1000
+      additionalProperties: false
+      description: FR-IAM-009; accounting records required by law are retained (FR-SEC-005)
+    DataRequestCase:
+      type: object
+      required:
+      - id
+      - type
+      - state
+      - due_at
+      properties:
+        id: *id010
+        type: *id008
+        state:
+          type: string
+          enum:
+          - received
+          - verifying_identity
+          - in_progress
+          - completed
+          - rejected
+        due_at: *id009
+      additionalProperties: false
+    DataRequestCaseEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/DataRequestCase'
+      additionalProperties: false
+    DecisionRequest:
+      type: object
+      required:
+      - decision
+      - reason
+      properties:
+        decision:
+          type: string
+          enum:
+          - approve
+          - reject
+          - request_changes
+        reason:
+          type: string
+          minLength: 10
+          maxLength: 500
+      additionalProperties: false
+    Device:
+      type: object
+      required:
+      - id
+      - platform
+      - registered_at
+      properties:
+        id: *id010
+        platform: *id008
+        registered_at: *id009
+      additionalProperties: false
+    DeviceEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/Device'
+      additionalProperties: false
+    DeviceRegistration:
+      type: object
+      required:
+      - platform
+      - push_token
+      - locale
+      properties:
+        platform:
+          type: string
+          enum:
+          - ios
+          - android
+          - web
+        push_token: *id008
+        locale:
+          type: string
+          enum:
+          - ar
+          - en
+        app_version: *id008
+      additionalProperties: false
+    ExportJob:
+      type: object
+      required:
+      - id
+      - state
+      properties:
+        id: *id010
+        state:
+          type: string
+          enum:
+          - queued
+          - ready
+          - expired
+          - failed
+        download_url:
+          type:
+          - string
+          - 'null'
+        expires_at:
+          type:
+          - string
+          - 'null'
+          format: date-time
+      additionalProperties: false
+    ExportJobEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/ExportJob'
+      additionalProperties: false
+    ExportRequest:
+      type: object
+      required:
+      - dataset
+      - reason
+      - filters
+      properties:
+        dataset:
+          type: string
+          enum:
+          - learners
+          - kpi_report
+        reason:
+          type: string
+          minLength: 10
+          maxLength: 500
+        filters:
+          type: object
+      additionalProperties: false
+      description: Watermarked, scoped export (FR-ADMIN-005)
+    GuardianDecisionRequest:
+      type: object
+      required:
+      - decisions
+      - verification
+      properties:
+        decisions:
+          type: array
+          items:
+            type: object
+            required:
+            - purpose
+            - granted
+            properties:
+              purpose: *id008
+              granted: *id012
+            additionalProperties: false
+        verification:
+          type: object
+          description: 'NEEDS_APPROVAL (O-04): shape depends on the chosen verification method'
+      additionalProperties: false
+    GuardianInvitation:
+      type: object
+      required:
+      - id
+      - state
+      - expires_at
+      - purposes
+      properties:
+        id: *id010
+        state:
+          type: string
+          enum:
+          - sent
+          - opened
+          - decided
+          - expired
+          - revoked
+        expires_at: *id009
+        purposes:
+          type: array
+          items: *id008
+        policy_versions:
+          type: object
+          additionalProperties: *id008
+      additionalProperties: false
+    GuardianInvitationEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/GuardianInvitation'
+      additionalProperties: false
+    GuardianInvitationRequest:
+      type: object
+      required:
+      - channel
+      - contact
+      - purposes
+      properties:
+        channel:
+          type: string
+          enum:
+          - email
+          - sms
+        contact:
+          type: string
+          maxLength: 254
+        purposes:
+          type: array
+          minItems: 1
+          items:
+            type: string
+            enum:
+            - lessons
+            - recording
+            - competitions
+            - ai_processing
+      additionalProperties: false
+    JudgeAssignment:
+      type: object
+      required:
+      - competition_id
+      - round_id
+      - judges
+      properties:
+        competition_id: *id010
+        round_id: *id010
+        judges:
+          type: array
+          items:
+            type: object
+            required:
+            - judge_id
+            - conflict_check
+            properties:
+              judge_id: *id010
+              conflict_check:
+                type: string
+                enum:
+                - clear
+                - conflict
+            additionalProperties: false
+      additionalProperties: false
+    JudgeAssignmentEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/JudgeAssignment'
+      additionalProperties: false
+    JudgeAssignmentRequest:
+      type: object
+      required:
+      - judge_ids
+      - round_id
+      properties:
+        judge_ids:
+          type: array
+          minItems: 1
+          items: *id010
+        round_id: *id010
+        second_review: *id012
+      additionalProperties: false
+    LearnerGoalsPatch:
+      type: object
+      required:
+      - goals
+      properties:
+        goals:
+          type: array
+          minItems: 1
+          items:
+            type: object
+            required:
+            - kind
+            properties:
+              kind:
+                type: string
+                enum:
+                - memorization
+                - review
+                - recitation
+                - tajweed
+                - reading_foundations
+              primary: *id012
+              weekly_minutes:
+                type: integer
+                minimum: 0
+            additionalProperties: false
+      additionalProperties: false
+    LegalDocument:
+      type: object
+      required:
+      - slug
+      - version
+      - locale
+      - effective_at
+      - body_html
+      properties:
+        slug:
+          type: string
+          enum:
+          - terms
+          - privacy
+          - refunds
+          - safeguarding
+          - cookies
+        version: *id008
+        locale:
+          type: string
+          enum:
+          - ar
+          - en
+        effective_at: *id009
+        body_html:
+          type: string
+          description: Owner legal copy (O-01); never generated
+      additionalProperties: false
+    LegalDocumentEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/LegalDocument'
+      additionalProperties: false
+    LibraryItem:
+      type: object
+      required:
+      - id
+      - title
+      - program_id
+      - kind
+      - licence_state
+      properties:
+        id: *id010
+        title: *id008
+        program_id: *id010
+        level: *id008
+        kind:
+          type: string
+          enum:
+          - video
+          - audio
+          - document
+          - exercise
+        licence_state:
+          type: string
+          enum:
+          - pending
+          - licensed
+          - expired
+        access_url:
+          type:
+          - string
+          - 'null'
+          description: Signed, short-lived (FR-MEDIA-002); null without entitlement
+        access_expires_at:
+          type:
+          - string
+          - 'null'
+          format: date-time
+      additionalProperties: false
+    LibraryItemList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/LibraryItem'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    LogoutRequest:
+      type: object
+      required:
+      - refresh_token
+      properties:
+        refresh_token: *id008
+        all_devices: *id012
+      additionalProperties: false
+    MyLearnerRow:
+      type: object
+      required:
+      - learner_id
+      - display_name
+      - program_id
+      - next_lesson_at
+      properties:
+        learner_id: *id010
+        display_name: *id008
+        program_id: *id010
+        next_lesson_at:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        plan_state:
+          type: string
+          enum:
+          - none
+          - draft
+          - pending_review
+          - approved
+        age_band:
+          type: string
+          enum:
+          - minor_under_13
+          - minor_13_17
+          - adult
+      additionalProperties: false
+    MyLearnerRowList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/MyLearnerRow'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Notification:
+      type: object
+      required:
+      - id
+      - kind
+      - created_at
+      - read
+      properties:
+        id: *id010
+        kind:
+          type: string
+          enum:
+          - lesson_reminder
+          - plan_approved
+          - review_due
+          - exam_result
+          - lesson_compensated
+          - consent_needed
+          - safety
+        created_at: *id009
+        read: *id012
+        deep_link:
+          type:
+          - string
+          - 'null'
+        message_key: *id008
+        params:
+          type: object
+          additionalProperties:
+            type:
+            - string
+            - number
+      additionalProperties: false
+    NotificationList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Notification'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    NotificationReadRequest:
+      type: object
+      required:
+      - ids
+      properties:
+        ids:
+          type: array
+          minItems: 1
+          maxItems: 100
+          items: *id010
+      additionalProperties: false
+    PasswordResetConfirm:
+      type: object
+      required:
+      - token
+      - new_password
+      properties:
+        token: *id008
+        new_password:
+          type: string
+          minLength: 10
+          maxLength: 128
+      additionalProperties: false
+    PasswordResetRequest:
+      type: object
+      required:
+      - identifier
+      properties:
+        identifier:
+          type: string
+          maxLength: 254
+          description: email or E.164 phone
+      additionalProperties: false
+    PayRunRow:
+      type: object
+      required:
+      - id
+      - period
+      - state
+      properties:
+        id: *id010
+        period: *id008
+        state:
+          type: string
+          enum:
+          - draft
+          - calculated
+          - reviewed
+          - approved
+          - paid
+          - reconciled
+        created_by: *id010
+        approved_by:
+          type:
+          - string
+          - 'null'
+          format: uuid
+      additionalProperties: false
+    PayRunRowList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/PayRunRow'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    PayStatementDispute:
+      type: object
+      required:
+      - id
+      - state
+      properties:
+        id: *id010
+        state:
+          type: string
+          enum:
+          - open
+          - under_review
+          - upheld
+          - rejected
+      additionalProperties: false
+    PayStatementDisputeEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/PayStatementDispute'
+      additionalProperties: false
+    PayStatementDisputeRequest:
+      type: object
+      required:
+      - lesson_id
+      - reason
+      properties:
+        lesson_id: *id010
+        reason:
+          type: string
+          minLength: 10
+          maxLength: 1000
+      additionalProperties: false
+    ProgramDraftRequest:
+      type: object
+      required:
+      - title_ar
+      - title_en
+      properties:
+        title_ar: *id008
+        title_en: *id008
+        base_version_id:
+          type:
+          - string
+          - 'null'
+          format: uuid
+      additionalProperties: false
+    PublicTeacher:
+      type: object
+      required:
+      - id
+      - display_name
+      - languages
+      - program_ids
+      properties:
+        id: *id010
+        display_name: *id008
+        languages:
+          type: array
+          items: *id008
+        program_ids:
+          type: array
+          items: *id010
+        bio:
+          type:
+          - string
+          - 'null'
+          description: Only if publication consent exists (FR-TCHR-002); owner content
+        photo_url:
+          type:
+          - string
+          - 'null'
+          description: Signed URL; null without consent
+        riwayat:
+          type: array
+          items: *id008
+      additionalProperties: false
+      description: 'Public projection: no contract, pay, safeguarding, or contact fields.'
+    PublicTeacherEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/PublicTeacher'
+      additionalProperties: false
+    QualityObservationRequest:
+      type: object
+      required:
+      - teacher_id
+      - purpose
+      - rating
+      - feedback
+      properties:
+        teacher_id: *id010
+        purpose: *id008
+        rating:
+          type: string
+          enum:
+          - meets_standard
+          - needs_training
+          - serious_concerns
+        feedback:
+          type: string
+          maxLength: 2000
+      additionalProperties: false
+    QuestionBankItem:
+      type: object
+      required:
+      - id
+      - version
+      - status
+      - level
+      - type
+      properties:
+        id: *id010
+        version: *id013
+        status:
+          type: string
+          enum:
+          - draft
+          - review
+          - approved
+          - retired
+        level: *id008
+        type:
+          type: string
+          enum:
+          - choice
+          - order
+          - identify_word
+          - recitation
+        author_id: *id010
+        reviewer_id:
+          type:
+          - string
+          - 'null'
+          format: uuid
+        quran_ref:
+          type:
+          - object
+          - 'null'
+          description: surah/ayah/riwayah reference to the licensed corpus (O-06); never free text
+      additionalProperties: false
+    QuestionBankItemList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/QuestionBankItem'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    QuestionDraftRequest:
+      type: object
+      required:
+      - type
+      - level
+      properties:
+        type:
+          type: string
+          enum:
+          - choice
+          - order
+          - identify_word
+          - recitation
+        level: *id008
+        quran_ref:
+          type:
+          - object
+          - 'null'
+      additionalProperties: false
+    QuranSource:
+      type: object
+      required:
+      - id
+      - provider
+      - riwayah
+      - licence_state
+      properties:
+        id: *id010
+        provider: *id008
+        riwayah: *id008
+        licence_state:
+          type: string
+          enum:
+          - unverified
+          - verified
+          - revoked
+        verified_by:
+          type:
+          - string
+          - 'null'
+          format: uuid
+      additionalProperties: false
+      description: 'NEEDS_APPROVAL (O-06): minimal fields from FR-CURR-003 only; licence attributes defined after the content source is chosen.'
+    QuranSourceList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/QuranSource'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    RefundCase:
+      type: object
+      required:
+      - id
+      - payment_id
+      - state
+      - amount_minor
+      - currency
+      properties:
+        id: *id010
+        payment_id: *id010
+        state:
+          type: string
+          enum:
+          - requested
+          - approved
+          - rejected
+          - sent
+          - settled
+        amount_minor: *id013
+        currency: *id008
+      additionalProperties: false
+    RefundCaseEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/RefundCase'
+      additionalProperties: false
+    RefundRequest:
+      type: object
+      required:
+      - reason
+      - amount_minor
+      properties:
+        reason: *id008
+        amount_minor:
+          type: integer
+          minimum: 1
+        currency:
+          type: string
+          pattern: ^[A-Z]{3}$
+      additionalProperties: false
+      description: 'NEEDS_APPROVAL (O-02, FR-PAY-005): eligibility and partial-refund rules are owner policy'
+    RenewalConsentRequest:
+      type: object
+      required:
+      - auto_renew
+      - policy_version
+      properties:
+        auto_renew: *id012
+        policy_version: *id008
+      additionalProperties: false
+    ReportDraft:
+      type: object
+      required:
+      - lesson_id
+      - version
+      - fields
+      - saved_at
+      properties:
+        lesson_id: *id010
+        version: *id013
+        saved_at: *id009
+        fields:
+          type: object
+          description: Same fields as LessonReportRequest, all optional while draft
+      additionalProperties: false
+    ReportDraftEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/ReportDraft'
+      additionalProperties: false
+    RevealRequest:
+      type: object
+      required:
+      - fields
+      - reason
+      properties:
+        fields:
+          type: array
+          items:
+            type: string
+            enum:
+            - full_name
+            - contact
+            - date_of_birth
+        reason:
+          type: string
+          minLength: 10
+          maxLength: 500
+      additionalProperties: false
+    RevealedPii:
+      type: object
+      required:
+      - fields
+      - expires_at
+      properties:
+        fields:
+          type: object
+          additionalProperties:
+            type: string
+        expires_at: *id009
+      additionalProperties: false
+    RevealedPiiEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/RevealedPii'
+      additionalProperties: false
+    Rubric:
+      type: object
+      required:
+      - id
+      - version
+      - program_id
+      - criteria
+      properties:
+        id: *id010
+        version: *id013
+        program_id: *id010
+        level: *id008
+        criteria:
+          type: array
+          items:
+            type: object
+            required:
+            - key
+            - scale
+            properties:
+              key: *id008
+              scale:
+                type: string
+                enum:
+                - '0_4'
+                - descriptive
+              weight:
+                type: number
+            additionalProperties: false
+      additionalProperties: false
+    RubricList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Rubric'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    RubricVersionRequest:
+      type: object
+      required:
+      - program_id
+      - criteria
+      properties:
+        program_id: *id010
+        level: *id008
+        criteria:
+          type: array
+          minItems: 1
+          items:
+            type: object
+            required:
+            - key
+            - scale
+            properties:
+              key: *id008
+              scale:
+                type: string
+                enum:
+                - '0_4'
+                - descriptive
+              weight:
+                type: number
+            additionalProperties: false
+      additionalProperties: false
+    SecretRotationRequest:
+      type: object
+      required:
+      - secret_ref
+      - reason
+      properties:
+        secret_ref:
+          type: string
+          description: Reference to the secret manager entry; the secret value never transits this API
+        reason:
+          type: string
+          minLength: 10
+          maxLength: 500
+      additionalProperties: false
+    SlotHold:
+      type: object
+      required:
+      - id
+      - expires_at
+      - start_at
+      - teacher_id
+      properties:
+        id: *id010
+        expires_at: *id009
+        start_at: *id009
+        teacher_id: *id010
+      additionalProperties: false
+    SlotHoldEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/SlotHold'
+      additionalProperties: false
+    SlotHoldRequest:
+      type: object
+      required:
+      - teacher_id
+      - start_at
+      - duration_minutes
+      - timezone
+      properties:
+        teacher_id: *id010
+        start_at: *id009
+        duration_minutes:
+          type: integer
+          enum:
+          - 30
+          - 45
+          - 60
+        timezone:
+          type: string
+          description: IANA zone used to display the slot
+        dst_resolution:
+          type:
+          - string
+          - 'null'
+          enum:
+          - earlier
+          - later
+          - null
+          description: Required when the local time is ambiguous (overlap); a local time in a DST gap is rejected 422 DST_GAP
+      additionalProperties: false
+    SupportTicketRow:
+      type: object
+      required:
+      - id
+      - state
+      - created_at
+      - category
+      properties:
+        id: *id010
+        state:
+          type: string
+          enum:
+          - open
+          - waiting_on_user
+          - resolved
+          - closed
+        created_at: *id009
+        category: *id008
+      additionalProperties: false
+    SupportTicketRowList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/SupportTicketRow'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    SyncBatchRequest:
+      type: object
+      required:
+      - device_id
+      - items
+      properties:
+        device_id: *id010
+        items:
+          type: array
+          minItems: 1
+          maxItems: 50
+          items:
+            type: object
+            required:
+            - client_id
+            - kind
+            - payload
+            - client_created_at
+            properties:
+              client_id: *id010
+              kind:
+                type: string
+                enum:
+                - revision_evidence
+                - report_draft
+                - exam_checkpoint
+              payload:
+                type: object
+              client_created_at: *id009
+              base_version:
+                type:
+                - integer
+                - 'null'
+            additionalProperties: false
+      additionalProperties: false
+    SyncBatchResult:
+      type: object
+      required:
+      - results
+      properties:
+        results:
+          type: array
+          items:
+            type: object
+            required:
+            - client_id
+            - outcome
+            properties:
+              client_id: *id010
+              outcome:
+                type: string
+                enum:
+                - applied
+                - duplicate
+                - conflict
+                - rejected
+              server_version:
+                type:
+                - integer
+                - 'null'
+              problem:
+                oneOf:
+                - *id001
+                - type: 'null'
+            additionalProperties: false
+      additionalProperties: false
+    SyncBatchResultEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/SyncBatchResult'
+      additionalProperties: false
+    TeacherApplication:
+      type: object
+      required:
+      - id
+      - state
+      - submitted_at
+      properties:
+        id: *id010
+        state:
+          type: string
+          enum:
+          - submitted
+          - credentials_review
+          - recitation_interview
+          - safeguarding_check
+          - accepted
+          - rejected
+          - withdrawn
+        submitted_at: *id009
+        languages:
+          type: array
+          items: *id008
+        riwayat:
+          type: array
+          items: *id008
+        document_upload_ids:
+          type: array
+          items: *id010
+        safeguarding_check:
+          type: string
+          enum:
+          - not_started
+          - in_progress
+          - cleared
+          - failed
+      additionalProperties: false
+    TeacherApplicationEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/TeacherApplication'
+      additionalProperties: false
+    TeacherApplicationList:
+      type: object
+      required:
+      - data
+      - next_cursor
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/TeacherApplication'
+        next_cursor:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    TeacherApplicationRequest:
+      type: object
+      required:
+      - languages
+      - teaching_areas
+      - document_upload_ids
+      - consent_receipt_id
+      properties:
+        languages:
+          type: array
+          minItems: 1
+          items: *id008
+        teaching_areas:
+          type: array
+          minItems: 1
+          items:
+            type: string
+            enum:
+            - memorization
+            - review
+            - recitation
+            - tajweed
+            - reading_foundations
+        riwayat:
+          type: array
+          items: *id008
+        document_upload_ids:
+          type: array
+          minItems: 1
+          items: *id010
+        consent_receipt_id: *id010
+      additionalProperties: false
+    TeacherAssignmentRequest:
+      type: object
+      required:
+      - teacher_id
+      - reason
+      properties:
+        teacher_id: *id010
+        reason:
+          type: string
+          minLength: 10
+          maxLength: 500
+        transfer_plan: *id012
+      additionalProperties: false
+    TeacherChangeRequest:
+      type: object
+      required:
+      - reason
+      properties:
+        reason:
+          type: string
+          enum:
+          - schedule
+          - teaching_style
+          - language
+          - other
+        note:
+          type: string
+          maxLength: 500
+      additionalProperties: false
+    Upload:
+      type: object
+      required:
+      - id
+      - upload_url
+      - expires_at
+      - scan_state
+      properties:
+        id: *id010
+        upload_url: *id008
+        expires_at: *id009
+        scan_state:
+          type: string
+          enum:
+          - pending
+          - clean
+          - removed_by_scan
+      additionalProperties: false
+    UploadEnvelope:
+      type: object
+      required:
+      - data
+      properties:
+        data:
+          $ref: '#/components/schemas/Upload'
+      additionalProperties: false
+    UploadRequest:
+      type: object
+      required:
+      - purpose
+      - content_type
+      - size_bytes
+      properties:
+        purpose:
+          type: string
+          enum:
+          - teacher_document
+          - report_attachment
+          - support_attachment
+        content_type:
+          type: string
+          enum:
+          - application/pdf
+          - image/jpeg
+          - image/png
+        size_bytes:
+          type: integer
+          maximum: 10485760
+      additionalProperties: false
+    WaitlistRequest:
+      type: object
+      required:
+      - market
+      - contact
+      - locale
+      - consent_receipt_id
+      properties:
+        market:
+          type: string
+          pattern: ^[A-Z]{2}$
+        contact:
+          type: string
+          maxLength: 254
+        locale:
+          type: string
+          enum:
+          - ar
+          - en
+        consent_receipt_id: *id010
+      additionalProperties: false
+x-corrections-to-existing:
+- cid: C-01
+  opid: post_bookings
+  method: POST
+  path: /api/v1/bookings
+  issue: BookingRequest has no hold reference; no Idempotency-Key header; only 201/403/409/422 responses
+  fix: Add `hold_id` (from P-30), require Idempotency-Key, add 401/429
+  fr: FR-BOOK-001
+- cid: C-02
+  opid: get__api_v1_admin_security_access_audits
+  method: GET
+  path: /api/v1/admin/security/access-audits
+  issue: Covers privileged access only; FR-SEC-004 also needs finance/judging/consent/token events
+  fix: Add `category` + `actor_id` + `from/to` filters and cursor pagination
+  fr: FR-SEC-004
+- cid: C-03
+  opid: post__auth_refresh
+  method: POST
+  path: /api/v1/auth/refresh
+  issue: Rotation/reuse semantics undocumented
+  fix: Document one-time refresh tokens; replay → 409 TOKEN_REUSED and family revocation
+  fr: FR-IAM-008
+- cid: C-04
+  opid: patch__api_v1_me_preferences
+  method: PATCH
+  path: /api/v1/me/preferences
+  issue: Preference schema has no UI mode for Kids/Professional/Simple (D-34/D-35)
+  fix: Add `ui_mode` enum [kids, professional, simple]; server ignores it for authorization (presentation only)
+  fr: FR-MOB-005
+- cid: C-05
+  opid: get__teachers
+  method: GET
+  path: /api/v1/teachers
+  issue: Used with `?admin=1` by UX-ADMIN-007; a query flag must not unlock private fields
+  fix: Remove the admin use; bind UX-ADMIN-007 to listAdminTeachers (P-07)
+  fr: FR-SEC-001
+- cid: C-06
+  opid: get_bookings
+  method: GET
+  path: /api/v1/bookings
+  issue: Used with `?admin=1` by UX-ADMIN-015; also returns only 200 (no error responses)
+  fix: Bind admin to a scoped `listAdminBookings` (follow-up proposal) and add 401/403/422/429
+  fr: FR-BOOK-004
+- cid: C-07
+  opid: get__competitions
+  method: GET
+  path: /api/v1/competitions
+  issue: Used with `?admin=1` by UX-ADMIN-027; drafts must never be visible to learners
+  fix: Bind admin to listAdminCompetitions (P-14)
+  fr: FR-CONTEST-001
+- cid: C-17
+  opid: post__learning_plans__planId__approve
+  method: POST
+  path: /api/v1/learning-plans/{planId}/approve
+  issue: Teacher can only approve; “Reject with reason” on UX-TEACHER-011 has no operation
+  fix: 'Accept `{decision: approve|reject, reason}` (or add a sibling reject operation)'
+  fr: FR-PLAN-002
+- cid: C-08
+  opid: post__lessons__lessonId__report
+  method: POST
+  path: /api/v1/lessons/{lessonId}/report
+  issue: No draft version link; concurrent edits undetectable
+  fix: Accept `draft_version`; 412 VERSION_CONFLICT on mismatch (with P-35)
+  fr: FR-ATT-003
+- cid: C-09
+  opid: schema:Subscription
+  method: ''
+  path: ''
+  issue: Subscription.status = ['pending', 'active', 'paused', 'expired', 'cancelled'] vs state machine [PENDING_PAYMENT, ACTIVE, RENEWAL_DUE,
+    SUSPENDED, REFUND_PENDING, PARTIALLY_REFUNDED, REFUNDED, EXPIRED, CANCELLED]
+  fix: API lacks renewal_due/suspended/refund states and has `paused`, which the state machine does not define — PROPOSED; the state machine is
+    the domain authority
+  fr: ''
+- cid: C-10
+  opid: schema:Lesson
+  method: ''
+  path: ''
+  issue: Lesson.attendance_state = ['pending', 'verified', 'disputed'] vs state machine [DRAFT, CONFIRMED, READY, IN_PROGRESS, INTERRUPTED, RESCHEDULE_PENDING,
+    COMPLETED, CANCELLED, DISPUTED, RESOLVED]
+  fix: Lesson has no lifecycle `state` field at all; add it (attendance_state stays separate) — PROPOSED; the state machine is the domain authority
+  fr: ''
+- cid: C-11
+  opid: schema:Competition
+  method: ''
+  path: ''
+  issue: Competition.(none) = None vs state machine [draft … academic_review … legal_review … registration_open … running … scoring … provisional_results
+    … appeal_window … finalized … prizes_issued … archived]
+  fix: Competition has no state field; add the 13-state lifecycle + cancelled — PROPOSED; the state machine is the domain authority
+  fr: ''
+- cid: C-12
+  opid: schema:ConsentReceipt
+  method: ''
+  path: ''
+  issue: ConsentReceipt.state = ['pending', 'approved', 'revoked', 'expired'] vs state machine [not_requested, requested, verified/granted, withdrawn,
+    expired]
+  fix: Names differ (approved↔granted, revoked↔withdrawn); a guardian `declined` outcome exists in neither — add it — PROPOSED; the state machine
+    is the domain authority
+  fr: ''
+- cid: C-13
+  opid: schema:Assessment
+  method: ''
+  path: ''
+  issue: Assessment.status = ['draft', 'submitted', 'reviewing', 'approved', 'rejected'] vs state machine [DRAFT, SUBMITTED, HUMAN_REVIEW, APPROVED,
+    REJECTED, PUBLISHED, APPEALED, CORRECTED]
+  fix: API stops at approved/rejected; published/appealed/corrected missing (FR-ASMT-007) — PROPOSED; the state machine is the domain authority
+  fr: ''
+- cid: C-14
+  opid: schema:LearningPlan
+  method: ''
+  path: ''
+  issue: LearningPlan.state = ['draft', 'pending_teacher_review', 'approved', 'archived'] vs state machine [draft, proposed, teacher_review, approved,
+    active, superseded, archived]
+  fix: AI drafts must start at `proposed`; API has no proposed/active/superseded — PROPOSED; the state machine is the domain authority
+  fr: ''
+- cid: C-15
+  opid: schema:PayRun
+  method: ''
+  path: ''
+  issue: PayRun.state = ['draft', 'calculated', 'reviewed', 'approved', 'paid', 'reconciled'] vs state machine [accrued, calculated, reviewed,
+    approved, payout_requested, paid, reconciled (+ disputed)]
+  fix: payout_requested and disputed missing — PROPOSED; the state machine is the domain authority
+  fr: ''
+- cid: C-16
+  opid: schema:CompetitionSubmission
+  method: ''
+  path: ''
+  issue: CompetitionSubmission.status = ['draft', 'submitted', 'under_review', 'judged'] vs state machine [submitted, evaluating, reviewed, final
+    (FR-CONTEST-008)]
+  fix: Names differ from FR-CONTEST-008; no second-review state — PROPOSED; the state machine is the domain authority
+  fr: ''

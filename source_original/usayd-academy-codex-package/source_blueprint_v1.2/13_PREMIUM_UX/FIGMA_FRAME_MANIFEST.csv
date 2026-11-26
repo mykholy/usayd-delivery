@@ -1,0 +1,641 @@
+﻿Screen ID,Persona,Frame name,Locale,Direction,Breakpoint,States required,Primary CTA,Route,Status
+UX-PUBLIC-001,PUBLIC,UX-PUBLIC-001 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,احجز تقييم مستوى,/,TO_DESIGN
+UX-PUBLIC-001,PUBLIC,UX-PUBLIC-001 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,احجز تقييم مستوى,/,TO_DESIGN
+UX-PUBLIC-001,PUBLIC,UX-PUBLIC-001 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,احجز تقييم مستوى,/,TO_DESIGN
+UX-PUBLIC-001,PUBLIC,UX-PUBLIC-001 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,احجز تقييم مستوى,/,TO_DESIGN
+UX-PUBLIC-002,PUBLIC,UX-PUBLIC-002 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,استكشف البرنامج,/programs,TO_DESIGN
+UX-PUBLIC-002,PUBLIC,UX-PUBLIC-002 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,استكشف البرنامج,/programs,TO_DESIGN
+UX-PUBLIC-002,PUBLIC,UX-PUBLIC-002 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,استكشف البرنامج,/programs,TO_DESIGN
+UX-PUBLIC-002,PUBLIC,UX-PUBLIC-002 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,استكشف البرنامج,/programs,TO_DESIGN
+UX-PUBLIC-003,PUBLIC,UX-PUBLIC-003 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,ابدأ تقييم المستوى,/programs/:slug,TO_DESIGN
+UX-PUBLIC-003,PUBLIC,UX-PUBLIC-003 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,ابدأ تقييم المستوى,/programs/:slug,TO_DESIGN
+UX-PUBLIC-003,PUBLIC,UX-PUBLIC-003 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,ابدأ تقييم المستوى,/programs/:slug,TO_DESIGN
+UX-PUBLIC-003,PUBLIC,UX-PUBLIC-003 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,ابدأ تقييم المستوى,/programs/:slug,TO_DESIGN
+UX-PUBLIC-004,PUBLIC,UX-PUBLIC-004 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اختر باقة,/pricing,TO_DESIGN
+UX-PUBLIC-004,PUBLIC,UX-PUBLIC-004 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اختر باقة,/pricing,TO_DESIGN
+UX-PUBLIC-004,PUBLIC,UX-PUBLIC-004 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اختر باقة,/pricing,TO_DESIGN
+UX-PUBLIC-004,PUBLIC,UX-PUBLIC-004 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اختر باقة,/pricing,TO_DESIGN
+UX-PUBLIC-005,PUBLIC,UX-PUBLIC-005 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تعرف على المعلم,/teachers,TO_DESIGN
+UX-PUBLIC-005,PUBLIC,UX-PUBLIC-005 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تعرف على المعلم,/teachers,TO_DESIGN
+UX-PUBLIC-005,PUBLIC,UX-PUBLIC-005 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تعرف على المعلم,/teachers,TO_DESIGN
+UX-PUBLIC-005,PUBLIC,UX-PUBLIC-005 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تعرف على المعلم,/teachers,TO_DESIGN
+UX-PUBLIC-006,PUBLIC,UX-PUBLIC-006 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,احجز تجربة,/teachers/:slug,TO_DESIGN
+UX-PUBLIC-006,PUBLIC,UX-PUBLIC-006 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,احجز تجربة,/teachers/:slug,TO_DESIGN
+UX-PUBLIC-006,PUBLIC,UX-PUBLIC-006 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,احجز تجربة,/teachers/:slug,TO_DESIGN
+UX-PUBLIC-006,PUBLIC,UX-PUBLIC-006 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,احجز تجربة,/teachers/:slug,TO_DESIGN
+UX-PUBLIC-007,PUBLIC,UX-PUBLIC-007 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,احجز تجربة,/how-it-works,TO_DESIGN
+UX-PUBLIC-007,PUBLIC,UX-PUBLIC-007 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,احجز تجربة,/how-it-works,TO_DESIGN
+UX-PUBLIC-007,PUBLIC,UX-PUBLIC-007 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,احجز تجربة,/how-it-works,TO_DESIGN
+UX-PUBLIC-007,PUBLIC,UX-PUBLIC-007 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,احجز تجربة,/how-it-works,TO_DESIGN
+UX-PUBLIC-008,PUBLIC,UX-PUBLIC-008 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اكتشف التحديات,/challenges,TO_DESIGN
+UX-PUBLIC-008,PUBLIC,UX-PUBLIC-008 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اكتشف التحديات,/challenges,TO_DESIGN
+UX-PUBLIC-008,PUBLIC,UX-PUBLIC-008 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اكتشف التحديات,/challenges,TO_DESIGN
+UX-PUBLIC-008,PUBLIC,UX-PUBLIC-008 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اكتشف التحديات,/challenges,TO_DESIGN
+UX-PUBLIC-009,PUBLIC,UX-PUBLIC-009 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,احجز الموعد,/trial,TO_DESIGN
+UX-PUBLIC-009,PUBLIC,UX-PUBLIC-009 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,احجز الموعد,/trial,TO_DESIGN
+UX-PUBLIC-009,PUBLIC,UX-PUBLIC-009 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,احجز الموعد,/trial,TO_DESIGN
+UX-PUBLIC-009,PUBLIC,UX-PUBLIC-009 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,احجز الموعد,/trial,TO_DESIGN
+UX-PUBLIC-010,PUBLIC,UX-PUBLIC-010 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,شوف البرامج,/about,TO_DESIGN
+UX-PUBLIC-010,PUBLIC,UX-PUBLIC-010 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,شوف البرامج,/about,TO_DESIGN
+UX-PUBLIC-010,PUBLIC,UX-PUBLIC-010 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,شوف البرامج,/about,TO_DESIGN
+UX-PUBLIC-010,PUBLIC,UX-PUBLIC-010 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,شوف البرامج,/about,TO_DESIGN
+UX-PUBLIC-011,PUBLIC,UX-PUBLIC-011 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,ابدأ محادثة الدعم,/help,TO_DESIGN
+UX-PUBLIC-011,PUBLIC,UX-PUBLIC-011 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,ابدأ محادثة الدعم,/help,TO_DESIGN
+UX-PUBLIC-011,PUBLIC,UX-PUBLIC-011 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,ابدأ محادثة الدعم,/help,TO_DESIGN
+UX-PUBLIC-011,PUBLIC,UX-PUBLIC-011 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,ابدأ محادثة الدعم,/help,TO_DESIGN
+UX-PUBLIC-012,PUBLIC,UX-PUBLIC-012 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اقرأ السياسة,/legal/:slug,TO_DESIGN
+UX-PUBLIC-012,PUBLIC,UX-PUBLIC-012 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اقرأ السياسة,/legal/:slug,TO_DESIGN
+UX-PUBLIC-012,PUBLIC,UX-PUBLIC-012 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اقرأ السياسة,/legal/:slug,TO_DESIGN
+UX-PUBLIC-012,PUBLIC,UX-PUBLIC-012 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اقرأ السياسة,/legal/:slug,TO_DESIGN
+UX-AUTH-001,AUTH,UX-AUTH-001 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إنشاء حساب,/signup,TO_DESIGN
+UX-AUTH-001,AUTH,UX-AUTH-001 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إنشاء حساب,/signup,TO_DESIGN
+UX-AUTH-001,AUTH,UX-AUTH-001 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إنشاء حساب,/signup,TO_DESIGN
+UX-AUTH-001,AUTH,UX-AUTH-001 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إنشاء حساب,/signup,TO_DESIGN
+UX-AUTH-002,AUTH,UX-AUTH-002 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إرسال طلب الموافقة,/onboarding/guardian-consent,TO_DESIGN
+UX-AUTH-002,AUTH,UX-AUTH-002 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إرسال طلب الموافقة,/onboarding/guardian-consent,TO_DESIGN
+UX-AUTH-002,AUTH,UX-AUTH-002 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إرسال طلب الموافقة,/onboarding/guardian-consent,TO_DESIGN
+UX-AUTH-002,AUTH,UX-AUTH-002 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إرسال طلب الموافقة,/onboarding/guardian-consent,TO_DESIGN
+UX-AUTH-003,AUTH,UX-AUTH-003 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تسجيل الدخول,/login,TO_DESIGN
+UX-AUTH-003,AUTH,UX-AUTH-003 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تسجيل الدخول,/login,TO_DESIGN
+UX-AUTH-003,AUTH,UX-AUTH-003 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تسجيل الدخول,/login,TO_DESIGN
+UX-AUTH-003,AUTH,UX-AUTH-003 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تسجيل الدخول,/login,TO_DESIGN
+UX-AUTH-004,AUTH,UX-AUTH-004 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,استرداد,/forgot-password,TO_DESIGN
+UX-AUTH-004,AUTH,UX-AUTH-004 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,استرداد,/forgot-password,TO_DESIGN
+UX-AUTH-004,AUTH,UX-AUTH-004 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,استرداد,/forgot-password,TO_DESIGN
+UX-AUTH-004,AUTH,UX-AUTH-004 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,استرداد,/forgot-password,TO_DESIGN
+UX-AUTH-005,AUTH,UX-AUTH-005 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,متابعة,/onboarding,TO_DESIGN
+UX-AUTH-005,AUTH,UX-AUTH-005 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,متابعة,/onboarding,TO_DESIGN
+UX-AUTH-005,AUTH,UX-AUTH-005 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,متابعة,/onboarding,TO_DESIGN
+UX-AUTH-005,AUTH,UX-AUTH-005 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,متابعة,/onboarding,TO_DESIGN
+UX-LEARNER-001,LEARNER,UX-LEARNER-001 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,ابدأ مهمة اليوم,/app,TO_DESIGN
+UX-LEARNER-001,LEARNER,UX-LEARNER-001 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,ابدأ مهمة اليوم,/app,TO_DESIGN
+UX-LEARNER-001,LEARNER,UX-LEARNER-001 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,ابدأ مهمة اليوم,/app,TO_DESIGN
+UX-LEARNER-001,LEARNER,UX-LEARNER-001 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,ابدأ مهمة اليوم,/app,TO_DESIGN
+UX-LEARNER-002,LEARNER,UX-LEARNER-002 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حفظ التغييرات,/app/profile,TO_DESIGN
+UX-LEARNER-002,LEARNER,UX-LEARNER-002 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حفظ التغييرات,/app/profile,TO_DESIGN
+UX-LEARNER-002,LEARNER,UX-LEARNER-002 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حفظ التغييرات,/app/profile,TO_DESIGN
+UX-LEARNER-002,LEARNER,UX-LEARNER-002 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حفظ التغييرات,/app/profile,TO_DESIGN
+UX-LEARNER-003,LEARNER,UX-LEARNER-003 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,شوف البرنامج,/app/programs,TO_DESIGN
+UX-LEARNER-003,LEARNER,UX-LEARNER-003 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,شوف البرنامج,/app/programs,TO_DESIGN
+UX-LEARNER-003,LEARNER,UX-LEARNER-003 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,شوف البرنامج,/app/programs,TO_DESIGN
+UX-LEARNER-003,LEARNER,UX-LEARNER-003 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,شوف البرنامج,/app/programs,TO_DESIGN
+UX-LEARNER-004,LEARNER,UX-LEARNER-004 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حجز تقييم,/app/assessment,TO_DESIGN
+UX-LEARNER-004,LEARNER,UX-LEARNER-004 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حجز تقييم,/app/assessment,TO_DESIGN
+UX-LEARNER-004,LEARNER,UX-LEARNER-004 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حجز تقييم,/app/assessment,TO_DESIGN
+UX-LEARNER-004,LEARNER,UX-LEARNER-004 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حجز تقييم,/app/assessment,TO_DESIGN
+UX-LEARNER-005,LEARNER,UX-LEARNER-005 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اختيار موعد,/app/teachers,TO_DESIGN
+UX-LEARNER-005,LEARNER,UX-LEARNER-005 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اختيار موعد,/app/teachers,TO_DESIGN
+UX-LEARNER-005,LEARNER,UX-LEARNER-005 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اختيار موعد,/app/teachers,TO_DESIGN
+UX-LEARNER-005,LEARNER,UX-LEARNER-005 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اختيار موعد,/app/teachers,TO_DESIGN
+UX-LEARNER-006,LEARNER,UX-LEARNER-006 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,احجز مع المعلم,/app/teachers/:id,TO_DESIGN
+UX-LEARNER-006,LEARNER,UX-LEARNER-006 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,احجز مع المعلم,/app/teachers/:id,TO_DESIGN
+UX-LEARNER-006,LEARNER,UX-LEARNER-006 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,احجز مع المعلم,/app/teachers/:id,TO_DESIGN
+UX-LEARNER-006,LEARNER,UX-LEARNER-006 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,احجز مع المعلم,/app/teachers/:id,TO_DESIGN
+UX-LEARNER-007,LEARNER,UX-LEARNER-007 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حجز أو تغيير,/app/calendar,TO_DESIGN
+UX-LEARNER-007,LEARNER,UX-LEARNER-007 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حجز أو تغيير,/app/calendar,TO_DESIGN
+UX-LEARNER-007,LEARNER,UX-LEARNER-007 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حجز أو تغيير,/app/calendar,TO_DESIGN
+UX-LEARNER-007,LEARNER,UX-LEARNER-007 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حجز أو تغيير,/app/calendar,TO_DESIGN
+UX-LEARNER-008,LEARNER,UX-LEARNER-008 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تأكيد الحجز,/app/book,TO_DESIGN
+UX-LEARNER-008,LEARNER,UX-LEARNER-008 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تأكيد الحجز,/app/book,TO_DESIGN
+UX-LEARNER-008,LEARNER,UX-LEARNER-008 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تأكيد الحجز,/app/book,TO_DESIGN
+UX-LEARNER-008,LEARNER,UX-LEARNER-008 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تأكيد الحجز,/app/book,TO_DESIGN
+UX-LEARNER-009,LEARNER,UX-LEARNER-009 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,دخول الحصة,/app/lessons/:id,TO_DESIGN
+UX-LEARNER-009,LEARNER,UX-LEARNER-009 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,دخول الحصة,/app/lessons/:id,TO_DESIGN
+UX-LEARNER-009,LEARNER,UX-LEARNER-009 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,دخول الحصة,/app/lessons/:id,TO_DESIGN
+UX-LEARNER-009,LEARNER,UX-LEARNER-009 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,دخول الحصة,/app/lessons/:id,TO_DESIGN
+UX-LEARNER-010,LEARNER,UX-LEARNER-010 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إنهاء الحصة,/app/lessons/:id/live,TO_DESIGN
+UX-LEARNER-010,LEARNER,UX-LEARNER-010 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إنهاء الحصة,/app/lessons/:id/live,TO_DESIGN
+UX-LEARNER-010,LEARNER,UX-LEARNER-010 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إنهاء الحصة,/app/lessons/:id/live,TO_DESIGN
+UX-LEARNER-010,LEARNER,UX-LEARNER-010 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إنهاء الحصة,/app/lessons/:id/live,TO_DESIGN
+UX-LEARNER-011,LEARNER,UX-LEARNER-011 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,راجع الواجب,/app/lessons/:id/report,TO_DESIGN
+UX-LEARNER-011,LEARNER,UX-LEARNER-011 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,راجع الواجب,/app/lessons/:id/report,TO_DESIGN
+UX-LEARNER-011,LEARNER,UX-LEARNER-011 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,راجع الواجب,/app/lessons/:id/report,TO_DESIGN
+UX-LEARNER-011,LEARNER,UX-LEARNER-011 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,راجع الواجب,/app/lessons/:id/report,TO_DESIGN
+UX-LEARNER-012,LEARNER,UX-LEARNER-012 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,ابدأ المهمة,/app/plan,TO_DESIGN
+UX-LEARNER-012,LEARNER,UX-LEARNER-012 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,ابدأ المهمة,/app/plan,TO_DESIGN
+UX-LEARNER-012,LEARNER,UX-LEARNER-012 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,ابدأ المهمة,/app/plan,TO_DESIGN
+UX-LEARNER-012,LEARNER,UX-LEARNER-012 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,ابدأ المهمة,/app/plan,TO_DESIGN
+UX-LEARNER-013,LEARNER,UX-LEARNER-013 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إنهاء التدريب,/app/study,TO_DESIGN
+UX-LEARNER-013,LEARNER,UX-LEARNER-013 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إنهاء التدريب,/app/study,TO_DESIGN
+UX-LEARNER-013,LEARNER,UX-LEARNER-013 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إنهاء التدريب,/app/study,TO_DESIGN
+UX-LEARNER-013,LEARNER,UX-LEARNER-013 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إنهاء التدريب,/app/study,TO_DESIGN
+UX-LEARNER-014,LEARNER,UX-LEARNER-014 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,راجع الآن,/app/revision,TO_DESIGN
+UX-LEARNER-014,LEARNER,UX-LEARNER-014 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,راجع الآن,/app/revision,TO_DESIGN
+UX-LEARNER-014,LEARNER,UX-LEARNER-014 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,راجع الآن,/app/revision,TO_DESIGN
+UX-LEARNER-014,LEARNER,UX-LEARNER-014 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,راجع الآن,/app/revision,TO_DESIGN
+UX-LEARNER-015,LEARNER,UX-LEARNER-015 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,افتح المقطع,/app/memory-map,TO_DESIGN
+UX-LEARNER-015,LEARNER,UX-LEARNER-015 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,افتح المقطع,/app/memory-map,TO_DESIGN
+UX-LEARNER-015,LEARNER,UX-LEARNER-015 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,افتح المقطع,/app/memory-map,TO_DESIGN
+UX-LEARNER-015,LEARNER,UX-LEARNER-015 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,افتح المقطع,/app/memory-map,TO_DESIGN
+UX-LEARNER-016,LEARNER,UX-LEARNER-016 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إرسال للمعلم,/app/practice,TO_DESIGN
+UX-LEARNER-016,LEARNER,UX-LEARNER-016 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إرسال للمعلم,/app/practice,TO_DESIGN
+UX-LEARNER-016,LEARNER,UX-LEARNER-016 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إرسال للمعلم,/app/practice,TO_DESIGN
+UX-LEARNER-016,LEARNER,UX-LEARNER-016 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إرسال للمعلم,/app/practice,TO_DESIGN
+UX-LEARNER-017,LEARNER,UX-LEARNER-017 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,ابدأ اختبار,/app/exams,TO_DESIGN
+UX-LEARNER-017,LEARNER,UX-LEARNER-017 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,ابدأ اختبار,/app/exams,TO_DESIGN
+UX-LEARNER-017,LEARNER,UX-LEARNER-017 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,ابدأ اختبار,/app/exams,TO_DESIGN
+UX-LEARNER-017,LEARNER,UX-LEARNER-017 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,ابدأ اختبار,/app/exams,TO_DESIGN
+UX-LEARNER-018,LEARNER,UX-LEARNER-018 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تسليم الاختبار,/app/exams/:id/take,TO_DESIGN
+UX-LEARNER-018,LEARNER,UX-LEARNER-018 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تسليم الاختبار,/app/exams/:id/take,TO_DESIGN
+UX-LEARNER-018,LEARNER,UX-LEARNER-018 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تسليم الاختبار,/app/exams/:id/take,TO_DESIGN
+UX-LEARNER-018,LEARNER,UX-LEARNER-018 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تسليم الاختبار,/app/exams/:id/take,TO_DESIGN
+UX-LEARNER-019,LEARNER,UX-LEARNER-019 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,عرض الخطة الجديدة,/app/exams/:id/result,TO_DESIGN
+UX-LEARNER-019,LEARNER,UX-LEARNER-019 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,عرض الخطة الجديدة,/app/exams/:id/result,TO_DESIGN
+UX-LEARNER-019,LEARNER,UX-LEARNER-019 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,عرض الخطة الجديدة,/app/exams/:id/result,TO_DESIGN
+UX-LEARNER-019,LEARNER,UX-LEARNER-019 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,عرض الخطة الجديدة,/app/exams/:id/result,TO_DESIGN
+UX-LEARNER-020,LEARNER,UX-LEARNER-020 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,عرض التفاصيل,/app/competitions,TO_DESIGN
+UX-LEARNER-020,LEARNER,UX-LEARNER-020 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,عرض التفاصيل,/app/competitions,TO_DESIGN
+UX-LEARNER-020,LEARNER,UX-LEARNER-020 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,عرض التفاصيل,/app/competitions,TO_DESIGN
+UX-LEARNER-020,LEARNER,UX-LEARNER-020 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,عرض التفاصيل,/app/competitions,TO_DESIGN
+UX-LEARNER-021,LEARNER,UX-LEARNER-021 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اشترك,/app/competitions/:id,TO_DESIGN
+UX-LEARNER-021,LEARNER,UX-LEARNER-021 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اشترك,/app/competitions/:id,TO_DESIGN
+UX-LEARNER-021,LEARNER,UX-LEARNER-021 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اشترك,/app/competitions/:id,TO_DESIGN
+UX-LEARNER-021,LEARNER,UX-LEARNER-021 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اشترك,/app/competitions/:id,TO_DESIGN
+UX-LEARNER-022,LEARNER,UX-LEARNER-022 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,ابدأ مهمة التحضير,/app/competitions/:id/prepare,TO_DESIGN
+UX-LEARNER-022,LEARNER,UX-LEARNER-022 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,ابدأ مهمة التحضير,/app/competitions/:id/prepare,TO_DESIGN
+UX-LEARNER-022,LEARNER,UX-LEARNER-022 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,ابدأ مهمة التحضير,/app/competitions/:id/prepare,TO_DESIGN
+UX-LEARNER-022,LEARNER,UX-LEARNER-022 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,ابدأ مهمة التحضير,/app/competitions/:id/prepare,TO_DESIGN
+UX-LEARNER-023,LEARNER,UX-LEARNER-023 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إرسال المشاركة,/app/competitions/:id/round/:roundId,TO_DESIGN
+UX-LEARNER-023,LEARNER,UX-LEARNER-023 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إرسال المشاركة,/app/competitions/:id/round/:roundId,TO_DESIGN
+UX-LEARNER-023,LEARNER,UX-LEARNER-023 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إرسال المشاركة,/app/competitions/:id/round/:roundId,TO_DESIGN
+UX-LEARNER-023,LEARNER,UX-LEARNER-023 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إرسال المشاركة,/app/competitions/:id/round/:roundId,TO_DESIGN
+UX-LEARNER-024,LEARNER,UX-LEARNER-024 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,عرض نتيجتي,/app/competitions/:id/standings,TO_DESIGN
+UX-LEARNER-024,LEARNER,UX-LEARNER-024 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,عرض نتيجتي,/app/competitions/:id/standings,TO_DESIGN
+UX-LEARNER-024,LEARNER,UX-LEARNER-024 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,عرض نتيجتي,/app/competitions/:id/standings,TO_DESIGN
+UX-LEARNER-024,LEARNER,UX-LEARNER-024 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,عرض نتيجتي,/app/competitions/:id/standings,TO_DESIGN
+UX-LEARNER-025,LEARNER,UX-LEARNER-025 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تقديم تظلم,/app/competitions/:id/result,TO_DESIGN
+UX-LEARNER-025,LEARNER,UX-LEARNER-025 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تقديم تظلم,/app/competitions/:id/result,TO_DESIGN
+UX-LEARNER-025,LEARNER,UX-LEARNER-025 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تقديم تظلم,/app/competitions/:id/result,TO_DESIGN
+UX-LEARNER-025,LEARNER,UX-LEARNER-025 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تقديم تظلم,/app/competitions/:id/result,TO_DESIGN
+UX-LEARNER-026,LEARNER,UX-LEARNER-026 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,عرض الشهادة,/app/achievements,TO_DESIGN
+UX-LEARNER-026,LEARNER,UX-LEARNER-026 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,عرض الشهادة,/app/achievements,TO_DESIGN
+UX-LEARNER-026,LEARNER,UX-LEARNER-026 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,عرض الشهادة,/app/achievements,TO_DESIGN
+UX-LEARNER-026,LEARNER,UX-LEARNER-026 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,عرض الشهادة,/app/achievements,TO_DESIGN
+UX-LEARNER-027,LEARNER,UX-LEARNER-027 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اسأل عن مراجعاتك,/app/ai-coach,TO_DESIGN
+UX-LEARNER-027,LEARNER,UX-LEARNER-027 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اسأل عن مراجعاتك,/app/ai-coach,TO_DESIGN
+UX-LEARNER-027,LEARNER,UX-LEARNER-027 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اسأل عن مراجعاتك,/app/ai-coach,TO_DESIGN
+UX-LEARNER-027,LEARNER,UX-LEARNER-027 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اسأل عن مراجعاتك,/app/ai-coach,TO_DESIGN
+UX-LEARNER-028,LEARNER,UX-LEARNER-028 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,شاهد الدرس,/app/library,TO_DESIGN
+UX-LEARNER-028,LEARNER,UX-LEARNER-028 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,شاهد الدرس,/app/library,TO_DESIGN
+UX-LEARNER-028,LEARNER,UX-LEARNER-028 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,شاهد الدرس,/app/library,TO_DESIGN
+UX-LEARNER-028,LEARNER,UX-LEARNER-028 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,شاهد الدرس,/app/library,TO_DESIGN
+UX-LEARNER-029,LEARNER,UX-LEARNER-029 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تجديد الاشتراك,/app/billing,TO_DESIGN
+UX-LEARNER-029,LEARNER,UX-LEARNER-029 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تجديد الاشتراك,/app/billing,TO_DESIGN
+UX-LEARNER-029,LEARNER,UX-LEARNER-029 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تجديد الاشتراك,/app/billing,TO_DESIGN
+UX-LEARNER-029,LEARNER,UX-LEARNER-029 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تجديد الاشتراك,/app/billing,TO_DESIGN
+UX-LEARNER-030,LEARNER,UX-LEARNER-030 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,ضبط الإشعارات,/app/notifications,TO_DESIGN
+UX-LEARNER-030,LEARNER,UX-LEARNER-030 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,ضبط الإشعارات,/app/notifications,TO_DESIGN
+UX-LEARNER-030,LEARNER,UX-LEARNER-030 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,ضبط الإشعارات,/app/notifications,TO_DESIGN
+UX-LEARNER-030,LEARNER,UX-LEARNER-030 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,ضبط الإشعارات,/app/notifications,TO_DESIGN
+UX-LEARNER-031,LEARNER,UX-LEARNER-031 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,فتح تذكرة,/app/support,TO_DESIGN
+UX-LEARNER-031,LEARNER,UX-LEARNER-031 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,فتح تذكرة,/app/support,TO_DESIGN
+UX-LEARNER-031,LEARNER,UX-LEARNER-031 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,فتح تذكرة,/app/support,TO_DESIGN
+UX-LEARNER-031,LEARNER,UX-LEARNER-031 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,فتح تذكرة,/app/support,TO_DESIGN
+UX-LEARNER-032,LEARNER,UX-LEARNER-032 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حفظ,/app/settings,TO_DESIGN
+UX-LEARNER-032,LEARNER,UX-LEARNER-032 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حفظ,/app/settings,TO_DESIGN
+UX-LEARNER-032,LEARNER,UX-LEARNER-032 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حفظ,/app/settings,TO_DESIGN
+UX-LEARNER-032,LEARNER,UX-LEARNER-032 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حفظ,/app/settings,TO_DESIGN
+UX-TEACHER-001,TEACHER,UX-TEACHER-001 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,استكمال البيانات,/teach/start,TO_DESIGN
+UX-TEACHER-001,TEACHER,UX-TEACHER-001 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,استكمال البيانات,/teach/start,TO_DESIGN
+UX-TEACHER-001,TEACHER,UX-TEACHER-001 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,استكمال البيانات,/teach/start,TO_DESIGN
+UX-TEACHER-001,TEACHER,UX-TEACHER-001 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,استكمال البيانات,/teach/start,TO_DESIGN
+UX-TEACHER-002,TEACHER,UX-TEACHER-002 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,افتح الحصة,/teach,TO_DESIGN
+UX-TEACHER-002,TEACHER,UX-TEACHER-002 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,افتح الحصة,/teach,TO_DESIGN
+UX-TEACHER-002,TEACHER,UX-TEACHER-002 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,افتح الحصة,/teach,TO_DESIGN
+UX-TEACHER-002,TEACHER,UX-TEACHER-002 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,افتح الحصة,/teach,TO_DESIGN
+UX-TEACHER-003,TEACHER,UX-TEACHER-003 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حفظ التوافر,/teach/availability,TO_DESIGN
+UX-TEACHER-003,TEACHER,UX-TEACHER-003 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حفظ التوافر,/teach/availability,TO_DESIGN
+UX-TEACHER-003,TEACHER,UX-TEACHER-003 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حفظ التوافر,/teach/availability,TO_DESIGN
+UX-TEACHER-003,TEACHER,UX-TEACHER-003 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حفظ التوافر,/teach/availability,TO_DESIGN
+UX-TEACHER-004,TEACHER,UX-TEACHER-004 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,عرض الحصة,/teach/calendar,TO_DESIGN
+UX-TEACHER-004,TEACHER,UX-TEACHER-004 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,عرض الحصة,/teach/calendar,TO_DESIGN
+UX-TEACHER-004,TEACHER,UX-TEACHER-004 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,عرض الحصة,/teach/calendar,TO_DESIGN
+UX-TEACHER-004,TEACHER,UX-TEACHER-004 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,عرض الحصة,/teach/calendar,TO_DESIGN
+UX-TEACHER-005,TEACHER,UX-TEACHER-005 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,ابدأ الحصة,/teach/lessons/:id,TO_DESIGN
+UX-TEACHER-005,TEACHER,UX-TEACHER-005 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,ابدأ الحصة,/teach/lessons/:id,TO_DESIGN
+UX-TEACHER-005,TEACHER,UX-TEACHER-005 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,ابدأ الحصة,/teach/lessons/:id,TO_DESIGN
+UX-TEACHER-005,TEACHER,UX-TEACHER-005 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,ابدأ الحصة,/teach/lessons/:id,TO_DESIGN
+UX-TEACHER-006,TEACHER,UX-TEACHER-006 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إغلاق الحصة,/teach/lessons/:id/live,TO_DESIGN
+UX-TEACHER-006,TEACHER,UX-TEACHER-006 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إغلاق الحصة,/teach/lessons/:id/live,TO_DESIGN
+UX-TEACHER-006,TEACHER,UX-TEACHER-006 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إغلاق الحصة,/teach/lessons/:id/live,TO_DESIGN
+UX-TEACHER-006,TEACHER,UX-TEACHER-006 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إغلاق الحصة,/teach/lessons/:id/live,TO_DESIGN
+UX-TEACHER-007,TEACHER,UX-TEACHER-007 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اعتماد التقرير,/teach/lessons/:id/report,TO_DESIGN
+UX-TEACHER-007,TEACHER,UX-TEACHER-007 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اعتماد التقرير,/teach/lessons/:id/report,TO_DESIGN
+UX-TEACHER-007,TEACHER,UX-TEACHER-007 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اعتماد التقرير,/teach/lessons/:id/report,TO_DESIGN
+UX-TEACHER-007,TEACHER,UX-TEACHER-007 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اعتماد التقرير,/teach/lessons/:id/report,TO_DESIGN
+UX-TEACHER-008,TEACHER,UX-TEACHER-008 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,افتح الملف,/teach/learners,TO_DESIGN
+UX-TEACHER-008,TEACHER,UX-TEACHER-008 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,افتح الملف,/teach/learners,TO_DESIGN
+UX-TEACHER-008,TEACHER,UX-TEACHER-008 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,افتح الملف,/teach/learners,TO_DESIGN
+UX-TEACHER-008,TEACHER,UX-TEACHER-008 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,افتح الملف,/teach/learners,TO_DESIGN
+UX-TEACHER-009,TEACHER,UX-TEACHER-009 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اقترح تعديل الخطة,/teach/learners/:id,TO_DESIGN
+UX-TEACHER-009,TEACHER,UX-TEACHER-009 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اقترح تعديل الخطة,/teach/learners/:id,TO_DESIGN
+UX-TEACHER-009,TEACHER,UX-TEACHER-009 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اقترح تعديل الخطة,/teach/learners/:id,TO_DESIGN
+UX-TEACHER-009,TEACHER,UX-TEACHER-009 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اقترح تعديل الخطة,/teach/learners/:id,TO_DESIGN
+UX-TEACHER-010,TEACHER,UX-TEACHER-010 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حفظ واعتماد,/teach/assessments,TO_DESIGN
+UX-TEACHER-010,TEACHER,UX-TEACHER-010 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حفظ واعتماد,/teach/assessments,TO_DESIGN
+UX-TEACHER-010,TEACHER,UX-TEACHER-010 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حفظ واعتماد,/teach/assessments,TO_DESIGN
+UX-TEACHER-010,TEACHER,UX-TEACHER-010 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حفظ واعتماد,/teach/assessments,TO_DESIGN
+UX-TEACHER-011,TEACHER,UX-TEACHER-011 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اعتماد أو رفض,/teach/plans,TO_DESIGN
+UX-TEACHER-011,TEACHER,UX-TEACHER-011 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اعتماد أو رفض,/teach/plans,TO_DESIGN
+UX-TEACHER-011,TEACHER,UX-TEACHER-011 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اعتماد أو رفض,/teach/plans,TO_DESIGN
+UX-TEACHER-011,TEACHER,UX-TEACHER-011 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اعتماد أو رفض,/teach/plans,TO_DESIGN
+UX-TEACHER-012,TEACHER,UX-TEACHER-012 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إرسال للمشرف,/teach/questions,TO_DESIGN
+UX-TEACHER-012,TEACHER,UX-TEACHER-012 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إرسال للمشرف,/teach/questions,TO_DESIGN
+UX-TEACHER-012,TEACHER,UX-TEACHER-012 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إرسال للمشرف,/teach/questions,TO_DESIGN
+UX-TEACHER-012,TEACHER,UX-TEACHER-012 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إرسال للمشرف,/teach/questions,TO_DESIGN
+UX-TEACHER-013,TEACHER,UX-TEACHER-013 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,فتح التحكيم,/teach/competitions,TO_DESIGN
+UX-TEACHER-013,TEACHER,UX-TEACHER-013 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,فتح التحكيم,/teach/competitions,TO_DESIGN
+UX-TEACHER-013,TEACHER,UX-TEACHER-013 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,فتح التحكيم,/teach/competitions,TO_DESIGN
+UX-TEACHER-013,TEACHER,UX-TEACHER-013 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,فتح التحكيم,/teach/competitions,TO_DESIGN
+UX-TEACHER-014,TEACHER,UX-TEACHER-014 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حفظ الدرجة,/teach/competitions/:id/judge,TO_DESIGN
+UX-TEACHER-014,TEACHER,UX-TEACHER-014 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حفظ الدرجة,/teach/competitions/:id/judge,TO_DESIGN
+UX-TEACHER-014,TEACHER,UX-TEACHER-014 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حفظ الدرجة,/teach/competitions/:id/judge,TO_DESIGN
+UX-TEACHER-014,TEACHER,UX-TEACHER-014 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حفظ الدرجة,/teach/competitions/:id/judge,TO_DESIGN
+UX-TEACHER-015,TEACHER,UX-TEACHER-015 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حفظ القرار,/teach/appeals,TO_DESIGN
+UX-TEACHER-015,TEACHER,UX-TEACHER-015 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حفظ القرار,/teach/appeals,TO_DESIGN
+UX-TEACHER-015,TEACHER,UX-TEACHER-015 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حفظ القرار,/teach/appeals,TO_DESIGN
+UX-TEACHER-015,TEACHER,UX-TEACHER-015 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حفظ القرار,/teach/appeals,TO_DESIGN
+UX-TEACHER-016,TEACHER,UX-TEACHER-016 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,عرض كشف الشهر,/teach/pay,TO_DESIGN
+UX-TEACHER-016,TEACHER,UX-TEACHER-016 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,عرض كشف الشهر,/teach/pay,TO_DESIGN
+UX-TEACHER-016,TEACHER,UX-TEACHER-016 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,عرض كشف الشهر,/teach/pay,TO_DESIGN
+UX-TEACHER-016,TEACHER,UX-TEACHER-016 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,عرض كشف الشهر,/teach/pay,TO_DESIGN
+UX-TEACHER-017,TEACHER,UX-TEACHER-017 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,فتح طلب,/teach/support,TO_DESIGN
+UX-TEACHER-017,TEACHER,UX-TEACHER-017 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,فتح طلب,/teach/support,TO_DESIGN
+UX-TEACHER-017,TEACHER,UX-TEACHER-017 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,فتح طلب,/teach/support,TO_DESIGN
+UX-TEACHER-017,TEACHER,UX-TEACHER-017 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,فتح طلب,/teach/support,TO_DESIGN
+UX-TEACHER-018,TEACHER,UX-TEACHER-018 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حفظ,/teach/settings,TO_DESIGN
+UX-TEACHER-018,TEACHER,UX-TEACHER-018 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حفظ,/teach/settings,TO_DESIGN
+UX-TEACHER-018,TEACHER,UX-TEACHER-018 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حفظ,/teach/settings,TO_DESIGN
+UX-TEACHER-018,TEACHER,UX-TEACHER-018 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حفظ,/teach/settings,TO_DESIGN
+UX-ADMIN-001,ADMIN,UX-ADMIN-001 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,فتح التقرير,/admin,TO_DESIGN
+UX-ADMIN-001,ADMIN,UX-ADMIN-001 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,فتح التقرير,/admin,TO_DESIGN
+UX-ADMIN-001,ADMIN,UX-ADMIN-001 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,فتح التقرير,/admin,TO_DESIGN
+UX-ADMIN-001,ADMIN,UX-ADMIN-001 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,فتح التقرير,/admin,TO_DESIGN
+UX-ADMIN-002,ADMIN,UX-ADMIN-002 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,فتح متعلم,/admin/learners,TO_DESIGN
+UX-ADMIN-002,ADMIN,UX-ADMIN-002 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,فتح متعلم,/admin/learners,TO_DESIGN
+UX-ADMIN-002,ADMIN,UX-ADMIN-002 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,فتح متعلم,/admin/learners,TO_DESIGN
+UX-ADMIN-002,ADMIN,UX-ADMIN-002 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,فتح متعلم,/admin/learners,TO_DESIGN
+UX-ADMIN-003,ADMIN,UX-ADMIN-003 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حل المشكلة,/admin/learners/:id,TO_DESIGN
+UX-ADMIN-003,ADMIN,UX-ADMIN-003 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حل المشكلة,/admin/learners/:id,TO_DESIGN
+UX-ADMIN-003,ADMIN,UX-ADMIN-003 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حل المشكلة,/admin/learners/:id,TO_DESIGN
+UX-ADMIN-003,ADMIN,UX-ADMIN-003 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حل المشكلة,/admin/learners/:id,TO_DESIGN
+UX-ADMIN-004,ADMIN,UX-ADMIN-004 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اعتماد/رفض,/admin/consents,TO_DESIGN
+UX-ADMIN-004,ADMIN,UX-ADMIN-004 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اعتماد/رفض,/admin/consents,TO_DESIGN
+UX-ADMIN-004,ADMIN,UX-ADMIN-004 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اعتماد/رفض,/admin/consents,TO_DESIGN
+UX-ADMIN-004,ADMIN,UX-ADMIN-004 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اعتماد/رفض,/admin/consents,TO_DESIGN
+UX-ADMIN-005,ADMIN,UX-ADMIN-005 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تغيير الدور,/admin/staff,TO_DESIGN
+UX-ADMIN-005,ADMIN,UX-ADMIN-005 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تغيير الدور,/admin/staff,TO_DESIGN
+UX-ADMIN-005,ADMIN,UX-ADMIN-005 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تغيير الدور,/admin/staff,TO_DESIGN
+UX-ADMIN-005,ADMIN,UX-ADMIN-005 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تغيير الدور,/admin/staff,TO_DESIGN
+UX-ADMIN-006,ADMIN,UX-ADMIN-006 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,فتح الطلب,/admin/teachers/applications,TO_DESIGN
+UX-ADMIN-006,ADMIN,UX-ADMIN-006 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,فتح الطلب,/admin/teachers/applications,TO_DESIGN
+UX-ADMIN-006,ADMIN,UX-ADMIN-006 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,فتح الطلب,/admin/teachers/applications,TO_DESIGN
+UX-ADMIN-006,ADMIN,UX-ADMIN-006 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,فتح الطلب,/admin/teachers/applications,TO_DESIGN
+UX-ADMIN-007,ADMIN,UX-ADMIN-007 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,فتح المعلم,/admin/teachers,TO_DESIGN
+UX-ADMIN-007,ADMIN,UX-ADMIN-007 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,فتح المعلم,/admin/teachers,TO_DESIGN
+UX-ADMIN-007,ADMIN,UX-ADMIN-007 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,فتح المعلم,/admin/teachers,TO_DESIGN
+UX-ADMIN-007,ADMIN,UX-ADMIN-007 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,فتح المعلم,/admin/teachers,TO_DESIGN
+UX-ADMIN-008,ADMIN,UX-ADMIN-008 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اعتماد,/admin/teachers/:id,TO_DESIGN
+UX-ADMIN-008,ADMIN,UX-ADMIN-008 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اعتماد,/admin/teachers/:id,TO_DESIGN
+UX-ADMIN-008,ADMIN,UX-ADMIN-008 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اعتماد,/admin/teachers/:id,TO_DESIGN
+UX-ADMIN-008,ADMIN,UX-ADMIN-008 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اعتماد,/admin/teachers/:id,TO_DESIGN
+UX-ADMIN-009,ADMIN,UX-ADMIN-009 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اعتماد العقد,/admin/teachers/:id/compensation,TO_DESIGN
+UX-ADMIN-009,ADMIN,UX-ADMIN-009 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اعتماد العقد,/admin/teachers/:id/compensation,TO_DESIGN
+UX-ADMIN-009,ADMIN,UX-ADMIN-009 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اعتماد العقد,/admin/teachers/:id/compensation,TO_DESIGN
+UX-ADMIN-009,ADMIN,UX-ADMIN-009 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اعتماد العقد,/admin/teachers/:id/compensation,TO_DESIGN
+UX-ADMIN-010,ADMIN,UX-ADMIN-010 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حفظ الشيفت,/admin/teachers/shifts,TO_DESIGN
+UX-ADMIN-010,ADMIN,UX-ADMIN-010 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حفظ الشيفت,/admin/teachers/shifts,TO_DESIGN
+UX-ADMIN-010,ADMIN,UX-ADMIN-010 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حفظ الشيفت,/admin/teachers/shifts,TO_DESIGN
+UX-ADMIN-010,ADMIN,UX-ADMIN-010 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حفظ الشيفت,/admin/teachers/shifts,TO_DESIGN
+UX-ADMIN-011,ADMIN,UX-ADMIN-011 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,برنامج جديد,/admin/programs,TO_DESIGN
+UX-ADMIN-011,ADMIN,UX-ADMIN-011 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,برنامج جديد,/admin/programs,TO_DESIGN
+UX-ADMIN-011,ADMIN,UX-ADMIN-011 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,برنامج جديد,/admin/programs,TO_DESIGN
+UX-ADMIN-011,ADMIN,UX-ADMIN-011 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,برنامج جديد,/admin/programs,TO_DESIGN
+UX-ADMIN-012,ADMIN,UX-ADMIN-012 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اعتماد المصدر,/admin/quran-sources,TO_DESIGN
+UX-ADMIN-012,ADMIN,UX-ADMIN-012 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اعتماد المصدر,/admin/quran-sources,TO_DESIGN
+UX-ADMIN-012,ADMIN,UX-ADMIN-012 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اعتماد المصدر,/admin/quran-sources,TO_DESIGN
+UX-ADMIN-012,ADMIN,UX-ADMIN-012 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اعتماد المصدر,/admin/quran-sources,TO_DESIGN
+UX-ADMIN-013,ADMIN,UX-ADMIN-013 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إضافة سؤال,/admin/question-bank,TO_DESIGN
+UX-ADMIN-013,ADMIN,UX-ADMIN-013 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إضافة سؤال,/admin/question-bank,TO_DESIGN
+UX-ADMIN-013,ADMIN,UX-ADMIN-013 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إضافة سؤال,/admin/question-bank,TO_DESIGN
+UX-ADMIN-013,ADMIN,UX-ADMIN-013 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إضافة سؤال,/admin/question-bank,TO_DESIGN
+UX-ADMIN-014,ADMIN,UX-ADMIN-014 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إصدار جديد,/admin/rubrics,TO_DESIGN
+UX-ADMIN-014,ADMIN,UX-ADMIN-014 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إصدار جديد,/admin/rubrics,TO_DESIGN
+UX-ADMIN-014,ADMIN,UX-ADMIN-014 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إصدار جديد,/admin/rubrics,TO_DESIGN
+UX-ADMIN-014,ADMIN,UX-ADMIN-014 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إصدار جديد,/admin/rubrics,TO_DESIGN
+UX-ADMIN-015,ADMIN,UX-ADMIN-015 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حل تعارض,/admin/bookings,TO_DESIGN
+UX-ADMIN-015,ADMIN,UX-ADMIN-015 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حل تعارض,/admin/bookings,TO_DESIGN
+UX-ADMIN-015,ADMIN,UX-ADMIN-015 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حل تعارض,/admin/bookings,TO_DESIGN
+UX-ADMIN-015,ADMIN,UX-ADMIN-015 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حل تعارض,/admin/bookings,TO_DESIGN
+UX-ADMIN-016,ADMIN,UX-ADMIN-016 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إعادة جدولة,/admin/live,TO_DESIGN
+UX-ADMIN-016,ADMIN,UX-ADMIN-016 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إعادة جدولة,/admin/live,TO_DESIGN
+UX-ADMIN-016,ADMIN,UX-ADMIN-016 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إعادة جدولة,/admin/live,TO_DESIGN
+UX-ADMIN-016,ADMIN,UX-ADMIN-016 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إعادة جدولة,/admin/live,TO_DESIGN
+UX-ADMIN-017,ADMIN,UX-ADMIN-017 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تحديث السياسات,/admin/video-providers,TO_DESIGN
+UX-ADMIN-017,ADMIN,UX-ADMIN-017 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تحديث السياسات,/admin/video-providers,TO_DESIGN
+UX-ADMIN-017,ADMIN,UX-ADMIN-017 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تحديث السياسات,/admin/video-providers,TO_DESIGN
+UX-ADMIN-017,ADMIN,UX-ADMIN-017 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تحديث السياسات,/admin/video-providers,TO_DESIGN
+UX-ADMIN-018,ADMIN,UX-ADMIN-018 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اعتماد التعويض,/admin/attendance,TO_DESIGN
+UX-ADMIN-018,ADMIN,UX-ADMIN-018 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اعتماد التعويض,/admin/attendance,TO_DESIGN
+UX-ADMIN-018,ADMIN,UX-ADMIN-018 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اعتماد التعويض,/admin/attendance,TO_DESIGN
+UX-ADMIN-018,ADMIN,UX-ADMIN-018 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اعتماد التعويض,/admin/attendance,TO_DESIGN
+UX-ADMIN-019,ADMIN,UX-ADMIN-019 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,استرداد منضبط,/admin/payments,TO_DESIGN
+UX-ADMIN-019,ADMIN,UX-ADMIN-019 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,استرداد منضبط,/admin/payments,TO_DESIGN
+UX-ADMIN-019,ADMIN,UX-ADMIN-019 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,استرداد منضبط,/admin/payments,TO_DESIGN
+UX-ADMIN-019,ADMIN,UX-ADMIN-019 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,استرداد منضبط,/admin/payments,TO_DESIGN
+UX-ADMIN-020,ADMIN,UX-ADMIN-020 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إنشاء باقة,/admin/packages,TO_DESIGN
+UX-ADMIN-020,ADMIN,UX-ADMIN-020 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إنشاء باقة,/admin/packages,TO_DESIGN
+UX-ADMIN-020,ADMIN,UX-ADMIN-020 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إنشاء باقة,/admin/packages,TO_DESIGN
+UX-ADMIN-020,ADMIN,UX-ADMIN-020 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إنشاء باقة,/admin/packages,TO_DESIGN
+UX-ADMIN-021,ADMIN,UX-ADMIN-021 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,توليد دورة دفع,/admin/payroll,TO_DESIGN
+UX-ADMIN-021,ADMIN,UX-ADMIN-021 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,توليد دورة دفع,/admin/payroll,TO_DESIGN
+UX-ADMIN-021,ADMIN,UX-ADMIN-021 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,توليد دورة دفع,/admin/payroll,TO_DESIGN
+UX-ADMIN-021,ADMIN,UX-ADMIN-021 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,توليد دورة دفع,/admin/payroll,TO_DESIGN
+UX-ADMIN-022,ADMIN,UX-ADMIN-022 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اعتماد الدفع,/admin/payroll/:id,TO_DESIGN
+UX-ADMIN-022,ADMIN,UX-ADMIN-022 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اعتماد الدفع,/admin/payroll/:id,TO_DESIGN
+UX-ADMIN-022,ADMIN,UX-ADMIN-022 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اعتماد الدفع,/admin/payroll/:id,TO_DESIGN
+UX-ADMIN-022,ADMIN,UX-ADMIN-022 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اعتماد الدفع,/admin/payroll/:id,TO_DESIGN
+UX-ADMIN-023,ADMIN,UX-ADMIN-023 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إيقاف النموذج,/admin/ai-learning,TO_DESIGN
+UX-ADMIN-023,ADMIN,UX-ADMIN-023 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إيقاف النموذج,/admin/ai-learning,TO_DESIGN
+UX-ADMIN-023,ADMIN,UX-ADMIN-023 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إيقاف النموذج,/admin/ai-learning,TO_DESIGN
+UX-ADMIN-023,ADMIN,UX-ADMIN-023 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إيقاف النموذج,/admin/ai-learning,TO_DESIGN
+UX-ADMIN-024,ADMIN,UX-ADMIN-024 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حسم الحالة,/admin/session-reviews,TO_DESIGN
+UX-ADMIN-024,ADMIN,UX-ADMIN-024 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حسم الحالة,/admin/session-reviews,TO_DESIGN
+UX-ADMIN-024,ADMIN,UX-ADMIN-024 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حسم الحالة,/admin/session-reviews,TO_DESIGN
+UX-ADMIN-024,ADMIN,UX-ADMIN-024 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حسم الحالة,/admin/session-reviews,TO_DESIGN
+UX-ADMIN-025,ADMIN,UX-ADMIN-025 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,قالب جديد,/admin/competition-templates,TO_DESIGN
+UX-ADMIN-025,ADMIN,UX-ADMIN-025 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,قالب جديد,/admin/competition-templates,TO_DESIGN
+UX-ADMIN-025,ADMIN,UX-ADMIN-025 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,قالب جديد,/admin/competition-templates,TO_DESIGN
+UX-ADMIN-025,ADMIN,UX-ADMIN-025 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,قالب جديد,/admin/competition-templates,TO_DESIGN
+UX-ADMIN-026,ADMIN,UX-ADMIN-026 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إرسال للمراجعة,/admin/competitions/new,TO_DESIGN
+UX-ADMIN-026,ADMIN,UX-ADMIN-026 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إرسال للمراجعة,/admin/competitions/new,TO_DESIGN
+UX-ADMIN-026,ADMIN,UX-ADMIN-026 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إرسال للمراجعة,/admin/competitions/new,TO_DESIGN
+UX-ADMIN-026,ADMIN,UX-ADMIN-026 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إرسال للمراجعة,/admin/competitions/new,TO_DESIGN
+UX-ADMIN-027,ADMIN,UX-ADMIN-027 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,فتح مسابقة,/admin/competitions,TO_DESIGN
+UX-ADMIN-027,ADMIN,UX-ADMIN-027 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,فتح مسابقة,/admin/competitions,TO_DESIGN
+UX-ADMIN-027,ADMIN,UX-ADMIN-027 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,فتح مسابقة,/admin/competitions,TO_DESIGN
+UX-ADMIN-027,ADMIN,UX-ADMIN-027 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,فتح مسابقة,/admin/competitions,TO_DESIGN
+UX-ADMIN-028,ADMIN,UX-ADMIN-028 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,بدء جولة,/admin/competitions/:id,TO_DESIGN
+UX-ADMIN-028,ADMIN,UX-ADMIN-028 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,بدء جولة,/admin/competitions/:id,TO_DESIGN
+UX-ADMIN-028,ADMIN,UX-ADMIN-028 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,بدء جولة,/admin/competitions/:id,TO_DESIGN
+UX-ADMIN-028,ADMIN,UX-ADMIN-028 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,بدء جولة,/admin/competitions/:id,TO_DESIGN
+UX-ADMIN-029,ADMIN,UX-ADMIN-029 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تأكيد المحكمين,/admin/competitions/:id/judges,TO_DESIGN
+UX-ADMIN-029,ADMIN,UX-ADMIN-029 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تأكيد المحكمين,/admin/competitions/:id/judges,TO_DESIGN
+UX-ADMIN-029,ADMIN,UX-ADMIN-029 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تأكيد المحكمين,/admin/competitions/:id/judges,TO_DESIGN
+UX-ADMIN-029,ADMIN,UX-ADMIN-029 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تأكيد المحكمين,/admin/competitions/:id/judges,TO_DESIGN
+UX-ADMIN-030,ADMIN,UX-ADMIN-030 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اعتماد النتائج,/admin/competitions/:id/results,TO_DESIGN
+UX-ADMIN-030,ADMIN,UX-ADMIN-030 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اعتماد النتائج,/admin/competitions/:id/results,TO_DESIGN
+UX-ADMIN-030,ADMIN,UX-ADMIN-030 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اعتماد النتائج,/admin/competitions/:id/results,TO_DESIGN
+UX-ADMIN-030,ADMIN,UX-ADMIN-030 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اعتماد النتائج,/admin/competitions/:id/results,TO_DESIGN
+UX-ADMIN-031,ADMIN,UX-ADMIN-031 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حسم الاستئناف,/admin/contest-appeals,TO_DESIGN
+UX-ADMIN-031,ADMIN,UX-ADMIN-031 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حسم الاستئناف,/admin/contest-appeals,TO_DESIGN
+UX-ADMIN-031,ADMIN,UX-ADMIN-031 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حسم الاستئناف,/admin/contest-appeals,TO_DESIGN
+UX-ADMIN-031,ADMIN,UX-ADMIN-031 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حسم الاستئناف,/admin/contest-appeals,TO_DESIGN
+UX-ADMIN-032,ADMIN,UX-ADMIN-032 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إصدار,/admin/rewards,TO_DESIGN
+UX-ADMIN-032,ADMIN,UX-ADMIN-032 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إصدار,/admin/rewards,TO_DESIGN
+UX-ADMIN-032,ADMIN,UX-ADMIN-032 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إصدار,/admin/rewards,TO_DESIGN
+UX-ADMIN-032,ADMIN,UX-ADMIN-032 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إصدار,/admin/rewards,TO_DESIGN
+UX-ADMIN-033,ADMIN,UX-ADMIN-033 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,متابعة lead,/admin/crm,TO_DESIGN
+UX-ADMIN-033,ADMIN,UX-ADMIN-033 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,متابعة lead,/admin/crm,TO_DESIGN
+UX-ADMIN-033,ADMIN,UX-ADMIN-033 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,متابعة lead,/admin/crm,TO_DESIGN
+UX-ADMIN-033,ADMIN,UX-ADMIN-033 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,متابعة lead,/admin/crm,TO_DESIGN
+UX-ADMIN-034,ADMIN,UX-ADMIN-034 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تصدير آمن,/admin/marketing,TO_DESIGN
+UX-ADMIN-034,ADMIN,UX-ADMIN-034 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تصدير آمن,/admin/marketing,TO_DESIGN
+UX-ADMIN-034,ADMIN,UX-ADMIN-034 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تصدير آمن,/admin/marketing,TO_DESIGN
+UX-ADMIN-034,ADMIN,UX-ADMIN-034 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تصدير آمن,/admin/marketing,TO_DESIGN
+UX-ADMIN-035,ADMIN,UX-ADMIN-035 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تعيين,/admin/support,TO_DESIGN
+UX-ADMIN-035,ADMIN,UX-ADMIN-035 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تعيين,/admin/support,TO_DESIGN
+UX-ADMIN-035,ADMIN,UX-ADMIN-035 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تعيين,/admin/support,TO_DESIGN
+UX-ADMIN-035,ADMIN,UX-ADMIN-035 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تعيين,/admin/support,TO_DESIGN
+UX-ADMIN-036,ADMIN,UX-ADMIN-036 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تصعيد,/admin/safety,TO_DESIGN
+UX-ADMIN-036,ADMIN,UX-ADMIN-036 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تصعيد,/admin/safety,TO_DESIGN
+UX-ADMIN-036,ADMIN,UX-ADMIN-036 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تصعيد,/admin/safety,TO_DESIGN
+UX-ADMIN-036,ADMIN,UX-ADMIN-036 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تصعيد,/admin/safety,TO_DESIGN
+UX-ADMIN-037,ADMIN,UX-ADMIN-037 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,رفع درس,/admin/library,TO_DESIGN
+UX-ADMIN-037,ADMIN,UX-ADMIN-037 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,رفع درس,/admin/library,TO_DESIGN
+UX-ADMIN-037,ADMIN,UX-ADMIN-037 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,رفع درس,/admin/library,TO_DESIGN
+UX-ADMIN-037,ADMIN,UX-ADMIN-037 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,رفع درس,/admin/library,TO_DESIGN
+UX-ADMIN-038,ADMIN,UX-ADMIN-038 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إرسال مجدول,/admin/notifications,TO_DESIGN
+UX-ADMIN-038,ADMIN,UX-ADMIN-038 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إرسال مجدول,/admin/notifications,TO_DESIGN
+UX-ADMIN-038,ADMIN,UX-ADMIN-038 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إرسال مجدول,/admin/notifications,TO_DESIGN
+UX-ADMIN-038,ADMIN,UX-ADMIN-038 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إرسال مجدول,/admin/notifications,TO_DESIGN
+UX-ADMIN-039,ADMIN,UX-ADMIN-039 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,إنشاء تقرير,/admin/reports,TO_DESIGN
+UX-ADMIN-039,ADMIN,UX-ADMIN-039 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,إنشاء تقرير,/admin/reports,TO_DESIGN
+UX-ADMIN-039,ADMIN,UX-ADMIN-039 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,إنشاء تقرير,/admin/reports,TO_DESIGN
+UX-ADMIN-039,ADMIN,UX-ADMIN-039 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,إنشاء تقرير,/admin/reports,TO_DESIGN
+UX-ADMIN-040,ADMIN,UX-ADMIN-040 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تصفية السجل,/admin/audit,TO_DESIGN
+UX-ADMIN-040,ADMIN,UX-ADMIN-040 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تصفية السجل,/admin/audit,TO_DESIGN
+UX-ADMIN-040,ADMIN,UX-ADMIN-040 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تصفية السجل,/admin/audit,TO_DESIGN
+UX-ADMIN-040,ADMIN,UX-ADMIN-040 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تصفية السجل,/admin/audit,TO_DESIGN
+UX-ADMIN-041,ADMIN,UX-ADMIN-041 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حفظ سياسة,/admin/settings,TO_DESIGN
+UX-ADMIN-041,ADMIN,UX-ADMIN-041 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حفظ سياسة,/admin/settings,TO_DESIGN
+UX-ADMIN-041,ADMIN,UX-ADMIN-041 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حفظ سياسة,/admin/settings,TO_DESIGN
+UX-ADMIN-041,ADMIN,UX-ADMIN-041 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حفظ سياسة,/admin/settings,TO_DESIGN
+UX-MOBILE-001,MOBILE,UX-MOBILE-001 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,دخول,mobile://auth,TO_DESIGN
+UX-MOBILE-001,MOBILE,UX-MOBILE-001 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,دخول,mobile://auth,TO_DESIGN
+UX-MOBILE-001,MOBILE,UX-MOBILE-001 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,دخول,mobile://auth,TO_DESIGN
+UX-MOBILE-001,MOBILE,UX-MOBILE-001 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,دخول,mobile://auth,TO_DESIGN
+UX-MOBILE-002,MOBILE,UX-MOBILE-002 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,ابدأ المراجعة,mobile://home,TO_DESIGN
+UX-MOBILE-002,MOBILE,UX-MOBILE-002 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,ابدأ المراجعة,mobile://home,TO_DESIGN
+UX-MOBILE-002,MOBILE,UX-MOBILE-002 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,ابدأ المراجعة,mobile://home,TO_DESIGN
+UX-MOBILE-002,MOBILE,UX-MOBILE-002 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,ابدأ المراجعة,mobile://home,TO_DESIGN
+UX-MOBILE-003,MOBILE,UX-MOBILE-003 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,دخول,mobile://classroom,TO_DESIGN
+UX-MOBILE-003,MOBILE,UX-MOBILE-003 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,دخول,mobile://classroom,TO_DESIGN
+UX-MOBILE-003,MOBILE,UX-MOBILE-003 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,دخول,mobile://classroom,TO_DESIGN
+UX-MOBILE-003,MOBILE,UX-MOBILE-003 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,دخول,mobile://classroom,TO_DESIGN
+UX-MOBILE-004,MOBILE,UX-MOBILE-004 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,احجز,mobile://schedule,TO_DESIGN
+UX-MOBILE-004,MOBILE,UX-MOBILE-004 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,احجز,mobile://schedule,TO_DESIGN
+UX-MOBILE-004,MOBILE,UX-MOBILE-004 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,احجز,mobile://schedule,TO_DESIGN
+UX-MOBILE-004,MOBILE,UX-MOBILE-004 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,احجز,mobile://schedule,TO_DESIGN
+UX-MOBILE-005,MOBILE,UX-MOBILE-005 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,استكشف,mobile://memory,TO_DESIGN
+UX-MOBILE-005,MOBILE,UX-MOBILE-005 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,استكشف,mobile://memory,TO_DESIGN
+UX-MOBILE-005,MOBILE,UX-MOBILE-005 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,استكشف,mobile://memory,TO_DESIGN
+UX-MOBILE-005,MOBILE,UX-MOBILE-005 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,استكشف,mobile://memory,TO_DESIGN
+UX-MOBILE-006,MOBILE,UX-MOBILE-006 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,ابدأ تمرين,mobile://coach,TO_DESIGN
+UX-MOBILE-006,MOBILE,UX-MOBILE-006 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,ابدأ تمرين,mobile://coach,TO_DESIGN
+UX-MOBILE-006,MOBILE,UX-MOBILE-006 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,ابدأ تمرين,mobile://coach,TO_DESIGN
+UX-MOBILE-006,MOBILE,UX-MOBILE-006 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,ابدأ تمرين,mobile://coach,TO_DESIGN
+UX-MOBILE-007,MOBILE,UX-MOBILE-007 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,تسليم,mobile://exam,TO_DESIGN
+UX-MOBILE-007,MOBILE,UX-MOBILE-007 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,تسليم,mobile://exam,TO_DESIGN
+UX-MOBILE-007,MOBILE,UX-MOBILE-007 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,تسليم,mobile://exam,TO_DESIGN
+UX-MOBILE-007,MOBILE,UX-MOBILE-007 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,تسليم,mobile://exam,TO_DESIGN
+UX-MOBILE-008,MOBILE,UX-MOBILE-008 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,اشترك,mobile://competition,TO_DESIGN
+UX-MOBILE-008,MOBILE,UX-MOBILE-008 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,اشترك,mobile://competition,TO_DESIGN
+UX-MOBILE-008,MOBILE,UX-MOBILE-008 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,اشترك,mobile://competition,TO_DESIGN
+UX-MOBILE-008,MOBILE,UX-MOBILE-008 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,اشترك,mobile://competition,TO_DESIGN
+UX-MOBILE-009,MOBILE,UX-MOBILE-009 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,ابدأ الحصة,mobile://teacher,TO_DESIGN
+UX-MOBILE-009,MOBILE,UX-MOBILE-009 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,ابدأ الحصة,mobile://teacher,TO_DESIGN
+UX-MOBILE-009,MOBILE,UX-MOBILE-009 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,ابدأ الحصة,mobile://teacher,TO_DESIGN
+UX-MOBILE-009,MOBILE,UX-MOBILE-009 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,ابدأ الحصة,mobile://teacher,TO_DESIGN
+UX-MOBILE-010,MOBILE,UX-MOBILE-010 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حفظ,mobile://teacher/report,TO_DESIGN
+UX-MOBILE-010,MOBILE,UX-MOBILE-010 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حفظ,mobile://teacher/report,TO_DESIGN
+UX-MOBILE-010,MOBILE,UX-MOBILE-010 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حفظ,mobile://teacher/report,TO_DESIGN
+UX-MOBILE-010,MOBILE,UX-MOBILE-010 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حفظ,mobile://teacher/report,TO_DESIGN
+UX-MOBILE-011,MOBILE,UX-MOBILE-011 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,حفظ,mobile://settings,TO_DESIGN
+UX-MOBILE-011,MOBILE,UX-MOBILE-011 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,حفظ,mobile://settings,TO_DESIGN
+UX-MOBILE-011,MOBILE,UX-MOBILE-011 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,حفظ,mobile://settings,TO_DESIGN
+UX-MOBILE-011,MOBILE,UX-MOBILE-011 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,حفظ,mobile://settings,TO_DESIGN
+UX-GLOB-001,PUBLIC,UX-GLOB-001 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Confirm country,/choose-country,TO_DESIGN
+UX-GLOB-001,PUBLIC,UX-GLOB-001 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Confirm country,/choose-country,TO_DESIGN
+UX-GLOB-001,PUBLIC,UX-GLOB-001 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Confirm country,/choose-country,TO_DESIGN
+UX-GLOB-001,PUBLIC,UX-GLOB-001 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Confirm country,/choose-country,TO_DESIGN
+UX-GLOB-002,PUBLIC,UX-GLOB-002 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Choose plan,/pricing,TO_DESIGN
+UX-GLOB-002,PUBLIC,UX-GLOB-002 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Choose plan,/pricing,TO_DESIGN
+UX-GLOB-002,PUBLIC,UX-GLOB-002 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Choose plan,/pricing,TO_DESIGN
+UX-GLOB-002,PUBLIC,UX-GLOB-002 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Choose plan,/pricing,TO_DESIGN
+UX-GLOB-003,PUBLIC,UX-GLOB-003 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Join waitlist,/unavailable-market,TO_DESIGN
+UX-GLOB-003,PUBLIC,UX-GLOB-003 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Join waitlist,/unavailable-market,TO_DESIGN
+UX-GLOB-003,PUBLIC,UX-GLOB-003 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Join waitlist,/unavailable-market,TO_DESIGN
+UX-GLOB-003,PUBLIC,UX-GLOB-003 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Join waitlist,/unavailable-market,TO_DESIGN
+UX-GLOB-004,STUDENT,UX-GLOB-004 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Save preferences,/me/preferences/region,TO_DESIGN
+UX-GLOB-004,STUDENT,UX-GLOB-004 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Save preferences,/me/preferences/region,TO_DESIGN
+UX-GLOB-004,STUDENT,UX-GLOB-004 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Save preferences,/me/preferences/region,TO_DESIGN
+UX-GLOB-004,STUDENT,UX-GLOB-004 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Save preferences,/me/preferences/region,TO_DESIGN
+UX-GLOB-005,STUDENT,UX-GLOB-005 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Pick valid instant,/me/schedule/timezone-preview,TO_DESIGN
+UX-GLOB-005,STUDENT,UX-GLOB-005 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Pick valid instant,/me/schedule/timezone-preview,TO_DESIGN
+UX-GLOB-005,STUDENT,UX-GLOB-005 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Pick valid instant,/me/schedule/timezone-preview,TO_DESIGN
+UX-GLOB-005,STUDENT,UX-GLOB-005 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Pick valid instant,/me/schedule/timezone-preview,TO_DESIGN
+UX-GLOB-006,STUDENT,UX-GLOB-006 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Pay securely,/checkout/:quoteId,TO_DESIGN
+UX-GLOB-006,STUDENT,UX-GLOB-006 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Pay securely,/checkout/:quoteId,TO_DESIGN
+UX-GLOB-006,STUDENT,UX-GLOB-006 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Pay securely,/checkout/:quoteId,TO_DESIGN
+UX-GLOB-006,STUDENT,UX-GLOB-006 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Pay securely,/checkout/:quoteId,TO_DESIGN
+UX-GLOB-007,STUDENT,UX-GLOB-007 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Accept renewal terms,/me/subscriptions/:id/renewal,TO_DESIGN
+UX-GLOB-007,STUDENT,UX-GLOB-007 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Accept renewal terms,/me/subscriptions/:id/renewal,TO_DESIGN
+UX-GLOB-007,STUDENT,UX-GLOB-007 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Accept renewal terms,/me/subscriptions/:id/renewal,TO_DESIGN
+UX-GLOB-007,STUDENT,UX-GLOB-007 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Accept renewal terms,/me/subscriptions/:id/renewal,TO_DESIGN
+UX-GLOB-008,TEACHER,UX-GLOB-008 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Save availability,/teacher/availability,TO_DESIGN
+UX-GLOB-008,TEACHER,UX-GLOB-008 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Save availability,/teacher/availability,TO_DESIGN
+UX-GLOB-008,TEACHER,UX-GLOB-008 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Save availability,/teacher/availability,TO_DESIGN
+UX-GLOB-008,TEACHER,UX-GLOB-008 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Save availability,/teacher/availability,TO_DESIGN
+UX-GLOB-009,TEACHER,UX-GLOB-009 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Join lesson,/teacher/lessons/:id,TO_DESIGN
+UX-GLOB-009,TEACHER,UX-GLOB-009 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Join lesson,/teacher/lessons/:id,TO_DESIGN
+UX-GLOB-009,TEACHER,UX-GLOB-009 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Join lesson,/teacher/lessons/:id,TO_DESIGN
+UX-GLOB-009,TEACHER,UX-GLOB-009 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Join lesson,/teacher/lessons/:id,TO_DESIGN
+UX-GLOB-010,ADMIN,UX-GLOB-010 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Create draft market,/admin/markets,TO_DESIGN
+UX-GLOB-010,ADMIN,UX-GLOB-010 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Create draft market,/admin/markets,TO_DESIGN
+UX-GLOB-010,ADMIN,UX-GLOB-010 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Create draft market,/admin/markets,TO_DESIGN
+UX-GLOB-010,ADMIN,UX-GLOB-010 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Create draft market,/admin/markets,TO_DESIGN
+UX-GLOB-011,ADMIN,UX-GLOB-011 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Submit for review,/admin/markets/new,TO_DESIGN
+UX-GLOB-011,ADMIN,UX-GLOB-011 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Submit for review,/admin/markets/new,TO_DESIGN
+UX-GLOB-011,ADMIN,UX-GLOB-011 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Submit for review,/admin/markets/new,TO_DESIGN
+UX-GLOB-011,ADMIN,UX-GLOB-011 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Submit for review,/admin/markets/new,TO_DESIGN
+UX-GLOB-012,ADMIN,UX-GLOB-012 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Create price draft,/admin/pricing/matrix,TO_DESIGN
+UX-GLOB-012,ADMIN,UX-GLOB-012 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Create price draft,/admin/pricing/matrix,TO_DESIGN
+UX-GLOB-012,ADMIN,UX-GLOB-012 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Create price draft,/admin/pricing/matrix,TO_DESIGN
+UX-GLOB-012,ADMIN,UX-GLOB-012 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Create price draft,/admin/pricing/matrix,TO_DESIGN
+UX-GLOB-013,ADMIN,UX-GLOB-013 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Approve/reject,/admin/pricing/approvals/:id,TO_DESIGN
+UX-GLOB-013,ADMIN,UX-GLOB-013 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Approve/reject,/admin/pricing/approvals/:id,TO_DESIGN
+UX-GLOB-013,ADMIN,UX-GLOB-013 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Approve/reject,/admin/pricing/approvals/:id,TO_DESIGN
+UX-GLOB-013,ADMIN,UX-GLOB-013 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Approve/reject,/admin/pricing/approvals/:id,TO_DESIGN
+UX-GLOB-014,ADMIN,UX-GLOB-014 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Test sandbox,/admin/payments/merchant-profiles,TO_DESIGN
+UX-GLOB-014,ADMIN,UX-GLOB-014 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Test sandbox,/admin/payments/merchant-profiles,TO_DESIGN
+UX-GLOB-014,ADMIN,UX-GLOB-014 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Test sandbox,/admin/payments/merchant-profiles,TO_DESIGN
+UX-GLOB-014,ADMIN,UX-GLOB-014 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Test sandbox,/admin/payments/merchant-profiles,TO_DESIGN
+UX-GLOB-015,ADMIN,UX-GLOB-015 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Export finance summary,/admin/finance/fx,TO_DESIGN
+UX-GLOB-015,ADMIN,UX-GLOB-015 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Export finance summary,/admin/finance/fx,TO_DESIGN
+UX-GLOB-015,ADMIN,UX-GLOB-015 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Export finance summary,/admin/finance/fx,TO_DESIGN
+UX-GLOB-015,ADMIN,UX-GLOB-015 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Export finance summary,/admin/finance/fx,TO_DESIGN
+UX-GLOB-016,ADMIN,UX-GLOB-016 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Resolve collision,/admin/operations/timezones,TO_DESIGN
+UX-GLOB-016,ADMIN,UX-GLOB-016 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Resolve collision,/admin/operations/timezones,TO_DESIGN
+UX-GLOB-016,ADMIN,UX-GLOB-016 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Resolve collision,/admin/operations/timezones,TO_DESIGN
+UX-GLOB-016,ADMIN,UX-GLOB-016 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Resolve collision,/admin/operations/timezones,TO_DESIGN
+UX-GLOB-017,MOBILE,UX-GLOB-017 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Save,mobile://settings/region,TO_DESIGN
+UX-GLOB-017,MOBILE,UX-GLOB-017 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Save,mobile://settings/region,TO_DESIGN
+UX-GLOB-017,MOBILE,UX-GLOB-017 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Save,mobile://settings/region,TO_DESIGN
+UX-GLOB-017,MOBILE,UX-GLOB-017 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Save,mobile://settings/region,TO_DESIGN
+UX-VPC-001,ADMIN,UX-VPC-001 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Configure vendor,/admin/settings/video-providers,TO_DESIGN
+UX-VPC-001,ADMIN,UX-VPC-001 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Configure vendor,/admin/settings/video-providers,TO_DESIGN
+UX-VPC-001,ADMIN,UX-VPC-001 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Configure vendor,/admin/settings/video-providers,TO_DESIGN
+UX-VPC-001,ADMIN,UX-VPC-001 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Configure vendor,/admin/settings/video-providers,TO_DESIGN
+UX-VPC-002,ADMIN,UX-VPC-002 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Rotate/validate,/admin/settings/video-providers/:id/credentials,TO_DESIGN
+UX-VPC-002,ADMIN,UX-VPC-002 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Rotate/validate,/admin/settings/video-providers/:id/credentials,TO_DESIGN
+UX-VPC-002,ADMIN,UX-VPC-002 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Rotate/validate,/admin/settings/video-providers/:id/credentials,TO_DESIGN
+UX-VPC-002,ADMIN,UX-VPC-002 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Rotate/validate,/admin/settings/video-providers/:id/credentials,TO_DESIGN
+UX-VPC-003,ADMIN,UX-VPC-003 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Run verified PoC,/admin/settings/video-providers/:id/capabilities,TO_DESIGN
+UX-VPC-003,ADMIN,UX-VPC-003 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Run verified PoC,/admin/settings/video-providers/:id/capabilities,TO_DESIGN
+UX-VPC-003,ADMIN,UX-VPC-003 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Run verified PoC,/admin/settings/video-providers/:id/capabilities,TO_DESIGN
+UX-VPC-003,ADMIN,UX-VPC-003 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Run verified PoC,/admin/settings/video-providers/:id/capabilities,TO_DESIGN
+UX-VPC-004,ADMIN,UX-VPC-004 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Edit draft policy,/admin/settings/video-routing,TO_DESIGN
+UX-VPC-004,ADMIN,UX-VPC-004 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Edit draft policy,/admin/settings/video-routing,TO_DESIGN
+UX-VPC-004,ADMIN,UX-VPC-004 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Edit draft policy,/admin/settings/video-routing,TO_DESIGN
+UX-VPC-004,ADMIN,UX-VPC-004 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Edit draft policy,/admin/settings/video-routing,TO_DESIGN
+UX-VPC-005,ADMIN,UX-VPC-005 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Run test,/admin/settings/video-routing/dry-run,TO_DESIGN
+UX-VPC-005,ADMIN,UX-VPC-005 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Run test,/admin/settings/video-routing/dry-run,TO_DESIGN
+UX-VPC-005,ADMIN,UX-VPC-005 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Run test,/admin/settings/video-routing/dry-run,TO_DESIGN
+UX-VPC-005,ADMIN,UX-VPC-005 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Run test,/admin/settings/video-routing/dry-run,TO_DESIGN
+UX-VPC-006,ADMIN,UX-VPC-006 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Approve rollout,/admin/settings/video-routing/approvals/:id,TO_DESIGN
+UX-VPC-006,ADMIN,UX-VPC-006 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Approve rollout,/admin/settings/video-routing/approvals/:id,TO_DESIGN
+UX-VPC-006,ADMIN,UX-VPC-006 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Approve rollout,/admin/settings/video-routing/approvals/:id,TO_DESIGN
+UX-VPC-006,ADMIN,UX-VPC-006 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Approve rollout,/admin/settings/video-routing/approvals/:id,TO_DESIGN
+UX-VPC-007,ADMIN,UX-VPC-007 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Open incident,/admin/monitoring/video,TO_DESIGN
+UX-VPC-007,ADMIN,UX-VPC-007 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Open incident,/admin/monitoring/video,TO_DESIGN
+UX-VPC-007,ADMIN,UX-VPC-007 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Open incident,/admin/monitoring/video,TO_DESIGN
+UX-VPC-007,ADMIN,UX-VPC-007 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Open incident,/admin/monitoring/video,TO_DESIGN
+UX-VPC-008,ADMIN,UX-VPC-008 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Create replacement,/admin/operations/video-incidents/:id,TO_DESIGN
+UX-VPC-008,ADMIN,UX-VPC-008 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Create replacement,/admin/operations/video-incidents/:id,TO_DESIGN
+UX-VPC-008,ADMIN,UX-VPC-008 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Create replacement,/admin/operations/video-incidents/:id,TO_DESIGN
+UX-VPC-008,ADMIN,UX-VPC-008 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Create replacement,/admin/operations/video-incidents/:id,TO_DESIGN
+UX-VPC-009,STUDENT,UX-VPC-009 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Join,/lessons/:id/prejoin,TO_DESIGN
+UX-VPC-009,STUDENT,UX-VPC-009 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Join,/lessons/:id/prejoin,TO_DESIGN
+UX-VPC-009,STUDENT,UX-VPC-009 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Join,/lessons/:id/prejoin,TO_DESIGN
+UX-VPC-009,STUDENT,UX-VPC-009 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Join,/lessons/:id/prejoin,TO_DESIGN
+UX-VPC-010,TEACHER,UX-VPC-010 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Join as teacher,/teacher/lessons/:id/join,TO_DESIGN
+UX-VPC-010,TEACHER,UX-VPC-010 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Join as teacher,/teacher/lessons/:id/join,TO_DESIGN
+UX-VPC-010,TEACHER,UX-VPC-010 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Join as teacher,/teacher/lessons/:id/join,TO_DESIGN
+UX-VPC-010,TEACHER,UX-VPC-010 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Join as teacher,/teacher/lessons/:id/join,TO_DESIGN
+UX-SUP-001,SUPERVISOR,UX-SUP-001 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Open assigned queue,/supervisor,TO_DESIGN
+UX-SUP-001,SUPERVISOR,UX-SUP-001 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Open assigned queue,/supervisor,TO_DESIGN
+UX-SUP-001,SUPERVISOR,UX-SUP-001 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Open assigned queue,/supervisor,TO_DESIGN
+UX-SUP-001,SUPERVISOR,UX-SUP-001 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Open assigned queue,/supervisor,TO_DESIGN
+UX-SUP-002,SUPERVISOR,UX-SUP-002 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Approve/reject,/supervisor/academic/plans,TO_DESIGN
+UX-SUP-002,SUPERVISOR,UX-SUP-002 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Approve/reject,/supervisor/academic/plans,TO_DESIGN
+UX-SUP-002,SUPERVISOR,UX-SUP-002 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Approve/reject,/supervisor/academic/plans,TO_DESIGN
+UX-SUP-002,SUPERVISOR,UX-SUP-002 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Approve/reject,/supervisor/academic/plans,TO_DESIGN
+UX-SUP-003,SUPERVISOR,UX-SUP-003 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Record coaching,/supervisor/quality/observations,TO_DESIGN
+UX-SUP-003,SUPERVISOR,UX-SUP-003 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Record coaching,/supervisor/quality/observations,TO_DESIGN
+UX-SUP-003,SUPERVISOR,UX-SUP-003 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Record coaching,/supervisor/quality/observations,TO_DESIGN
+UX-SUP-003,SUPERVISOR,UX-SUP-003 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Record coaching,/supervisor/quality/observations,TO_DESIGN
+UX-SUP-004,SUPERVISOR,UX-SUP-004 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Escalate safely,/supervisor/safeguarding/cases,TO_DESIGN
+UX-SUP-004,SUPERVISOR,UX-SUP-004 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Escalate safely,/supervisor/safeguarding/cases,TO_DESIGN
+UX-SUP-004,SUPERVISOR,UX-SUP-004 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Escalate safely,/supervisor/safeguarding/cases,TO_DESIGN
+UX-SUP-004,SUPERVISOR,UX-SUP-004 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Escalate safely,/supervisor/safeguarding/cases,TO_DESIGN
+UX-SUP-005,SUPERVISOR,UX-SUP-005 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Assign judges,/supervisor/competitions,TO_DESIGN
+UX-SUP-005,SUPERVISOR,UX-SUP-005 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Assign judges,/supervisor/competitions,TO_DESIGN
+UX-SUP-005,SUPERVISOR,UX-SUP-005 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Assign judges,/supervisor/competitions,TO_DESIGN
+UX-SUP-005,SUPERVISOR,UX-SUP-005 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Assign judges,/supervisor/competitions,TO_DESIGN
+UX-SUP-006,SUPERVISOR,UX-SUP-006 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Assign replacement,/supervisor/operations/schedule,TO_DESIGN
+UX-SUP-006,SUPERVISOR,UX-SUP-006 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Assign replacement,/supervisor/operations/schedule,TO_DESIGN
+UX-SUP-006,SUPERVISOR,UX-SUP-006 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Assign replacement,/supervisor/operations/schedule,TO_DESIGN
+UX-SUP-006,SUPERVISOR,UX-SUP-006 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Assign replacement,/supervisor/operations/schedule,TO_DESIGN
+UX-SUP-007,SUPERVISOR,UX-SUP-007 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,View cohort,/supervisor/regions,TO_DESIGN
+UX-SUP-007,SUPERVISOR,UX-SUP-007 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,View cohort,/supervisor/regions,TO_DESIGN
+UX-SUP-007,SUPERVISOR,UX-SUP-007 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,View cohort,/supervisor/regions,TO_DESIGN
+UX-SUP-007,SUPERVISOR,UX-SUP-007 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,View cohort,/supervisor/regions,TO_DESIGN
+UX-SUP-008,ADMIN,UX-SUP-008 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Request access,/admin/security/supervisors,TO_DESIGN
+UX-SUP-008,ADMIN,UX-SUP-008 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Request access,/admin/security/supervisors,TO_DESIGN
+UX-SUP-008,ADMIN,UX-SUP-008 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Request access,/admin/security/supervisors,TO_DESIGN
+UX-SUP-008,ADMIN,UX-SUP-008 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Request access,/admin/security/supervisors,TO_DESIGN
+UX-SUP-009,ADMIN,UX-SUP-009 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Review incident,/admin/security/access-audits,TO_DESIGN
+UX-SUP-009,ADMIN,UX-SUP-009 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Review incident,/admin/security/access-audits,TO_DESIGN
+UX-SUP-009,ADMIN,UX-SUP-009 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Review incident,/admin/security/access-audits,TO_DESIGN
+UX-SUP-009,ADMIN,UX-SUP-009 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Review incident,/admin/security/access-audits,TO_DESIGN
+UX-SUP-010,ADMIN,UX-SUP-010 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Create draft,/admin/settings,TO_DESIGN
+UX-SUP-010,ADMIN,UX-SUP-010 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Create draft,/admin/settings,TO_DESIGN
+UX-SUP-010,ADMIN,UX-SUP-010 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Create draft,/admin/settings,TO_DESIGN
+UX-SUP-010,ADMIN,UX-SUP-010 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Create draft,/admin/settings,TO_DESIGN
+UX-SUP-011,ADMIN,UX-SUP-011 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Submit translation,/admin/content/translations,TO_DESIGN
+UX-SUP-011,ADMIN,UX-SUP-011 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Submit translation,/admin/content/translations,TO_DESIGN
+UX-SUP-011,ADMIN,UX-SUP-011 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Submit translation,/admin/content/translations,TO_DESIGN
+UX-SUP-011,ADMIN,UX-SUP-011 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Submit translation,/admin/content/translations,TO_DESIGN
+UX-ENG-001,STUDENT,UX-ENG-001 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Register,/competitions/:id/schedule,TO_DESIGN
+UX-ENG-001,STUDENT,UX-ENG-001 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Register,/competitions/:id/schedule,TO_DESIGN
+UX-ENG-001,STUDENT,UX-ENG-001 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Register,/competitions/:id/schedule,TO_DESIGN
+UX-ENG-001,STUDENT,UX-ENG-001 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Register,/competitions/:id/schedule,TO_DESIGN
+UX-ENG-002,STUDENT,UX-ENG-002 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Start practice,/study/practice/recommended,TO_DESIGN
+UX-ENG-002,STUDENT,UX-ENG-002 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Start practice,/study/practice/recommended,TO_DESIGN
+UX-ENG-002,STUDENT,UX-ENG-002 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Start practice,/study/practice/recommended,TO_DESIGN
+UX-ENG-002,STUDENT,UX-ENG-002 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Start practice,/study/practice/recommended,TO_DESIGN
+UX-ENG-003,STUDENT,UX-ENG-003 / AR / desktop,ar,RTL,1440,default;loading;empty;error;offline;permission;success,Set weekly goal,/me/progress/weekly,TO_DESIGN
+UX-ENG-003,STUDENT,UX-ENG-003 / AR / mobile,ar,RTL,390,default;loading;empty;error;offline;permission;success,Set weekly goal,/me/progress/weekly,TO_DESIGN
+UX-ENG-003,STUDENT,UX-ENG-003 / EN / desktop,en,LTR,1440,default;loading;empty;error;offline;permission;success,Set weekly goal,/me/progress/weekly,TO_DESIGN
+UX-ENG-003,STUDENT,UX-ENG-003 / EN / mobile,en,LTR,390,default;loading;empty;error;offline;permission;success,Set weekly goal,/me/progress/weekly,TO_DESIGN

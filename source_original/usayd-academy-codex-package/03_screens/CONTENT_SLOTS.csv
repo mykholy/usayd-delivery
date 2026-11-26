@@ -1,0 +1,397 @@
+﻿screen_id,slot_type,label_en,label_ar
+UX-ADMIN-001,runtime_sample,—,—
+UX-ADMIN-001,runtime_sample,—,—
+UX-ADMIN-001,runtime_sample,—,—
+UX-ADMIN-001,runtime_sample,—,—
+UX-ADMIN-001,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-002,runtime_sample,Name partially masked,الاسم مخفي جزئيًا
+UX-ADMIN-002,runtime_sample,Name partially masked,الاسم مخفي جزئيًا
+UX-ADMIN-002,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-003,runtime_sample,Name,اسم
+UX-ADMIN-003,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-004,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-005,runtime_sample,Name,اسم
+UX-ADMIN-005,runtime_sample,Name,اسم
+UX-ADMIN-005,runtime_sample,Name,اسم
+UX-ADMIN-005,runtime_sample,Name,اسم
+UX-ADMIN-005,runtime_sample,Name,اسم
+UX-ADMIN-005,runtime_sample,Name,اسم
+UX-ADMIN-005,runtime_sample,Name,اسم
+UX-ADMIN-005,runtime_sample,Name,اسم
+UX-ADMIN-005,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-006,runtime_sample,Applicant,متقدم
+UX-ADMIN-006,runtime_sample,Applicant,متقدم
+UX-ADMIN-006,runtime_sample,Applicant,متقدم
+UX-ADMIN-006,runtime_sample,Applicant,متقدم
+UX-ADMIN-006,runtime_sample,Applicant,متقدم
+UX-ADMIN-006,runtime_sample,Applicant,متقدم
+UX-ADMIN-006,runtime_sample,Applicant,متقدم
+UX-ADMIN-006,runtime_sample,Applicant,متقدم
+UX-ADMIN-006,runtime_sample,Applicant,متقدم
+UX-ADMIN-006,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-007,runtime_sample,Name,اسم
+UX-ADMIN-007,runtime_sample,Name,اسم
+UX-ADMIN-007,runtime_sample,Name,اسم
+UX-ADMIN-007,runtime_sample,Name,اسم
+UX-ADMIN-007,runtime_sample,Name,اسم
+UX-ADMIN-007,runtime_sample,Name,اسم
+UX-ADMIN-007,runtime_sample,Name,اسم
+UX-ADMIN-007,runtime_sample,Name,اسم
+UX-ADMIN-007,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-008,runtime_sample,Teacher name,اسم المعلم
+UX-ADMIN-008,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-009,runtime_sample,Name,اسم
+UX-ADMIN-009,runtime_sample,—,—
+UX-ADMIN-009,runtime_sample,—,—
+UX-ADMIN-009,runtime_sample,—,—
+UX-ADMIN-009,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-010,runtime_sample,1,١
+UX-ADMIN-010,runtime_sample,1,١
+UX-ADMIN-010,runtime_sample,2,٢
+UX-ADMIN-010,runtime_sample,1,١
+UX-ADMIN-010,runtime_sample,1,١
+UX-ADMIN-010,runtime_sample,2,٢
+UX-ADMIN-010,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-011,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-012,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-013,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-014,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-015,runtime_sample,Name,اسم
+UX-ADMIN-015,runtime_sample,Name,اسم
+UX-ADMIN-015,runtime_sample,Name,اسم
+UX-ADMIN-015,runtime_sample,Name,اسم
+UX-ADMIN-015,runtime_sample,Name,اسم
+UX-ADMIN-015,runtime_sample,Name,اسم
+UX-ADMIN-015,runtime_sample,Name,اسم
+UX-ADMIN-015,runtime_sample,Name,اسم
+UX-ADMIN-015,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-016,runtime_sample,—,—
+UX-ADMIN-016,runtime_sample,—,—
+UX-ADMIN-016,runtime_sample,—,—
+UX-ADMIN-016,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-017,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-018,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-019,runtime_sample,—,—
+UX-ADMIN-019,runtime_sample,PSP,PSP
+UX-ADMIN-019,runtime_sample,0.000,0.000
+UX-ADMIN-019,runtime_sample,PSP,PSP
+UX-ADMIN-019,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-020,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-021,runtime_sample,—,—
+UX-ADMIN-021,runtime_sample,—,—
+UX-ADMIN-021,runtime_sample,1,١
+UX-ADMIN-021,runtime_sample,—,—
+UX-ADMIN-021,runtime_sample,2,٢
+UX-ADMIN-021,runtime_sample,—,—
+UX-ADMIN-021,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-022,runtime_sample,Accountant 1,محاسب ١
+UX-ADMIN-022,runtime_sample,—,—
+UX-ADMIN-022,runtime_sample,—,—
+UX-ADMIN-022,runtime_sample,—,—
+UX-ADMIN-022,runtime_sample,Accountant 1,محاسب ١
+UX-ADMIN-022,runtime_sample,Finance supervisor,مشرف مالي
+UX-ADMIN-022,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-023,runtime_sample,—,—
+UX-ADMIN-023,runtime_sample,—,—
+UX-ADMIN-023,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-024,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-025,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-026,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-027,runtime_sample,—,—
+UX-ADMIN-027,runtime_sample,—,—
+UX-ADMIN-027,runtime_sample,—,—
+UX-ADMIN-027,runtime_sample,—,—
+UX-ADMIN-027,runtime_sample,—,—
+UX-ADMIN-027,runtime_sample,—,—
+UX-ADMIN-027,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-028,runtime_sample,—,—
+UX-ADMIN-028,runtime_sample,—,—
+UX-ADMIN-028,runtime_sample,—,—
+UX-ADMIN-028,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-029,runtime_sample,1,١
+UX-ADMIN-029,runtime_sample,2,٢
+UX-ADMIN-029,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-030,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-031,runtime_sample,3,٣
+UX-ADMIN-031,runtime_sample,5,٥
+UX-ADMIN-031,runtime_sample,2,٢
+UX-ADMIN-031,runtime_sample,7,٧
+UX-ADMIN-031,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-032,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-033,runtime_sample,Lead,عميل
+UX-ADMIN-033,runtime_sample,Lead,عميل
+UX-ADMIN-033,runtime_sample,Lead,عميل
+UX-ADMIN-033,runtime_sample,Lead,عميل
+UX-ADMIN-033,runtime_sample,Lead,عميل
+UX-ADMIN-033,runtime_sample,Lead,عميل
+UX-ADMIN-033,runtime_sample,Lead,عميل
+UX-ADMIN-033,runtime_sample,Lead,عميل
+UX-ADMIN-033,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-034,runtime_sample,—,—
+UX-ADMIN-034,runtime_sample,—,—
+UX-ADMIN-034,runtime_sample,—,—
+UX-ADMIN-034,runtime_sample,—,—
+UX-ADMIN-034,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-035,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-036,runtime_sample,—,—
+UX-ADMIN-036,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-037,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-038,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-039,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-040,runtime_sample,Finance supervisor,مشرف مالي
+UX-ADMIN-040,runtime_sample,Admin,مدير
+UX-ADMIN-040,runtime_sample,User name,اسم المستخدم
+UX-ADMIN-041,runtime_sample,User name,اسم المستخدم
+UX-ENG-001,runtime_sample,User name,اسم المستخدم
+UX-ENG-002,runtime_sample,User name,اسم المستخدم
+UX-ENG-003,runtime_sample,User name,اسم المستخدم
+UX-GLOB-002,runtime_sample,—,—
+UX-GLOB-002,runtime_sample,—,—
+UX-GLOB-002,runtime_sample,0.000,٠.٠٠٠
+UX-GLOB-002,runtime_sample,—,—
+UX-GLOB-002,runtime_sample,—,—
+UX-GLOB-002,runtime_sample,0.000,٠.٠٠٠
+UX-GLOB-002,runtime_sample,—,—
+UX-GLOB-002,runtime_sample,—,—
+UX-GLOB-002,runtime_sample,0.000,٠.٠٠٠
+UX-GLOB-002,CONTENT_REQUIRED,PRICE,السعر
+UX-GLOB-002,CONTENT_REQUIRED,PRICE,السعر
+UX-GLOB-002,CONTENT_REQUIRED,PRICE,السعر
+UX-GLOB-004,runtime_sample,—,—
+UX-GLOB-004,runtime_sample,User name,اسم المستخدم
+UX-GLOB-005,runtime_sample,User name,اسم المستخدم
+UX-GLOB-006,CONTENT_REQUIRED,PRICE,السعر
+UX-GLOB-006,runtime_sample,—,—
+UX-GLOB-006,runtime_sample,—,—
+UX-GLOB-006,runtime_sample,—,—
+UX-GLOB-006,CONTENT_REQUIRED,Approved entity,الكيان المعتمد
+UX-GLOB-006,runtime_sample,User name,اسم المستخدم
+UX-GLOB-007,runtime_sample,—,—
+UX-GLOB-007,runtime_sample,—,—
+UX-GLOB-007,CONTENT_REQUIRED,written by approved pricing team,يكتبه فريق التسعير المعتمد
+UX-GLOB-007,runtime_sample,User name,اسم المستخدم
+UX-GLOB-008,runtime_sample,per tzdb,حسب tzdb
+UX-GLOB-008,runtime_sample,User name,اسم المستخدم
+UX-GLOB-009,runtime_sample,User name,اسم المستخدم
+UX-GLOB-010,runtime_sample,User name,اسم المستخدم
+UX-GLOB-011,runtime_sample,Candidate PSP,PSP مرشح
+UX-GLOB-011,runtime_sample,Not created,لم يُنشأ
+UX-GLOB-011,runtime_sample,User name,اسم المستخدم
+UX-GLOB-012,runtime_sample,—,—
+UX-GLOB-012,runtime_sample,—,—
+UX-GLOB-012,runtime_sample,0.000,0.000
+UX-GLOB-012,runtime_sample,—,—
+UX-GLOB-012,runtime_sample,—,—
+UX-GLOB-012,runtime_sample,0.000,0.000
+UX-GLOB-012,runtime_sample,User name,اسم المستخدم
+UX-GLOB-013,runtime_sample,—,—
+UX-GLOB-013,runtime_sample,Rationale entered by proposer,مبرر يُدخله المقترح
+UX-GLOB-013,runtime_sample,Pricing manager,مدير تسعير
+UX-GLOB-013,runtime_sample,User name,اسم المستخدم
+UX-GLOB-014,runtime_sample,PSP,PSP
+UX-GLOB-014,runtime_sample,PSP,PSP
+UX-GLOB-014,runtime_sample,User name,اسم المستخدم
+UX-GLOB-015,runtime_sample,—,—
+UX-GLOB-015,runtime_sample,Data provider,مزود بيانات
+UX-GLOB-015,runtime_sample,—,—
+UX-GLOB-015,runtime_sample,Data provider,مزود بيانات
+UX-GLOB-015,runtime_sample,User name,اسم المستخدم
+UX-GLOB-016,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-001,runtime_sample,Name,الاسم
+UX-LEARNER-001,runtime_sample,Name,اسم المعلم
+UX-LEARNER-001,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-002,runtime_sample,Name,اسم
+UX-LEARNER-002,runtime_sample,Name,الاسم
+UX-LEARNER-002,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-003,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-004,runtime_sample,Teacher name,اسم المعلم
+UX-LEARNER-004,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-005,runtime_sample,Teacher name,اسم المعلم
+UX-LEARNER-005,runtime_sample,Teacher name,اسم المعلم
+UX-LEARNER-005,runtime_sample,Teacher name,اسم المعلم
+UX-LEARNER-005,runtime_sample,Teacher name,اسم المعلم
+UX-LEARNER-005,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-006,runtime_sample,Teacher name,اسم المعلم
+UX-LEARNER-006,runtime_sample,Teacher name,اسم المعلم
+UX-LEARNER-006,CONTENT_REQUIRED,Approved teacher bio,نبذة المعلم المعتمدة
+UX-LEARNER-006,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-007,runtime_sample,Name,اسم
+UX-LEARNER-007,runtime_sample,Name,اسم
+UX-LEARNER-007,runtime_sample,Name,اسم
+UX-LEARNER-007,runtime_sample,Name,اسم
+UX-LEARNER-007,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-008,runtime_sample,Name,اسم
+UX-LEARNER-008,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-009,runtime_sample,Name,اسم المعلم
+UX-LEARNER-009,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-010,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-LEARNER-010,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-LEARNER-010,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-LEARNER-010,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-011,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-012,runtime_sample,Name,اسم
+UX-LEARNER-012,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-013,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-LEARNER-013,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-LEARNER-013,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-LEARNER-013,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-LEARNER-013,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-014,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-015,runtime_sample,Name,اسم
+UX-LEARNER-015,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-016,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-LEARNER-016,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-LEARNER-016,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-017,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-018,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-LEARNER-018,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-019,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-020,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-021,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-022,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-023,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-LEARNER-023,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-LEARNER-023,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-LEARNER-023,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-024,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-025,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-026,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-027,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-028,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-029,runtime_sample,—,—
+UX-LEARNER-029,runtime_sample,—,—
+UX-LEARNER-029,runtime_sample,—,—
+UX-LEARNER-029,CONTENT_REQUIRED,Approved entity — O-01,الكيان المعتمد — O-01
+UX-LEARNER-029,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-030,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-031,runtime_sample,User name,اسم المستخدم
+UX-LEARNER-032,runtime_sample,User name,اسم المستخدم
+UX-MOBILE-002,runtime_sample,Name,الاسم
+UX-MOBILE-002,runtime_sample,Name,اسم
+UX-MOBILE-003,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-MOBILE-003,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-MOBILE-007,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-MOBILE-K02,runtime_sample,Name,الاسم
+UX-MOBILE-K11,runtime_sample,Name,الاسم
+UX-MOBILE-S02,runtime_sample,Name,الاسم
+UX-MOBILE-S02,runtime_sample,Name,الاسم
+UX-PUBLIC-001,CONTENT_REQUIRED,photo: Approved teacher photo,صورة معتمدة من المعلم
+UX-PUBLIC-001,CONTENT_REQUIRED,Teacher name,اسم المعلم
+UX-PUBLIC-001,CONTENT_REQUIRED,photo: Approved teacher photo,صورة معتمدة من المعلم
+UX-PUBLIC-001,CONTENT_REQUIRED,Teacher name,اسم المعلم
+UX-PUBLIC-001,CONTENT_REQUIRED,photo: Approved teacher photo,صورة معتمدة من المعلم
+UX-PUBLIC-001,CONTENT_REQUIRED,Teacher name,اسم المعلم
+UX-PUBLIC-001,CONTENT_REQUIRED,PRICE,السعر
+UX-PUBLIC-001,CONTENT_REQUIRED,PRICE,السعر
+UX-PUBLIC-001,CONTENT_REQUIRED,PRICE,السعر
+UX-PUBLIC-001,CONTENT_REQUIRED,Approved testimonial 1,شهادة معتمدة ١
+UX-PUBLIC-001,CONTENT_REQUIRED,Approved testimonial 2,شهادة معتمدة ٢
+UX-PUBLIC-003,CONTENT_REQUIRED,PRICE,السعر
+UX-PUBLIC-004,CONTENT_REQUIRED,PRICE,السعر
+UX-PUBLIC-004,CONTENT_REQUIRED,PRICE,السعر
+UX-PUBLIC-004,CONTENT_REQUIRED,PRICE,السعر
+UX-PUBLIC-005,CONTENT_REQUIRED,photo: Approved teacher photo,صورة معتمدة من المعلم
+UX-PUBLIC-005,CONTENT_REQUIRED,Teacher name,اسم المعلم
+UX-PUBLIC-005,CONTENT_REQUIRED,photo: Approved teacher photo,صورة معتمدة من المعلم
+UX-PUBLIC-005,CONTENT_REQUIRED,Teacher name,اسم المعلم
+UX-PUBLIC-005,CONTENT_REQUIRED,photo: Approved teacher photo,صورة معتمدة من المعلم
+UX-PUBLIC-005,CONTENT_REQUIRED,Teacher name,اسم المعلم
+UX-PUBLIC-005,CONTENT_REQUIRED,photo: Approved teacher photo,صورة معتمدة من المعلم
+UX-PUBLIC-005,CONTENT_REQUIRED,Teacher name,اسم المعلم
+UX-PUBLIC-005,CONTENT_REQUIRED,photo: Approved teacher photo,صورة معتمدة من المعلم
+UX-PUBLIC-005,CONTENT_REQUIRED,Teacher name,اسم المعلم
+UX-PUBLIC-005,CONTENT_REQUIRED,photo: Approved teacher photo,صورة معتمدة من المعلم
+UX-PUBLIC-005,CONTENT_REQUIRED,Teacher name,اسم المعلم
+UX-PUBLIC-006,CONTENT_REQUIRED,Teacher name,اسم المعلم
+UX-PUBLIC-006,CONTENT_REQUIRED,Teacher name,اسم المعلم
+UX-PUBLIC-006,CONTENT_REQUIRED,"written by the teacher, reviewed by the academy",يكتبها المعلم وتراجعها الأكاديمية
+UX-PUBLIC-006,CONTENT_REQUIRED,details after verification,تفاصيل بعد التحقق
+UX-PUBLIC-010,CONTENT_REQUIRED,Name story and source — academic board,قصة الاسم ومصدرها — يعتمدها المجلس الأكاديمي
+UX-SUP-001,runtime_sample,1,١
+UX-SUP-001,runtime_sample,User name,اسم المستخدم
+UX-SUP-002,runtime_sample,Name,اسم
+UX-SUP-002,runtime_sample,User name,اسم المستخدم
+UX-SUP-003,runtime_sample,1,١
+UX-SUP-003,runtime_sample,4,٤
+UX-SUP-003,runtime_sample,User name,اسم المستخدم
+UX-SUP-004,runtime_sample,User name,اسم المستخدم
+UX-SUP-005,runtime_sample,User name,اسم المستخدم
+UX-SUP-006,runtime_sample,User name,اسم المستخدم
+UX-SUP-007,runtime_sample,—,—
+UX-SUP-007,runtime_sample,—,—
+UX-SUP-007,runtime_sample,—,—
+UX-SUP-007,runtime_sample,—,—
+UX-SUP-007,runtime_sample,User name,اسم المستخدم
+UX-SUP-008,runtime_sample,Name,اسم
+UX-SUP-008,runtime_sample,Name,اسم
+UX-SUP-008,runtime_sample,Name,اسم
+UX-SUP-008,runtime_sample,Name,اسم
+UX-SUP-008,runtime_sample,Name,اسم
+UX-SUP-008,runtime_sample,Name,اسم
+UX-SUP-008,runtime_sample,Name,اسم
+UX-SUP-008,runtime_sample,User name,اسم المستخدم
+UX-SUP-009,runtime_sample,Admin,مدير
+UX-SUP-009,runtime_sample,Finance,مالية
+UX-SUP-009,runtime_sample,Support,دعم
+UX-SUP-009,runtime_sample,Admin,مدير
+UX-SUP-009,runtime_sample,Safeguarding,حماية
+UX-SUP-009,runtime_sample,Admin,مدير
+UX-SUP-009,runtime_sample,User name,اسم المستخدم
+UX-SUP-010,runtime_sample,User name,اسم المستخدم
+UX-SUP-011,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-002,runtime_sample,Name,الاسم
+UX-TEACHER-002,runtime_sample,—,—
+UX-TEACHER-002,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-003,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-004,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-005,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-TEACHER-005,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-TEACHER-005,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-006,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-TEACHER-006,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-TEACHER-006,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-TEACHER-006,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-TEACHER-006,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-007,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-008,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-009,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-010,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-011,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-012,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-TEACHER-012,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-013,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-014,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-TEACHER-014,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-TEACHER-014,runtime_sample, Ayah text from the licensed Quran source , نص الآية من المصدر القرآني المعتمد 
+UX-TEACHER-014,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-015,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-016,runtime_sample,—,—
+UX-TEACHER-016,runtime_sample,—,—
+UX-TEACHER-016,runtime_sample,—,—
+UX-TEACHER-016,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-017,runtime_sample,User name,اسم المستخدم
+UX-TEACHER-018,runtime_sample,User name,اسم المستخدم
+UX-VPC-001,runtime_sample,—,—
+UX-VPC-001,runtime_sample,—,—
+UX-VPC-001,runtime_sample,—,—
+UX-VPC-001,runtime_sample,—,—
+UX-VPC-001,runtime_sample,—,—
+UX-VPC-001,runtime_sample,—,—
+UX-VPC-001,runtime_sample,User name,اسم المستخدم
+UX-VPC-002,runtime_sample,User name,اسم المستخدم
+UX-VPC-003,runtime_sample,User name,اسم المستخدم
+UX-VPC-004,runtime_sample,User name,اسم المستخدم
+UX-VPC-005,runtime_sample,—,—
+UX-VPC-005,runtime_sample,User name,اسم المستخدم
+UX-VPC-006,runtime_sample,Platform admin,مدير منصة
+UX-VPC-006,runtime_sample,User name,اسم المستخدم
+UX-VPC-007,runtime_sample,—,—
+UX-VPC-007,runtime_sample,—,—
+UX-VPC-007,runtime_sample,—,—
+UX-VPC-007,runtime_sample,—,—
+UX-VPC-007,runtime_sample,—,—
+UX-VPC-007,runtime_sample,—,—
+UX-VPC-007,runtime_sample,User name,اسم المستخدم
+UX-VPC-008,runtime_sample,User name,اسم المستخدم
+UX-VPC-009,runtime_sample,User name,اسم المستخدم
+UX-VPC-010,runtime_sample,User name,اسم المستخدم

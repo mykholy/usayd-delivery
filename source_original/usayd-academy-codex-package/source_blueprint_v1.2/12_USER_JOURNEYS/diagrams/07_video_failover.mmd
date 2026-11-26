@@ -1,0 +1,12 @@
+flowchart TD
+  A[Classroom join requested] --> B{Existing provider binding?}
+  B -->|No| C[Route approved eligible provider]
+  B -->|Yes| D[Use bound provider]
+  C --> E{Healthy and capability verified?}
+  D --> E
+  E -->|Yes| F[Issue authorized join]
+  E -->|No| G{Class already active?}
+  G -->|Yes| H[Recovery incident and manual replacement]
+  G -->|No| I[Authorized migration or fallback with audit]
+  I --> F
+  H --> J[Reschedule or refund workflow]

@@ -1,0 +1,678 @@
+{
+"UX-ADMIN-001": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-002": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "R-025 (open, P3): sparse 2-row list in a large area"
+},
+"UX-ADMIN-003": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-004": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "R-025 (open, P3): sparse"
+},
+"UX-ADMIN-005": {
+"ar": "R-015 density redesign checked in RTL (logical side bars correct)",
+"en": "R-015 density redesign checked (summary, lane, sortable header, pager)"
+},
+"UX-ADMIN-006": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-007": {
+"ar": "R-015 density redesign checked in RTL (logical side bars correct)",
+"en": "R-015 density redesign checked (summary, lane, sortable header, pager)"
+},
+"UX-ADMIN-008": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-009": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-010": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-011": {
+"ar": "R-015 density redesign checked in RTL (logical side bars correct)",
+"en": "R-015 density redesign checked (summary, lane, sortable header, pager)"
+},
+"UX-ADMIN-012": {
+"ar": "candidate sources named from blueprint 08_REFERENCES; shown as unverified/locked (O-06)",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-013": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "R-025 (open, P3): sparse"
+},
+"UX-ADMIN-014": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-015": {
+"ar": "R-015 redesign checked; lane action alignment + disabled pager style fixed; stacked text cells fixed",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-016": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "R-025 (open, P3): sparse"
+},
+"UX-ADMIN-017": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-018": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-019": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "R-025 (open, P3): sparse"
+},
+"UX-ADMIN-020": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "R-025 (open, P3): sparse"
+},
+"UX-ADMIN-021": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-022": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-023": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-024": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-025": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-026": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-027": {
+"ar": "R-015 density redesign checked in RTL (logical side bars correct)",
+"en": "R-015 density redesign checked (summary, lane, sortable header, pager)"
+},
+"UX-ADMIN-028": {
+"ar": "R-023: score localized",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-029": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-030": {
+"ar": "R-023: scores localized",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-031": {
+"ar": "R-015 density redesign checked in RTL (logical side bars correct)",
+"en": "R-015 density redesign checked (summary, lane, sortable header, pager)"
+},
+"UX-ADMIN-032": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-033": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-034": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-035": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-036": {
+"ar": "break-glass button was live → disabled with D-39 reason (R-018)",
+"en": "break-glass disabled (R-018)"
+},
+"UX-ADMIN-037": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "R-025 (open, P3): sparse"
+},
+"UX-ADMIN-038": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-039": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ADMIN-040": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "R-025 (open, P3): sparse"
+},
+"UX-ADMIN-041": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-AUTH-001": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "brand tagline D-44"
+},
+"UX-AUTH-002": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-AUTH-003": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-AUTH-004": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-AUTH-005": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ENG-001": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ENG-002": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-ENG-003": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-001": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-002": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-003": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-004": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-005": {
+"ar": "R-026 (open, P3): header shows Riyadh while the DST example is in New York",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-006": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-007": {
+"ar": "owner-content chip wraps over two lines (acceptable; content slot)",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-008": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-009": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-010": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-011": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-012": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-013": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-014": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-015": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-016": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-GLOB-017": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-001": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-002": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-003": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-004": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-005": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-006": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-007": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-008": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-009": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-010": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-011": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-012": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-013": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-014": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-015": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-016": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-017": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-018": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-019": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-020": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-021": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-022": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-023": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-024": {
+"ar": "R-023: scores used Western digits in Arabic — localized",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-025": {
+"ar": "R-023: scores localized",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-026": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-027": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-028": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-029": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-030": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-031": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-LEARNER-032": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-000": {
+"ar": "brand tagline alludes to a hadith — D-44 needs academic approval",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-001": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-002": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-003": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-004": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-005": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "R-027 (artifact): phone frame at a 1440 viewport uses viewport breakpoints → 6 columns inside 390 px; real 390 render is 3 columns"
+},
+"UX-MOBILE-006": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-007": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-008": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-009": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-010": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-011": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-012": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-K02": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-K05": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-K08": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-K11": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-S02": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-S04": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-MOBILE-S11": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-PUBLIC-001": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-PUBLIC-002": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-PUBLIC-003": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-PUBLIC-004": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-PUBLIC-005": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-PUBLIC-006": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-PUBLIC-007": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-PUBLIC-008": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-PUBLIC-009": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-PUBLIC-010": {
+"ar": "R-021: hadith paraphrase with reference replaced by academic-board owner slot",
+"en": "R-021 (see AR)"
+},
+"UX-PUBLIC-011": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-PUBLIC-012": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-SUP-001": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-SUP-002": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-SUP-003": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-SUP-004": {
+"ar": "disabled break-glass + unresolved note render correctly",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-SUP-005": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-SUP-006": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-SUP-007": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-SUP-008": {
+"ar": "R-015 density redesign checked in RTL (logical side bars correct)",
+"en": "R-015 density redesign checked (summary, lane, sortable header, pager)"
+},
+"UX-SUP-009": {
+"ar": "R-015 density redesign checked in RTL (logical side bars correct)",
+"en": "R-015 density redesign checked (summary, lane, sortable header, pager)"
+},
+"UX-SUP-010": {
+"ar": "R-015 density redesign checked in RTL (logical side bars correct)",
+"en": "R-015 density redesign checked (summary, lane, sortable header, pager)"
+},
+"UX-SUP-011": {
+"ar": "bidi of code tokens in Arabic lane titles fixed (LTR isolates); caption “AR وEN” reworded",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-001": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-002": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-003": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-004": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-005": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-006": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-007": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-008": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-009": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-010": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-011": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-012": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-013": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-014": {
+"ar": "R-024: media time “07:42 / 00:00” reversed by bidi — forced LTR",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-015": {
+"ar": "R-023: score localized",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-016": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-017": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-TEACHER-018": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-VPC-001": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "R-022: health/last-test labelled as sample data"
+},
+"UX-VPC-002": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-VPC-003": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "R-022: matrix claimed “Verified” + “evidence attached” with no test → all Unknown except blueprint-stated Meet limits"
+},
+"UX-VPC-004": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-VPC-005": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-VPC-006": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-VPC-007": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-VPC-008": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-VPC-009": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+},
+"UX-VPC-010": {
+"ar": "reviewed (AI, above the fold) — no defect seen",
+"en": "reviewed (AI, above the fold) — no defect seen"
+}
+}

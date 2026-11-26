@@ -1,0 +1,34 @@
+﻿id,summary,description,status,module
+USYD-E-FOUNDATION,[FOUNDATION] Architecture & Environment Foundations,Full scope epic for Architecture & Environment Foundations; backed by original source specification and generated task handoffs.,Backlog,FOUNDATION
+USYD-E-CONTRACTS,[CONTRACTS] API Contract & State Alignment,Full scope epic for API Contract & State Alignment; backed by original source specification and generated task handoffs.,Backlog,CONTRACTS
+USYD-E-WEB,[WEB] Next.js Web Platform Foundations,Full scope epic for Next.js Web Platform Foundations; backed by original source specification and generated task handoffs.,Backlog,WEB
+USYD-E-FLUTTER,[FLUTTER] Flutter App Foundations,Full scope epic for Flutter App Foundations; backed by original source specification and generated task handoffs.,Backlog,FLUTTER
+USYD-E-QUALITY,[QUALITY] Test Engineering & Acceptance,Full scope epic for Test Engineering & Acceptance; backed by original source specification and generated task handoffs.,Backlog,QUALITY
+USYD-E-OPERATIONS,"[OPERATIONS] Infrastructure, Security Operations & Observability","Full scope epic for Infrastructure, Security Operations & Observability; backed by original source specification and generated task handoffs.",Backlog,OPERATIONS
+USYD-E-PRODUCT,"[PRODUCT] Owner Decisions, Content & Governance","Full scope epic for Owner Decisions, Content & Governance; backed by original source specification and generated task handoffs.",Backlog,PRODUCT
+USYD-E-RELEASE,"[RELEASE] Production Launch, UAT & Handover","Full scope epic for Production Launch, UAT & Handover; backed by original source specification and generated task handoffs.",Backlog,RELEASE
+USYD-E-IAM,"[IAM] Identity, Sessions & Guardian","Full scope epic for Identity, Sessions & Guardian; backed by original source specification and generated task handoffs.",Backlog,IAM
+USYD-E-SEC,"[SEC] Security, Audit, Governance","Full scope epic for Security, Audit, Governance; backed by original source specification and generated task handoffs.",Backlog,SEC
+USYD-E-I18N,"[I18N] Localization, RTL & Locale","Full scope epic for Localization, RTL & Locale; backed by original source specification and generated task handoffs.",Backlog,I18N
+USYD-E-GEO,"[GEO] Markets, Regions & Country Activation","Full scope epic for Markets, Regions & Country Activation; backed by original source specification and generated task handoffs.",Backlog,GEO
+USYD-E-PROF,[PROF] Learner Profiles & Onboarding,Full scope epic for Learner Profiles & Onboarding; backed by original source specification and generated task handoffs.,Backlog,PROF
+USYD-E-CURR,"[CURR] Curriculum, Programs & Licensed Quran","Full scope epic for Curriculum, Programs & Licensed Quran; backed by original source specification and generated task handoffs.",Backlog,CURR
+USYD-E-TCHR,[TCHR] Teachers & Availability,Full scope epic for Teachers & Availability; backed by original source specification and generated task handoffs.,Backlog,TCHR
+USYD-E-TIME,"[TIME] Timezones, DST & Scheduling","Full scope epic for Timezones, DST & Scheduling; backed by original source specification and generated task handoffs.",Backlog,TIME
+USYD-E-BOOK,[BOOK] Booking Engine & Credits,Full scope epic for Booking Engine & Credits; backed by original source specification and generated task handoffs.,Backlog,BOOK
+USYD-E-VIDEO,[VIDEO] Live Classroom & Video,Full scope epic for Live Classroom & Video; backed by original source specification and generated task handoffs.,Backlog,VIDEO
+USYD-E-VPC,[VPC] Video Provider Console,Full scope epic for Video Provider Console; backed by original source specification and generated task handoffs.,Backlog,VPC
+USYD-E-ATT,[ATT] Attendance & Lesson Reports,Full scope epic for Attendance & Lesson Reports; backed by original source specification and generated task handoffs.,Backlog,ATT
+USYD-E-PLAN,"[PLAN] Learning Plans, Revision & Memory Map","Full scope epic for Learning Plans, Revision & Memory Map; backed by original source specification and generated task handoffs.",Backlog,PLAN
+USYD-E-ASMT,[ASMT] Assessments & Examinations,Full scope epic for Assessments & Examinations; backed by original source specification and generated task handoffs.,Backlog,ASMT
+USYD-E-NOTIF,[NOTIF] Notifications & Communication,Full scope epic for Notifications & Communication; backed by original source specification and generated task handoffs.,Backlog,NOTIF
+USYD-E-PAY,"[PAY] Pricing, Checkout, Subscriptions & Refunds","Full scope epic for Pricing, Checkout, Subscriptions & Refunds; backed by original source specification and generated task handoffs.",Backlog,PAY
+USYD-E-PAYROLL,[PAYROLL] Teacher Contracts & Payroll,Full scope epic for Teacher Contracts & Payroll; backed by original source specification and generated task handoffs.,Backlog,PAYROLL
+USYD-E-CONTEST,"[CONTEST] Competitions, Judging & Appeals","Full scope epic for Competitions, Judging & Appeals; backed by original source specification and generated task handoffs.",Backlog,CONTEST
+USYD-E-ENG,"[ENG] Engagement, Badges & Achievements","Full scope epic for Engagement, Badges & Achievements; backed by original source specification and generated task handoffs.",Backlog,ENG
+USYD-E-AI,"[AI] AI Assistance, Consent & Evaluation","Full scope epic for AI Assistance, Consent & Evaluation; backed by original source specification and generated task handoffs.",Backlog,AI
+USYD-E-SUP,[SUP] Supervisor Workspaces & Scopes,Full scope epic for Supervisor Workspaces & Scopes; backed by original source specification and generated task handoffs.,Backlog,SUP
+USYD-E-ADMIN,"[ADMIN] Administration, KPIs & Settings","Full scope epic for Administration, KPIs & Settings; backed by original source specification and generated task handoffs.",Backlog,ADMIN
+USYD-E-CRM,"[CRM] CRM, Support & Safeguarding","Full scope epic for CRM, Support & Safeguarding; backed by original source specification and generated task handoffs.",Backlog,CRM
+USYD-E-MEDIA,"[MEDIA] Media, Recordings & Library","Full scope epic for Media, Recordings & Library; backed by original source specification and generated task handoffs.",Backlog,MEDIA
+USYD-E-MOB,[MOB] Mobile App & Offline Sync,Full scope epic for Mobile App & Offline Sync; backed by original source specification and generated task handoffs.,Backlog,MOB

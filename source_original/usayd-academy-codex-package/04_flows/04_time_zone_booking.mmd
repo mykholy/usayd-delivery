@@ -1,0 +1,11 @@
+sequenceDiagram
+  participant Learner
+  participant BookingAPI
+  participant Teacher
+  Learner->>BookingAPI: Request local slot with IANA zone
+  BookingAPI->>BookingAPI: Detect DST gap or overlap
+  BookingAPI-->>Learner: UTC slot plus local offset choices
+  Learner->>BookingAPI: Pick confirmed UTC slot
+  BookingAPI->>BookingAPI: Teacher UTC overlap lock
+  BookingAPI-->>Teacher: Booked UTC and teacher local display
+  BookingAPI-->>Learner: Booked UTC and learner local display

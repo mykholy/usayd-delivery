@@ -1,0 +1,8 @@
+flowchart TD
+  A[Student reports issue] --> B[Support queue under region]
+  B --> C{Safety risk?}
+  C -->|Yes| D[Safeguarding restricted case]
+  C -->|No| E[Operational incident]
+  D --> F[Authorized human triage and review]
+  E --> G[Resolution and optional class credit]
+  F --> H[Escalate per law and notify appropriately]

@@ -1,0 +1,642 @@
+﻿screen_id,action_id,label_en,label_ar,kind
+UX-ADMIN-001,admin-001.market-all,Market: all,السوق: الكل,filter
+UX-ADMIN-001,admin-001.last-30-days,Last 30 days,آخر ٣٠ يومًا,filter
+UX-ADMIN-001,admin-001.retry,Retry,أعد المحاولة,action
+UX-ADMIN-001,admin-001.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-002,admin-002.export-with-reason,Export (with reason),تصدير (مع سبب),action
+UX-ADMIN-002,admin-002.market,Market,السوق,filter
+UX-ADMIN-002,admin-002.status,Status,الحالة,filter
+UX-ADMIN-002,admin-002.minor,Minor,قاصر,filter
+UX-ADMIN-002,admin-002.program,Program,البرنامج,filter
+UX-ADMIN-002,admin-002.retry,Retry,أعد المحاولة,action
+UX-ADMIN-002,admin-002.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-003,admin-003.reveal-data-reason,Reveal data (reason),كشف البيانات (سبب),action
+UX-ADMIN-003,admin-003.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-ADMIN-003,admin-003.retry,Retry,أعد المحاولة,action
+UX-ADMIN-003,admin-003.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-004,admin-004.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-ADMIN-004,admin-004.resend,Resend,إعادة إرسال,action
+UX-ADMIN-004,admin-004.resend,Resend,إعادة إرسال,action
+UX-ADMIN-004,admin-004.retry,Retry,أعد المحاولة,action
+UX-ADMIN-004,admin-004.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-005,admin-005.role,Role,الدور,filter
+UX-ADMIN-005,admin-005.market,Market,السوق,filter
+UX-ADMIN-005,admin-005.mfa,MFA,التحقق بخطوتين,filter
+UX-ADMIN-005,admin-005.sort-staff,Sort by Staff,ترتيب حسب الموظف,sort
+UX-ADMIN-005,admin-005.sort-role,Sort by Role,ترتيب حسب الدور,sort
+UX-ADMIN-005,admin-005.sort-scope,Sort by Scope,ترتيب حسب النطاق,sort
+UX-ADMIN-005,admin-005.sort-mfa,Sort by MFA,ترتيب حسب التحقق بخطوتين,sort
+UX-ADMIN-005,admin-005.sort-last-sign-in-utc,Sort by Last sign-in (UTC),ترتيب حسب آخر دخول (UTC),sort
+UX-ADMIN-005,admin-005.next-page,Next page,الصفحة التالية,pager
+UX-ADMIN-005,admin-005.previous-page,Previous page,الصفحة السابقة,disabled
+UX-ADMIN-005,admin-005.retry,Retry,أعد المحاولة,action
+UX-ADMIN-005,admin-005.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-006,admin-006.retry,Retry,أعد المحاولة,action
+UX-ADMIN-006,admin-006.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-007,admin-007.market,Market,السوق,filter
+UX-ADMIN-007,admin-007.status,Status,الحالة,filter
+UX-ADMIN-007,admin-007.contract-type,Contract type,نوع العقد,filter
+UX-ADMIN-007,admin-007.sort-teacher,Sort by Teacher,ترتيب حسب المعلم,sort
+UX-ADMIN-007,admin-007.sort-timezone,Sort by Timezone,ترتيب حسب التوقيت,sort
+UX-ADMIN-007,admin-007.sort-contract,Sort by Contract,ترتيب حسب العقد,sort
+UX-ADMIN-007,admin-007.sort-lessons-month,Sort by Lessons (month),ترتيب حسب حصص الشهر,sort
+UX-ADMIN-007,admin-007.sort-attendance,Sort by Attendance,ترتيب حسب الحضور,sort
+UX-ADMIN-007,admin-007.sort-status,Sort by Status,ترتيب حسب الحالة,sort
+UX-ADMIN-007,admin-007.next-page,Next page,الصفحة التالية,pager
+UX-ADMIN-007,admin-007.previous-page,Previous page,الصفحة السابقة,disabled
+UX-ADMIN-007,admin-007.retry,Retry,أعد المحاولة,action
+UX-ADMIN-007,admin-007.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-008,admin-008.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-ADMIN-008,admin-008.retry,Retry,أعد المحاولة,action
+UX-ADMIN-008,admin-008.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-009,admin-009.send-for-finance-approval,Send for finance approval,أرسل للاعتماد المالي,action
+UX-ADMIN-009,admin-009.retry,Retry,أعد المحاولة,action
+UX-ADMIN-009,admin-009.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-010,admin-010.retry,Retry,أعد المحاولة,action
+UX-ADMIN-010,admin-010.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-011,admin-011.new-program,New program,برنامج جديد,action
+UX-ADMIN-011,admin-011.market,Market,السوق,filter
+UX-ADMIN-011,admin-011.status,Status,الحالة,filter
+UX-ADMIN-011,admin-011.sort-program,Sort by Program,ترتيب حسب البرنامج,sort
+UX-ADMIN-011,admin-011.sort-version,Sort by Version,ترتيب حسب النسخة,sort
+UX-ADMIN-011,admin-011.sort-markets,Sort by Markets,ترتيب حسب الأسواق,sort
+UX-ADMIN-011,admin-011.sort-ar-en-copy,Sort by AR/EN copy,ترتيب حسب الترجمة AR/EN,sort
+UX-ADMIN-011,admin-011.sort-academic-review,Sort by Academic review,ترتيب حسب المراجعة الأكاديمية,sort
+UX-ADMIN-011,admin-011.sort-status,Sort by Status,ترتيب حسب الحالة,sort
+UX-ADMIN-011,admin-011.next-page,Next page,الصفحة التالية,pager
+UX-ADMIN-011,admin-011.previous-page,Previous page,الصفحة السابقة,disabled
+UX-ADMIN-011,admin-011.retry,Retry,أعد المحاولة,action
+UX-ADMIN-011,admin-011.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-012,admin-012.retry,Retry,أعد المحاولة,action
+UX-ADMIN-012,admin-012.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-013,admin-013.new-question,New question,سؤال جديد,action
+UX-ADMIN-013,admin-013.import-deferred,Import (deferred),استيراد (مؤجل),disabled
+UX-ADMIN-013,admin-013.skill,Skill,المهارة,filter
+UX-ADMIN-013,admin-013.level,Level,المستوى,filter
+UX-ADMIN-013,admin-013.source,Source,المصدر,filter
+UX-ADMIN-013,admin-013.status,Status,الحالة,filter
+UX-ADMIN-013,admin-013.retry,Retry,أعد المحاولة,action
+UX-ADMIN-013,admin-013.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-014,admin-014.new-rubric,New rubric,معيار جديد,action
+UX-ADMIN-014,admin-014.retry,Retry,أعد المحاولة,action
+UX-ADMIN-014,admin-014.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-015,admin-015.details,Details,التفاصيل,action
+UX-ADMIN-015,admin-015.offer-credit-refund,Offer credit/refund,عرض رصيد/استرداد,action
+UX-ADMIN-015,admin-015.details,Details,التفاصيل,action
+UX-ADMIN-015,admin-015.details,Details,التفاصيل,action
+UX-ADMIN-015,admin-015.details,Details,التفاصيل,action
+UX-ADMIN-015,admin-015.details,Details,التفاصيل,action
+UX-ADMIN-015,admin-015.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-ADMIN-015,admin-015.sort-booking,Sort by Booking,ترتيب حسب الحجز,sort
+UX-ADMIN-015,admin-015.sort-learner,Sort by Learner,ترتيب حسب المتعلم,sort
+UX-ADMIN-015,admin-015.sort-teacher,Sort by Teacher,ترتيب حسب المعلم,sort
+UX-ADMIN-015,admin-015.sort-time-utc,Sort by Time (UTC),ترتيب حسب الموعد (UTC),sort
+UX-ADMIN-015,admin-015.sort-status,Sort by Status,ترتيب حسب الحالة,sort
+UX-ADMIN-015,admin-015.next-page,Next page,الصفحة التالية,pager
+UX-ADMIN-015,admin-015.previous-page,Previous page,الصفحة السابقة,disabled
+UX-ADMIN-015,admin-015.retry,Retry,أعد المحاولة,action
+UX-ADMIN-015,admin-015.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-016,admin-016.retry,Retry,أعد المحاولة,action
+UX-ADMIN-016,admin-016.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-017,admin-017.retry,Retry,أعد المحاولة,action
+UX-ADMIN-017,admin-017.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-018,admin-018.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-ADMIN-018,admin-018.confirm-decision,Confirm decision,اعتمد القرار,action
+UX-ADMIN-018,admin-018.retry,Retry,أعد المحاولة,action
+UX-ADMIN-018,admin-018.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-019,admin-019.market,Market,السوق,filter
+UX-ADMIN-019,admin-019.status,Status,الحالة,filter
+UX-ADMIN-019,admin-019.psp,PSP,مزود الدفع,filter
+UX-ADMIN-019,admin-019.refund,Refund,استرداد,action
+UX-ADMIN-019,admin-019.retry,Retry,أعد المحاولة,action
+UX-ADMIN-019,admin-019.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-020,admin-020.retry,Retry,أعد المحاولة,action
+UX-ADMIN-020,admin-020.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-021,admin-021.retry,Retry,أعد المحاولة,action
+UX-ADMIN-021,admin-021.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-022,admin-022.approve-run,Approve run,اعتمد الدورة,action
+UX-ADMIN-022,admin-022.return-for-changes,Return for changes,أعد للتعديل,action
+UX-ADMIN-022,admin-022.retry,Retry,أعد المحاولة,action
+UX-ADMIN-022,admin-022.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-023,admin-023.retry,Retry,أعد المحاولة,action
+UX-ADMIN-023,admin-023.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-024,admin-024.record-decision,Record decision,سجّل القرار,action
+UX-ADMIN-024,admin-024.retry,Retry,أعد المحاولة,action
+UX-ADMIN-024,admin-024.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-025,admin-025.new-template-deferred,New template (deferred),قالب جديد (مؤجل),disabled
+UX-ADMIN-025,admin-025.retry,Retry,أعد المحاولة,action
+UX-ADMIN-025,admin-025.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-026,admin-026.next-rounds,Next: rounds,التالي: الجولات,action
+UX-ADMIN-026,admin-026.retry,Retry,أعد المحاولة,action
+UX-ADMIN-026,admin-026.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-027,admin-027.state,State,الحالة,filter
+UX-ADMIN-027,admin-027.market,Market,السوق,filter
+UX-ADMIN-027,admin-027.age-band,Age band,الفئة العمرية,filter
+UX-ADMIN-027,admin-027.sort-competition,Sort by Competition,ترتيب حسب المسابقة,sort
+UX-ADMIN-027,admin-027.sort-state,Sort by State,ترتيب حسب الحالة,sort
+UX-ADMIN-027,admin-027.sort-participants,Sort by Participants,ترتيب حسب المشاركون,sort
+UX-ADMIN-027,admin-027.sort-pending-judging,Sort by Pending judging,ترتيب حسب بانتظار التحكيم,sort
+UX-ADMIN-027,admin-027.sort-next-deadline-utc,Sort by Next deadline (UTC),ترتيب حسب الموعد التالي (UTC),sort
+UX-ADMIN-027,admin-027.next-page,Next page,الصفحة التالية,pager
+UX-ADMIN-027,admin-027.previous-page,Previous page,الصفحة السابقة,disabled
+UX-ADMIN-027,admin-027.retry,Retry,أعد المحاولة,action
+UX-ADMIN-027,admin-027.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-028,admin-028.retry,Retry,أعد المحاولة,action
+UX-ADMIN-028,admin-028.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-029,admin-029.reassign,Reassign,أعد الإسناد,action
+UX-ADMIN-029,admin-029.retry,Retry,أعد المحاولة,action
+UX-ADMIN-029,admin-029.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-030,admin-030.publish-final-results,Publish final results,انشر النتائج المعتمدة,disabled
+UX-ADMIN-030,admin-030.retry,Retry,أعد المحاولة,action
+UX-ADMIN-030,admin-030.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-031,admin-031.assign-reviewer,Assign reviewer,أسند مراجعًا,action
+UX-ADMIN-031,admin-031.assign-reviewer,Assign reviewer,أسند مراجعًا,action
+UX-ADMIN-031,admin-031.assign-reviewer,Assign reviewer,أسند مراجعًا,action
+UX-ADMIN-031,admin-031.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-ADMIN-031,admin-031.sort-appeal,Sort by Appeal,ترتيب حسب التظلم,sort
+UX-ADMIN-031,admin-031.sort-contest,Sort by Contest,ترتيب حسب المسابقة,sort
+UX-ADMIN-031,admin-031.sort-criterion,Sort by Criterion,ترتيب حسب المعيار,sort
+UX-ADMIN-031,admin-031.sort-reviewer,Sort by Reviewer,ترتيب حسب المراجع,sort
+UX-ADMIN-031,admin-031.sort-sla,Sort by SLA,ترتيب حسب المهلة,sort
+UX-ADMIN-031,admin-031.next-page,Next page,الصفحة التالية,pager
+UX-ADMIN-031,admin-031.previous-page,Previous page,الصفحة السابقة,disabled
+UX-ADMIN-031,admin-031.retry,Retry,أعد المحاولة,action
+UX-ADMIN-031,admin-031.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-032,admin-032.retry,Retry,أعد المحاولة,action
+UX-ADMIN-032,admin-032.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-033,admin-033.retry,Retry,أعد المحاولة,action
+UX-ADMIN-033,admin-033.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-034,admin-034.retry,Retry,أعد المحاولة,action
+UX-ADMIN-034,admin-034.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-035,admin-035.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-ADMIN-035,admin-035.open,Open,افتح,action
+UX-ADMIN-035,admin-035.retry,Retry,أعد المحاولة,action
+UX-ADMIN-035,admin-035.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-036,admin-036.break-glass,Break-glass,وصول طارئ,disabled
+UX-ADMIN-036,admin-036.retry,Retry,أعد المحاولة,action
+UX-ADMIN-036,admin-036.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-037,admin-037.upload,Upload,رفع مادة,action
+UX-ADMIN-037,admin-037.retry,Retry,أعد المحاولة,action
+UX-ADMIN-037,admin-037.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-038,admin-038.retry,Retry,أعد المحاولة,action
+UX-ADMIN-038,admin-038.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-039,admin-039.export-with-reason,Export (with reason),تصدير (مع سبب),action
+UX-ADMIN-039,admin-039.metric,Metric,المؤشر,filter
+UX-ADMIN-039,admin-039.market,Market,السوق,filter
+UX-ADMIN-039,admin-039.period,Period,الفترة,filter
+UX-ADMIN-039,admin-039.group-by,Group by,التجميع,filter
+UX-ADMIN-039,admin-039.retry,Retry,أعد المحاولة,action
+UX-ADMIN-039,admin-039.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-040,admin-040.actor,Actor,الفاعل,filter
+UX-ADMIN-040,admin-040.action,Action,الإجراء,filter
+UX-ADMIN-040,admin-040.object,Object,الكائن,filter
+UX-ADMIN-040,admin-040.period,Period,الفترة,filter
+UX-ADMIN-040,admin-040.retry,Retry,أعد المحاولة,action
+UX-ADMIN-040,admin-040.reconnect,Reconnect,أعد الاتصال,action
+UX-ADMIN-041,admin-041.retry,Retry,أعد المحاولة,action
+UX-ADMIN-041,admin-041.reconnect,Reconnect,أعد الاتصال,action
+UX-AUTH-001,auth-001.show-password,Show / hide password,إظهار / إخفاء كلمة المرور,action
+UX-AUTH-001,auth-001.retry,Retry,أعد المحاولة,action
+UX-AUTH-001,auth-001.reconnect,Reconnect,أعد الاتصال,action
+UX-AUTH-002,auth-002.retry,Retry,أعد المحاولة,action
+UX-AUTH-002,auth-002.reconnect,Reconnect,أعد الاتصال,action
+UX-AUTH-003,auth-003.show-password,Show / hide password,إظهار / إخفاء كلمة المرور,action
+UX-AUTH-003,auth-003.retry,Retry,أعد المحاولة,action
+UX-AUTH-003,auth-003.reconnect,Reconnect,أعد الاتصال,action
+UX-AUTH-004,auth-004.send-link,Send link,أرسل الرابط,action
+UX-AUTH-004,auth-004.retry,Retry,أعد المحاولة,action
+UX-AUTH-004,auth-004.reconnect,Reconnect,أعد الاتصال,action
+UX-AUTH-005,auth-005.retry,Retry,أعد المحاولة,action
+UX-AUTH-005,auth-005.reconnect,Reconnect,أعد الاتصال,action
+UX-ENG-001,eng-001.add-to-calendar-ics,Add to calendar (ICS),أضف للتقويم (ICS),action
+UX-ENG-001,eng-001.retry,Retry,أعد المحاولة,action
+UX-ENG-001,eng-001.reconnect,Reconnect,أعد الاتصال,action
+UX-ENG-002,eng-002.retry,Retry,أعد المحاولة,action
+UX-ENG-002,eng-002.reconnect,Reconnect,أعد الاتصال,action
+UX-ENG-003,eng-003.retry,Retry,أعد المحاولة,action
+UX-ENG-003,eng-003.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-001,glob-001.retry,Retry,أعد المحاولة,action
+UX-GLOB-001,glob-001.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-002,glob-002.retry,Retry,أعد المحاولة,action
+UX-GLOB-002,glob-002.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-003,glob-003.join-the-waitlist,Join the waitlist,انضم لقائمة الانتظار,action
+UX-GLOB-003,glob-003.retry,Retry,أعد المحاولة,action
+UX-GLOB-003,glob-003.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-004,glob-004.save,Save,احفظ,action
+UX-GLOB-004,glob-004.retry,Retry,أعد المحاولة,action
+UX-GLOB-004,glob-004.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-005,glob-005.retry,Retry,أعد المحاولة,action
+UX-GLOB-005,glob-005.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-006,glob-006.slide-to-pay-securely,Slide to pay securely,اسحب للدفع بأمان,slide
+UX-GLOB-006,glob-006.retry,Retry,أعد المحاولة,action
+UX-GLOB-006,glob-006.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-007,glob-007.retry,Retry,أعد المحاولة,action
+UX-GLOB-007,glob-007.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-008,glob-008.edit,Edit,تعديل,action
+UX-GLOB-008,glob-008.edit,Edit,تعديل,action
+UX-GLOB-008,glob-008.edit,Edit,تعديل,action
+UX-GLOB-008,glob-008.add-range,Add range,إضافة فترة,action
+UX-GLOB-008,glob-008.retry,Retry,أعد المحاولة,action
+UX-GLOB-008,glob-008.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-009,glob-009.request-reschedule,Request reschedule,طلب إعادة جدولة,action
+UX-GLOB-009,glob-009.retry,Retry,أعد المحاولة,action
+UX-GLOB-009,glob-009.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-010,glob-010.retry,Retry,أعد المحاولة,action
+UX-GLOB-010,glob-010.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-011,glob-011.next,Next,التالي,action
+UX-GLOB-011,glob-011.retry,Retry,أعد المحاولة,action
+UX-GLOB-011,glob-011.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-012,glob-012.retry,Retry,أعد المحاولة,action
+UX-GLOB-012,glob-012.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-013,glob-013.approve,Approve,اعتمد,action
+UX-GLOB-013,glob-013.reject,Reject,ارفض,action
+UX-GLOB-013,glob-013.retry,Retry,أعد المحاولة,action
+UX-GLOB-013,glob-013.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-014,glob-014.new-profile,New profile,ملف جديد,action
+UX-GLOB-014,glob-014.retry,Retry,أعد المحاولة,action
+UX-GLOB-014,glob-014.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-015,glob-015.retry,Retry,أعد المحاولة,action
+UX-GLOB-015,glob-015.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-016,glob-016.preview-impact,Preview impact,معاينة التأثير,action
+UX-GLOB-016,glob-016.retry,Retry,أعد المحاولة,action
+UX-GLOB-016,glob-016.reconnect,Reconnect,أعد الاتصال,action
+UX-GLOB-017,glob-017.retry,Retry,أعد المحاولة,action
+UX-GLOB-017,glob-017.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-001,learner-001.join-opens-10-min-before,Join opens 10 min before,يمكنك الدخول قبل الحصة بـ١٠ دقائق,disabled
+UX-LEARNER-001,learner-001.why-this,Why this?,لماذا هذا الاقتراح؟,action
+UX-LEARNER-001,learner-001.dismiss,Dismiss,إخفاء,action
+UX-LEARNER-001,learner-001.retry,Retry,أعد المحاولة,action
+UX-LEARNER-001,learner-001.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-002,learner-002.edit-goals,Edit goals,تعديل الأهداف,action
+UX-LEARNER-002,learner-002.retry,Retry,أعد المحاولة,action
+UX-LEARNER-002,learner-002.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-003,learner-003.goal,Goal,الهدف,filter
+UX-LEARNER-003,learner-003.duration,Duration,المدة,filter
+UX-LEARNER-003,learner-003.retry,Retry,أعد المحاولة,action
+UX-LEARNER-003,learner-003.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-004,learner-004.retry,Retry,أعد المحاولة,action
+UX-LEARNER-004,learner-004.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-005,learner-005.request-teacher-change,Request teacher change,طلب تغيير المعلم,action
+UX-LEARNER-005,learner-005.specialty,Specialty,التخصص,filter
+UX-LEARNER-005,learner-005.gender,Gender,معلم/معلمة,filter
+UX-LEARNER-005,learner-005.times-that-suit-me,Times that suit me,أوقات تناسبني,filter
+UX-LEARNER-005,learner-005.retry,Retry,أعد المحاولة,action
+UX-LEARNER-005,learner-005.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-006,learner-006.retry,Retry,أعد المحاولة,action
+UX-LEARNER-006,learner-006.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-007,learner-007.export-ics,Export ICS,تصدير ICS,action
+UX-LEARNER-007,learner-007.previous,Previous,السابق,action
+UX-LEARNER-007,learner-007.next,Next,التالي,action
+UX-LEARNER-007,learner-007.retry,Retry,أعد المحاولة,action
+UX-LEARNER-007,learner-007.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-008,learner-008.slide-to-confirm-booking,Slide to confirm booking,اسحب لتأكيد الحجز,slide
+UX-LEARNER-008,learner-008.retry,Retry,أعد المحاولة,action
+UX-LEARNER-008,learner-008.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-009,learner-009.join-opens-10-min-before,Join opens 10 min before,يمكنك الدخول قبل الحصة بـ١٠ دقائق,disabled
+UX-LEARNER-009,learner-009.cancel-lesson,Cancel lesson,إلغاء الحصة,action
+UX-LEARNER-009,learner-009.retry,Retry,أعد المحاولة,action
+UX-LEARNER-009,learner-009.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-010,learner-010.retry,Retry,أعد المحاولة,action
+UX-LEARNER-010,learner-010.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-011,learner-011.retry,Retry,أعد المحاولة,action
+UX-LEARNER-011,learner-011.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-012,learner-012.previous-versions,Previous versions,النسخ السابقة,action
+UX-LEARNER-012,learner-012.why-this,Why this?,لماذا هذا الاقتراح؟,action
+UX-LEARNER-012,learner-012.dismiss,Dismiss,إخفاء,action
+UX-LEARNER-012,learner-012.retry,Retry,أعد المحاولة,action
+UX-LEARNER-012,learner-012.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-013,learner-013.previous,Previous,السابق,action
+UX-LEARNER-013,learner-013.listen-to-approved-reciter-licence-pendi,Listen to approved reciter (licence pending),استمع للقارئ المعتمد (بانتظار الترخيص),disabled
+UX-LEARNER-013,learner-013.next,Next,التالي,action
+UX-LEARNER-013,learner-013.retry,Retry,أعد المحاولة,action
+UX-LEARNER-013,learner-013.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-014,learner-014.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-LEARNER-014,learner-014.retry,Retry,أعد المحاولة,action
+UX-LEARNER-014,learner-014.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-015,learner-015.status-all,Status: all,الحالة: الكل,filter
+UX-LEARNER-015,learner-015.due-first,Due first,المستحق أولًا,filter
+UX-LEARNER-015,learner-015.retry,Retry,أعد المحاولة,action
+UX-LEARNER-015,learner-015.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-016,learner-016.start-recording,Start recording,ابدأ التسجيل,action
+UX-LEARNER-016,learner-016.send-to-teacher,Send to teacher,أرسل للمعلم,disabled
+UX-LEARNER-016,learner-016.retry,Retry,أعد المحاولة,action
+UX-LEARNER-016,learner-016.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-017,learner-017.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-LEARNER-017,learner-017.start,Start,ابدأ,disabled
+UX-LEARNER-017,learner-017.retry,Retry,أعد المحاولة,action
+UX-LEARNER-017,learner-017.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-018,learner-018.previous,Previous,السابق,action
+UX-LEARNER-018,learner-018.next,Next,التالي,action
+UX-LEARNER-018,learner-018.retry,Retry,أعد المحاولة,action
+UX-LEARNER-018,learner-018.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-019,learner-019.retry,Retry,أعد المحاولة,action
+UX-LEARNER-019,learner-019.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-020,learner-020.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-LEARNER-020,learner-020.retry,Retry,أعد المحاولة,action
+UX-LEARNER-020,learner-020.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-021,learner-021.retry,Retry,أعد المحاولة,action
+UX-LEARNER-021,learner-021.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-022,learner-022.retry,Retry,أعد المحاولة,action
+UX-LEARNER-022,learner-022.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-023,learner-023.start-recording,Start recording,ابدأ التسجيل,action
+UX-LEARNER-023,learner-023.retry,Retry,أعد المحاولة,action
+UX-LEARNER-023,learner-023.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-024,learner-024.retry,Retry,أعد المحاولة,action
+UX-LEARNER-024,learner-024.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-025,learner-025.submit-request,Submit request,أرسل الطلب,action
+UX-LEARNER-025,learner-025.retry,Retry,أعد المحاولة,action
+UX-LEARNER-025,learner-025.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-026,learner-026.download-pdf,Download PDF,تنزيل PDF,action
+UX-LEARNER-026,learner-026.retry,Retry,أعد المحاولة,action
+UX-LEARNER-026,learner-026.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-027,learner-027.why-this,Why this?,لماذا هذا الاقتراح؟,action
+UX-LEARNER-027,learner-027.dismiss,Dismiss,إخفاء,action
+UX-LEARNER-027,learner-027.retry,Retry,أعد المحاولة,action
+UX-LEARNER-027,learner-027.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-028,learner-028.program,Program,البرنامج,filter
+UX-LEARNER-028,learner-028.type,Type,النوع,filter
+UX-LEARNER-028,learner-028.retry,Retry,أعد المحاولة,action
+UX-LEARNER-028,learner-028.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-029,learner-029.retry,Retry,أعد المحاولة,action
+UX-LEARNER-029,learner-029.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-030,learner-030.mark-all-read,Mark all read,تحديد الكل كمقروء,action
+UX-LEARNER-030,learner-030.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-LEARNER-030,learner-030.retry,Retry,أعد المحاولة,action
+UX-LEARNER-030,learner-030.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-031,learner-031.urgent-report,Urgent report,بلاغ عاجل,action
+UX-LEARNER-031,learner-031.submit,Submit,أرسل,action
+UX-LEARNER-031,learner-031.retry,Retry,أعد المحاولة,action
+UX-LEARNER-031,learner-031.reconnect,Reconnect,أعد الاتصال,action
+UX-LEARNER-032,learner-032.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-LEARNER-032,learner-032.export-my-data,Export my data,تصدير بياناتي,action
+UX-LEARNER-032,learner-032.request-account-deletion,Request account deletion,طلب حذف الحساب,action
+UX-LEARNER-032,learner-032.retry,Retry,أعد المحاولة,action
+UX-LEARNER-032,learner-032.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-000,mobile-000.retry,Retry,أعد المحاولة,action
+UX-MOBILE-000,mobile-000.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-001,mobile-001.show-password,Show / hide password,إظهار / إخفاء كلمة المرور,action
+UX-MOBILE-001,mobile-001.retry,Retry,أعد المحاولة,action
+UX-MOBILE-001,mobile-001.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-002,mobile-002.slide-to-join-lesson,Slide to join lesson,اسحب لدخول الحصة,slide
+UX-MOBILE-002,mobile-002.why-this,Why this?,لماذا هذا الاقتراح؟,action
+UX-MOBILE-002,mobile-002.dismiss,Dismiss,إخفاء,action
+UX-MOBILE-002,mobile-002.retry,Retry,أعد المحاولة,action
+UX-MOBILE-002,mobile-002.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-003,mobile-003.retry,Retry,أعد المحاولة,action
+UX-MOBILE-003,mobile-003.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-004,mobile-004.retry,Retry,أعد المحاولة,action
+UX-MOBILE-004,mobile-004.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-005,mobile-005.retry,Retry,أعد المحاولة,action
+UX-MOBILE-005,mobile-005.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-006,mobile-006.why-this,Why this?,لماذا هذا الاقتراح؟,action
+UX-MOBILE-006,mobile-006.dismiss,Dismiss,إخفاء,action
+UX-MOBILE-006,mobile-006.retry,Retry,أعد المحاولة,action
+UX-MOBILE-006,mobile-006.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-007,mobile-007.submit-exam,Submit exam,سلّم الاختبار,disabled
+UX-MOBILE-007,mobile-007.retry,Retry,أعد المحاولة,action
+UX-MOBILE-007,mobile-007.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-008,mobile-008.retry,Retry,أعد المحاولة,action
+UX-MOBILE-008,mobile-008.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-009,mobile-009.retry,Retry,أعد المحاولة,action
+UX-MOBILE-009,mobile-009.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-010,mobile-010.slide-to-publish,Slide to publish,اسحب للنشر,slide
+UX-MOBILE-010,mobile-010.retry,Retry,أعد المحاولة,action
+UX-MOBILE-010,mobile-010.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-011,mobile-011.retry,Retry,أعد المحاولة,action
+UX-MOBILE-011,mobile-011.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-012,mobile-012.retry,Retry,أعد المحاولة,action
+UX-MOBILE-012,mobile-012.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-K02,mobile-k02.retry,Retry,أعد المحاولة,action
+UX-MOBILE-K02,mobile-k02.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-K05,mobile-k05.retry,Retry,أعد المحاولة,action
+UX-MOBILE-K05,mobile-k05.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-K08,mobile-k08.retry,Retry,أعد المحاولة,action
+UX-MOBILE-K08,mobile-k08.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-K11,mobile-k11.retry,Retry,أعد المحاولة,action
+UX-MOBILE-K11,mobile-k11.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-S02,mobile-s02.retry,Retry,أعد المحاولة,action
+UX-MOBILE-S02,mobile-s02.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-S04,mobile-s04.retry,Retry,أعد المحاولة,action
+UX-MOBILE-S04,mobile-s04.reconnect,Reconnect,أعد الاتصال,action
+UX-MOBILE-S11,mobile-s11.call-now,Call now,اتصل الآن,action
+UX-MOBILE-S11,mobile-s11.send-a-message,Send a message,أرسل رسالة,action
+UX-MOBILE-S11,mobile-s11.retry,Retry,أعد المحاولة,action
+UX-MOBILE-S11,mobile-s11.reconnect,Reconnect,أعد الاتصال,action
+UX-PUBLIC-001,public-001.retry,Retry,أعد المحاولة,action
+UX-PUBLIC-001,public-001.reconnect,Reconnect,أعد الاتصال,action
+UX-PUBLIC-002,public-002.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-PUBLIC-002,public-002.goal,Goal,الهدف,filter
+UX-PUBLIC-002,public-002.level,Level,المستوى,filter
+UX-PUBLIC-002,public-002.lesson-language,Lesson language,لغة الحصة,filter
+UX-PUBLIC-002,public-002.retry,Retry,أعد المحاولة,action
+UX-PUBLIC-002,public-002.reconnect,Reconnect,أعد الاتصال,action
+UX-PUBLIC-003,public-003.retry,Retry,أعد المحاولة,action
+UX-PUBLIC-003,public-003.reconnect,Reconnect,أعد الاتصال,action
+UX-PUBLIC-004,public-004.retry,Retry,أعد المحاولة,action
+UX-PUBLIC-004,public-004.reconnect,Reconnect,أعد الاتصال,action
+UX-PUBLIC-005,public-005.specialty,Specialty,التخصص,filter
+UX-PUBLIC-005,public-005.language,Language,لغة الحصة,filter
+UX-PUBLIC-005,public-005.teacher-gender,Teacher gender,معلم/معلمة,filter
+UX-PUBLIC-005,public-005.age-group,Age group,الفئة العمرية,filter
+UX-PUBLIC-005,public-005.retry,Retry,أعد المحاولة,action
+UX-PUBLIC-005,public-005.reconnect,Reconnect,أعد الاتصال,action
+UX-PUBLIC-006,public-006.retry,Retry,أعد المحاولة,action
+UX-PUBLIC-006,public-006.reconnect,Reconnect,أعد الاتصال,action
+UX-PUBLIC-007,public-007.retry,Retry,أعد المحاولة,action
+UX-PUBLIC-007,public-007.reconnect,Reconnect,أعد الاتصال,action
+UX-PUBLIC-008,public-008.retry,Retry,أعد المحاولة,action
+UX-PUBLIC-008,public-008.reconnect,Reconnect,أعد الاتصال,action
+UX-PUBLIC-009,public-009.next-week,Next week,الأسبوع التالي,action
+UX-PUBLIC-009,public-009.slide-to-confirm-booking,Slide to confirm booking,اسحب لتأكيد الحجز,slide
+UX-PUBLIC-009,public-009.retry,Retry,أعد المحاولة,action
+UX-PUBLIC-009,public-009.reconnect,Reconnect,أعد الاتصال,action
+UX-PUBLIC-010,public-010.retry,Retry,أعد المحاولة,action
+UX-PUBLIC-010,public-010.reconnect,Reconnect,أعد الاتصال,action
+UX-PUBLIC-011,public-011.send,Send,أرسل,action
+UX-PUBLIC-011,public-011.retry,Retry,أعد المحاولة,action
+UX-PUBLIC-011,public-011.reconnect,Reconnect,أعد الاتصال,action
+UX-PUBLIC-012,public-012.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-PUBLIC-012,public-012.download-pdf,Download PDF,تنزيل PDF,action
+UX-PUBLIC-012,public-012.retry,Retry,أعد المحاولة,action
+UX-PUBLIC-012,public-012.reconnect,Reconnect,أعد الاتصال,action
+UX-SUP-001,sup-001.retry,Retry,أعد المحاولة,action
+UX-SUP-001,sup-001.reconnect,Reconnect,أعد الاتصال,action
+UX-SUP-002,sup-002.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-SUP-002,sup-002.slide-to-approve,Slide to approve,اسحب للاعتماد,slide
+UX-SUP-002,sup-002.request-changes,Request changes,اطلب تعديلًا,action
+UX-SUP-002,sup-002.retry,Retry,أعد المحاولة,action
+UX-SUP-002,sup-002.reconnect,Reconnect,أعد الاتصال,action
+UX-SUP-003,sup-003.assess,Assess,قيّم,action
+UX-SUP-003,sup-003.assess,Assess,قيّم,action
+UX-SUP-003,sup-003.save,Save,احفظ,action
+UX-SUP-003,sup-003.retry,Retry,أعد المحاولة,action
+UX-SUP-003,sup-003.reconnect,Reconnect,أعد الاتصال,action
+UX-SUP-004,sup-004.break-glass-reviewed,Break-glass (reviewed),وصول طارئ (يُراجع),disabled
+UX-SUP-004,sup-004.retry,Retry,أعد المحاولة,action
+UX-SUP-004,sup-004.reconnect,Reconnect,أعد الاتصال,action
+UX-SUP-005,sup-005.assign-independent-reviewer,Assign independent reviewer,أسند لمراجع مستقل,action
+UX-SUP-005,sup-005.review,Review,راجع,action
+UX-SUP-005,sup-005.retry,Retry,أعد المحاولة,action
+UX-SUP-005,sup-005.reconnect,Reconnect,أعد الاتصال,action
+UX-SUP-006,sup-006.retry,Retry,أعد المحاولة,action
+UX-SUP-006,sup-006.reconnect,Reconnect,أعد الاتصال,action
+UX-SUP-007,sup-007.retry,Retry,أعد المحاولة,action
+UX-SUP-007,sup-007.reconnect,Reconnect,أعد الاتصال,action
+UX-SUP-008,sup-008.revoke,Revoke,إلغاء,action
+UX-SUP-008,sup-008.revoke,Revoke,إلغاء,action
+UX-SUP-008,sup-008.revoke,Revoke,إلغاء,action
+UX-SUP-008,sup-008.review,Review,راجع,action
+UX-SUP-008,sup-008.revoke,Revoke,إلغاء,action
+UX-SUP-008,sup-008.revoke,Revoke,إلغاء,action
+UX-SUP-008,sup-008.revoke,Revoke,إلغاء,action
+UX-SUP-008,sup-008.new-assignment,New assignment,إسناد جديد,action
+UX-SUP-008,sup-008.role,Role,الدور,filter
+UX-SUP-008,sup-008.market,Market,السوق,filter
+UX-SUP-008,sup-008.program,Program,البرنامج,filter
+UX-SUP-008,sup-008.sort-staff,Sort by Staff,ترتيب حسب الموظف,sort
+UX-SUP-008,sup-008.sort-role,Sort by Role,ترتيب حسب الدور,sort
+UX-SUP-008,sup-008.sort-scope,Sort by Scope,ترتيب حسب النطاق,sort
+UX-SUP-008,sup-008.sort-starts,Sort by Starts,ترتيب حسب يبدأ,sort
+UX-SUP-008,sup-008.sort-ends,Sort by Ends,ترتيب حسب ينتهي,sort
+UX-SUP-008,sup-008.sort-status,Sort by Status,ترتيب حسب الحالة,sort
+UX-SUP-008,sup-008.next-page,Next page,الصفحة التالية,pager
+UX-SUP-008,sup-008.previous-page,Previous page,الصفحة السابقة,disabled
+UX-SUP-008,sup-008.retry,Retry,أعد المحاولة,action
+UX-SUP-008,sup-008.reconnect,Reconnect,أعد الاتصال,action
+UX-SUP-009,sup-009.type,Type,النوع,filter
+UX-SUP-009,sup-009.staff,Staff,الموظف,filter
+UX-SUP-009,sup-009.review-state,Review state,حالة المراجعة,filter
+UX-SUP-009,sup-009.sort-time-utc,Sort by Time (UTC),ترتيب حسب الوقت (UTC),sort
+UX-SUP-009,sup-009.sort-staff,Sort by Staff,ترتيب حسب الموظف,sort
+UX-SUP-009,sup-009.sort-type,Sort by Type,ترتيب حسب النوع,sort
+UX-SUP-009,sup-009.sort-object,Sort by Object,ترتيب حسب الكائن,sort
+UX-SUP-009,sup-009.sort-reason,Sort by Reason,ترتيب حسب السبب,sort
+UX-SUP-009,sup-009.sort-review,Sort by Review,ترتيب حسب المراجعة,sort
+UX-SUP-009,sup-009.next-page,Next page,الصفحة التالية,pager
+UX-SUP-009,sup-009.previous-page,Previous page,الصفحة السابقة,disabled
+UX-SUP-009,sup-009.record-review-outcome,Record review outcome,سجّل نتيجة المراجعة,disabled
+UX-SUP-009,sup-009.retry,Retry,أعد المحاولة,action
+UX-SUP-009,sup-009.reconnect,Reconnect,أعد الاتصال,action
+UX-SUP-010,sup-010.draft-edit,Draft edit,مسودة تعديل,action
+UX-SUP-010,sup-010.draft-edit,Draft edit,مسودة تعديل,action
+UX-SUP-010,sup-010.draft-edit,Draft edit,مسودة تعديل,action
+UX-SUP-010,sup-010.draft-edit,Draft edit,مسودة تعديل,action
+UX-SUP-010,sup-010.draft-edit,Draft edit,مسودة تعديل,action
+UX-SUP-010,sup-010.draft-edit,Draft edit,مسودة تعديل,action
+UX-SUP-010,sup-010.review,Review,راجع,action
+UX-SUP-010,sup-010.draft-change,Draft change,مسودة تغيير,action
+UX-SUP-010,sup-010.domain,Domain,المجال,filter
+UX-SUP-010,sup-010.scope,Scope,النطاق,filter
+UX-SUP-010,sup-010.status,Status,الحالة,filter
+UX-SUP-010,sup-010.sort-key,Sort by Key,ترتيب حسب المفتاح,sort
+UX-SUP-010,sup-010.sort-effective-value,Sort by Effective value,ترتيب حسب القيمة الفعّالة,sort
+UX-SUP-010,sup-010.sort-inherited-from,Sort by Inherited from,ترتيب حسب موروثة من,sort
+UX-SUP-010,sup-010.sort-version,Sort by Version,ترتيب حسب النسخة,sort
+UX-SUP-010,sup-010.sort-status,Sort by Status,ترتيب حسب الحالة,sort
+UX-SUP-010,sup-010.next-page,Next page,الصفحة التالية,pager
+UX-SUP-010,sup-010.previous-page,Previous page,الصفحة السابقة,disabled
+UX-SUP-010,sup-010.retry,Retry,أعد المحاولة,action
+UX-SUP-010,sup-010.reconnect,Reconnect,أعد الاتصال,action
+UX-SUP-011,sup-011.namespace-booking,Namespace: booking.*,النطاق: booking.*,filter
+UX-SUP-011,sup-011.status,Status,الحالة,filter
+UX-SUP-011,sup-011.sort-key,Sort by Key,ترتيب حسب المفتاح,sort
+UX-SUP-011,sup-011.sort-arabic,Sort by Arabic,ترتيب حسب العربية,sort
+UX-SUP-011,sup-011.sort-english,Sort by English,ترتيب حسب English,sort
+UX-SUP-011,sup-011.sort-status,Sort by Status,ترتيب حسب الحالة,sort
+UX-SUP-011,sup-011.next-page,Next page,الصفحة التالية,pager
+UX-SUP-011,sup-011.previous-page,Previous page,الصفحة السابقة,disabled
+UX-SUP-011,sup-011.retry,Retry,أعد المحاولة,action
+UX-SUP-011,sup-011.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-001,teacher-001.retry,Retry,أعد المحاولة,action
+UX-TEACHER-001,teacher-001.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-002,teacher-002.retry,Retry,أعد المحاولة,action
+UX-TEACHER-002,teacher-002.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-003,teacher-003.add-exception,Add exception,إضافة استثناء,action
+UX-TEACHER-003,teacher-003.retry,Retry,أعد المحاولة,action
+UX-TEACHER-003,teacher-003.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-004,teacher-004.retry,Retry,أعد المحاولة,action
+UX-TEACHER-004,teacher-004.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-005,teacher-005.retry,Retry,أعد المحاولة,action
+UX-TEACHER-005,teacher-005.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-006,teacher-006.highlight-ayah,Highlight ayah,تظليل الآية,action
+UX-TEACHER-006,teacher-006.add-note,Add note,إضافة ملاحظة,action
+UX-TEACHER-006,teacher-006.share-passage,Share passage,مشاركة المقطع,action
+UX-TEACHER-006,teacher-006.retry,Retry,أعد المحاولة,action
+UX-TEACHER-006,teacher-006.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-007,teacher-007.slide-to-publish-to-learner,Slide to publish to learner,اسحب للنشر للمتعلم,slide
+UX-TEACHER-007,teacher-007.save-draft,Save draft,احفظ مسودة,action
+UX-TEACHER-007,teacher-007.why-this,Why this?,لماذا هذا الاقتراح؟,action
+UX-TEACHER-007,teacher-007.dismiss,Dismiss,إخفاء,action
+UX-TEACHER-007,teacher-007.retry,Retry,أعد المحاولة,action
+UX-TEACHER-007,teacher-007.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-008,teacher-008.level,Level,المستوى,filter
+UX-TEACHER-008,teacher-008.program,Program,البرنامج,filter
+UX-TEACHER-008,teacher-008.needs-attention,Needs attention,يحتاج انتباه,filter
+UX-TEACHER-008,teacher-008.retry,Retry,أعد المحاولة,action
+UX-TEACHER-008,teacher-008.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-009,teacher-009.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-TEACHER-009,teacher-009.retry,Retry,أعد المحاولة,action
+UX-TEACHER-009,teacher-009.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-010,teacher-010.approve-assessment,Approve assessment,اعتمد التقييم,action
+UX-TEACHER-010,teacher-010.save-draft,Save draft,احفظ مسودة,action
+UX-TEACHER-010,teacher-010.retry,Retry,أعد المحاولة,action
+UX-TEACHER-010,teacher-010.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-011,teacher-011.tabs,Tabs filter the list in place; selection is kept in the URL query,تبويبات تصفّي القائمة في نفس الصفحة,tabs
+UX-TEACHER-011,teacher-011.slide-to-approve-plan,Slide to approve plan,اسحب لاعتماد الخطة,slide
+UX-TEACHER-011,teacher-011.edit-then-approve,Edit then approve,عدّل ثم اعتمد,action
+UX-TEACHER-011,teacher-011.reject-with-reason,Reject with reason,ارفض مع سبب,action
+UX-TEACHER-011,teacher-011.retry,Retry,أعد المحاولة,action
+UX-TEACHER-011,teacher-011.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-012,teacher-012.review,Review,راجع,action
+UX-TEACHER-012,teacher-012.review,Review,راجع,action
+UX-TEACHER-012,teacher-012.approve,Approve,اعتمد,action
+UX-TEACHER-012,teacher-012.request-changes,Request changes,اطلب تعديلًا,action
+UX-TEACHER-012,teacher-012.retry,Retry,أعد المحاولة,action
+UX-TEACHER-012,teacher-012.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-013,teacher-013.retry,Retry,أعد المحاولة,action
+UX-TEACHER-013,teacher-013.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-014,teacher-014.play-recording,Play recording,تشغيل التسجيل,action
+UX-TEACHER-014,teacher-014.save-score,Save score,احفظ الدرجة,action
+UX-TEACHER-014,teacher-014.retry,Retry,أعد المحاولة,action
+UX-TEACHER-014,teacher-014.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-015,teacher-015.listen-to-segment,Listen to segment,استمع للمقطع,action
+UX-TEACHER-015,teacher-015.retry,Retry,أعد المحاولة,action
+UX-TEACHER-015,teacher-015.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-016,teacher-016.open-dispute,Open dispute,افتح نزاعًا,action
+UX-TEACHER-016,teacher-016.retry,Retry,أعد المحاولة,action
+UX-TEACHER-016,teacher-016.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-017,teacher-017.safeguarding-report,Safeguarding report,بلاغ حماية,action
+UX-TEACHER-017,teacher-017.submit,Submit,أرسل,action
+UX-TEACHER-017,teacher-017.retry,Retry,أعد المحاولة,action
+UX-TEACHER-017,teacher-017.reconnect,Reconnect,أعد الاتصال,action
+UX-TEACHER-018,teacher-018.save,Save,احفظ,action
+UX-TEACHER-018,teacher-018.retry,Retry,أعد المحاولة,action
+UX-TEACHER-018,teacher-018.reconnect,Reconnect,أعد الاتصال,action
+UX-VPC-001,vpc-001.retry,Retry,أعد المحاولة,action
+UX-VPC-001,vpc-001.reconnect,Reconnect,أعد الاتصال,action
+UX-VPC-002,vpc-002.show-password,Show / hide password,إظهار / إخفاء كلمة المرور,action
+UX-VPC-002,vpc-002.rotate-needs-2nd-approval,Rotate (needs 2nd approval),تدوير (يحتاج اعتمادًا ثانيًا),action
+UX-VPC-002,vpc-002.test-connection,Test connection,اختبر الاتصال,action
+UX-VPC-002,vpc-002.retry,Retry,أعد المحاولة,action
+UX-VPC-002,vpc-002.reconnect,Reconnect,أعد الاتصال,action
+UX-VPC-003,vpc-003.retry,Retry,أعد المحاولة,action
+UX-VPC-003,vpc-003.reconnect,Reconnect,أعد الاتصال,action
+UX-VPC-004,vpc-004.retry,Retry,أعد المحاولة,action
+UX-VPC-004,vpc-004.reconnect,Reconnect,أعد الاتصال,action
+UX-VPC-005,vpc-005.retry,Retry,أعد المحاولة,action
+UX-VPC-005,vpc-005.reconnect,Reconnect,أعد الاتصال,action
+UX-VPC-006,vpc-006.approve,Approve,اعتمد,action
+UX-VPC-006,vpc-006.reject,Reject,ارفض,action
+UX-VPC-006,vpc-006.roll-back-to-v7-new-lessons,Roll back to v7 (new lessons),تراجع إلى v7 (للحصص الجديدة),action
+UX-VPC-006,vpc-006.retry,Retry,أعد المحاولة,action
+UX-VPC-006,vpc-006.reconnect,Reconnect,أعد الاتصال,action
+UX-VPC-007,vpc-007.retry,Retry,أعد المحاولة,action
+UX-VPC-007,vpc-007.reconnect,Reconnect,أعد الاتصال,action
+UX-VPC-008,vpc-008.move-to-new-room-videosdk,Move to new room (VideoSDK),انقل لقاعة جديدة (VideoSDK),action
+UX-VPC-008,vpc-008.retry,Retry,أعد المحاولة,action
+UX-VPC-008,vpc-008.reconnect,Reconnect,أعد الاتصال,action
+UX-VPC-009,vpc-009.open-google-meet,Open Google Meet,افتح Google Meet,action
+UX-VPC-009,vpc-009.retry,Retry,أعد المحاولة,action
+UX-VPC-009,vpc-009.reconnect,Reconnect,أعد الاتصال,action
+UX-VPC-010,vpc-010.retry,Retry,أعد المحاولة,action
+UX-VPC-010,vpc-010.reconnect,Reconnect,أعد الاتصال,action

@@ -1,0 +1,9 @@
+flowchart TD
+  A[User selects local wall time] --> B{IANA local time valid?}
+  B -->|Nonexistent| C[Show valid alternatives]
+  B -->|Ambiguous| D[Show both offsets and instants]
+  B -->|Unique| E[Convert to UTC]
+  D --> F[User selects one offset]
+  F --> E
+  C --> A
+  E --> G[Persist UTC and timezone snapshot]

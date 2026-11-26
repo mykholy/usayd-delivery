@@ -1,0 +1,15 @@
+flowchart TD
+  W[Web AR RTL and EN LTR] --> API[Laravel API v1]
+  M[Flutter Mobile] --> API
+  A[Admin and Supervisor] --> API
+  API --> DB[(MySQL database)]
+  API --> R[(Redis queues and cache)]
+  API --> V[Video adapter facade]
+  API --> P[Payments adapter facade]
+  API --> LE[Learning and AI orchestration]
+  V --> LI[LiveKit]
+  V --> VI[VideoSDK]
+  V --> DA[Daily]
+  V --> Z[Zoom]
+  V --> GM[Google Meet external]
+  LE --> Q[Approved Quran content and academic verification]

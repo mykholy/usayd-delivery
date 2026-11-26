@@ -1,0 +1,58 @@
+{
+  "updated_at": "2026-11-24T05:22:00Z",
+  "operator": "Principal Full Stack Engineer & Autonomous Delivery Operator",
+  "active_workspace": "C:\\laragon\\www\\Usayd",
+  "jira": {
+    "site": "https://mykholy.atlassian.net",
+    "project_key": "USYD",
+    "total_mapped_items": 42,
+    "s00_items": 32,
+    "s01_items": 10,
+    "auth_status": "CREDENTIALS_REQUIRED_FOR_LIVE_REST_API",
+    "sync_queue_count": 18
+  },
+  "repositories": {
+    "usayd-api": {
+      "remote": "https://github.com/mykholy/usayd-api",
+      "main_commit": "6565e69",
+      "merged_prs": [1],
+      "open_prs": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      "last_implemented_task": "USYD-T0030 (USYD-69)",
+      "next_task": "USYD-T0031 (USYD-70)"
+    },
+    "usayd-flutter": {
+      "remote": "https://github.com/mykholy/usayd-flutter",
+      "main_branch": "main",
+      "assignee": "ahmedmmdouh9000@gmail.com",
+      "merged_prs": [],
+      "open_prs": [1, 2, 3, 4, 5, 6],
+      "last_implemented_task": "USYD-T0080 (USYD-73)",
+      "next_task": "USYD-T0081 (USYD-74)"
+    },
+    "usayd-web": {
+      "remote": "https://github.com/mykholy/usayd-web",
+      "main_branch": "main",
+      "status": "Ready for web foundation tasks"
+    }
+  },
+  "sprint_s00_summary": {
+    "total_tasks": 32,
+    "engineering_done_or_in_review": 10,
+    "specifications_done": 2,
+    "owner_decisions_dossier_ready": 20,
+    "status": "Engineering and specifications complete; awaiting human PR approvals and owner decision sign-offs"
+  },
+  "sprint_s01_summary": {
+    "total_tasks": 10,
+    "in_review": 6,
+    "to_do": 4,
+    "implemented_prs": [
+      {"pr": 8, "task": "USYD-T0027", "jira": "USYD-66", "repo": "usayd-api", "ci": "SUCCESS"},
+      {"pr": 9, "task": "USYD-T0028", "jira": "USYD-67", "repo": "usayd-api", "ci": "SUCCESS"},
+      {"pr": 10, "task": "USYD-T0029", "jira": "USYD-68", "repo": "usayd-api", "ci": "SUCCESS"},
+      {"pr": 11, "task": "USYD-T0030", "jira": "USYD-69", "repo": "usayd-api", "ci": "SUCCESS"},
+      {"pr": 5, "task": "USYD-T0079", "jira": "USYD-72", "repo": "usayd-flutter", "ci": "SUCCESS"},
+      {"pr": 6, "task": "USYD-T0080", "jira": "USYD-73", "repo": "usayd-flutter", "ci": "SUCCESS"}
+    ]
+  }
+}

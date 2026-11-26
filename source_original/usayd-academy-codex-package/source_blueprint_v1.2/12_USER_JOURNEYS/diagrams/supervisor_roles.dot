@@ -1,0 +1,4 @@
+digraph G{rankdir=LR;graph[bgcolor="transparent",pad=.5];node[shape=box,style="rounded,filled",color="#d8e5df",fillcolor="#f6faf7",fontname="DejaVu Sans",fontsize=12,margin=".22,.16"];edge[color="#528c7a",penwidth=1.5];A[label="Supervisor request"];B[label="Role + active MFA"];C[label="Region / Program /
+Assignment scope"];D[label="Purpose + consent
++ separation duties"];E[label="Minimized record
++ immutable audit",fillcolor="#e2f5ec"];X[label="403 + audit",fillcolor="#ffebeb",color="#e4a5a5"];A->B->C->D->E;B->X[label="deny"];C->X;D->X;}

@@ -1,0 +1,18 @@
+﻿Blocks Epic,Dependent Epic,Reason
+E01,E02,"Foundational profile, auth and consent before plan enrollment"
+E01,E03,Teacher staff access and qualification approvals
+E02,E04,Approved programs needed for slots
+E03,E04,Teacher availability and eligibility before booking
+E05,E04,Payment entitlement before paid booking
+E04,E06,Lesson identity and schedule before provider conference
+E06,E08,Live oral tests require meeting capability
+E08,E09,Approved assessment evidence feeds plan
+E09,E10,Level/memory state influences contest eligibility
+E08,E10,Rubric/question bank required before contests
+E01,E11,Consent and authorization before audio AI
+E08,E11,Evidence-backed planning needs assessed levels
+E04,E07,Eligible attended lessons feed compensation
+E06,E15,Native SDK adapter must be validated for Flutter
+E16,E05,Fraud and security before paid release
+E16,E10,Age privacy before leaderboard
+E16,E11,Privacy and safeguarding before AI analysis

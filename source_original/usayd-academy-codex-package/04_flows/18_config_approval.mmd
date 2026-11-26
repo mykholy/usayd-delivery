@@ -1,0 +1,9 @@
+flowchart TD
+  A[Admin edits settings draft] --> B[Schema and scope validation]
+  B --> C[Impact diff preview]
+  C --> D{Sensitive configuration?}
+  D -->|Yes| E[Independent reviewer and MFA]
+  D -->|No| F[Authorized publish]
+  E --> F
+  F --> G[Versioned effective change]
+  G --> H[Audit rollback future version]

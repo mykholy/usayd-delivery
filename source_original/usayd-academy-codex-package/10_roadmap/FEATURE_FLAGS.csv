@@ -1,0 +1,13 @@
+﻿flag,controls,blocked_by,default,behaviour_while_off,journeys
+guardian_consent_v1,"Minor guardian flow (invite, decide, resend, queue)","O-04, O-05",off,Minors stay in limited mode; no paid learning,J02
+quran_source_v1,Quran text/reference features,O-06,off,Placeholders + teacher-entered references only,"J08, J09"
+payroll_v1,"Pay runs, statements, disputes",O-08,off,Teachers see “statements coming soon”,J15
+auto_renew_v1,Auto-renewal consent,O-02 + PSP,off,Manual renewal only,J05
+refunds_v1,Self-service refund requests,O-02,off,Refunds via support ticket,J05
+library_v1,Recorded library,FR-MEDIA-001 licences,off,Library tab hidden,J08
+break_glass_v1,Emergency access to safeguarding cases,D-39,off,Only assigned officers,J14
+competition_rewards_v1,Material prizes,O-07,off,Badges/certificates of participation only,J10
+kids_mode,Kids / Simple app styles,"D-35, D-36, D-37",off,Professional mode for everyone,J17
+ai_audio_analysis,AI analysis of recitation audio,O-05,off,Teacher-only assessment,J08
+recording_v1,Lesson recording,O-05 + provider capability,off,No recording,J06
+market_<cc>,Per-market activation,"O-01, O-02",off per market,Waitlist (P-22),J16

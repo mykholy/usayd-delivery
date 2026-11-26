@@ -1,0 +1,11 @@
+sequenceDiagram
+  participant Learner
+  participant Support
+  participant Safety
+  participant Academic
+  Learner->>Support: Submit sensitive report
+  Support->>Safety: Scoped safeguarding case minimal details
+  Safety->>Safety: Verify purpose and evidence access
+  Safety->>Academic: Request permissible academic context
+  Academic-->>Safety: Minimal authorized context
+  Safety-->>Learner: Appropriate resolution notification

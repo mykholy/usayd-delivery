@@ -1,0 +1,5 @@
+digraph G{rankdir=TB;graph[bgcolor="transparent",pad=.5,ranksep=.7,nodesep=.35];node[shape=box,style="rounded,filled",color="#d8e5df",fillcolor="#f6faf7",fontname="DejaVu Sans",fontsize=12,margin=".21,.15"];edge[color="#528c7a",penwidth=1.5];W[label="Web AR/EN RTL/LTR"];M[label="Flutter Mobile"];ADM[label="Admin + Supervisors"];API[label="Laravel /api/v1
+ABAC · Content · Scheduling · Currency",fillcolor="#e4f2eb"];DB[label="MySQL / Redis / Audit"];V[label="Video adapters
+Meet · Zoom · Daily · VideoSDK · LiveKit"];PAY[label="Payment gateways
+per merchant & country"];AI[label="Academic + AI orchestration
+Human-approved Quran data"];W->API;M->API;ADM->API;API->DB;API->V;API->PAY;API->AI;}

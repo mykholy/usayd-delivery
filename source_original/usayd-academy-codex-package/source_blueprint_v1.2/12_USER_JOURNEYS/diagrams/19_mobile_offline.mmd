@@ -1,0 +1,10 @@
+flowchart TD
+  A[Mobile offline] --> B[Read cached approved study data]
+  B --> C[Enter local practice draft]
+  C --> D[Encrypt local draft and queue sync]
+  D --> E{Connection restored?}
+  E -->|No| D
+  E -->|Yes| F[Submit idempotent versioned sync]
+  F --> G{Conflict?}
+  G -->|Yes| H[Show merge/review with no silent overwrite]
+  G -->|No| I[Saved verified progress]

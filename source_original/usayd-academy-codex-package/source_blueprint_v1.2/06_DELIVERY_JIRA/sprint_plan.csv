@@ -1,0 +1,15 @@
+﻿Sprint,Suggested weeks,Phase,Focus
+S00,1–2,P0,"Contracts, user interviews, sources, teacher recruitment and vendor POC"
+S01,3–4,P0,"Design foundations, API framework, IAM and consent"
+S02,5–6,P0,"Teacher directory, program catalog, schedule"
+S03,7–8,P0,"Subscriptions, payments, ledger, protected booking"
+S04,9–10,P0,Provider join/attendance and teacher classroom/report
+S05,11–12,P0,"MVP UAT, stabilization, pilot launch"
+S06,13–14,P1,Assessment bank and rubric versioning
+S07,15–16,P1,"Adaptive review, plan and memory map"
+S08,17–18,P1,"Competition creation, eligibility and execution"
+S09,19–20,P1,"Judging, appeal, certificates and privacy"
+S10,21–22,P1,AI evidence plans and teacher copilot
+S11,23–25,P1,Consented policy analysis pilots + eval and cost
+S12,26–28,P2,Flutter learner and native provider integration
+S13,29–32,P2,"Flutter teacher, mobile security, optimization"

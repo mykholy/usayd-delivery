@@ -1,0 +1,67 @@
+﻿Issue Type,Summary,Description,Labels,Priority,External_ID,Parent_External_ID,Candidate_Sprint,Repository,Story_Points
+Epic,[FOUNDATION] Architecture & Environment Foundations,"Full scope epic for Architecture & Environment Foundations; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-FOUNDATION",usayd-spec-handoff usayd-epic usyd-e-foundation,High,USYD-E-FOUNDATION,,,,
+Epic,[CONTRACTS] API Contract & State Alignment,"Full scope epic for API Contract & State Alignment; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-CONTRACTS",usayd-spec-handoff usayd-epic usyd-e-contracts,High,USYD-E-CONTRACTS,,,,
+Epic,[WEB] Next.js Web Platform Foundations,"Full scope epic for Next.js Web Platform Foundations; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-WEB",usayd-spec-handoff usayd-epic usyd-e-web,High,USYD-E-WEB,,,,
+Epic,[FLUTTER] Flutter App Foundations,"Full scope epic for Flutter App Foundations; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-FLUTTER",usayd-spec-handoff usayd-epic usyd-e-flutter,High,USYD-E-FLUTTER,,,,
+Epic,[QUALITY] Test Engineering & Acceptance,"Full scope epic for Test Engineering & Acceptance; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-QUALITY",usayd-spec-handoff usayd-epic usyd-e-quality,High,USYD-E-QUALITY,,,,
+Epic,"[OPERATIONS] Infrastructure, Security Operations & Observability","Full scope epic for Infrastructure, Security Operations & Observability; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-OPERATIONS",usayd-spec-handoff usayd-epic usyd-e-operations,High,USYD-E-OPERATIONS,,,,
+Epic,"[PRODUCT] Owner Decisions, Content & Governance","Full scope epic for Owner Decisions, Content & Governance; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-PRODUCT",usayd-spec-handoff usayd-epic usyd-e-product,High,USYD-E-PRODUCT,,,,
+Epic,"[RELEASE] Production Launch, UAT & Handover","Full scope epic for Production Launch, UAT & Handover; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-RELEASE",usayd-spec-handoff usayd-epic usyd-e-release,High,USYD-E-RELEASE,,,,
+Epic,"[IAM] Identity, Sessions & Guardian","Full scope epic for Identity, Sessions & Guardian; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-IAM",usayd-spec-handoff usayd-epic usyd-e-iam,High,USYD-E-IAM,,,,
+Epic,"[SEC] Security, Audit, Governance","Full scope epic for Security, Audit, Governance; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-SEC",usayd-spec-handoff usayd-epic usyd-e-sec,High,USYD-E-SEC,,,,
+Epic,"[I18N] Localization, RTL & Locale","Full scope epic for Localization, RTL & Locale; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-I18N",usayd-spec-handoff usayd-epic usyd-e-i18n,High,USYD-E-I18N,,,,
+Epic,"[GEO] Markets, Regions & Country Activation","Full scope epic for Markets, Regions & Country Activation; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-GEO",usayd-spec-handoff usayd-epic usyd-e-geo,High,USYD-E-GEO,,,,
+Epic,[PROF] Learner Profiles & Onboarding,"Full scope epic for Learner Profiles & Onboarding; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-PROF",usayd-spec-handoff usayd-epic usyd-e-prof,High,USYD-E-PROF,,,,
+Epic,"[CURR] Curriculum, Programs & Licensed Quran","Full scope epic for Curriculum, Programs & Licensed Quran; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-CURR",usayd-spec-handoff usayd-epic usyd-e-curr,High,USYD-E-CURR,,,,
+Epic,[TCHR] Teachers & Availability,"Full scope epic for Teachers & Availability; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-TCHR",usayd-spec-handoff usayd-epic usyd-e-tchr,High,USYD-E-TCHR,,,,
+Epic,"[TIME] Timezones, DST & Scheduling","Full scope epic for Timezones, DST & Scheduling; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-TIME",usayd-spec-handoff usayd-epic usyd-e-time,High,USYD-E-TIME,,,,
+Epic,[BOOK] Booking Engine & Credits,"Full scope epic for Booking Engine & Credits; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-BOOK",usayd-spec-handoff usayd-epic usyd-e-book,High,USYD-E-BOOK,,,,
+Epic,[VIDEO] Live Classroom & Video,"Full scope epic for Live Classroom & Video; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-VIDEO",usayd-spec-handoff usayd-epic usyd-e-video,High,USYD-E-VIDEO,,,,
+Epic,[VPC] Video Provider Console,"Full scope epic for Video Provider Console; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-VPC",usayd-spec-handoff usayd-epic usyd-e-vpc,High,USYD-E-VPC,,,,
+Epic,[ATT] Attendance & Lesson Reports,"Full scope epic for Attendance & Lesson Reports; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-ATT",usayd-spec-handoff usayd-epic usyd-e-att,High,USYD-E-ATT,,,,
+Epic,"[PLAN] Learning Plans, Revision & Memory Map","Full scope epic for Learning Plans, Revision & Memory Map; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-PLAN",usayd-spec-handoff usayd-epic usyd-e-plan,High,USYD-E-PLAN,,,,
+Epic,[ASMT] Assessments & Examinations,"Full scope epic for Assessments & Examinations; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-ASMT",usayd-spec-handoff usayd-epic usyd-e-asmt,High,USYD-E-ASMT,,,,
+Epic,[NOTIF] Notifications & Communication,"Full scope epic for Notifications & Communication; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-NOTIF",usayd-spec-handoff usayd-epic usyd-e-notif,High,USYD-E-NOTIF,,,,
+Epic,"[PAY] Pricing, Checkout, Subscriptions & Refunds","Full scope epic for Pricing, Checkout, Subscriptions & Refunds; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-PAY",usayd-spec-handoff usayd-epic usyd-e-pay,High,USYD-E-PAY,,,,
+Epic,[PAYROLL] Teacher Contracts & Payroll,"Full scope epic for Teacher Contracts & Payroll; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-PAYROLL",usayd-spec-handoff usayd-epic usyd-e-payroll,High,USYD-E-PAYROLL,,,,
+Epic,"[CONTEST] Competitions, Judging & Appeals","Full scope epic for Competitions, Judging & Appeals; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-CONTEST",usayd-spec-handoff usayd-epic usyd-e-contest,High,USYD-E-CONTEST,,,,
+Epic,"[ENG] Engagement, Badges & Achievements","Full scope epic for Engagement, Badges & Achievements; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-ENG",usayd-spec-handoff usayd-epic usyd-e-eng,High,USYD-E-ENG,,,,
+Epic,"[AI] AI Assistance, Consent & Evaluation","Full scope epic for AI Assistance, Consent & Evaluation; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-AI",usayd-spec-handoff usayd-epic usyd-e-ai,High,USYD-E-AI,,,,
+Epic,[SUP] Supervisor Workspaces & Scopes,"Full scope epic for Supervisor Workspaces & Scopes; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-SUP",usayd-spec-handoff usayd-epic usyd-e-sup,High,USYD-E-SUP,,,,
+Epic,"[ADMIN] Administration, KPIs & Settings","Full scope epic for Administration, KPIs & Settings; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-ADMIN",usayd-spec-handoff usayd-epic usyd-e-admin,High,USYD-E-ADMIN,,,,
+Epic,"[CRM] CRM, Support & Safeguarding","Full scope epic for CRM, Support & Safeguarding; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-CRM",usayd-spec-handoff usayd-epic usyd-e-crm,High,USYD-E-CRM,,,,
+Epic,"[MEDIA] Media, Recordings & Library","Full scope epic for Media, Recordings & Library; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-MEDIA",usayd-spec-handoff usayd-epic usyd-e-media,High,USYD-E-MEDIA,,,,
+Epic,[MOB] Mobile App & Offline Sync,"Full scope epic for Mobile App & Offline Sync; backed by original source specification and generated task handoffs.
+External stable ID: USYD-E-MOB",usayd-spec-handoff usayd-epic usyd-e-mob,High,USYD-E-MOB,,,,

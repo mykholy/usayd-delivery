@@ -1,0 +1,10 @@
+flowchart TD
+  A[Guest loads localized site] --> B{Saved selected country?}
+  B -->|Yes| C[Use selected market]
+  B -->|No| D[Show coarse IP hint or country selector]
+  D --> E[User selects country]
+  C --> F{Market active?}
+  E --> F
+  F -->|Yes| G[Load active price book and programs]
+  F -->|No| H[Waitlist or unavailable notice]
+  G --> I[Quote currency and checkout eligibility]

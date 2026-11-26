@@ -1,0 +1,7 @@
+flowchart TD
+  A[Request classroom AI or recording] --> B{Provider supports on region and client?}
+  B -->|Verified| C{Purpose consent and legal eligibility?}
+  B -->|Unknown| X[Disable safely with explanation]
+  B -->|Unsupported| X
+  C -->|Yes| D[Enable required capability]
+  C -->|No| X

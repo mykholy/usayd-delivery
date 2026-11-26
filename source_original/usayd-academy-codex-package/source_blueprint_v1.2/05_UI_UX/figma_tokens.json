@@ -1,0 +1,81 @@
+{
+  "version": "v1.2-draft",
+  "brand": {
+    "darkGreen": "#102E2B",
+    "primary": "#176B60",
+    "secondary": "#2E8A7D",
+    "gold": "#B58B49",
+    "canvas": "#F7FAF8",
+    "surface": "#FFFFFF",
+    "text": "#172726",
+    "muted": "#61736E",
+    "border": "#DDE7E3",
+    "danger": "#B94545",
+    "warning": "#B27A2E",
+    "focus": "#78DDC9"
+  },
+  "spacings": {
+    "xs": 4,
+    "sm": 8,
+    "md": 16,
+    "lg": 24,
+    "xl": 32,
+    "2xl": 48
+  },
+  "radii": {
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24
+  },
+  "breakpoints": {
+    "mobileMin": 360,
+    "mobile": 390,
+    "tablet": 768,
+    "desktop": 1440
+  },
+  "fonts": {
+    "uiArabic": "Tajawal",
+    "uiLatin": "Inter",
+    "quranText": "to-be-licensed-verified-typeface"
+  },
+  "internationalization": {
+    "locales": [
+      "ar",
+      "en"
+    ],
+    "direction": {
+      "ar": "rtl",
+      "en": "ltr"
+    },
+    "currencyExamples": [
+      "EGP",
+      "SAR",
+      "AED",
+      "KWD"
+    ],
+    "timezoneLabel": "{localDate} ({ianaZone} UTC{offset})",
+    "markets": "explicit_user_choice"
+  },
+  "components": {
+    "inputHeight": 48,
+    "minTouchTarget": 44,
+    "sidebarWidth": 256,
+    "bodyFont": 16,
+    "focusRingWidth": 3
+  },
+  "icons": {
+    "calendar": "calendar-clock",
+    "currency": "wallet-cards",
+    "market": "globe-2",
+    "teacher": "graduation-cap",
+    "learner": "book-open-check",
+    "provider": "video",
+    "competition": "trophy",
+    "security": "shield-check",
+    "supervision": "clipboard-check",
+    "AI": "brain-circuit",
+    "audit": "history",
+    "country": "earth"
+  }
+}

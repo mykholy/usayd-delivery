@@ -1,0 +1,10 @@
+flowchart TD
+  A[Supervisor calls sensitive endpoint] --> B{Active role and MFA?}
+  B -->|No| X[403 deny and audit]
+  B -->|Yes| C{Region program and assignment scope?}
+  C -->|No| X
+  C -->|Yes| D{Purpose and consent valid?}
+  D -->|No| X
+  D -->|Yes| E{Approval separation satisfied?}
+  E -->|No| X
+  E -->|Yes| F[Return minimal allowed data]

@@ -1,0 +1,8 @@
+flowchart TD
+  A[Unified learner sign up] --> B{Age requires guardian authorization?}
+  B -->|No| C[Continue placement]
+  B -->|Yes| D[Collect guardian minimal contact and consent version]
+  D --> E{Verified permission?}
+  E -->|No| F[Restricted pending state]
+  E -->|Yes| C
+  C --> G[Enroll and schedule]

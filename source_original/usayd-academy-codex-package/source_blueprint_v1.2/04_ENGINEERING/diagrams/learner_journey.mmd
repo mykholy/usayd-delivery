@@ -1,0 +1,21 @@
+flowchart TD
+ A[Landing] --> B[Unified Learner Signup]
+ B --> C{Minor?}
+ C -->|Yes| D[Guardian verification and consent]
+ C -->|No| E[Onboarding]
+ D --> E
+ E --> F[Assessment]
+ F --> G[Suggested learning plan]
+ G --> H[Teacher approval]
+ H --> I[Subscription payment]
+ I --> J[Book lesson]
+ J --> K[Video Provider Join]
+ K --> L[Teacher report]
+ L --> M[Revision queue]
+ M --> N[Adaptive exam]
+ N --> O[Competition eligible?]
+ O -->|Yes| P[Contest and fair judging]
+ O -->|No| M
+ P --> M
+ M --> Q[Renewal]
+ Q --> J

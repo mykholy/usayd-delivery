@@ -1,0 +1,11 @@
+sequenceDiagram
+  participant Learner
+  participant AI
+  participant Teacher
+  participant Supervisor
+  Learner->>Teacher: Baseline evaluation
+  Teacher->>AI: Verified rubric evidence
+  AI-->>Teacher: Draft plan with provenance
+  Teacher->>Supervisor: Propose version for review
+  Supervisor-->>Teacher: Approve or request change
+  Teacher-->>Learner: Published verified plan

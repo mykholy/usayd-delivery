@@ -1,0 +1,26 @@
+# Mermaid diagrams index
+
+- `01_market_selection.mmd`: 01 market selection
+- `02_locale_independence.mmd`: 02 locale independence
+- `03_payment_quote.mmd`: 03 payment quote
+- `04_time_zone_booking.mmd`: 04 time zone booking
+- `05_dst_ambiguity.mmd`: 05 dst ambiguity
+- `06_video_provider_switch.mmd`: 06 video provider switch
+- `07_video_failover.mmd`: 07 video failover
+- `08_minor_guardian_consent.mmd`: 08 minor guardian consent
+- `09_teacher_shift.mmd`: 09 teacher shift
+- `10_academic_plan_approval.mmd`: 10 academic plan approval
+- `11_supervisor_abac.mmd`: 11 supervisor abac
+- `12_competition.mmd`: 12 competition
+- `13_assessment_adaptive.mmd`: 13 assessment adaptive
+- `14_payroll.mmd`: 14 payroll
+- `15_localized_notifications.mmd`: 15 localized notifications
+- `16_provider_capability_matrix.mmd`: 16 provider capability matrix
+- `17_support_incident.mmd`: 17 support incident
+- `18_config_approval.mmd`: 18 config approval
+- `19_mobile_offline.mmd`: 19 mobile offline
+- `20_learning_retention.mmd`: 20 learning retention
+- `21_platform_architecture.mmd`: 21 platform architecture
+- `22_supervisor_case.mmd`: 22 supervisor case
+- `23_teacher_selection.mmd`: 23 teacher selection
+- `24_country_activation.mmd`: 24 country activation
