@@ -56,15 +56,15 @@
       "all": {
         "total": 10,
         "Done": 1,
-        "In Progress": 1,
-        "In Review": 1,
+        "In Progress": 0,
+        "In Review": 2,
         "To Do": 7
       },
       "non_flutter": {
         "total": 6,
         "Done": 1,
-        "In Progress": 1,
-        "In Review": 1,
+        "In Progress": 0,
+        "In Review": 2,
         "To Do": 3
       },
       "flutter_read_only": {
@@ -76,7 +76,7 @@
       }
     }
   },
-  "api_main": "4dc2c69bcb4bcf8eebe2f849c9d77350cbe414f7",
+  "api_main": "c4e2a5b45b318dd22a1597a6e5f376e8d9dd1232",
   "api_prs_18_to_30": [
     {
       "number": 18,
@@ -926,7 +926,7 @@
       "jira": "USYD-79",
       "stable_id": "USYD-T0036",
       "summary": "[USYD-T0036] Secret scanning, dependency pinning and SBOM",
-      "status": "In Progress",
+      "status": "In Review",
       "sprint": "planned-s02",
       "scope": "non-flutter",
       "labels": [
@@ -1050,10 +1050,10 @@
     {
       "number": 31,
       "title": "USYD-T0036: secret scanning, locked dependency audit and SBOM",
-      "state": "open",
-      "merged": false,
+      "state": "closed",
+      "merged": true,
       "head": "46b817be1be6d5238b99ab8b64a1112a3025f884",
-      "merge_commit": null,
+      "merge_commit": "c4e2a5b45b318dd22a1597a6e5f376e8d9dd1232",
       "url": "https://github.com/mykholy/usayd-api/pull/31",
       "checks": [
         {
