@@ -56,15 +56,15 @@
       "all": {
         "total": 10,
         "Done": 1,
-        "In Progress": 1,
-        "In Review": 0,
+        "In Progress": 0,
+        "In Review": 1,
         "To Do": 8
       },
       "non_flutter": {
         "total": 6,
         "Done": 1,
-        "In Progress": 1,
-        "In Review": 0,
+        "In Progress": 0,
+        "In Review": 1,
         "To Do": 4
       },
       "flutter_read_only": {
@@ -76,7 +76,7 @@
       }
     }
   },
-  "api_main": "8c88d7108eb212e764c3909c809a3b1a5d78cbd7",
+  "api_main": "4dc2c69bcb4bcf8eebe2f849c9d77350cbe414f7",
   "api_prs_18_to_30": [
     {
       "number": 18,
@@ -189,36 +189,39 @@
     {
       "number": 30,
       "title": "USYD-T0034: staging release readiness and reversible migration protocol",
-      "state": "open",
-      "merged": false,
-      "head": "59aca38d92c656ddf010408163aa68cd9eee876f",
-      "merge_commit": null,
+      "state": "closed",
+      "merged": true,
+      "head": "4651885fda7644f7fde3691fd426043da9760c84",
+      "merge_commit": "4dc2c69bcb4bcf8eebe2f849c9d77350cbe414f7",
       "url": "https://github.com/mykholy/usayd-api/pull/30",
       "checks": [
         {
-          "name": "Independent PR Code Quality Review",
-          "status": "completed",
-          "conclusion": "success",
-          "id": 45871905475
-        },
-        {
+          "id": 45883983912,
           "name": "API CI",
           "status": "completed",
-          "conclusion": "success",
-          "id": 45871905443
+          "conclusion": "success"
+        },
+        {
+          "id": 45883983873,
+          "name": "Independent PR Code Quality Review",
+          "status": "completed",
+          "conclusion": "success"
         }
       ]
     }
   ],
   "latest_verified_merged_api_ci": {
-    "pr": 29,
-    "run": 45869097094,
+    "pr": 30,
+    "run": 45883983912,
     "tests": 178,
     "assertions": 1689,
     "openapi_operations": 16,
     "contract_fixtures": 13,
     "s3": "SeaweedFS isolated S3-compatible service",
-    "antivirus": "real ClamAV engine synthetic signature"
+    "antivirus": "real ClamAV engine synthetic signature",
+    "release_readiness_tests": 10,
+    "release_readiness": "passed isolated production-mode API",
+    "review_threads_resolved": 2
   },
   "issues": [
     {
@@ -890,7 +893,7 @@
       "jira": "USYD-77",
       "stable_id": "USYD-T0034",
       "summary": "[USYD-T0034] Staging deploy & reversible migration protocol",
-      "status": "In Progress",
+      "status": "In Review",
       "sprint": "planned-s02",
       "scope": "non-flutter",
       "labels": [
@@ -900,7 +903,9 @@
         "production-provisioning-deferred",
         "region-candidate-frankfurt",
         "usayd-spec-handoff",
-        "usyd-t0034"
+        "usyd-t0034",
+        "merged-verified",
+        "deployment-evidence-pending"
       ]
     },
     {
