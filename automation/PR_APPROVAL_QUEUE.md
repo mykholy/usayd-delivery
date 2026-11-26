@@ -25,3 +25,5 @@ PR #31: [Supply-chain security](https://github.com/mykholy/usayd-api/pull/31) �
 PR #38: [Versioned OpenAPI publication](https://github.com/mykholy/usayd-api/pull/38) — merged `a7f430be28fe9edad0f5b7eb8c51787ad0b7be8f`; all three exact-head checks passed. 178 PHPUnit/1689 assertions, 11 compatibility fixtures, 16 operations, SHA256 verified, candidate artifact 15152959071. USYD-80 In Review pending consumer validation and approved release artifact.
 
 Dependabot activation verified: #32–37 open update proposals; all three checks green at observed heads. No major upgrades merged.
+
+PR #39: [Operational bootstrap and verified API runbooks](https://github.com/mykholy/usayd-api/pull/39) — open; head `b14d8ed87666075f595b9db4d09d83f85e5f94b8`; API CI: in_progress; Supply chain security: success; Independent PR Code Quality Review: success. Cross-team documentation and named specialist acceptance remain pending.
