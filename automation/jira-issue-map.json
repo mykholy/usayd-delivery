@@ -451,10 +451,15 @@
     "USYD-T0035": {
       "jira_key": "USYD-78",
       "summary": "[USYD-T0035] Documentation, operational bootstrap & ADRs",
-      "status": "To Do",
+      "status": "In Progress",
       "status_source": "live Jira",
       "candidate_sprint": "planned-s02",
-      "scope": "non-flutter"
+      "scope": "non-flutter",
+      "latest_verified_api_pr": 39,
+      "latest_verified_api_pr_url": "https://github.com/mykholy/usayd-api/pull/39",
+      "latest_verified_api_pr_state": "open",
+      "latest_verified_api_head": "b14d8ed87666075f595b9db4d09d83f85e5f94b8",
+      "latest_verified_merge_commit": null
     },
     "USYD-T0036": {
       "jira_key": "USYD-79",
