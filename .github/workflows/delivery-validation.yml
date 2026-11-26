@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Test source integrity verification
+        run: python3 -m unittest discover -s automation -p test_source_integrity.py
       - name: Validate immutable specification and task baseline
         run: python3 automation/preflight.py
       - name: Validate live overlay and screen catalog
