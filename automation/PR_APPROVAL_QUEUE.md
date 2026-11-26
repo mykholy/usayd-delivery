@@ -26,4 +26,4 @@ PR #38: [Versioned OpenAPI publication](https://github.com/mykholy/usayd-api/pul
 
 Dependabot activation verified: #32–37 open update proposals; all three checks green at observed heads. No major upgrades merged.
 
-PR #39: [Operational bootstrap and verified API runbooks](https://github.com/mykholy/usayd-api/pull/39) — open; head `b14d8ed87666075f595b9db4d09d83f85e5f94b8`; API CI: in_progress; Supply chain security: success; Independent PR Code Quality Review: success. Cross-team documentation and named specialist acceptance remain pending.
+PR #39: [Operational bootstrap](https://github.com/mykholy/usayd-api/pull/39) — merged `607751653902f53d4f751047589a4bee73e0e2e6`; all three checks passed; 178 PHPUnit/1689 assertions, 4 operational fixtures, platform and Artisan inventory verified. Cross-team docs and named approvers pending.
