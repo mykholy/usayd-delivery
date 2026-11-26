@@ -10,7 +10,7 @@
   },
   "repositories": {
     "usayd-api": {
-      "main_commit": "c4e2a5b45b318dd22a1597a6e5f376e8d9dd1232",
+      "main_commit": "a7f430be28fe9edad0f5b7eb8c51787ad0b7be8f",
       "latest_prs": [
         {
           "number": 18,
@@ -189,6 +189,44 @@
             "artifact_id": 15148814537,
             "security_run": 45885591977
           }
+        },
+        {
+          "number": 38,
+          "title": "USYD-T0037: versioned OpenAPI publication and compatibility gate",
+          "state": "closed",
+          "merged": true,
+          "head": "7654a0a3cbec7f71e5d92c66da7a920bc43f2bd8",
+          "merge_commit": "a7f430be28fe9edad0f5b7eb8c51787ad0b7be8f",
+          "url": "https://github.com/mykholy/usayd-api/pull/38",
+          "checks": [
+            {
+              "id": 45895582278,
+              "name": "Independent PR Code Quality Review",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "id": 45895582417,
+              "name": "Supply chain security",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "id": 45895582294,
+              "name": "API CI",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ],
+          "contract_publication": {
+            "version": "0.1.0",
+            "operations": 16,
+            "compatibility_tests": 11,
+            "artifact_id": 15152959071,
+            "artifact_scope": "candidate PR merge test, not approved production release",
+            "tested_commit": "568d23ba429eaf9eab0ff626598447c6d79269b1",
+            "sha256": "3e5c083e95d30c88274f8bb62ad6bff460fde4a468e8608d01b421228db648e4"
+          }
         }
       ]
     },
@@ -251,15 +289,15 @@
         "total": 10,
         "Done": 1,
         "In Progress": 0,
-        "In Review": 2,
-        "To Do": 7
+        "In Review": 3,
+        "To Do": 6
       },
       "non_flutter": {
         "total": 6,
         "Done": 1,
         "In Progress": 0,
-        "In Review": 2,
-        "To Do": 3
+        "In Review": 3,
+        "To Do": 2
       },
       "flutter_read_only": {
         "total": 4,
