@@ -10,7 +10,7 @@
   },
   "repositories": {
     "usayd-api": {
-      "main_commit": "8c88d7108eb212e764c3909c809a3b1a5d78cbd7",
+      "main_commit": "4dc2c69bcb4bcf8eebe2f849c9d77350cbe414f7",
       "latest_prs": [
         {
           "number": 18,
@@ -123,23 +123,23 @@
         {
           "number": 30,
           "title": "USYD-T0034: staging release readiness and reversible migration protocol",
-          "state": "open",
-          "merged": false,
-          "head": "59aca38d92c656ddf010408163aa68cd9eee876f",
-          "merge_commit": null,
+          "state": "closed",
+          "merged": true,
+          "head": "4651885fda7644f7fde3691fd426043da9760c84",
+          "merge_commit": "4dc2c69bcb4bcf8eebe2f849c9d77350cbe414f7",
           "url": "https://github.com/mykholy/usayd-api/pull/30",
           "checks": [
             {
-              "name": "Independent PR Code Quality Review",
-              "status": "completed",
-              "conclusion": "success",
-              "id": 45871905475
-            },
-            {
+              "id": 45883983912,
               "name": "API CI",
               "status": "completed",
-              "conclusion": "success",
-              "id": 45871905443
+              "conclusion": "success"
+            },
+            {
+              "id": 45883983873,
+              "name": "Independent PR Code Quality Review",
+              "status": "completed",
+              "conclusion": "success"
             }
           ]
         }
@@ -203,15 +203,15 @@
       "all": {
         "total": 10,
         "Done": 1,
-        "In Progress": 1,
-        "In Review": 0,
+        "In Progress": 0,
+        "In Review": 1,
         "To Do": 8
       },
       "non_flutter": {
         "total": 6,
         "Done": 1,
-        "In Progress": 1,
-        "In Review": 0,
+        "In Progress": 0,
+        "In Review": 1,
         "To Do": 4
       },
       "flutter_read_only": {
