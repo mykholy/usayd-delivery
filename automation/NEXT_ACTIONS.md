@@ -6,7 +6,7 @@ Source: [LIVE_DELIVERY_STATE.json](LIVE_DELIVERY_STATE.json). S00 and S01 are no
 2. USYD-54: verify branch protection/ruleset and repository governance without weakening protections. USYD-81 depends on it.
 3. USYD-71 and USYD-39: engineering merged (#26/#28/#29); legal/DPO retention and data transfer approval remain. No recording/AI activation or destructive lifecycle.
 4. USYD-64 release coordination; USYD-65 authentic content and licenses.
-5. USYD-78 operations docs; USYD-79 security/SBOM; USYD-80 contracts; USYD-81 web foundation.
+5. USYD-79 / API PR #31 in progress: locked dependency audit, Dependabot, Gitleaks and Composer component SBOM; exact-head CI and review pending. USYD-78 operational docs and USYD-80 contracts remain To Do; USYD-81 web depends on USYD-54.
 6. Flutter implementation belongs to mobile developer; status read only.
 
 Read exact screen specs, HTML/Canvas, FR, API, permissions and tasks before coding. [Design navigation](../management/DESIGN_IMPLEMENTATION_GUIDE.md). Preserve source hashes; refresh verified snapshots, never replay stale transitions.
