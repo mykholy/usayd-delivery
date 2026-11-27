@@ -10,15 +10,15 @@
       "all": {
         "total": 32,
         "Done": 11,
-        "In Progress": 19,
-        "In Review": 1,
+        "In Progress": 18,
+        "In Review": 2,
         "To Do": 1
       },
       "non_flutter": {
         "total": 28,
         "Done": 7,
-        "In Progress": 19,
-        "In Review": 1,
+        "In Progress": 18,
+        "In Review": 2,
         "To Do": 1
       },
       "flutter_read_only": {
@@ -564,7 +564,7 @@
       "jira": "USYD-54",
       "stable_id": "USYD-T0021",
       "summary": "[USYD-T0021] 3-repository creation, permissions & ownership",
-      "status": "In Progress",
+      "status": "In Review",
       "sprint": "planned-s00",
       "scope": "non-flutter",
       "labels": [
@@ -1025,14 +1025,14 @@
     }
   ],
   "blockers": [
-    "USYD-54 live branch protection not verified",
     "USYD-71 legal/DPO retention approval and real AWS deployment gates",
     "USYD-64 coordination review",
     "USYD-65 owner content/licensing approval",
     "USYD-77 real deployment deferred by owner",
     "USYD-78 named specialist approvers unassigned; owner confirmation 2026-11-27",
     "USYD-81 hard prerequisite USYD-54",
-    "Delivery CI fails without job steps/logs"
+    "USYD-54 owner-confirmed rulesets; verify nested checks/independent reviewer evidence before closing",
+    "Delivery PR #1 green CI on 02e1714; independent review check unavailable"
   ],
   "infrastructure": {
     "provisioning": "deferred by owner",
@@ -1205,31 +1205,48 @@
         "default_branch": "main",
         "main_exists": true,
         "owner_permission": "admin",
-        "live_rulesets": "unverified"
+        "live_rulesets": "owner-confirmed; not directly inspected",
+        "visibility": "public"
       },
       {
         "name": "usayd-web",
         "default_branch": "main",
         "main_exists": true,
         "owner_permission": "admin",
-        "live_rulesets": "unverified"
+        "live_rulesets": "owner-confirmed; not directly inspected",
+        "visibility": "public"
       },
       {
         "name": "usayd-flutter",
         "default_branch": "main",
         "main_exists": true,
         "owner_permission": "admin",
-        "live_rulesets": "unverified"
+        "live_rulesets": "owner-confirmed; not directly inspected",
+        "visibility": "public"
       },
       {
         "name": "usayd-delivery",
         "default_branch": "main",
         "main_exists": true,
         "owner_permission": "admin",
-        "live_rulesets": "unverified"
+        "live_rulesets": "Active main, visible core settings verified; nested settings collapsed",
+        "visibility": "public"
       }
     ],
     "evidence": "architecture/REPOSITORY_GOVERNANCE_EVIDENCE.md",
-    "web_bootstrap": "blocked by USYD-54"
+    "web_bootstrap": "USYD-54 In Review; prerequisite not yet closed",
+    "owner_visibility_decision": "public",
+    "owner_ruleset_confirmation": "All four equivalent Protect main rulesets with repo-specific status checks",
+    "delivery_ruleset": {
+      "id": 28216946,
+      "active": true,
+      "default_target": "main",
+      "bypass_empty": true,
+      "restrict_deletions": true,
+      "require_pr": true,
+      "require_status_checks": true,
+      "block_force_push": true,
+      "nested_settings": "not visible; owner attestation for status checks"
+    }
   }
 }
