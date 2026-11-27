@@ -21,3 +21,7 @@ The repository metadata and collaborator permission do not prove protection or e
 [API rules](https://github.com/mykholy/usayd-api/settings/rules) · [Web rules](https://github.com/mykholy/usayd-web/settings/rules) · [Flutter rules](https://github.com/mykholy/usayd-flutter/settings/rules) · [Delivery rules](https://github.com/mykholy/usayd-delivery/settings/rules).
 
 USYD-54 remains In Progress; USYD-81 has a hard prerequisite on USYD-T0021. No next-stage bootstrap merge or completion while this gate remains open. No new personal access token or production credential requested.
+
+## Owner confirmation and direct evidence — 2026-11-27
+
+All four repositories now public (GitHub metadata); owner explicitly accepts visibility and confirmed equivalent Protect main rulesets with repository-specific checks. Delivery Ruleset [28216946](https://github.com/mykholy/usayd-delivery/settings/rules/28216946) screenshot and authenticated page show Active, default main, empty bypass, restricted deletion, required PR/status checks, and blocked force pushes. Nested check names, strict-up-to-date and conversation resolution were collapsed; other repositories owner-attested, not directly inspected. No specialist reviewers appointed. USYD-54 advanced to In Review, not Done. No settings changed by agent. Delivery validation passed on 02e1714 (run 45911306404); independent review check not available. Web prerequisite remains open.
