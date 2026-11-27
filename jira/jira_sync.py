@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Idempotent Jira Cloud work-item import. Requires Python stdlib only; run locally with a Jira API token.
 Usage: JIRA_BASE_URL=... JIRA_EMAIL=... JIRA_API_TOKEN=... JIRA_PROJECT_KEY=USAYD python jira/jira_sync.py --dry-run
-Then remove --dry-run to create. Does not auto-start/close sprints or change status.
+Full-stack scope only; excludes Flutter epics/tasks. Inspect --plan-only offline first.
+A real creation run requires --apply; existing projects must use live reconciliation instead.
+Does not auto-start/close sprints or change status.
 """
 import argparse,base64,csv,json,os,re,sys,time,urllib.request,urllib.parse,urllib.error
 from pathlib import Path
@@ -31,6 +33,37 @@ def rows(path):
     with open(ROOT/path,encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
 def adf(text):
     return {'type':'doc','version':1,'content':[{'type':'paragraph','content':[{'type':'text','text':s[:30000]}]} for s in (text or '').split('\n\n') if s.strip()] or [{'type':'paragraph','content':[{'type':'text','text':'See original source package'}]}]}
+FULL_STACK_REPOSITORIES = frozenset({"api", "web", "qa", "docs", "ops"})
+FLUTTER_EPIC = "USYD-E-FLUTTER"
+
+def full_stack_items(epics, tasks):
+    """Validate the complete import plan before any network request or write."""
+    included, excluded, known = [], [], set()
+    for row in [*epics, *tasks]:
+        external = row["External_ID"]
+        if not external or external in known:
+            raise ValueError("Missing or duplicate external ID: " + external)
+        known.add(external)
+        repo = row["Repository"].strip().lower()
+        labels = set(row["Labels"].lower().split())
+        is_flutter = (external == FLUTTER_EPIC or row["Parent_External_ID"] == FLUTTER_EPIC
+                      or repo == "flutter" or "flutter" in labels
+                      or row["Summary"].strip().upper().startswith("[FLUTTER]"))
+        if is_flutter:
+            excluded.append(row)
+            continue
+        if row["Issue Type"] == "Epic":
+            if repo or row["Parent_External_ID"]:
+                raise ValueError("Unexpected epic scope: " + external)
+        elif repo not in FULL_STACK_REPOSITORIES:
+            raise ValueError("Unknown repository scope: " + external)
+        included.append(row)
+    allowed = {r["External_ID"] for r in included}
+    for row in included:
+        if row["Parent_External_ID"] and row["Parent_External_ID"] not in allowed:
+            raise ValueError("Parent outside full-stack import: " + row["External_ID"])
+    return included, excluded
+
 def ensure_issue(row,parent_key=None,dry=False):
     external=row['External_ID'];existing=state.get(external)
     if existing:return existing,'cached'
@@ -49,10 +82,18 @@ def ensure_issue(row,parent_key=None,dry=False):
         raise
     key=res['key'];state[external]=key;state_file.write_text(json.dumps(state,indent=2));return key,'created'
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--dry-run',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser()
+    mode=parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument('--plan-only',action='store_true',help='Offline scope validation; no credentials or Jira requests')
+    mode.add_argument('--dry-run',action='store_true',help='Read-only Jira lookups')
+    mode.add_argument('--apply',action='store_true',help='Explicit creation of missing full-stack issues')
+    args=parser.parse_args()
+    items,excluded=full_stack_items(rows('JIRA_IMPORT_EPICS.csv'),rows('JIRA_IMPORT_WORK_ITEMS.csv'))
+    print(f'Full-stack import: {len(items)} included; {len(excluded)} Flutter rows excluded.')
+    if args.plan_only:
+        return
     if not base or not email or not token:raise SystemExit('Configure JIRA_BASE_URL/JIRA_EMAIL/JIRA_API_TOKEN securely (never commit them).')
     p=api('GET','/rest/api/3/project/'+urllib.parse.quote(project));print('Project',p.get('key'),p.get('name'))
-    items=rows('JIRA_IMPORT_EPICS.csv')+rows('JIRA_IMPORT_WORK_ITEMS.csv')
     for r in items:
         parent=state.get(r['Parent_External_ID']) if r['Parent_External_ID'] else None
         if r['Parent_External_ID'] and not parent and not args.dry_run:raise RuntimeError('No parent map for '+r['External_ID'])
