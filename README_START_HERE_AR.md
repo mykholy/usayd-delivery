@@ -15,7 +15,7 @@
 1. اقرأ `management/DECISIONS_AND_GATES.md` والقرارات المعلقة؛ لا تفعل وظائف مدفوعة أو تخص القاصرين بدون اعتماد.
 2. أنشئ أو تحقّق من المستودعات الثلاثة: `usayd-api`, `usayd-web`, `usayd-flutter`. كل واحد repo مستقل.
 3. جهّز قواعد حماية main وSecrets وCI وفق `automation/README.md`.
-4. بعد عودة Jira، أنشئ مشروع Scrum واحدًا وادخل المهام عبر `jira/jira_sync.py` ثم اربط Sprints/Dependencies. إن لم تعد الخدمة، استخدم ملفات CSV محليًا مع حالة BLOCKED بدل الادعاء برفعها.
+4. مشروع Jira الحالي موجود بالفعل؛ لا تعِد استيراد الحزمة أو تشغيل طوابير تاريخية. للتأسيس الأول فقط في مشروع جديد، نفّذ `python jira/jira_sync.py --plan-only` محليًا بلا Credentials (682 صفًا full-stack، واستبعاد 57 تاسك Flutter وEpic واحد)، ثم `--dry-run` للتحقق بالقراءة. يتطلب الإنشاء `--apply` صراحةً بعد مراجعة الخطة. لا ينشئ هذا المسار أي تاسك أو Epic خاص بـFlutter؛ مسؤول الموبايل يدير نطاقه منفصلًا. استخدم Jira الحي للتحقق والتزامن المعتاد.
 5. ابدأ Sprint `planning/sprints/S00.md`، تذكرة واحدة لكل feature branch وPull Request، ثم مراجعة وحماية ودمج موثق.
 6. تطبيق Flutter يبدأ UI + fixture-driven tests بالتوازي؛ الربط الفعلي يبدأ بعد جاهزية API وcontract.
 
