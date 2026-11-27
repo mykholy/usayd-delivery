@@ -14,6 +14,8 @@ jobs:
           persist-credentials: false
       - name: Test source integrity verification
         run: python3 -m unittest discover -s automation -p test_source_integrity.py
+      - name: Test offline Jira import scope
+        run: python3 -m unittest discover -s jira -p test_jira_import_scope.py
       - name: Validate immutable specification and task baseline
         run: python3 automation/preflight.py
       - name: Validate live overlay and screen catalog
