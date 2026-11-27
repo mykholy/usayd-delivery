@@ -7,7 +7,7 @@
       "repository": "usayd-api",
       "jira_key": "USYD-54",
       "summary": "[USYD-T0021] 3-repository creation, permissions & ownership",
-      "status": "In Progress",
+      "status": "In Review",
       "status_source": "live Jira",
       "candidate_sprint": "planned-s00",
       "scope": "non-flutter"
