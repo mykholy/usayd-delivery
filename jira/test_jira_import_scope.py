@@ -37,6 +37,36 @@ class ImportScopeTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Parent outside"):
             jira_sync.full_stack_items([], [row("a", "api", "absent")])
 
+    def test_valid_parent_first_chain_preserved(self):
+        epic = row("E", kind="Epic")
+        parent = row("P", "api", "E")
+        child = row("C", "api", "P")
+        included, excluded = jira_sync.full_stack_items([epic], [parent, child])
+        self.assertEqual([r["External_ID"] for r in included], ["E", "P", "C"])
+        self.assertEqual(excluded, [])
+
+    def test_child_before_parent_rejected(self):
+        epic = row("E", kind="Epic")
+        with self.assertRaisesRegex(ValueError, "Parent must precede child"):
+            jira_sync.full_stack_items([epic], [row("C", "api", "P"), row("P", "api", "E")])
+
+    def test_self_reference_and_cycle_rejected(self):
+        for tasks in ([row("P", "api", "P")],
+                      [row("A", "api", "B"), row("B", "api", "A")]):
+            with self.subTest(tasks=tasks), self.assertRaisesRegex(ValueError, "cycle"):
+                jira_sync.full_stack_items([], tasks)
+
+    def test_invalid_order_rejected_before_network_in_all_modes(self):
+        for mode in ("--plan-only", "--dry-run", "--apply"):
+            with self.subTest(mode=mode), patch("sys.argv", ["jira_sync.py", mode]), \
+                    patch.object(jira_sync, "rows", side_effect=[
+                        [row("E", kind="Epic")],
+                        [row("C", "api", "P"), row("P", "api", "E")]]), \
+                    patch.object(jira_sync, "api") as api:
+                with self.assertRaisesRegex(ValueError, "Parent must precede child"):
+                    jira_sync.main()
+                api.assert_not_called()
+
     def test_offline_plan_never_calls_jira(self):
         with patch("sys.argv", ["jira_sync.py", "--plan-only"]), patch.object(jira_sync, "api") as api:
             jira_sync.main()
