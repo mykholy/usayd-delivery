@@ -59,9 +59,18 @@ def full_stack_items(epics, tasks):
             raise ValueError("Unknown repository scope: " + external)
         included.append(row)
     allowed = {r["External_ID"] for r in included}
+    preceding = set()
     for row in included:
-        if row["Parent_External_ID"] and row["Parent_External_ID"] not in allowed:
-            raise ValueError("Parent outside full-stack import: " + row["External_ID"])
+        external = row["External_ID"]
+        parent = row["Parent_External_ID"]
+        if parent and parent not in allowed:
+            raise ValueError("Parent outside full-stack import: " + external)
+        # Preserve canonical CSV order. Every parent must already occur in the
+        # plan, even when a local Jira cache happens to contain that parent.
+        # This also rejects self-links and every directed parent cycle.
+        if parent and parent not in preceding:
+            raise ValueError("Parent must precede child (invalid order or cycle): " + external)
+        preceding.add(external)
     return included, excluded
 
 def ensure_issue(row,parent_key=None,dry=False):
