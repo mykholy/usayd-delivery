@@ -3,6 +3,7 @@
 from pathlib import Path
 from collections import Counter
 import csv,sys,re,hashlib,json
+from source_integrity import index_variants, verify_bytes
 root=Path(__file__).resolve().parents[1]
 def rows(p):
  with (root/p).open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
@@ -12,10 +13,18 @@ report={'ticket_files':len(tasks),'epics':len(epics),'backlog_items':len(backlog
  'source_files':len(rows('coverage/READY_SOURCE_SHA256.csv')),
  'sprints':len(list((root/'planning/sprints').glob('S*.md')))}
 assert len(tasks)==707 and len(epics)==33 and len(backlog)==707,report
-for row in rows('coverage/READY_SOURCE_SHA256.csv'):
- p=root/'source_original/usayd-academy-codex-package'/row['Relative_Path']
+manifest=rows('coverage/READY_SOURCE_SHA256.csv')
+original={row['Relative_Path']:row['SHA256'] for row in manifest}
+assert len(manifest)==len(original)==1183
+variants=index_variants(json.loads((root/'automation/SOURCE_CSV_LF_VARIANTS.json').read_text(encoding='utf-8')),original)
+assert len(variants)==31
+integrity=Counter()
+for path,expected in original.items():
+ p=root/'source_original/usayd-academy-codex-package'/path
  assert p.is_file(),p
- assert hashlib.sha256(p.read_bytes()).hexdigest()==row['SHA256'],p
+ integrity[verify_bytes(path,p.read_bytes(),expected,variants)]+=1
+report['source_integrity']=dict(integrity)
+report['source_archive_note']='LF variant means exact known normalized CSV bytes, not original raw archive bytes.'
 ids={p.stem for p in tasks}
 assert len(ids)==707
 for p in tasks:

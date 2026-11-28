@@ -47,3 +47,6 @@ python jira/jira_sync.py --dry-run  # requires Jira credentials + reachable site
 - https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/automatically-merging-a-pull-request
 - https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches
 - https://google-gemini.github.io/gemini-cli/docs/cli/headless.html
+
+## Live synchronization overlay (2026-11-26)
+`LIVE_DELIVERY_STATE.json` is a verified snapshot, not a deployed autonomous implementation runner. Live Jira is authoritative. The old transition queue is archived in `history/jira-sync-queue-2026-11-24.json`; the active queue is empty. **Never replay historical transitions.** Refresh live evidence on each delivery update. Do not update original specifications or Flutter code/issues. See `../management/DESIGN_IMPLEMENTATION_GUIDE.md` and `NEXT_ACTIONS.md`. Hourly external synchronization, if configured, only updates verified documentation via PR and respects protections; it does not authorize deployment or sensitive approvals.
